@@ -10,7 +10,7 @@ app.run(function($rootScope, $timeout, UserServices) {
       console.error("$stateChangeError: ", toState, error);
     });
 
-
+    $rootScope.header_menu = false;
 })
 
 app.constant('Configs', {
