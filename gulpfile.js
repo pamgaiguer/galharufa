@@ -10,22 +10,23 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 var inject = require('gulp-inject');
 
-// var bower_folder = require('./app/bower_components/material-design-lite/bower.json');
+// var bower_folder = require('./bower_components/material-design-lite/bower.json');
 
 var paths = {
-    sass: ['app/assets/scss/**/*.scss'],
+    sass: ['styles/scss/**/*.scss'],
     javascript: [
-        './app/bower_components/angular/angular.min.js',
-        './app/bower_components/material-design-lite/material.min.js',
-        './app/bower_components/angular-ui-router/release/angular-ui-router.min.js',
-        './app/app.js',
-        './app/app.config.js',
-        './app/components/**/*.js',
-        './app/shared/**/*.js',
+        './bower_components/angular/angular.min.js',
+        './bower_components/angular-ui-router/release/angular-ui-router.min.js',
+        './bower_components/angular-materialize/src/angular-materialize.js',
+        './bower_components/materialize/dist/js/materialize.min.js',
+        './app.js',
+        './js/controllers/*.js',
+        './js/services/*.js',
+        './shared/**/*.js',
     ],
     css: [
-        './app/bower_components/material-design-lite/material.min.css',
-        './app/assets/**/*min.css'
+        './bower_components/materialize/dist/css/materialize.min.css',
+        './styles/**/*min.css'
     ]
 };
 
@@ -33,7 +34,7 @@ var paths = {
 gulp.task('browser-sync', function() {
     browserSync({
         server: {
-            baseDir: "app/"
+            baseDir: ""
         }
     });
 });
@@ -43,13 +44,13 @@ gulp.task('server-sync', function() {
 });
 
 gulp.task('images', function() {
-    gulp.src('app/assets/images/**/*')
+    gulp.src('styles/images/**/*')
         .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-        .pipe(gulp.dest('app/assets/images/'));
+        .pipe(gulp.dest('styles/images/'));
 });
 
 gulp.task('styles', function() {
-    gulp.src(['app/assets/scss/custom.scss'])
+    gulp.src(['styles/scss/custom.scss'])
         .pipe(plumber({
             errorHandler: function(error) {
                 console.log(error.message);
@@ -57,44 +58,43 @@ gulp.task('styles', function() {
             }
         }))
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('app/assets/css/'))
+        .pipe(gulp.dest('styles/css/'))
         .pipe(rename({ suffix: '.min' }))
         .pipe(minifycss())
-        .pipe(gulp.dest('app/assets/css/'))
+        .pipe(gulp.dest('styles/css/'))
         .pipe(browserSync.reload({ stream: true }))
 });
 
 // gulp.task('scripts', function(){
-//   return gulp.src('app/assets/js/**/*.js')
+//   return gulp.src('styles/js/**/*.js')
 //     .pipe(plumber({
 //       errorHandler: function (error) {
 //         console.log(error.message);
 //         this.emit('end');
 //     }}))
 //     .pipe(concat('main.js'))
-//     .pipe(gulp.dest('app/assets/js/'))
+//     .pipe(gulp.dest('styles/js/'))
 //     .pipe(rename({suffix: '.min'}))
 //     .pipe(uglify())
-//     .pipe(gulp.dest('app/assets/js/'))
+//     .pipe(gulp.dest('styles/js/'))
 //     .pipe(browserSync.reload({stream:true}))
 // });
 
 gulp.task('index', function() {
-    return gulp.src('./app/index.html')
+    return gulp.src('./index.html')
         .pipe(inject(gulp.src(paths.javascript, { read: false }), { relative: true }))
-        .pipe(gulp.dest('./app'))
+        .pipe(gulp.dest('./'))
         .pipe(inject(gulp.src(paths.css, { read: false }), { relative: true }))
-        .pipe(gulp.dest('./app'));
+        .pipe(gulp.dest('./'));
 });
 
 
 
 gulp.task('default', ['browser-sync', 'index'], function() {
-    gulp.watch("app/assets/scss/custom.scss", ['styles']);
-    // gulp.watch("app/assets/js/**/*.js", ['scripts']);
-    gulp.watch("app/components/**/*.html", ['server-sync']);
-    gulp.watch("app/shared/**/*.html", ['server-sync']);
-    gulp.watch("app/*.html", ['server-sync']);
+    gulp.watch("styles/scss/custom.scss", ['styles']);
+    // gulp.watch("styles/js/**/*.js", ['scripts']);
+    gulp.watch("shared/**/*.html", ['server-sync']);
+    gulp.watch("*.html", ['server-sync']);
     gulp.watch(paths.sass, ['styles']);
     gulp.watch([
         paths.javascript,

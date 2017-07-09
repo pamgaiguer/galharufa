@@ -7,9 +7,19 @@
 
     <title>Galharufa</title>
 
-    <link href="css/main.css" rel="stylesheet">
-    <script src="node_modules/angular/angular.min.js"></script>
-    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,600,700,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- inject:css -->
+    <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css">
+    <!--<link rel="stylesheet" href="styles/css/custom.min.css">-->
+
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+
+    <script src="bower_components/angular-materialize/src/angular-materialize.js"></script>
+    <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
 
       <!-- your app's js -->
     <script src="js/app.js"></script>
@@ -17,14 +27,17 @@
     <!--<script src="js/controllers/home.js"></script>
     <script src="js/controllers/contato.js"></script>-->
     <script src="js/services/UserServices.js"></script>
-
-
+    <script src="shared/mainFooter/mainFooterDirective.js"></script>
+    <script src="shared/mainHeader/mainHeaderDirective.js"></script>
 
 
   </head>
+
   <body ng-app="galharufa">
-    <div ng-view>
-    ola mundo
-    </div>
+    <main-header ng-if="header_menu"></main-header>
+      <div ng-view>
+      </div>
+    <main-footer ng-if="header_menu"></main-footer>
   </body>
+
 </html>

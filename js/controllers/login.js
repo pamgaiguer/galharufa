@@ -1,6 +1,6 @@
 angular.module('galharufa.controllers.login', [])
 
-.controller('LoginCtrl', function($scope, $q, $timeout, UserServices) {
+.controller('LoginCtrl', function($scope, $rootScope, $q, $timeout, UserServices) {
 
   console.log("LoginCtrl :: Iniciado");
 
@@ -12,6 +12,9 @@ angular.module('galharufa.controllers.login', [])
 
   $scope.init = function () {
     console.log("startou o login");
+    $rootScope.header_menu = true;
+
+
   }  
 
   $scope.login = function(form) {      

@@ -1,0 +1,48 @@
+header {
+    nav {
+        background-color: $white;
+        .button-collapse i {
+            color: $gray-darker;
+        }
+    }
+    .brand-logo {
+        img {
+            width: 158px;
+            padding-top: 15px;
+        }
+    }
+    .nav-wrapper {
+        ul {
+            li {
+                a {
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    color: $gray-dark;
+                    border-bottom: 3px solid transparent;
+                    &:hover,
+                    &:focus {
+                        border-bottom: 3px solid $red-main;
+                        color: $red-main;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 375px) {
+    header {
+        .brand-logo {
+            img {
+                padding-top: 10px;
+                padding-left: 10px;
+            }
+        }
+    }
+}
+
+@media (min-width: 376px) and (max-width: 992px) {}
+
+@media (min-width: 993px) and (max-width: 1024px) {}
+
+@media (min-width: 1025px) {}
