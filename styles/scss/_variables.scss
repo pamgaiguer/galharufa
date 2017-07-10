@@ -10,6 +10,11 @@ $gray-darker: #757575;
 $white: #FFF;
 $black: #000;
 
+$black-main: #212121;
+$yellow-main: #FFCA27;
+$salmon-main: #F69C80;
+$green-main: #0796A6;
+
 .bg-white {@include bg-color($white);}
 .bg-black {@include bg-color($black);}
 
