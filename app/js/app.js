@@ -1,6 +1,6 @@
 var app = angular.module('galharufa', [
   'ngRoute',
-  'galharufa.controllers.login',  
+  'galharufa.controllers.login',
   'galharufa.services.UserServices']);
 
 app.run(function($rootScope, $timeout, UserServices) {
@@ -15,14 +15,14 @@ app.run(function($rootScope, $timeout, UserServices) {
 
 app.constant('Configs', {
     appToken:'au1br2',
-    apiUrl:'http://localhost/api/'    
+    apiUrl:'http://localhost/api/'
 });
 
 
 app.config(['$routeProvider', function($routeProvider) {
-  $routeProvider    
-    .when('/login', {        
-        templateUrl: '/templates/login.html',
+  $routeProvider
+    .when('/login', {
+        templateUrl: '/app/templates/login.html',
         controller: 'LoginCtrl'
     })
     .otherwise({
