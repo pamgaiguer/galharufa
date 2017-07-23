@@ -4,7 +4,7 @@
   var mainHeader = function() {
     return {
       restricted: 'E',
-      templateUrl: '/app/shared/mainHeader/mainHeaderTemplate.html'
+      templateUrl: '/shared/mainHeader/mainHeaderTemplate.html'
     };
   };
 

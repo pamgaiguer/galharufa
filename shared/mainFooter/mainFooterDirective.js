@@ -4,7 +4,7 @@
         var mainFooter = function() {
             return {
                 restricted: 'E',
-                templateUrl: '/app/shared/mainFooter/mainFooterTemplate.html',
+                templateUrl: '/shared/mainFooter/mainFooterTemplate.html',
                 controller: 'mainFooterController as footerCtrl'
             };
         };
