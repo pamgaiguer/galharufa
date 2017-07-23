@@ -1,0 +1,27 @@
+.about{
+  .main-title{
+    font-weight: 700;
+    font-size: 20px;
+    color: $red-main;
+  }
+  .sub-title{
+    font-size: 14px;
+    font-weight: 500;
+    color: $gray-dark;
+  }
+
+  .collection .collection-item {
+    line-height: 2.5;
+  }
+  .collection .collection-item.avatar{
+    min-height: 65px;
+
+    & .title{
+      font-size: 14px;
+    }
+  }
+  .materialboxed{
+    display: inline-block;
+  }
+
+}

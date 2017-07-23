@@ -1,0 +1,41 @@
+$red-light: #ff625b;
+$red-main:  #c72c31;
+$red-dark: #8f000a;
+
+$gray-light:#c1d5e0;
+$gray-main:#90a4ae;
+$gray-dark:#62757f;
+$gray-darker: #757575;
+
+$white: #FFF;
+$black: #000;
+
+$black-main: #212121;
+$yellow-main: #FFCA27;
+$salmon-main: #F69C80;
+$green-main: #0796A6;
+
+.bg-white {@include bg-color($white);}
+.bg-black {@include bg-color($black);}
+
+.bg-gray-light {@include bg-color($gray-light);}
+.bg-gray-main {@include bg-color($gray-main);}
+.bg-gray-dark {@include bg-color($gray-dark);}
+.bg-gray-darker {@include bg-color($gray-darker);}
+
+.bg-red-light {@include bg-color($red-light);}
+.bg-red-main {@include bg-color($red-main);}
+.bg-red-dark {@include bg-color($red-dark);}
+
+.white {@include color($white);}
+.black {@include color($black);}
+
+.gray-light {@include color($gray-light);}
+.gray-main {@include color($gray-main);}
+.gray-dark {@include color($gray-dark);}
+.gray-darker {@include color($gray-darker);}
+
+.red-light {@include color($red-light);}
+.red-main {@include color($red-main);}
+.red-dark {@include color($red-dark);}
+
