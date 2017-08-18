@@ -1,0 +1,42 @@
+header {
+    nav {
+        background: url('../../../images/header.jpg');
+        background-position: center top;
+        height: 635px;
+        box-shadow: none;
+        .button-collapse i {
+            color: $gray-darker;
+        }
+    }
+    .brand-logo{
+        width: 160px;
+    }
+    .nav-wrapper {
+    padding-top: 70px;
+
+        ul {
+            li {
+                a {
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    color: $gray-dark;
+                    border-bottom: 3px solid transparent;
+                    &:hover,
+                    &:focus {
+                        border-bottom: 3px solid $red-main;
+                        color: $red-main;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 375px) {
+}
+
+@media (min-width: 376px) and (max-width: 992px) {}
+
+@media (min-width: 993px) and (max-width: 1024px) {}
+
+@media (min-width: 1025px) {}

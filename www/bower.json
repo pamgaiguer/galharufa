@@ -1,0 +1,22 @@
+{
+  "name": "doismaisdois",
+  "description": "A Gulp file and project generator.",
+  "main": "gulpfile.js",
+  "authors": [
+    "PamGaiguer & ThomGarcia"
+  ],
+  "license": "ISC",
+  "homepage": "www.doismaidois.com.br",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.100.1",
+    "angular": "^1.6.5",
+    "angular-route": "^1.6.5"
+  }
+}

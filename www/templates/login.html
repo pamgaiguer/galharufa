@@ -1,0 +1,48 @@
+<main ng-init="init()" class="login">
+  <div class="container">
+    <div class="row">
+      <div class="col s6 offset-s3">
+        <div class="spacing"></div>
+        <div class="spacing"></div>
+        <div class="spacing"></div>
+        <div class="spacing"></div>
+        <div class="card-panel">
+
+          <div class="section center">
+            <h5>Acesso ao <span class="font-semibold">Painel de Controle 2+2</span></h5>
+          </div>
+
+          <div class="section">
+
+
+          <form ng-submit="login($this)" id="form-login">
+
+            <div class="input-field">
+              <i class="material-icons prefix">person</i>
+              <input ng-model="vm.login" id="login" type="text" class="validate">
+              <label for="login" data-error="Preencha corretamente">Login</label>
+            </div>
+
+            <div class="input-field">
+            <i class="material-icons prefix">lock</i>
+              <input ng-model="vm.pwd" id="senha" type="password" class="validate">
+              <label for="senha">Senha</label>
+            </div>
+
+              <div class="section">
+                <div id="form-erro" class="center red-text"></div>
+              </div>
+
+              <div class="section">
+                <button class="btn right" type="submit">
+                  Entrar
+                  <i class="material-icons right">send</i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
