@@ -110,3 +110,4 @@ Desktop.ini
 node_modules/*
 node_modules/*
 app/bower_components/*
+www/package-json.lock
