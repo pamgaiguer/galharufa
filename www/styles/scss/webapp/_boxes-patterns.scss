@@ -1,39 +1,39 @@
-.box-pattern{
-  font-size: 30px;
-  font-weight: 300;
-  padding: 20px;
-  height: 250px;
+// .box-pattern{
+//   font-size: 30px;
+//   font-weight: 300;
+//   padding: 20px;
+//   height: 250px;
 
-}
+// }
 
-.pink-yellow-box{
-  @extend .box-pattern;
-  background-color: $pink-light;
-  color: $yellow-dark;
-}
-.yellow-blue-box{
-  @extend .box-pattern;
-  background-color: $yellow-dark;
-  color: $navy-main;
-}
-.purple-yellow-box{
-  @extend .box-pattern;
-  background-color: $purple-main;
-  color: $yellow-dark;
-}
-.navy-yellow-box{
-  @extend .box-pattern;
-  background-color: $navy-main;
-  color: $yellow-dark;
-}
-.blue-white-box{
-  @extend .box-pattern;
-  background-color: $blue-facebook;
-  color: $white;
-}
+// .pink-yellow-box{
+//   @extend .box-pattern;
+//   background-color: $pink-light;
+//   color: $yellow-dark;
+// }
+// .yellow-blue-box{
+//   @extend .box-pattern;
+//   background-color: $yellow-dark;
+//   color: $navy-main;
+// }
+// .purple-yellow-box{
+//   @extend .box-pattern;
+//   background-color: $purple-main;
+//   color: $yellow-dark;
+// }
+// .navy-yellow-box{
+//   @extend .box-pattern;
+//   background-color: $navy-main;
+//   color: $yellow-dark;
+// }
+// .blue-white-box{
+//   @extend .box-pattern;
+//   background-color: $blue-facebook;
+//   color: $white;
+// }
 
-.img-row-1-m3, .img-row-1-m6{
-  background-color: #ccc;
-  height: 250px;
-  margin: 0;
-}
+// .img-row-1-m3, .img-row-1-m6{
+//   background-color: #ccc;
+//   height: 250px;
+//   margin: 0;
+// }

@@ -1,8 +1,10 @@
 header {
-  nav{
+  nav.nav-extended .nav-wrapper{
     background: url('/images/bg-header.png');
   }
-
+  nav.nav-extended .nav-content{
+    background-color: $yellow-main;
+  }
 }
 
 @media (min-width: 0px) and (max-width: 375px) {
