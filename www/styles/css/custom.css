@@ -60,6 +60,9 @@ main {
   padding-top: 5px;
   /*sticky footer property*/ }
 
+header nav {
+  background: url("/images/navbar_top.png"); }
+
 .home .beige-main-box {
   padding: 10px 40px;
   background-color: #F1EDE7; }
