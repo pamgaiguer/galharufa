@@ -1,9 +1,21 @@
 header {
   nav.nav-extended .nav-wrapper{
-    background: url('/images/bg-header.png');
+    background-image: url('/images/bg-header.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 190px;
   }
   nav.nav-extended .nav-content{
     background-color: $yellow-main;
+  }
+
+  .header-title{
+    font-weight: 300;
+    text-transform: uppercase;
+    display: inline-block;
+    color: $black-main;
+    padding-top: 100px;
   }
 }
 

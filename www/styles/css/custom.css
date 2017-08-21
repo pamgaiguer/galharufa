@@ -12,7 +12,6 @@
 
 body {
   margin: 10px;
-  font-family: 'Lato', sans-serif;
   display: flex;
   /*sticky footer property*/
   min-height: 100vh;
@@ -27,10 +26,21 @@ main {
   /*sticky footer property*/ }
 
 header nav.nav-extended .nav-wrapper {
-  background: url("/images/bg-header.png"); }
+  background-image: url("/images/bg-header.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 190px; }
 
 header nav.nav-extended .nav-content {
   background-color: #FFD740; }
+
+header .header-title {
+  font-weight: 300;
+  text-transform: uppercase;
+  display: inline-block;
+  color: #212121;
+  padding-top: 100px; }
 
 footer.page-footer {
   padding-top: 20px;
