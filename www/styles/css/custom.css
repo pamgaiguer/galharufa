@@ -61,7 +61,12 @@ main {
   /*sticky footer property*/ }
 
 header nav {
-  background: url("/images/navbar_top.png"); }
+  background: url("/images/bg-header.png"); }
+
+footer.page-footer {
+  padding-top: 20px;
+  color: #fff;
+  background-color: #212121; }
 
 .home .beige-main-box {
   padding: 10px 40px;
