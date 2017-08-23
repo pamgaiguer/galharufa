@@ -15,6 +15,7 @@ $black: #000;
 
 .bg-white {@include bg-color($white);}
 .bg-black {@include bg-color($black);}
+.bg-yellow-main {@include bg-color($yellow-main);}
 
 .white {@include color($white);}
 .black {@include color($black);}

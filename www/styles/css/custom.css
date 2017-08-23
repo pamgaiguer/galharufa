@@ -4,6 +4,9 @@
 .bg-black {
   background-color: #000; }
 
+.bg-yellow-main {
+  background-color: #FFD740; }
+
 .white {
   color: #FFF; }
 
@@ -46,3 +49,7 @@ footer.page-footer {
   padding-top: 20px;
   color: #fff;
   background-color: #212121; }
+
+.login .card-panel {
+  background-color: #212121;
+  color: white; }
