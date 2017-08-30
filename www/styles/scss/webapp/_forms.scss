@@ -1,0 +1,44 @@
+/* label color */
+.input-field label {
+  color: $gray-light;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label,
+.input-field input[type=email]:focus,
+.input-field textarea:focus + label {
+  color: $gray-light;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus,
+input[type=email]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly])  {
+  border-bottom: 1px solid $yellow-main;
+  box-shadow: 0 1px 0 0 $yellow-main;
+}
+
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid $yellow-main;
+    box-shadow: none;
+}
+
+
+
+textarea.materialize-textarea:focus:not([readonly]) + label,
+input[type=email]:focus:not([readonly]) + label,
+input[type=tel]:focus:not([readonly]) + label,
+input[type=password]:focus:not([readonly]) + label{
+  color: $gray-light;
+}
+
+.input-field .prefix.active {
+  color: $yellow-main;
+}
+input{
+  text-transform: uppercase;
+}
+input[type=email]{
+  text-transform: initial;
+}

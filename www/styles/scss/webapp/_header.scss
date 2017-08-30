@@ -1,6 +1,6 @@
 header {
   nav.nav-extended .nav-wrapper{
-    background-image: url('/images/bg-header.png');
+    background-image: url('/images/header.png');
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -8,14 +8,15 @@ header {
   }
   nav.nav-extended .nav-content{
     background-color: $yellow-main;
-  }
-
-  .header-title{
-    font-weight: 300;
-    text-transform: uppercase;
-    display: inline-block;
-    color: $black-main;
-    padding-top: 100px;
+    padding: 20px 0;
+    .tabs{
+      .tab{
+        a{
+          color: $black-main;
+          text-transform: lowercase;
+        }
+      }
+    }
   }
 }
 

@@ -29,27 +29,63 @@ main {
   /*sticky footer property*/ }
 
 header nav.nav-extended .nav-wrapper {
-  background-image: url("/images/bg-header.png");
+  background-image: url("/images/header.png");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   height: 190px; }
 
 header nav.nav-extended .nav-content {
-  background-color: #FFD740; }
-
-header .header-title {
-  font-weight: 300;
-  text-transform: uppercase;
-  display: inline-block;
-  color: #212121;
-  padding-top: 100px; }
+  background-color: #FFD740;
+  padding: 20px 0; }
+  header nav.nav-extended .nav-content .tabs .tab a {
+    color: #212121;
+    text-transform: lowercase; }
 
 footer.page-footer {
-  padding-top: 20px;
+  padding-top: 0px;
   color: #fff;
-  background-color: #212121; }
+  background-color: #0097A7; }
 
 .login .card-panel {
   background-color: #212121;
   color: white; }
+
+/* label color */
+.input-field label {
+  color: #FAFAFA; }
+
+/* label focus color */
+.input-field input[type=text]:focus + label,
+.input-field input[type=email]:focus,
+.input-field textarea:focus + label {
+  color: #FAFAFA; }
+
+/* label underline focus color */
+.input-field input[type=text]:focus,
+input[type=email]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #FFD740;
+  box-shadow: 0 1px 0 0 #FFD740; }
+
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #FFD740;
+  box-shadow: none; }
+
+textarea.materialize-textarea:focus:not([readonly]) + label,
+input[type=email]:focus:not([readonly]) + label,
+input[type=tel]:focus:not([readonly]) + label,
+input[type=password]:focus:not([readonly]) + label {
+  color: #FAFAFA; }
+
+.input-field .prefix.active {
+  color: #FFD740; }
+
+input {
+  text-transform: uppercase; }
+
+input[type=email] {
+  text-transform: initial; }
