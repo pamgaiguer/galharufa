@@ -15,7 +15,7 @@ angular.module('doismaisdois.controllers.login', [])
     $rootScope.header_menu = true;
     $rootScope.header_login = true;
 
-    if (UserServices.currentUser.usu_id != undefined) $location.path('/admin');
+    if (UserServices.currentUser.usu_id != undefined) $location.path('/adm-home');
 
 
   }  
@@ -39,7 +39,7 @@ angular.module('doismaisdois.controllers.login', [])
       UserServices.saveUserLocalStorage();
 
 
-      $location.path('/admin');
+      $location.path('/adm-home');
     });
   
   }

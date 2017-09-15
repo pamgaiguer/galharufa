@@ -1,8 +1,8 @@
-angular.module('doismaisdois.controllers.admin', [])
+angular.module('doismaisdois.controllers.adm-home', [])
 
-.controller('AdminCtrl', function($scope, $rootScope, $q, $timeout, $location, UserServices) {
+.controller('AdminHomeCtrl', function($scope, $rootScope, $q, $timeout, $location, UserServices) {
 
-  console.log("AdminCtrl :: Iniciado");
+  console.log("AdminHomeCtrl :: Iniciado");
 
   $scope.vm = {
     'login':'',
@@ -14,7 +14,7 @@ angular.module('doismaisdois.controllers.admin', [])
     console.log("startou o admin");
     $rootScope.header_login = false;
     $rootScope.header_menu = true;
-    if (UserServices.currentUser.usu_id == undefined) $location.path('/login');
+    //if (UserServices.currentUser.usu_id == undefined) $location.path('/login');
   }
 
   $scope.login = function(form) {

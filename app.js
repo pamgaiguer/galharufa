@@ -9,9 +9,12 @@ var mysql = require('mysql');
 var connection  = require('express-myconnection');
 
 var users = require('./routes/usuarios');
-
+/*var cadastros = require('./routes/cadastros');
+var trabalhos = require('./routes/trabalhos');
+var blog = require('./routes/blog');
+var email = require('./routes/email');
+*/
 var app = express();
-
 
 app.all('*', function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
@@ -41,15 +44,20 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'www')));
 
 app.use('/usuarios', users);
 
 
 app.use(express.static(__dirname + '/www'));
 
+app.use('/bower_components',express.static(path.join(__dirname, 'bower_components')));
+app.use('/js',express.static(path.join(__dirname, 'www/js')));
+app.use('/shared',express.static(path.join(__dirname, 'shared')));
+app.use('/styles',express.static(path.join(__dirname, 'styles')));
+
 app.use('/',function(req, res) {
-  res.sendfile(__dirname + '/www/index.html');
+  res.sendFile(__dirname + '/www/index.html');
 });
 
 

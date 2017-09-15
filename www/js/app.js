@@ -2,7 +2,7 @@ var app = angular.module('doismaisdois', [
   'ngRoute',
   'doismaisdois.controllers.home',
   'doismaisdois.controllers.login',
-  'doismaisdois.controllers.admin',
+  'doismaisdois.controllers.adm-home',
   'doismaisdois.services.UserServices']);
 
 app.run(function($rootScope, $timeout, UserServices, $location) {
@@ -37,9 +37,9 @@ app.config(['$routeProvider', function($routeProvider) {
         templateUrl: '/templates/login.html',
         controller: 'LoginCtrl'
     })
-    .when('/admin', {
-        templateUrl: '/templates/admin.html',
-        controller: 'AdminCtrl'
+    .when('/adm-home', {
+        templateUrl: '/templates/adm-home.html',
+        controller: 'AdminHomeCtrl'
     })
     .otherwise({
         redirectTo: '/'
