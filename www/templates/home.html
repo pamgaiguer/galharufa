@@ -1,13 +1,23 @@
-<main ng-init="init()" class="home">
-  <div class="container">
-        <div id="home" class="col s12">home</div>
-        <div id="whoweare" class="col s12">Quem Somos</div>
-        <div id="casting" class="col s12">casting</div>
-        <div id="services" class="col s12">servicos</div>
+<main ng-init="init()" class="home" id="home">
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m4 l4 xl4"></div>
+        <div class="col s12 m4 l4 xl4">
+          <img src="/images/logo-home.png" class="responsive-img">
+        </div>
+        <div class="col s12 m4 l4 xl4"></div>
+      </div>
+    </div>
   </div>
+  <div class="section">quem somos</div>
+  <div class="section">casting</div>
+  <div class="section">services</div>
 </main>
 <script>
   $(document).ready(function(){
     $('ul.tabs').tabs();
+    $('#galharufa').fullpage();
+
   });
 </script>

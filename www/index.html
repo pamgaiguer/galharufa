@@ -12,6 +12,8 @@
 
   <!-- inject:css -->
   <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css">
+  <link rel="stylesheet" href="bower_components/wow/css/libs/animate.css">
+  <link rel="stylesheet" href="bower_components/fullpage.js/dist/jquery.fullpage.min.css">
   <link rel="stylesheet" href="styles/css/custom.min.css">
   <!-- endinject -->
 
@@ -20,13 +22,14 @@
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/angular-route/angular-route.min.js"></script>
   <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
+  <script src="bower_components/fullpage.js/dist/jquery.fullpage.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/services/UserServices.js"></script>
-  <script src="shared/appHeader/appHeaderDirective.js"></script>
   <script src="shared/appFooter/appFooterDirective.js"></script>
+  <script src="shared/appHeader/appHeaderDirective.js"></script>
+  <script src="shared/mainFooter/mainFooterDirective.js"></script>
   <script src="shared/mainHeader/mainHeaderDirective.js"></script>
   <script src="js/controllers/adm-home.js"></script>
-
   <script src="js/controllers/home.js"></script>
   <script src="js/controllers/login.js"></script>
   <!-- endinject -->
@@ -36,7 +39,7 @@
 <body ng-app="doismaisdois">
   <main-header ng-if="!header_menu"></main-header>
   <app-header ng-if="header_menu && !header_login"></app-header>
-  <div ng-view></div>
+  <div ng-view id="galharufa"></div>
   <main-footer ng-if="!header_menu"></main-footer>
   <app-footer ng-if="header_menu && !header_login"></app-footer>
 </body>

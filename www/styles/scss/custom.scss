@@ -15,16 +15,9 @@ main {
     padding-top: 5px;
     /*sticky footer property*/
 }
-.col{
-	// border:1px solid #f0f;
-}
-
-
 
 @import 'webapp/header';
 @import 'webapp/footer';
 @import 'webapp/home';
-@import 'webapp/boxes-patterns';
 @import 'webapp/login';
 @import 'webapp/forms';
-

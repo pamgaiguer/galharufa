@@ -17,14 +17,16 @@ var paths = {
         './bower_components/angular/angular.min.js',
         './bower_components/angular-route/angular-route.min.js',
         './bower_components/materialize/dist/js/materialize.min.js',
+        './bower_components/fullpage.js/dist/jquery.fullpage.min.js',
         './js/app.js',
         './js/services/*.js',
         './shared/**/*.js',
-
         './js/controllers/*.js',
     ],
     css: [
         './bower_components/materialize/dist/css/materialize.min.css',
+        './bower_components/wow/css/libs/animate.css',
+        './bower_components/fullpage.js/dist/jquery.fullpage.min.css',
         './styles/**/*min.css'
     ]
 };

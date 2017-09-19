@@ -1,12 +1,12 @@
 <nav class="black lighten-1 white-text">
+<a class="brand-logo center white-text"><img src="/images/logo.png" class=" class="responsive-img"" alt="">{{session_title}}</a>
   <ul id="slide-out" class="side-nav">
-    <li><a href="#!">Home</a></li>
-    <li><a href="#!">Usuários</a></li>
-    <li><a href="#!">Atores</a></li>
-    <li><a href="#!">Figuração</a></li>
-    <li><a href="#!">Modelos</a></li>
-    <li><a href="#!">Crianças</a></li>
+    <li><a href="#!" ng-click="path('/adm-home');">Home - cadastros</a></li>
+    <li><a href="#!" ng-click="path('/adm-blog');">Blog</a></li>
+    <li><a href="#!" ng-click="path('/adm-trabalhos');">Trabalhos</a></li>
+    <li><a href="#!" ng-click="path('/adm-users');">Usuários</a></li>
+    <li class="divider"></li>
+    <li><a href="#!" ng-click="logout()">Logout</a></li>
   </ul>
   <a href="" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
 </nav>
-ola mundo
