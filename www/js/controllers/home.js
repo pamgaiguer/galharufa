@@ -1,4 +1,4 @@
-angular.module('doismaisdois.controllers.home', [])
+angular.module('galharufa.controllers.home', [])
 
 .controller('HomeCtrl', function($scope, $rootScope, $q, $timeout) {
 

@@ -1,4 +1,4 @@
-angular.module('doismaisdois.controllers.adm-home', [])
+angular.module('galharufa.controllers.adm-home', [])
 
 .controller('AdminHomeCtrl', function($scope, $rootScope, $q, $timeout, $location, UserServices) {
 

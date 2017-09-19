@@ -20,9 +20,9 @@
             Materialize.toast('Canal no youtube ainda em desenvolvimento!', 4000);
         }
 
-    };    
+    };
 
-    angular.module('doismaisdois')
+    angular.module('galharufa')
     .controller('appFooterController', [
         appFooterController
     ])

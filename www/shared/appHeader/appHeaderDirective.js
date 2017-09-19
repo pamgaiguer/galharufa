@@ -8,7 +8,7 @@
     };
   };
 
-  angular.module('doismaisdois').directive('appHeader', [
+  angular.module('galharufa').directive('appHeader', [
     appHeader
   ]);
 

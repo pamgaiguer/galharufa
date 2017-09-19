@@ -22,7 +22,7 @@
 
         };
 
-    angular.module('doismaisdois')
+    angular.module('galharufa')
     .controller('mainFooterController', [
         mainFooterController
     ])

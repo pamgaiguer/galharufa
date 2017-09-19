@@ -1,4 +1,4 @@
-var app = angular.module('doismaisdois.services.UserServices', []);
+var app = angular.module('galharufa.services.UserServices', []);
 
 app.service('UserServices', function ($q, $http, Configs) {
 

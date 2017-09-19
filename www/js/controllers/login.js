@@ -1,4 +1,4 @@
-angular.module('doismaisdois.controllers.login', [])
+angular.module('galharufa.controllers.login', [])
 .controller('LoginCtrl', function($scope, $rootScope, $q, $location, UserServices) {
 
   console.log("LoginCtrl :: Iniciado");
