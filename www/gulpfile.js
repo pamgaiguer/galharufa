@@ -13,9 +13,15 @@ var inject = require('gulp-inject');
 var paths = {
     sass: ['styles/scss/**/*.scss'],
     javascript: [
-        './js/libs/*.js',
+        './js/libs/jquery.min.js',
+        './js/libs/angular.min.js',
+        './js/libs/angular-route.min.js',
+        './js/libs/materialize.min.js',
+        './js/libs/jquery.fullpage.min.js',
+        './js/libs/ng-file-upload.min.js',
+        './js/libs/',
         './js/app.js',
-        './js/services/*.js',        
+        './js/services/*.js',
         './shared/**/*.js',
         './js/controllers/*.js',
     ],

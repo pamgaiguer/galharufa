@@ -14,7 +14,7 @@ angular.module('galharufa.controllers.adm-crianca', [])
     console.log("startou o admin");
     $rootScope.header_login = false;
     $rootScope.header_menu = true;
-    $rootScope.session_title= 'Admin';
+    $rootScope.session_title= 'Admin - Crianças';
     //if (UserServices.currentUser.usu_id == undefined) $location.path('/login');
   }
 });

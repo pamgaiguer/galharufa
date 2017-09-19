@@ -14,7 +14,7 @@ angular.module('galharufa.controllers.adm-ator', [])
     console.log("startou o adm ator");
     $rootScope.header_login = false;
     $rootScope.header_menu = true;
-    $rootScope.session_title= 'Admin';
+    $rootScope.session_title= 'Admin - Ator';
 
     //if (UserServices.currentUser.usu_id == undefined) $location.path('/login');
   }
