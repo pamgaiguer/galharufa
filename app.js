@@ -51,10 +51,10 @@ app.use('/usuarios', users);
 
 app.use(express.static(__dirname + '/www'));
 
-app.use('/bower_components',express.static(path.join(__dirname, 'bower_components')));
+app.use('/bower_components',express.static(path.join(__dirname, 'www/bower_components')));
 app.use('/js',express.static(path.join(__dirname, 'www/js')));
-app.use('/shared',express.static(path.join(__dirname, 'shared')));
-app.use('/styles',express.static(path.join(__dirname, 'styles')));
+app.use('/shared',express.static(path.join(__dirname, 'www/shared')));
+app.use('/styles',express.static(path.join(__dirname, 'www/styles')));
 
 app.use('/',function(req, res) {
   res.sendFile(__dirname + '/www/index.html');
