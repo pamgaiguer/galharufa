@@ -3,10 +3,8 @@ var app = angular.module('galharufa', [
   'galharufa.controllers.home',
   'galharufa.controllers.login',
   'galharufa.controllers.adm-home',
-  'galharufa.controllers.adm-ator',
-  'galharufa.controllers.adm-crianca',
-  'galharufa.controllers.adm-modelo',
-  'galharufa.controllers.adm-figuracao',
+  'galharufa.controllers.adm-casting-register',
+  'galharufa.controllers.adm-casting-search',
   'galharufa.controllers.adm-usuario',
   'galharufa.services.UserServices']);
 
@@ -46,21 +44,13 @@ app.config(['$routeProvider', function($routeProvider) {
     templateUrl: '/templates/adm-home.html',
     controller: 'AdminHomeCtrl'
   })
-  .when('/adm-ator', {
-    templateUrl: '/templates/adm-ator.html',
-    controller: 'AdminAtorCtrl'
+  .when('/adm-casting-register', {
+    templateUrl: '/templates/adm-casting-register.html',
+    controller: 'AdminCastingRegCtrl'
   })
-  .when('/adm-crianca', {
-    templateUrl: '/templates/adm-crianca.html',
-    controller: 'AdminCriancaCtrl'
-  })
-  .when('/adm-modelo', {
-    templateUrl: '/templates/adm-modelo.html',
-    controller: 'AdminModeloCtrl'
-  })
-  .when('/adm-figuracao', {
-    templateUrl: '/templates/adm-figuracao.html',
-    controller: 'AdminFiguracaoCtrl'
+  .when('/adm-casting-search', {
+    templateUrl: '/templates/adm-casting-search.html',
+    controller: 'AdminCastingSearchCtrl'
   })
   .when('/adm-usuario', {
     templateUrl: '/templates/adm-usuario.html',

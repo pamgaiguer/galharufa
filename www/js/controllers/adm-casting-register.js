@@ -1,8 +1,8 @@
-angular.module('galharufa.controllers.adm-casting', [])
+angular.module('galharufa.controllers.adm-casting-register', [])
 
-.controller('AdminCastingCtrl', function($scope, $rootScope, $q, $timeout, $location, UserServices) {
+.controller('AdminCastingRegCtrl', function($scope, $rootScope, $q, $timeout, $location, UserServices) {
 
-  console.log("AdminCastingCtrl :: Iniciado");
+  console.log("AdminCastingRegCtrl :: Iniciado");
 
   $scope.vm = {
     'login':'',
@@ -14,7 +14,7 @@ angular.module('galharufa.controllers.adm-casting', [])
     console.log("startou o adm Casting");
     $rootScope.header_login = false;
     $rootScope.header_menu = true;
-    $rootScope.session_title= 'Admin - Casting';
+    $rootScope.session_title= 'Admin - Casting - Cadastro';
     //if (UserServices.currentUser.usu_id == undefined) $location.path('/login');
   }
 });

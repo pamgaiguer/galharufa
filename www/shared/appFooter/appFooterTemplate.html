@@ -8,6 +8,7 @@
 
   $(document).ready(function() {
     $('select').material_select();
+    $('.collapsible').collapsible();
     $("#genre").change(function(){
       if ($(this).val() == 1){
         $(".woman-data").fadeIn(300);
