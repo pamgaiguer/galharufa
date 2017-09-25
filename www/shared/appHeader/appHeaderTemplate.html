@@ -2,21 +2,22 @@
   <a class="brand-logo center white-text"><!-- <img src="/images/logo.png" class="responsive-img" alt=""> -->{{session_title}}</a>
   <ul id="slide-out" class="side-nav">
     <li><a href="" ng-click="path('/adm-home');">Home</a></li>
+    <li><a href="" ng-click="path('/adm-users')">Usuários</a></li>
     <li class="no-padding">
       <ul class="collapsible collapsible-accordion">
         <li>
           <a class="collapsible-header">Casting <i class="material-icons">arrow_drop_down</i></a>
           <div class="collapsible-body">
             <ul>
-              <li><a href="#!" ng-click="path('/adm-casting');">Cadastrar</a></li>
-              <li><a href="#!">Pesquisar</a></li>
+              <li><a href="" ng-click="path('/adm-casting-register');">Cadastrar</a></li>
+              <li><a href="" ng-click="path('/adm-casting-search');">Pesquisar</a></li>
             </ul>
           </div>
         </li>
       </ul>
-    </li>
-    <li class="divider"></li>
-    <li><a href="#!" ng-click="logout()">Logout</a></li>
+    </li>    
+    <li class="divider"></li>    
+    <li><a href="" ng-click="logout()">Logout</a></li>
   </ul>
   <a href="" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
 </nav>

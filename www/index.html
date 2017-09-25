@@ -33,7 +33,7 @@
   <script src="js/controllers/adm-casting-register.js"></script>
   <script src="js/controllers/adm-casting-search.js"></script>
   <script src="js/controllers/adm-home.js"></script>
-  <script src="js/controllers/adm-usuario.js"></script>
+  <script src="js/controllers/adm-users.js"></script>
   <script src="js/controllers/home.js"></script>
   <script src="js/controllers/login.js"></script>
   <!-- endinject -->
@@ -41,11 +41,11 @@
 </head>
 
 <body ng-app="galharufa">
-    <main-header ng-show="!header_menu"></main-header>
-    <app-header ng-show="header_menu && !header_login"></app-header>
+    <main-header ng-show="headerId == 1"></main-header>
+    <app-header ng-show="headerId == 2"></app-header>
     <div ng-view></div>
-    <main-footer ng-show="!header_menu"></main-footer>
-    <app-footer ng-show="header_menu && !header_login"></app-footer>
+    <main-footer ng-show="headerId == 1"></main-footer>
+    <app-footer ng-show="headerId == 2"></app-footer>
 </body>
 
 </html>

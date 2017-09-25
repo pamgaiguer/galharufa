@@ -11,8 +11,7 @@ angular.module('galharufa.controllers.login', [])
 
   $scope.init = function () {
     console.log("startou o login");
-    $rootScope.header_menu = true;
-    $rootScope.header_login = true;
+    $rootScope.headerId = 0;
     if (UserServices.currentUser.usu_id != undefined) $location.path('/adm-home');
 
     $scope.login = function(form) {

@@ -1,0 +1,71 @@
+<main ng-init="init()" class="dash-users">
+  <section class="container">
+    <div class="row">
+      <div class="col s12 m12 l12 xl12">
+        <h5>Listagem usuários</h5>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Login</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="user in vm.users">
+              <td>{{user.usu_nome}}</td>
+              <td>{{user.usu_login}}</td>
+              <td><a href="" ng-click="deleteUser(user.usu_id)"><i class="material-icons">delete</i></a></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+    <div class="spacing"></div>
+    <div class="spacing"></div>
+    <div class="spacing"></div>
+    <div class="spacing"></div>
+    <div class="spacing"></div>
+
+    <form ng-submit="addUser()">
+      <h5>Cadastrar novo usuários</h5>
+
+      <div class="row">
+        <div class="col s6 m6 l6 xl6">
+          <div class="input-field">
+            <input ng-model="vm.user.usu_nome" id="usu_nome" type="text" required class="validate">
+            <label for="usu_nome">Nome do usuário</label>
+          </div>
+        </div>
+        <div class="col s6 m6 l6 xl6">
+          <div class="input-field">
+            <input ng-model="vm.user.usu_login" id="usu_login"  type="text" required class="validate">
+            <label for="usu_login">Login</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s6 m6 l6 xl6">
+          <div class="input-field">
+            <input ng-model="vm.user.usu_senha" id="usu_senha" type="password" required class="validate">
+            <label for="usu_senha">Senha</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m12 l12 xl12">
+          <button type="submit" value="Cadastrar" class="btn btn-submit right">Cadastrar <i class="material-icons right">send</i></button>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </form>
+
+    <div class="clearfix"></div>
+
+
+
+
+  </section>
+</main>

@@ -12,8 +12,7 @@ angular.module('galharufa.controllers.adm-casting-search', [])
 
   $scope.init = function () {
     console.log("startou o adm Casting");
-    $rootScope.header_login = false;
-    $rootScope.header_menu = true;
+    $rootScope.headerId = 2;
     $rootScope.session_title= 'Admin - Pesquisa Casting';
     //if (UserServices.currentUser.usu_id == undefined) $location.path('/login');
   }

@@ -5,7 +5,7 @@ var app = angular.module('galharufa', [
   'galharufa.controllers.adm-home',
   'galharufa.controllers.adm-casting-register',
   'galharufa.controllers.adm-casting-search',
-  'galharufa.controllers.adm-usuario',
+  'galharufa.controllers.adm-users',
   'galharufa.services.UserServices']);
 
 app.run(function($rootScope, $timeout, UserServices, $location) {
@@ -15,9 +15,13 @@ app.run(function($rootScope, $timeout, UserServices, $location) {
     console.error("$stateChangeError: ", toState, error);
   });
 
-  $rootScope.header_menu = false;
-  $rootScope.header_login = true;
-  $rootScope.header_admin = false;
+  $rootScope.headerId = 1;
+
+
+  $rootScope.path = function(p){
+    console.log("path: " + p);
+    $location.path(p);
+  }
 
   $rootScope.logout = function(){
     UserServices.deleteUserLocalStorage();
@@ -52,9 +56,9 @@ app.config(['$routeProvider', function($routeProvider) {
     templateUrl: '/templates/adm-casting-search.html',
     controller: 'AdminCastingSearchCtrl'
   })
-  .when('/adm-usuario', {
-    templateUrl: '/templates/adm-usuario.html',
-    controller: 'AdminUsuarioCtrl'
+  .when('/adm-users', {
+    templateUrl: '/templates/adm-users.html',
+    controller: 'AdminUsersCtrl'
   })
   .otherwise({
     redirectTo: '/'

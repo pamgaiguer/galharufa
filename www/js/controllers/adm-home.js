@@ -12,8 +12,7 @@ angular.module('galharufa.controllers.adm-home', [])
 
   $scope.init = function () {
     console.log("startou o admin");
-    $rootScope.header_login = false;
-    $rootScope.header_menu = true;
+    $rootScope.headerId = 2;
     $rootScope.session_title= 'Admin - home';
 
     //if (UserServices.currentUser.usu_id == undefined) $location.path('/login');
