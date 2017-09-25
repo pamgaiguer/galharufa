@@ -4,12 +4,19 @@ SET time_zone = "-03:00";
 
 CREATE TABLE `casting` (
   `cas_id` int(11) NOT NULL,
-  `cas_tipo` int(11) NOT NULL,
+  `cas_tipo` varchar(25) NOT NULL,
   `cas_nome` varchar(100) DEFAULT NULL,
   `cas_nomeart` varchar(100) DEFAULT NULL,
   `cas_genero` varchar(10) DEFAULT NULL,
   `cas_ano` int DEFAULT NULL,
+  `cas_terno` decimal(10,2) DEFAULT NULL,
+  `cas_camisa` decimal(10,2) DEFAULT NULL,
+  `cas_busto` decimal(10,2) DEFAULT NULL,
+  `cas_cintura` decimal(10,2) DEFAULT NULL,
+  `cas_quadril` decimal(10,2) DEFAULT NULL,
   `cas_etnia` varchar(50) DEFAULT NULL,
+  `cas_cabelo` varchar(50) DEFAULT NULL,
+  `cas_olhos` varchar(50) DEFAULT NULL,
   `cas_peso` decimal(10,2) DEFAULT NULL,
   `cas_dtnasc` datetime DEFAULT NULL,
   `cas_rg` varchar(10) DEFAULT NULL,
@@ -56,7 +63,7 @@ ALTER TABLE `usuarios`
 
 
 ALTER TABLE `casting`
-  MODIFY `cast_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `cas_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 
 ALTER TABLE `usuarios`

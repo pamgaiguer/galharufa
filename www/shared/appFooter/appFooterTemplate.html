@@ -6,18 +6,6 @@
     closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
   });
 
-  $(document).ready(function() {
-    $('select').material_select();
-    $('.collapsible').collapsible();
-    $("#genre").change(function(){
-      if ($(this).val() == 1){
-        $(".woman-data").fadeIn(300);
-        $(".man-data").fadeOut(300);
-      } else {
-        $(".man-data").fadeIn(300);
-        $(".woman-data").fadeOut(300);
-      }
-    });
-  });
+  $('.collapsible').collapsible();  
 
 </script>

@@ -70,7 +70,7 @@
       </div>
       <div class="row">
         <div class="col s12 m12 l12 xl12">
-          <a class="btn right" data-cpf="a" data-href="/dashboard/clientes/adicionar">Adicionar casting <i class="material-icons right">person_add</i></a>
+          <a class="btn right" data-cpf="a" ng-click="path('/adm-casting-register')">Adicionar casting <i class="material-icons right">person_add</i></a>
         </div>
       </div>
 
@@ -93,15 +93,15 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Fulano</td>
-              <td>1997</td>
-              <td>1.78</td>
-              <td>G</td>
-              <td>Branco</td>
-              <td><i class="material-icons">pageview</i></td>
-              <td><i class="material-icons">edit</i></td>
-              <td><i class="material-icons">delete</i></td>
+            <tr ng-repeat="c in vm.casting">
+              <td>{{c.cas_nome}}</td>
+              <td>{{c.cas_ano}}</td>
+              <td>{{c.cas_altura}}</td>
+              <td>{{c.cas_manequim}}</td>
+              <td>{{c.cas_etnia}}</td>
+              <td><a href="" ng-click="visualizar(c.cas_id)"><i class="material-icons">pageview</i></a></td>
+              <td><a href="" ng-click="alterar(c)"><i class="material-icons">edit</i></a></td>
+              <td><a href="" ng-click="excluir(c.cas_id)"><i class="material-icons">delete</i></a></td>
             </tr>
           </tbody>
         </table>

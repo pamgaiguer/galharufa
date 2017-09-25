@@ -9,8 +9,8 @@ var mysql = require('mysql');
 var connection  = require('express-myconnection');
 
 var users = require('./routes/usuarios');
-/*var cadastros = require('./routes/cadastros');
-var trabalhos = require('./routes/trabalhos');
+var casting = require('./routes/casting');
+/*var trabalhos = require('./routes/trabalhos');
 var blog = require('./routes/blog');
 var email = require('./routes/email');
 */
@@ -30,7 +30,14 @@ app.use(
      password : '',
      port : 3306, //port mysql
      //port: 41890,
-     database:'doismaisdois'
+     database:'galharufa',
+     typeCast: function castField( field, useDefaultTypeCasting ) {        
+      if ( ( field.type === "BIT" ) && ( field.length === 1 ) ) {
+          var bytes = field.buffer();            
+          return( bytes[0] === 1 );
+      }
+      return( useDefaultTypeCasting() );
+    }
    },'request')
 );
 
@@ -47,6 +54,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'www')));
 
 app.use('/usuarios', users);
+app.use('/casting', casting);
 
 
 app.use(express.static(__dirname + '/www'));
