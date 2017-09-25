@@ -105,22 +105,14 @@ angular.module('galharufa.controllers.adm-casting-register', [])
       $scope.vm.casting.ptf = CastingServices.casting.cas_portfolio;
       $scope.vm.casting.sks = CastingServices.casting.cas_skills;
       $scope.vm.casting.dbc = CastingServices.casting.cas_dadosbancarios;
-      $scope.vm.casting.uid = CastingServices.casting.cas_usu_id; 
-
-
-      console.log($scope.vm.casting);
-
-      $('select').material_select();
+      $scope.vm.casting.uid = CastingServices.casting.cas_usu_id;
+      
     } else {
       $scope.vm.state = "insert";
     }
   }
 
-  $scope.adicionar = function(){
-
-    console.log($scope.vm.casting.f34);
-
-    
+  $scope.adicionar = function(){    
     var img34Ext = "";
     var imgBdExt = "";
     var imgSmExt = "";
@@ -151,9 +143,7 @@ angular.module('galharufa.controllers.adm-casting-register', [])
       $scope.vm.casting.dbc, UserServices.currentUser.usu_id)
     
     .then(function(r){
-      console.log(r);
-
-      if (r < 1) return;
+      if (r == undefined || r < 1) return;
 
 
       if ($scope.vm.casting.f34) $scope.upload($scope.vm.casting.f34, img34);
@@ -162,7 +152,46 @@ angular.module('galharufa.controllers.adm-casting-register', [])
 
 
       $rootScope.path("/adm-casting-search");
+    });
+  }
 
+  $scope.alterar = function(){    
+    var img34Ext = "";
+    var imgBdExt = "";
+    var imgSmExt = "";
+    var img34 = "";
+    var imgBd = "";
+    var imgSm = "";
+
+    if ($scope.vm.casting.f34) img34Ext = $scope.vm.casting.f34.name.slice(($scope.vm.casting.f34.name.lastIndexOf(".") - 1 >>> 0) + 2);
+    if ($scope.vm.casting.fbd) imgBdExt = $scope.vm.casting.fbd.name.slice(($scope.vm.casting.fbd.name.lastIndexOf(".") - 1 >>> 0) + 2);
+    if ($scope.vm.casting.fsm) imgSmExt = $scope.vm.casting.fsm.name.slice(($scope.vm.casting.fsm.name.lastIndexOf(".") - 1 >>> 0) + 2);
+
+    if ($scope.vm.casting.f34) img34 = "/styles/casting/ft34_" + $scope.vm.casting.nma.replace(/\s/g, "") + "." + img34Ext;
+    if ($scope.vm.casting.fbd) imgBd = "/styles/casting/ftbd_" + $scope.vm.casting.nma.replace(/\s/g, "") + "." + imgBdExt;
+    if ($scope.vm.casting.fsm) imgSm = "/styles/casting/ftsm_" + $scope.vm.casting.nma.replace(/\s/g, "") + "." + imgSmExt;
+
+
+    CastingServices.alterCasting(
+      $scope.vm.casting.tpo, $scope.vm.casting.nme, $scope.vm.casting.nma, 
+      $scope.vm.casting.gen, $scope.vm.casting.ano, $scope.vm.casting.trn, 
+      $scope.vm.casting.cms, $scope.vm.casting.bst, $scope.vm.casting.ctr, 
+      $scope.vm.casting.qdl, $scope.vm.casting.etn, $scope.vm.casting.cbl, 
+      $scope.vm.casting.olh, $scope.vm.casting.pes, $scope.vm.casting.dtn, 
+      $scope.vm.casting.rg,  $scope.vm.casting.cpf, $scope.vm.casting.cnh, 
+      $scope.vm.casting.drt, $scope.vm.casting.end, $scope.vm.casting.alt, 
+      $scope.vm.casting.mnq, $scope.vm.casting.spt, img34, imgBd, imgSm,      
+      $scope.vm.casting.car, $scope.vm.casting.mot, $scope.vm.casting.tra, 
+      $scope.vm.casting.jsk, $scope.vm.casting.ptf, $scope.vm.casting.sks, 
+      $scope.vm.casting.dbc, UserServices.currentUser.usu_id)
+    
+    .then(function(r){
+      if (r == undefined || r < 1) return;
+      if ($scope.vm.casting.f34) $scope.upload($scope.vm.casting.f34, img34);
+      if ($scope.vm.casting.fbd) $scope.upload($scope.vm.casting.fbd, imgBd);
+      if ($scope.vm.casting.fsm) $scope.upload($scope.vm.casting.fsm, imgSm);
+
+      $rootScope.path("/adm-casting-search");
     });
   }
 
