@@ -29,10 +29,10 @@
         </div>
         <div class="col s12 m2 l2 xl2">
           <div class="input-field">
-            <select ng-model="vm.casting.gen" id="genre">
-              <option value="" selected>Escolha sua opção</option>
-              <option value="M">Feminino</option>
-              <option value="F">Masculino</option>
+            <select ng-model="vm.casting.gen" id="genre" my-material-select>
+              <option value="" ng-selected="vm.casting.gen == ''">Escolha sua opção</option>
+              <option value="F" ng-selected="vm.casting.gen == 'F'">Feminino</option>
+              <option value="M" ng-selected="vm.casting.gen == 'M'">Masculino</option>
             </select>
             <label>Gênero</label>
           </div>
@@ -83,7 +83,7 @@
       <div class="row">
         <div class="col s12 m2 l2 xl2">
           <div class="input-field">
-            <select ng-model="vm.casting.etn">
+            <select ng-model="vm.casting.etn" my-material-select>
               <option value="" selected>Escolha sua opção</option>
               <option value="Branco">Branco</option>
               <option value="Negro">Negro</option>
@@ -96,7 +96,7 @@
         </div>
         <div class="col s12 m2 l2 xl2">
           <div class="input-field">
-            <select ng-model="vm.casting.cbl">
+            <select ng-model="vm.casting.cbl" my-material-select>
               <option value="" selected>Escolha sua opção</option>
               <option value="Grisalhos">Grisalhos</option>
               <option value="Loiro">Loiro</option>
@@ -109,7 +109,7 @@
         </div>
         <div class="col s12 m2 l2 xl2">
           <div class="input-field">
-            <select ng-model="vm.casting.olh">
+            <select ng-model="vm.casting.olh" my-material-select>
               <option value="" selected>Escolha sua opção</option>
               <option value="Azuis">Azuis</option>
               <option value="Verdes">Verdes</option>
@@ -285,9 +285,16 @@
 
       <div class="row">
         <div class="col s12 m12 l12 xl12">
-          <button class="btn waves-effect waves-light right" type="submit" name="action">Cadastrar membro do casting
-            <i class="material-icons right">send</i>
+          
+          <button ng-if="vm.state == 'insert'" class="btn waves-effect waves-light right" type="submit" name="action">
+            Cadastrar membro do casting <i class="material-icons right">send</i>
           </button>
+
+          <button ng-if="vm.state == 'alter'" class="btn waves-effect waves-light right" type="submit" name="action">
+            Cadastrar membro do casting <i class="material-icons right">send</i>
+          </button>
+
+
         </div>
       </div>
     </form>
@@ -297,9 +304,8 @@
 
 <script type="text/javascript">
   
-  $('select').material_select();  
   $("#genre").change(function(){
-    if ($(this).val() == 1){
+    if ($(this).val() == "F"){
       $(".woman-data").fadeIn(300);
       $(".man-data").fadeOut(300);
     } else {
@@ -307,6 +313,10 @@
       $(".woman-data").fadeOut(300);
     }
   });
+
+  $("#genre").change();
+
+  $('select').material_select();  
 
 
 </script>

@@ -1,11 +1,28 @@
 angular.module('galharufa.controllers.adm-casting-register', [])
 
+
+.directive("myMaterialSelect", [ "$timeout", function($timeout) {
+  return {
+    restrict: 'A',
+    require : 'ngModel',
+    link : function(scope, element, attrs, AdminCastingRegCtrl) {
+        $(function() {
+            $(element).material_select();
+            $(element).change(function() {
+                AdminCastingRegCtrl.$setViewValue($(element).val());
+            });
+        });
+    }
+  }
+}])
+
 .controller('AdminCastingRegCtrl', function($scope, $rootScope, $q, $timeout, $location, Upload, UserServices, CastingServices) {
 
   console.log("AdminCastingRegCtrl :: Iniciado");
 
   $scope.vm = {    
     'isLoading':false,
+    'state': 'insert',
     'casting': {
       'tpo' : 'Ator', 
       'nme' : '', 
@@ -48,7 +65,55 @@ angular.module('galharufa.controllers.adm-casting-register', [])
     console.log("startou o adm Casting");
     $rootScope.headerId = 2;
     $rootScope.session_title= 'Admin - Casting - Cadastro';
-    if (UserServices.currentUser.usu_id == undefined) $location.path('/login');    
+    if (UserServices.currentUser.usu_id == undefined) $location.path('/login');
+
+
+    if (CastingServices.casting.cas_id != undefined){
+      $scope.vm.state = "alter";
+
+      var dataNascimento = new Date(CastingServices.casting.cas_dtnasc);
+      console.log(dataNascimento);
+
+      $scope.vm.casting.id =  CastingServices.casting.cas_id;
+      $scope.vm.casting.tpo = CastingServices.casting.cas_tipo;
+      $scope.vm.casting.nme = CastingServices.casting.cas_nome;
+      $scope.vm.casting.nma = CastingServices.casting.cas_nomeart;
+      $scope.vm.casting.gen = CastingServices.casting.cas_genero;
+      $scope.vm.casting.ano = CastingServices.casting.cas_ano;
+      $scope.vm.casting.trn = CastingServices.casting.cas_terno;
+      $scope.vm.casting.cms = CastingServices.casting.cas_camisa;
+      $scope.vm.casting.bst = CastingServices.casting.cas_busto;
+      $scope.vm.casting.ctr = CastingServices.casting.cas_cintura;
+      $scope.vm.casting.qdl = CastingServices.casting.cas_quadril;
+      $scope.vm.casting.etn = CastingServices.casting.cas_etnia;
+      $scope.vm.casting.cbl = CastingServices.casting.cas_cabelo;
+      $scope.vm.casting.olh = CastingServices.casting.cas_olhos;
+      $scope.vm.casting.pes = CastingServices.casting.cas_peso;
+      $scope.vm.casting.dtn = ("0" + dataNascimento.getDate()).slice(-2) + "/" + ("0" + (dataNascimento.getMonth() + 1)).slice(-2) + "/" + dataNascimento.getFullYear();
+      $scope.vm.casting.rg  = CastingServices.casting.cas_rg;
+      $scope.vm.casting.cpf = CastingServices.casting.cas_cpf;
+      $scope.vm.casting.cnh = CastingServices.casting.cas_cnh;
+      $scope.vm.casting.drt = CastingServices.casting.cas_drt;
+      $scope.vm.casting.end = CastingServices.casting.cas_endereco;
+      $scope.vm.casting.alt = CastingServices.casting.cas_altura;
+      $scope.vm.casting.mnq = CastingServices.casting.cas_manequim;
+      $scope.vm.casting.spt = CastingServices.casting.cas_sapato;
+      $scope.vm.casting.car = CastingServices.casting.cas_carro;
+      $scope.vm.casting.mot = CastingServices.casting.cas_moto;
+      $scope.vm.casting.tra = CastingServices.casting.cas_trator;
+      $scope.vm.casting.jsk = CastingServices.casting.cas_jetski;
+      $scope.vm.casting.ptf = CastingServices.casting.cas_portfolio;
+      $scope.vm.casting.sks = CastingServices.casting.cas_skills;
+      $scope.vm.casting.dbc = CastingServices.casting.cas_dadosbancarios;
+      $scope.vm.casting.uid = CastingServices.casting.cas_usu_id; 
+
+
+      console.log($scope.vm.casting);
+
+      $('select').material_select();
+    } else {
+      $scope.vm.state = "insert";
+    }
   }
 
   $scope.adicionar = function(){

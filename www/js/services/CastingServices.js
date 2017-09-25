@@ -6,7 +6,7 @@ app.service('CastingServices', function ($q, $http, Configs) {
 
   var self = {
     isLoading:false,
-    casting: [],
+    casting: {},
     
     getCastings: function(){
       var d = $q.defer();

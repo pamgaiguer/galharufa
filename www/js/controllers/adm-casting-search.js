@@ -14,21 +14,20 @@ angular.module('galharufa.controllers.adm-casting-search', [])
     $rootScope.headerId = 2;
     $rootScope.session_title= 'Admin - Pesquisa Casting';
     //if (UserServices.currentUser.usu_id == undefined) $location.path('/login');
-
-
-    CastingServices.getCastings().then(function(r){
-      console.log(r);
-      $scope.vm.casting = r;
-    });
+    CastingServices.getCastings().then(function(r){ $scope.vm.casting = r; });
   }
 
 
   $scope.alterar = function(c){
-    console.log(c);
+    CastingServices.casting = c;
+    $rootScope.path("/adm-casting-register");
   }
 
-  $scope.excluir = function(c){
-    console.log(c);
+  $scope.excluir = function(c){    
+    CastingServices.deleteCasting(c.cas_id).then(function(r){
+      CastingServices.getCastings().then(function(r){ $scope.vm.casting = r; });
+    });
+
   }
 
   $scope.visualizar = function(c){
