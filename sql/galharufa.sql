@@ -25,7 +25,7 @@ CREATE TABLE `casting` (
   `cas_drt` varchar(15) DEFAULT NULL,
   `cas_endereco` varchar(255) DEFAULT NULL,
   `cas_altura` decimal(10,2) DEFAULT NULL,
-  `cas_manequim` decimal(10,2) DEFAULT NULL,
+  `cas_manequim` varchar(10) DEFAULT NULL,
   `cas_sapato` decimal(10,2) DEFAULT NULL,
   `cas_foto34` varchar(100) DEFAULT NULL,
   `cas_fotobody` varchar(100) DEFAULT NULL,
