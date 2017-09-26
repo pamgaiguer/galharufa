@@ -96,6 +96,57 @@ app.service('CastingServices', function ($q, $http, Configs) {
       return d.promise;
     },
 
+
+    getCastingsPorNome: function(n){
+      var d = $q.defer();
+      $http.get(Configs.apiUrl+'casting/buscar/?t=nome&b='+n)
+      .then(function (r) {
+        d.resolve(r.data);
+
+      });
+      return d.promise;
+    },
+
+    getCastingsPorAno: function(n){
+      var d = $q.defer();
+      $http.get(Configs.apiUrl+'casting/buscar/?t=ano&b='+n)
+      .then(function (r) {
+        d.resolve(r.data);
+
+      });
+      return d.promise;
+    },
+
+    getCastingsPorAltura: function(n){
+      var d = $q.defer();
+      $http.get(Configs.apiUrl+'casting/buscar/?t=altura&b='+n)
+      .then(function (r) {
+        d.resolve(r.data);
+
+      });
+      return d.promise;
+    },
+
+    getCastingsPorManequim: function(n){
+      var d = $q.defer();
+      $http.get(Configs.apiUrl+'casting/buscar/?t=manequim&b='+n)
+      .then(function (r) {
+        d.resolve(r.data);
+
+      });
+      return d.promise;
+    },
+
+    getCastingsPorEtnia: function(n){
+      var d = $q.defer();
+      $http.get(Configs.apiUrl+'casting/buscar/?t=etnia&b='+n)
+      .then(function (r) {
+        d.resolve(r.data);
+
+      });
+      return d.promise;
+    },
+
   };
 
   return self;

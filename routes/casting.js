@@ -31,6 +31,31 @@ router.get('/', function(req, res, next) {
   });
 });
 
+
+router.get('/buscar', function(req, res, next) {
+  
+  tipo = req.query.t;
+  busca = req.query.b;
+
+  req.getConnection(function(err,connection){    
+    
+
+
+    if (tipo == "nome" || tipo == "manequim" || tipo == "etnia")
+      connection.query('SELECT * FROM casting where cas_'+tipo+' like ?',['%' + busca + '%'],function(err,result){
+          if(err) return res.status(400).json(err);
+          return res.status(200).json(result);
+      });
+
+    else
+      connection.query('SELECT * FROM casting where cas_'+tipo+' = ?',[busca],function(err,result){
+          if(err) return res.status(400).json(err);
+          return res.status(200).json(result);
+      });
+
+  });
+});
+
 router.post('/adicionar', function(req, res, next) {
   
   tipo = req.query.tpo; 

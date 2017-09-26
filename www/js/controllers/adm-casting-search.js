@@ -35,5 +35,26 @@ angular.module('galharufa.controllers.adm-casting-search', [])
   }
 
 
+  $scope.buscarPorNome = function(){
+    CastingServices.getCastingsPorNome($scope.vm.buscanome).then(function(r){ $scope.vm.casting = r; });
+  }
+
+  $scope.buscarPorAno = function(){
+    CastingServices.getCastingsPorAno($scope.vm.buscaano).then(function(r){ $scope.vm.casting = r; });
+  }
+
+  $scope.buscarPorAltura = function(){
+    CastingServices.getCastingsPorAltura($scope.vm.buscaaltura).then(function(r){ $scope.vm.casting = r; });
+  }
+
+  $scope.buscarPorManequim = function(){
+    CastingServices.getCastingsPorManequim($scope.vm.buscamanequim).then(function(r){ $scope.vm.casting = r; });
+  }
+
+  $scope.buscarPorEtnia = function(){
+    CastingServices.getCastingsPorEtnia($scope.vm.buscaetnia).then(function(r){ $scope.vm.casting = r; });
+  }
+
+
 
 });
