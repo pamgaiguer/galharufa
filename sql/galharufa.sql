@@ -9,6 +9,8 @@ CREATE TABLE `casting` (
   `cas_nomeart` varchar(100) DEFAULT NULL,
   `cas_genero` varchar(10) DEFAULT NULL,
   `cas_ano` int DEFAULT NULL,
+  `cas_nacionalidade` varchar(50) DEFAULT NULL,
+  `cas_torax` decimal(10,2) DEFAULT NULL,
   `cas_terno` decimal(10,2) DEFAULT NULL,
   `cas_camisa` decimal(10,2) DEFAULT NULL,
   `cas_busto` decimal(10,2) DEFAULT NULL,

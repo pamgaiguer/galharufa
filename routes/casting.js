@@ -63,6 +63,8 @@ router.post('/adicionar', function(req, res, next) {
   nomeart = req.query.nma; 
   genero = req.query.gen;
   ano = req.query.ano;
+  nacionalidade = req.query.nac;
+  torax = req.query.trx;
   terno = req.query.trn;
   camisa = req.query.cms;
   busto = req.query.bst;
@@ -92,19 +94,18 @@ router.post('/adicionar', function(req, res, next) {
   skills = req.query.sks;
   dadosbancarios = req.query.dbc; 
   usuarioId = req.query.uid;
-  
 
   req.getConnection(function(err,connection){    
   connection.query('insert into casting ( ' +
-  ' cas_tipo, cas_nome, cas_nomeart, cas_genero, cas_ano, cas_terno, cas_camisa, ' + 
+  ' cas_tipo, cas_nome, cas_nomeart, cas_genero, cas_ano, cas_nacionalidade, cas_torax, cas_terno, cas_camisa, ' + 
   ' cas_busto, cas_cintura, cas_quadril, cas_etnia, cas_cabelo, ' +
 	' cas_olhos, cas_peso, cas_dtnasc, cas_rg, cas_cpf, cas_cnh, cas_drt, cas_endereco, ' +
 	' cas_altura, cas_manequim, cas_sapato, cas_foto34, cas_fotobody, cas_fotosmile, ' +
 	' cas_carro, cas_moto, cas_trator, cas_jetski, cas_portfolio, cas_skills, cas_dadosbancarios, ' +
 	' cas_usu_id, cas_datamodificacao) ' + 
-	' values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, now())',
+	' values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, now())',
 		
-    [tipo, nome, nomeart, genero, ano, terno, camisa, busto, cintura, quadril, etnia, cabelo, olhos, 
+    [tipo, nome, nomeart, genero, ano, nacionalidade, torax, terno, camisa, busto, cintura, quadril, etnia, cabelo, olhos, 
 		peso, dtnasc, rg, cpf, cnh, drt, endereco, altura, manequim, sapato, foto34, fotobody,
 		fotosmile, parseInt(carro), parseInt(moto), parseInt(trator), parseInt(jetski), portfolio, skills, dadosbancarios, usuarioId],
 	function(err,result){
@@ -134,6 +135,8 @@ router.post('/alterar', function(req, res, next) {
   nomeart = req.query.nma;
   genero = req.query.gen;
   ano = req.query.ano;
+  nacionalidade = req.query.nac;
+  torax = req.query.trx;
   terno = req.query.trn;
   camisa = req.query.cms;
   busto = req.query.bst;
@@ -162,18 +165,18 @@ router.post('/alterar', function(req, res, next) {
   portfolio = req.query.ptf;
   skills = req.query.sks;
   dadosbancarios = req.query.dbc; 
-  usuarioId = req.query.uid; 
+  usuarioId = req.query.uid;
 
   req.getConnection(function(err,connection){    
   connection.query('update casting set cas_tipo = ?, ' +
-  ' cas_nome = ?, cas_nomeart = ?, cas_genero = ?, cas_ano = ?, cas_terno = ?, cas_camisa = ?, ' + 
+  ' cas_nome = ?, cas_nomeart = ?, cas_genero = ?, cas_ano = ?, cas_nacionalidade = ?, cas_torax = ?, cas_terno = ?, cas_camisa = ?, ' + 
   ' cas_busto = ?, cas_cintura = ?, cas_quadril = ?, cas_etnia = ?, cas_cabelo = ?, ' +
   ' cas_olhos = ?, cas_peso = ?, cas_dtnasc = ?, cas_rg = ?, cas_cpf = ?, cas_cnh = ?, cas_drt = ?, cas_endereco = ?, ' +
   ' cas_altura = ?, cas_manequim = ?, cas_sapato = ?, ' + 
   ' cas_foto34 = ?, cas_fotobody = ?, cas_fotosmile = ?, ' +
   ' cas_carro = ?, cas_moto = ?, cas_trator = ?, cas_jetski = ?, cas_portfolio = ?, cas_skills = ?, cas_dadosbancarios = ?, ' +
   ' cas_usu_id = ?, cas_datamodificacao = now() where cas_id = ?', 
-  [tipo, nome, nomeart, genero, ano, terno, camisa, busto, cintura, quadril, etnia, cabelo, olhos, 
+  [tipo, nome, nomeart, genero, ano, nacionalidade, torax, terno, camisa, busto, cintura, quadril, etnia, cabelo, olhos, 
    peso, dtnasc, rg, cpf, cnh, drt, endereco, altura, manequim, sapato, foto34, fotobody,
    fotosmile, parseInt(carro), parseInt(moto), parseInt(trator), parseInt(jetski), portfolio, skills, dadosbancarios, usuarioId, id],
   function(err,result){

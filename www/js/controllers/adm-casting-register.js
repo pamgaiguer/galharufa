@@ -29,6 +29,8 @@ angular.module('galharufa.controllers.adm-casting-register', [])
       'nma' : '', 
       'gen' : '', 
       'ano' : 0,
+      'nac' : '',
+      'trx' : 0, 
       'trn' : 0, 
       'cms' : 0, 
       'bst' : 0, 
@@ -80,6 +82,8 @@ angular.module('galharufa.controllers.adm-casting-register', [])
       $scope.vm.casting.nma = CastingServices.casting.cas_nomeart;
       $scope.vm.casting.gen = CastingServices.casting.cas_genero;
       $scope.vm.casting.ano = CastingServices.casting.cas_ano;
+      $scope.vm.casting.nac = CastingServices.casting.cas_nacionalidade;
+      $scope.vm.casting.trx = CastingServices.casting.cas_torax;
       $scope.vm.casting.trn = CastingServices.casting.cas_terno;
       $scope.vm.casting.cms = CastingServices.casting.cas_camisa;
       $scope.vm.casting.bst = CastingServices.casting.cas_busto;
@@ -133,8 +137,8 @@ angular.module('galharufa.controllers.adm-casting-register', [])
 
     CastingServices.addCasting(
       $scope.vm.casting.tpo, $scope.vm.casting.nme, $scope.vm.casting.nma, 
-      $scope.vm.casting.gen, $scope.vm.casting.ano, 
-      tratarDecimal($scope.vm.casting.trn), 
+      $scope.vm.casting.gen, $scope.vm.casting.ano, $scope.vm.casting.nac, 
+      tratarDecimal($scope.vm.casting.trx), tratarDecimal($scope.vm.casting.trn), 
       tratarDecimal($scope.vm.casting.cms), tratarDecimal($scope.vm.casting.bst), 
       tratarDecimal($scope.vm.casting.ctr), tratarDecimal($scope.vm.casting.qdl), 
       $scope.vm.casting.etn, $scope.vm.casting.cbl, 
@@ -183,8 +187,8 @@ angular.module('galharufa.controllers.adm-casting-register', [])
 
     CastingServices.alterCasting($scope.vm.casting.id,
       $scope.vm.casting.tpo, $scope.vm.casting.nme, $scope.vm.casting.nma, 
-      $scope.vm.casting.gen, $scope.vm.casting.ano, 
-      tratarDecimal($scope.vm.casting.trn), 
+      $scope.vm.casting.gen, $scope.vm.casting.ano, $scope.vm.casting.nac, 
+      tratarDecimal($scope.vm.casting.trx), tratarDecimal($scope.vm.casting.trn), 
       tratarDecimal($scope.vm.casting.cms), tratarDecimal($scope.vm.casting.bst), 
       tratarDecimal($scope.vm.casting.ctr), tratarDecimal($scope.vm.casting.qdl), 
       $scope.vm.casting.etn, $scope.vm.casting.cbl, 

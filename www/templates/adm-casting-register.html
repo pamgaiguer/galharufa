@@ -15,16 +15,22 @@
         </div>
       </div>
       <div class="row">
-        <div class="col s12 m4 l4 xl4">
+        <div class="col s12 m3 l3 xl4">
           <div class="input-field">
             <input ng-model="vm.casting.nme" type="text" required >
             <label>Nome Completo</label>
           </div>
         </div>
-        <div class="col s12 m4 l4 xl4">
+        <div class="col s12 m3 l3 xl4">
           <div class="input-field">
             <input ng-model="vm.casting.nma" type="text" required >
             <label>Nome Artístico</label>
+          </div>
+        </div>
+        <div class="col s12 m3 l3 xl4">
+          <div class="input-field">
+            <input ng-model="vm.casting.nac" type="text" >
+            <label>Nacionalidade</label>
           </div>
         </div>
         <div class="col s12 m2 l2 xl2">
@@ -46,13 +52,19 @@
       </div>
 
       <div class="row man-data" style="display: none">
-        <div class="col s12 m6 l6 xl6">
+        <div class="col s12 m4 l6 xl6">
+          <div class="input-field">
+            <input ng-model="vm.casting.trx" type="text">
+            <label>Tórax</label>
+          </div>
+        </div>
+        <div class="col s12 m4 l6 xl6">
           <div class="input-field">
             <input ng-model="vm.casting.trn" type="text">
             <label>Terno</label>
           </div>
         </div>
-        <div class="col s12 m6 l6 xl6">
+        <div class="col s12 m4 l6 xl6">
           <div class="input-field">
             <input ng-model="vm.casting.cms" type="text">
             <label>Camisa</label>
@@ -126,7 +138,7 @@
         </div>
         <div class="col s12 m2 l2 xl2">
           <div class="input-field">
-            <input id="dtn" ng-model="vm.casting.dtn" 
+            <input id="dtn" ng-model="vm.casting.dtn" required
               type="text" 
               pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}">
             <label for="dtn">Data de nascimento</label>
@@ -310,7 +322,7 @@
     if ($(this).val() == "F"){
       $(".woman-data").fadeIn(300);
       $(".man-data").fadeOut(300);
-    } else {
+    } else if ($(this).val() == "M"){
       $(".man-data").fadeIn(300);
       $(".woman-data").fadeOut(300);
     }

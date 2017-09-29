@@ -27,15 +27,14 @@ app.all('*', function(req, res, next) {
 
 
 app.use(
-   connection(mysql,{
-     //host: 'localhost',
-     //user: 'root',
-     //password : '',
+   co/*nnection(mysql,{
+     host: 'localhost',
+     user: 'root',
+     password : '',*/
      host: 'mysql857.umbler.com',
      user: 'galharufa',
      password: 'agenciagalharufa',     
-     port : 3306, //port mysql
-     //port: 41890,
+     port : 3306, //port mysql     
      database:'galharufa',
      typeCast: function castField( field, useDefaultTypeCasting ) {        
       if ( ( field.type === "BIT" ) && ( field.length === 1 ) ) {
