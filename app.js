@@ -27,8 +27,8 @@ app.all('*', function(req, res, next) {
 
 
 app.use(
-   co/*nnection(mysql,{
-     host: 'localhost',
+   connection(mysql,{
+     /*host: 'localhost',
      user: 'root',
      password : '',*/
      host: 'mysql857.umbler.com',
