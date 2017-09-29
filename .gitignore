@@ -32,8 +32,8 @@ coverage
 build/Release
 
 # Dependency directories
-#node_modules
-jspm_packages
+# node_modules
+# jspm_packages
 
 # Optional npm cache directory
 .npm
@@ -72,7 +72,7 @@ dist
 nbproject/
 node/
 node_tmp/
-node_modules/
+#node_modules/
 *.pydevproject
 .project
 .metadata
@@ -107,7 +107,7 @@ Desktop.ini
 /test/build/reports/e2e
 /test/build/coverage
 .DS_Store
-node_modules/*
-node_modules/*
+#node_modules/*
+#node_modules/*
 app/bower_components/*
 www/package-json.lock
