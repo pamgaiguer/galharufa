@@ -40,11 +40,11 @@
 </head>
 
 <body ng-app="galharufa">
-    <main-header ng-show="headerId == 1"></main-header>
-    <app-header ng-show="headerId == 2"></app-header>
+    <main-header ng-show="headerId == 1 && !hold"></main-header>
+    <app-header ng-show="headerId == 2 && !hold"></app-header>
     <div ng-view></div>
-    <main-footer ng-show="headerId == 1"></main-footer>
-    <app-footer ng-show="headerId == 2"></app-footer>
+    <main-footer ng-show="headerId == 1 && !hold"></main-footer>
+    <app-footer ng-show="headerId == 2 && !hold"></app-footer>
 </body>
 
 </html>

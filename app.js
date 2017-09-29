@@ -23,11 +23,17 @@ app.all('*', function(req, res, next) {
   next();
 });
 
+
+
+
 app.use(
    connection(mysql,{
-     host: 'localhost',
-     user: 'root',
-     password : '',
+     //host: 'localhost',
+     //user: 'root',
+     //password : '',
+     host: 'mysql857.umbler.com',
+     user: 'galharufa',
+     password: 'agenciagalharufa',     
      port : 3306, //port mysql
      //port: 41890,
      database:'galharufa',

@@ -1,6 +1,6 @@
 angular.module('galharufa.controllers.home', [])
 
-.controller('HomeCtrl', function($scope, $rootScope, $q, $timeout) {
+.controller('HomeCtrl', function($scope, $rootScope, $q, $timeout, $location) {
 
   console.log("HomeCtrl :: Iniciado");
 
@@ -11,10 +11,8 @@ angular.module('galharufa.controllers.home', [])
   }
 
   $scope.init = function () {
-    console.log("startou o login");
-    $rootScope.header_menu = false;
-
-
+    console.log("startou o login");    
+    $rootScope.hold = $location.path() != "/teste";
   }
 
   $scope.login = function(form) {

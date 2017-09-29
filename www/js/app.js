@@ -17,7 +17,8 @@ app.run(function($rootScope, $timeout, UserServices, $location, $route) {
     console.error("$stateChangeError: ", toState, error);
   });
 
-  $rootScope.headerId = 1;
+  $rootScope.headerId = 1;  
+  $rootScope.hold = false;
   UserServices.loadUserLocalStorage();
 
 
@@ -35,12 +36,17 @@ app.run(function($rootScope, $timeout, UserServices, $location, $route) {
 
 app.constant('Configs', {
   appToken:'',
-  apiUrl:'http://localhost:3000/'
+  //apiUrl:'http://localhost:3000/'
+  apiUrl:'http://agenciagalharufa.com.br/'
 });
 
 app.config(['$routeProvider', function($routeProvider) {
   $routeProvider
   .when('/', {
+    templateUrl: '/templates/home.html',
+    controller: 'HomeCtrl'
+  })
+  .when('/teste', {
     templateUrl: '/templates/home.html',
     controller: 'HomeCtrl'
   })

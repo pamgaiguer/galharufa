@@ -1,4 +1,6 @@
-<main ng-init="init()" class="home" id="home">
+<img ng-if="hold" class="img-responsive" style="position: absolute; z-index: 9999; width: 100%;" src="/images/hold.jpg"/>
+
+<main ng-show="!hold" ng-init="init()" class="home" id="home">
   <div class="section">
     <div class="container">
       <div class="row">

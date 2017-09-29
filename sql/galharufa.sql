@@ -54,6 +54,9 @@ CREATE TABLE `usuarios` (
 INSERT INTO `usuarios` (`usu_id`, `usu_nome`, `usu_login`, `usu_senha`, `usu_tipo`) VALUES
 (1, 'tom', 'tom', 'tom', 0);
 
+INSERT INTO `usuarios` (`usu_id`, `usu_nome`, `usu_login`, `usu_senha`, `usu_tipo`) VALUES
+(2, 'ju', 'ju', 'ju', 1);
+
 
 ALTER TABLE `casting`
   ADD PRIMARY KEY (`cas_id`);
@@ -67,4 +70,4 @@ ALTER TABLE `casting`
 
 
 ALTER TABLE `usuarios`
-  MODIFY `usu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `usu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
