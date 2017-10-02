@@ -37,11 +37,9 @@ router.get('/buscar', function(req, res, next) {
   tipo = req.query.t;
   busca = req.query.b;
 
-  req.getConnection(function(err,connection){    
-    
+  req.getConnection(function(err,connection){        
 
-
-    if (tipo == "nome" || tipo == "manequim" || tipo == "etnia")
+    if (tipo == "nome" || tipo == "manequim" || tipo == "etnia" || tipo == "nacionalidade")
       connection.query('SELECT * FROM casting where cas_'+tipo+' like ?',['%' + busca + '%'],function(err,result){
           if(err) return res.status(400).json(err);
           return res.status(200).json(result);

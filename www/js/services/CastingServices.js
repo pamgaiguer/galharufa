@@ -107,6 +107,16 @@ app.service('CastingServices', function ($q, $http, Configs) {
       return d.promise;
     },
 
+    getCastingsPorNacionalidade: function(n){
+      var d = $q.defer();
+      $http.get(Configs.apiUrl+'casting/buscar/?t=nacionalidade&b='+n)
+      .then(function (r) {
+        d.resolve(r.data);
+
+      });
+      return d.promise;
+    },
+
     getCastingsPorAno: function(n){
       var d = $q.defer();
       $http.get(Configs.apiUrl+'casting/buscar/?t=ano&b='+n)

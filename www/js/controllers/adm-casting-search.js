@@ -39,6 +39,11 @@ angular.module('galharufa.controllers.adm-casting-search', [])
     CastingServices.getCastingsPorNome($scope.vm.buscanome).then(function(r){ $scope.vm.casting = r; });
   }
 
+  $scope.buscarPorNacionalidade = function(){
+    console.log($scope.vm.buscanac);
+    CastingServices.getCastingsPorNacionalidade($scope.vm.buscanac).then(function(r){ $scope.vm.casting = r; });
+  }
+
   $scope.buscarPorAno = function(){
     CastingServices.getCastingsPorAno($scope.vm.buscaano).then(function(r){ $scope.vm.casting = r; });
   }
