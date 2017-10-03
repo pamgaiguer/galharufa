@@ -66,6 +66,7 @@ angular.module('galharufa.controllers.adm-casting-register', [])
   $scope.init = function () {
     console.log("startou o adm Casting");
     $rootScope.headerId = 2;
+    $rootScope.hold = false;
     $rootScope.session_title= 'Galharufa Dashboard - Casting Cadastro';
     if (UserServices.currentUser.usu_id == undefined) $location.path('/login');
 

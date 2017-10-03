@@ -17,6 +17,7 @@ angular.module('galharufa.controllers.adm-users', [])
   $scope.init = function () {
     console.log("startou o adm-users");
     $rootScope.headerId = 2;
+    $rootScope.hold = false;
     $rootScope.session_title= 'Galharufa Dashboard - Usuarios';
 
     UserServices.getUsers().then(function(r){ $scope.vm.users = r; });
