@@ -13,7 +13,7 @@ angular.module('galharufa.controllers.adm-home', [])
   $scope.init = function () {
     console.log("startou o admin");
     $rootScope.headerId = 2;
-    $rootScope.session_title= 'Admin - home';
+    $rootScope.session_title= 'Galharufa Dashboard - Admin';
 
     //if (UserServices.currentUser.usu_id == undefined) $location.path('/login');
   }

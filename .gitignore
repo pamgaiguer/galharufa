@@ -1,6 +1,8 @@
 
 # Created by https://www.gitignore.io/api/node,bower,sass
-
+node_modules/
+www/node_modules/
+www/bower_components/
 ### Node ###
 # Logs
 logs

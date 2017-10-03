@@ -10,20 +10,20 @@ angular.module('galharufa.controllers.adm-users', [])
       'usu_login': '',
       'usu_senha': ''
     },
-    'users': [],    
+    'users': [],
     'isLoading':false
   }
 
   $scope.init = function () {
     console.log("startou o adm-users");
     $rootScope.headerId = 2;
-    $rootScope.session_title= '2+2 : Dashboard - Usuarios';
+    $rootScope.session_title= 'Galharufa Dashboard - Usuarios';
 
     UserServices.getUsers().then(function(r){ $scope.vm.users = r; });
   }
 
 
-  $scope.addUser = function(){    
+  $scope.addUser = function(){
     UserServices.addUser($scope.vm.user.usu_nome, $scope.vm.user.usu_login, $scope.vm.user.usu_senha).then(function(r){
       $scope.vm.user.usu_nome = '';
       $scope.vm.user.usu_login = '';

@@ -4,7 +4,7 @@ angular.module('galharufa.controllers.adm-casting-search', [])
 
   console.log("AdminCastingSearchCtrl :: Iniciado");
 
-  $scope.vm = {    
+  $scope.vm = {
     'isLoading':false,
     'casting': []
   }
@@ -12,7 +12,7 @@ angular.module('galharufa.controllers.adm-casting-search', [])
   $scope.init = function () {
     console.log("startou o adm Casting");
     $rootScope.headerId = 2;
-    $rootScope.session_title= 'Admin - Pesquisa Casting';
+    $rootScope.session_title= 'Galharufa Dashboard - Pesquisa Casting';
     //if (UserServices.currentUser.usu_id == undefined) $location.path('/login');
     CastingServices.getCastings().then(function(r){ $scope.vm.casting = r; });
   }
@@ -23,7 +23,7 @@ angular.module('galharufa.controllers.adm-casting-search', [])
     $rootScope.path("/adm-casting-register");
   }
 
-  $scope.excluir = function(c){    
+  $scope.excluir = function(c){
     CastingServices.deleteCasting(c.cas_id).then(function(r){
       CastingServices.getCastings().then(function(r){ $scope.vm.casting = r; });
     });
