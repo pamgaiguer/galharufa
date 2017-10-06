@@ -13,6 +13,8 @@ angular.module('galharufa.controllers.adm-casting-search', [])
     console.log("startou o adm Casting");
     $rootScope.headerId = 2;
     $rootScope.hold = false;
+    $('body').css('background-color', '#eee');
+
     $rootScope.session_title= 'Galharufa Dashboard - Pesquisa Casting';
     //if (UserServices.currentUser.usu_id == undefined) $location.path('/login');
     CastingServices.getCastings().then(function(r){ $scope.vm.casting = r; });

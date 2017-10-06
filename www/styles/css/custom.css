@@ -47,6 +47,47 @@ footer.page-footer {
   color: #fff;
   background-color: #0097A7; }
 
-.login .card-panel {
-  background-color: #212121;
-  color: white; }
+.login {
+  /* label color */
+  /* label focus color */
+  /* label underline focus color */
+  /* valid color */
+  /* invalid color */
+  /* icon prefix focus color */ }
+  .login .card-panel {
+    background-color: #eee;
+    color: #212121; }
+  .login .input-field label {
+    color: #000; }
+  .login .input-field input[type=text]:focus + label,
+  .login .input-field input[type=password]:focus + label,
+  .login .input-field input[type=email]:focus + label,
+  .login .input-field input[type=tel]:focus + label,
+  .login .input-field input[type=number]:focus + label {
+    color: #000; }
+  .login .input-field input[type=text]:focus,
+  .login .input-field input[type=password]:focus,
+  .login .input-field input[type=email]:focus,
+  .login .input-field input[type=tel]:focus,
+  .login .input-field input[type=number]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+  .login .input-field input[type=text].valid,
+  .login .input-field input[type=password].valid,
+  .login .input-field input[type=email].valid,
+  .login .input-field input[type=tel].valid,
+  .login .input-field input[type=number].valid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+  .login .input-field input[type=text].invalid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+  .login .input-field .prefix.active {
+    color: #000; }
+  .login .btn:hover, .login .btn-large:hover {
+    background-color: #FFAB33; }
+  .login .btn:focus, .login .btn-large:focus, .login .btn-floating:focus {
+    background-color: #FFAB33; }
+
+.dash-casting blockquote, .dash-casting-search blockquote {
+  border-left: 5px solid #212121; }

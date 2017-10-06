@@ -12,6 +12,10 @@ angular.module('galharufa.controllers.login', [])
   $scope.init = function () {
     console.log("startou o login");
     $rootScope.headerId = 0;
+
+    $('body').css('background-color', '#212121');
+
+
     if (UserServices.currentUser.usu_id != undefined) $location.path('/adm-home');
 
     $scope.login = function(form) {

@@ -2,126 +2,73 @@
 
   <div class="row">
     <div class="col s12">
-      <h4>Clientes</h4>
+      <h4>Casting</h4>
       <blockquote>
         Área para cadastro e pesquisa de membros do casting Galharufa.
       </blockquote>
+    </div>
+  </div>
 
-      <div class="section">
-        <div class="row">
-          <div class="col s12 m2 l2 xl2">
-            <form ng-submit="buscarPorNome()" id="form-busca-clientes-nome">
-              <div class="file-path-wrapper">
-                <div id="validacaoCpf"></div>
-                <input ng-model="vm.buscanome" id="input-cpfcnpj" name="cpfCnpj" type="search" required/>
-                <button class="btn" type="submit" name="action">
-                  Buscar por Nome
-                  <i class="material-icons right">search</i>
-                </button>
-              </div>
-            </form>
-          </div>
-          <div class="col s12 m2 l2 xl2">
-            <form ng-submit="buscarPorNacionalidade()" id="form-busca-clientes-nacionalidade">
-              <div class="file-path-wrapper">
-                <div id="validacaoCpf"></div>
-                <input ng-model="vm.buscanac" id="input-cpfcnpj" name="nacionalidade" type="search" required/>
-                <button class="btn" type="submit" name="action">
-                  Buscar por Nacionalidade
-                  <i class="material-icons right">search</i>
-                </button>
-              </div>
-            </form>
-          </div>
-          <div class="col s12 m2 l2 xl2">
-            <form ng-submit="buscarPorAno()" id="form-busca-clientes-ano">
-              <div class="file-path-wrapper-nome">
-                <input ng-model="vm.buscaano" id="input-nome" name="input-nome" type="search" required/>
-                <button class="btn" type="submit" name="action">
-                  Buscar por Ano
-                  <i class="material-icons right">search</i>
-                </button>
-              </div>
-            </form>
-          </div>
-          <div class="col s12 m3 l3 xl3">
-            <form ng-submit="buscarPorAltura()" id="form-busca-clientes-altura">
-              <div class="file-path-wrapper-nome">
-                <input ng-model="vm.buscaaltura" id="input-nome" name="input-nome" type="search" required/>
-                <button class="btn" type="submit" name="action">
-                  Buscar por Altura
-                  <i class="material-icons right">search</i>
-                </button>
-              </div>
-            </form>
-          </div>
-          <div class="col s12 m3 l3 xl3">
-            <form ng-submit="buscarPorManequim()" id="form-busca-clientes-nome">
-              <div class="file-path-wrapper-nome">
-                <input ng-model="vm.buscamanequim" id="input-nome" name="input-nome" type="search" required/>
-                <button class="btn" type="submit" name="action">
-                  Buscar por Manequim
-                  <i class="material-icons right">search</i>
-                </button>
-              </div>
-            </form>
-          </div>
-          <div class="col s12 m2 l2 xl2">
-            <form ng-submit="buscarPorEtnia()" id="form-busca-clientes-nome">
-              <div class="file-path-wrapper-nome">
-                <input ng-model="vm.buscaetnia" id="input-nome" name="input-nome" type="search" required/>
-                <button class="btn" type="submit" name="action">
-                  Buscar por Etnia
-                  <i class="material-icons right">search</i>
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-
+  <div class="row">
+    <div class="col s12 m3 l3 xl3">
+      <div class="input-field">
+        <select>
+          <option value="" disabled selected>Escolha sua opção</option>
+          <option value="1">Nome</option>
+          <option value="2">Nacionalidade</option>
+          <option value="3">Ano</option>
+          <option value="3">Altura</option>
+          <option value="3">Manequim</option>
+          <option value="3">Etnia</option>
+        </select>
+        <label>Filtro</label>
       </div>
-      <div class="row">
-        <div class="col s12 m12 l12 xl12">
-          <a class="btn right" data-cpf="a" ng-click="path('/adm-casting-register')">Adicionar casting <i class="material-icons right">person_add</i></a>
-        </div>
-      </div>
-
-      <div class="spacing"></div>
-      <div class="spacing"></div>
-      <div class="spacing"></div>
-      <div>
-
-        <table class="striped responsive-table">
-          <thead>
-            <tr>
-              <th>Nome</th>
-              <th>Ano</th>
-              <th>Altura</th>
-              <th>Manequim</th>
-              <th>Etnia</th>
-              <th>Visualizar</th>
-              <th>Editar</th>
-              <th>Excluir</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr ng-repeat="c in vm.casting">
-              <td>{{c.cas_nome}}</td>
-              <td>{{c.cas_ano}}</td>
-              <td>{{c.cas_altura}}</td>
-              <td>{{c.cas_manequim}}</td>
-              <td>{{c.cas_etnia}}</td>
-              <td><a href="" ng-click="visualizar(c.cas_id)"><i class="material-icons">pageview</i></a></td>
-              <td><a href="" ng-click="alterar(c)"><i class="material-icons">edit</i></a></td>
-              <td><a href="" ng-click="excluir(c.cas_id)"><i class="material-icons">delete</i></a></td>
-            </tr>
-          </tbody>
-        </table>
+    </div>
+    <div class="col s12 m3 l3 xl3">
+      <div class="input-field">
+        <input type="text" class="validate">
       </div>
     </div>
   </div>
 
+  <div class="row">
+    <div class="col s12 m12 l12 xl12">
+      <a class="btn right" data-cpf="a" ng-click="path('/adm-casting-register')">Adicionar casting <i class="material-icons right">person_add</i></a>
+    </div>
+  </div>
+
+
+  <table class="striped responsive-table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Ano</th>
+        <th>Altura</th>
+        <th>Manequim</th>
+        <th>Etnia</th>
+        <th class="center">Visualizar</th>
+        <th class="center">Editar</th>
+        <th class="center">Excluir</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="c in vm.casting">
+        <td >{{c.cas_nome}}</td>
+        <td >{{c.cas_ano}}</td>
+        <td >{{c.cas_altura}}</td>
+        <td >{{c.cas_manequim}}</td>
+        <td >{{c.cas_etnia}}</td>
+        <td class="center"><a href="" ng-click="visualizar(c.cas_id)"><i class="material-icons">assignment</i></a></td>
+        <td class="center"><a href="" ng-click="alterar(c)"><i class="material-icons">edit</i></a></td>
+        <td class="center"><a href="" ng-click="excluir(c.cas_id)"><i class="material-icons">delete</i></a></td>
+      </tr>
+    </tbody>
+  </table>
+
 
 </main>
 
-
+<script>
+  $('select').material_select();
+  Materialize.updateTextFields();
+</script>
