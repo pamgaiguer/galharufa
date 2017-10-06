@@ -1,52 +1,114 @@
-.login{
+.login {
   .card-panel{
     background-color: #eee;
     color: $black-main;
   }
-  /* label color */
-  .input-field label {
-    color: #000;
+  .input-field {
+    label {
+      color: #000;
+    }
+    input[type=text] {
+      &:focus {
+        + {
+          label {
+            color: #000;
+          }
+        }
+        border-bottom: 1px solid #000;
+        box-shadow: 0 1px 0 0 #000;
+      }
+    }
+    input[type=password] {
+      &:focus {
+        + {
+          label {
+            color: #000;
+          }
+        }
+        border-bottom: 1px solid #000;
+        box-shadow: 0 1px 0 0 #000;
+      }
+    }
+    input[type=email] {
+      &:focus {
+        + {
+          label {
+            color: #000;
+          }
+        }
+        border-bottom: 1px solid #000;
+        box-shadow: 0 1px 0 0 #000;
+      }
+    }
+    input[type=tel] {
+      &:focus {
+        + {
+          label {
+            color: #000;
+          }
+        }
+        border-bottom: 1px solid #000;
+        box-shadow: 0 1px 0 0 #000;
+      }
+    }
+    input[type=number] {
+      &:focus {
+        + {
+          label {
+            color: #000;
+          }
+        }
+        border-bottom: 1px solid #000;
+        box-shadow: 0 1px 0 0 #000;
+      }
+    }
+    input[type=text].valid {
+      border-bottom: 1px solid #000;
+      box-shadow: 0 1px 0 0 #000;
+    }
+    input[type=password].valid {
+      border-bottom: 1px solid #000;
+      box-shadow: 0 1px 0 0 #000;
+    }
+    input[type=email].valid {
+      border-bottom: 1px solid #000;
+      box-shadow: 0 1px 0 0 #000;
+    }
+    input[type=tel].valid {
+      border-bottom: 1px solid #000;
+      box-shadow: 0 1px 0 0 #000;
+    }
+    input[type=number].valid {
+      border-bottom: 1px solid #000;
+      box-shadow: 0 1px 0 0 #000;
+    }
+    input[type=text].invalid {
+      border-bottom: 1px solid #000;
+      box-shadow: 0 1px 0 0 #000;
+    }
+    .prefix.active {
+      color: #000;
+    }
   }
-  /* label focus color */
-  .input-field input[type=text]:focus + label,
-  .input-field input[type=password]:focus + label,
-  .input-field input[type=email]:focus + label,
-  .input-field input[type=tel]:focus + label,
-  .input-field input[type=number]:focus + label{
-    color: #000;
+  .btn {
+    &:hover {
+      background-color: $yellow-dark;
+    }
+    &:focus {
+      background-color: $yellow-dark;
+    }
   }
-  /* label underline focus color */
-  .input-field input[type=text]:focus,
-  .input-field input[type=password]:focus,
-  .input-field input[type=email]:focus,
-  .input-field input[type=tel]:focus,
-  .input-field input[type=number]:focus{
-    border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000;
+  .btn-large {
+    &:hover {
+      background-color: $yellow-dark;
+    }
+    &:focus {
+      background-color: $yellow-dark;
+    }
   }
-  /* valid color */
-  .input-field input[type=text].valid,
-  .input-field input[type=password].valid,
-  .input-field input[type=email].valid,
-  .input-field input[type=tel].valid,
-  .input-field input[type=number].valid{
-    border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000;
-  }
-  /* invalid color */
-  .input-field input[type=text].invalid {
-    border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000;
-  }
-  /* icon prefix focus color */
-  .input-field .prefix.active {
-    color: #000;
-  }
-  .btn:hover, .btn-large:hover {
-    background-color: $yellow-dark;
-  }
-
-  .btn:focus, .btn-large:focus, .btn-floating:focus {
-    background-color: $yellow-dark;
+  .btn-floating {
+    &:focus {
+      background-color: $yellow-dark;
+    }
   }
 }

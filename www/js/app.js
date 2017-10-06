@@ -7,6 +7,8 @@ var app = angular.module('galharufa', [
   'galharufa.controllers.adm-casting-register',
   'galharufa.controllers.adm-casting-search',
   'galharufa.controllers.adm-users',
+  'galharufa.controllers.adm-quemsomos',
+  'galharufa.controllers.adm-servicos',
   'galharufa.services.UserServices',
   'galharufa.services.CastingServices']);
 
@@ -17,7 +19,7 @@ app.run(function($rootScope, $timeout, UserServices, $location, $route) {
     console.error("$stateChangeError: ", toState, error);
   });
 
-  $rootScope.headerId = 1;  
+  $rootScope.headerId = 1;
   $rootScope.hold = false;
   UserServices.loadUserLocalStorage();
 
@@ -70,6 +72,14 @@ app.config(['$routeProvider', function($routeProvider) {
   .when('/adm-users/', {
     templateUrl: '/templates/adm-users.html',
     controller: 'AdminUsersCtrl'
+  })
+  .when('/adm-quemsomos/', {
+    templateUrl: '/templates/adm-quemsomos.html',
+    controller: 'AdminQuemsomosCtrl'
+  })
+  .when('/adm-servicos/', {
+    templateUrl: '/templates/adm-servicos.html',
+    controller: 'AdminServicosCtrl'
   })
   .otherwise({
     redirectTo: '/'

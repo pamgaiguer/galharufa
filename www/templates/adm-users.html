@@ -1,8 +1,10 @@
 <main ng-init="init()" class="dash-users">
   <div class="row">
     <div class="col s12 m12 l12 xl12">
-      <h5>Listagem usuários</h5>
-
+      <h5>Usuários</h5>
+      <blockquote>
+        Usuários com acesso ao sistema da agência.
+      </blockquote>
       <table>
         <thead>
           <tr>
@@ -29,8 +31,11 @@
   <div class="spacing"></div>
 
   <form ng-submit="addUser()">
-    <h5>Cadastrar novo usuários</h5>
-
+    <div class="row">
+      <div class="col s12 m12 l12 xl12">
+        <h5>Cadastrar novo usuários</h5>
+      </div>
+    </div>
     <div class="row">
       <div class="col s6 m6 l6 xl6">
         <div class="input-field">
@@ -55,7 +60,7 @@
     </div>
     <div class="row">
       <div class="col s12 m12 l12 xl12">
-        <button type="submit" value="Cadastrar" class="btn btn-submit right">Cadastrar <i class="material-icons right">send</i></button>
+        <button type="submit" value="Cadastrar" class="btn btn-submit black-text bg-yellow-main right">Cadastrar <i class="material-icons right">send</i></button>
         <div class="clearfix"></div>
       </div>
     </div>
