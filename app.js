@@ -28,12 +28,12 @@ app.all('*', function(req, res, next) {
 
 app.use(
    connection(mysql,{
-     /*host: 'localhost',
+     host: 'localhost',
      user: 'root',
-     password : '',*/
-     host: 'mysql857.umbler.com',
+     password : '',
+     /*host: 'mysql857.umbler.com',
      user: 'galharufa',
-     password: 'agenciagalharufa',     
+     password: 'agenciagalharufa',     */
      port : 3306, //port mysql     
      database:'galharufa',
      typeCast: function castField( field, useDefaultTypeCasting ) {        
