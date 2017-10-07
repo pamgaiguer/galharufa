@@ -7,6 +7,9 @@
 .bg-yellow-main {
   background-color: #FFD740; }
 
+.bg-salmon-light {
+  background-color: #F69C80; }
+
 .white {
   color: #FFF; }
 
@@ -46,6 +49,9 @@ footer.page-footer {
   padding-top: 0px;
   color: #fff;
   background-color: #0097A7; }
+
+.home .section {
+  padding: 100px 0; }
 
 .login .card-panel {
   background-color: #eee;

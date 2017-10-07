@@ -4,6 +4,7 @@ $yellow-main:  #FFD740;
 $black-main: #212121;
 
 $salmon-main: #FF9E80;
+$salmon-light: #F69C80;
 
 $navy-main: #0097A7;
 
@@ -15,6 +16,8 @@ $black: #000;
 .bg-white {@include bg-color($white);}
 .bg-black {@include bg-color($black);}
 .bg-yellow-main {@include bg-color($yellow-main);}
+.bg-salmon-light {@include bg-color($salmon-light);}
+
 
 .white {@include color($white);}
 .black {@include color($black);}
