@@ -177,6 +177,12 @@ footer.page-footer {
   .dash-casting .input-field input[type=number]:focus + label, .dash-casting-search .input-field input[type=number]:focus + label, .dash-users .input-field input[type=number]:focus + label, .dash-quemsomos .input-field input[type=number]:focus + label {
     color: #000; }
 
+.dash-casting .input-field textarea:focus, .dash-casting-search .input-field textarea:focus, .dash-users .input-field textarea:focus, .dash-quemsomos .input-field textarea:focus {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000; }
+  .dash-casting .input-field textarea:focus + label, .dash-casting-search .input-field textarea:focus + label, .dash-users .input-field textarea:focus + label, .dash-quemsomos .input-field textarea:focus + label {
+    color: #000; }
+
 .dash-casting .input-field input[type=text].valid, .dash-casting-search .input-field input[type=text].valid, .dash-users .input-field input[type=text].valid, .dash-quemsomos .input-field input[type=text].valid {
   border-bottom: 1px solid #000;
   box-shadow: 0 1px 0 0 #000; }

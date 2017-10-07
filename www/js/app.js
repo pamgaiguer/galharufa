@@ -3,6 +3,9 @@ var app = angular.module('galharufa', [
   'ngFileUpload',
   'galharufa.controllers.home',
   'galharufa.controllers.login',
+  'galharufa.controllers.contato',
+  'galharufa.controllers.servicos',
+  'galharufa.controllers.casting',
   'galharufa.controllers.adm-home',
   'galharufa.controllers.adm-casting-register',
   'galharufa.controllers.adm-casting-search',
@@ -56,6 +59,18 @@ app.config(['$routeProvider', function($routeProvider) {
   .when('/login/', {
     templateUrl: '/templates/login.html',
     controller: 'LoginCtrl'
+  })
+  .when('/contato/', {
+    templateUrl: '/templates/contato.html',
+    controller: 'ContatoCtrl'
+  })
+  .when('/servicos/', {
+    templateUrl: '/templates/servicos.html',
+    controller: 'ServicosCtrl'
+  })
+  .when('/casting/', {
+    templateUrl: '/templates/casting.html',
+    controller: 'CastingCtrl'
   })
   .when('/adm-home/', {
     templateUrl: '/templates/adm-home.html',

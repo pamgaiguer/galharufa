@@ -11,7 +11,7 @@ angular.module('galharufa.controllers.home', [])
   }
 
   $scope.init = function () {
-    console.log("startou o login");    
+    console.log("startou o login");
     $rootScope.hold = $location.path() != "/teste";
   }
 
