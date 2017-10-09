@@ -8,6 +8,8 @@ $salmon-light: #F69C80;
 
 $navy-main: #0097A7;
 
+$purple-main: #78769D;
+
 $gray-light: #FAFAFA;
 
 $white: #FFF;
@@ -19,6 +21,7 @@ $black: #000;
 .bg-salmon-light {@include bg-color($salmon-light);}
 .bg-navy-main {@include bg-color($navy-main);}
 .bg-gray-light {@include bg-color($gray-light);}
+.bg-purple-main {@include bg-color($purple-main);}
 
 
 .white {@include color($white);}

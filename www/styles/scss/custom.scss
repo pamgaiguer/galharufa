@@ -7,7 +7,7 @@ body {
 }
 
 main {
-    .btn {
+  .btn {
     &:hover {
       background-color: #006974;
     }
@@ -127,9 +127,13 @@ main {
     }
   }
 }
+.spacing{
+  padding-bottom: 10px;
+}
 
 @import 'webapp/header';
 @import 'webapp/footer';
-@import 'webapp/home';
 @import 'webapp/login';
 @import 'webapp/admin';
+@import 'webapp/home';
+@import 'webapp/quemsomos';

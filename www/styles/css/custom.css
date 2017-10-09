@@ -16,6 +16,9 @@
 .bg-gray-light {
   background-color: #FAFAFA; }
 
+.bg-purple-main {
+  background-color: #78769D; }
+
 .white {
   color: #FFF; }
 
@@ -107,6 +110,9 @@ main .input-field input[type=text].invalid {
 main .input-field .prefix.active {
   color: #000; }
 
+.spacing {
+  padding-bottom: 10px; }
+
 header nav.nav-extended .nav-wrapper {
   background-image: url("/images/header.png");
   background-position: center top;
@@ -130,11 +136,6 @@ footer.page-footer {
     footer.page-footer a:hover, footer.page-footer a:focus {
       color: white;
       text-decoration: underline; }
-
-.home .section {
-  padding: 250px 0; }
-  .home .section.servicos h4 {
-    font-weight: 300; }
 
 .login .card-panel {
   background-color: #eee;
@@ -298,3 +299,32 @@ footer.page-footer {
 
 .dash-casting .input-field .prefix.active, .dash-casting-search .input-field .prefix.active, .dash-users .input-field .prefix.active, .dash-quemsomos .input-field .prefix.active {
   color: #000; }
+
+.home .section {
+  padding: 250px 0; }
+  .home .section.servicos h4 {
+    font-weight: 300; }
+
+.quemsomos {
+  background-color: #78769D;
+  color: #FFD740; }
+  .quemsomos .row {
+    margin-bottom: 0; }
+  .quemsomos .whoweare {
+    border-left: 5px solid #0097A7;
+    border-right: 5px solid #0097A7;
+    padding: 20px 25px; }
+  .quemsomos .side-text h4, .quemsomos .side-text h6 {
+    font-weight: 300;
+    margin: 0; }
+  .quemsomos .side-text .topics {
+    font-weight: 300;
+    color: white;
+    font-size: 18px;
+    padding-left: 25px; }
+    .quemsomos .side-text .topics li {
+      list-style-type: circle !important; }
+  .quemsomos .main-text {
+    font-weight: 300;
+    font-size: 16px;
+    text-align: justify; }
