@@ -1,29 +1,32 @@
 <footer class="page-footer">
   <div class="container">
     <div class="row">
-      <div class="center col l12 s12">
-        <p class="white-text">CONTATO</p>
-        <p class="white-text">&copy; 2007 - 2017 - Agência Galharufa</p>
+      <div class="col l12 s12">
+        <p class="left white-text">
+          <a href="" ng-click="path('/contato');">CONTATO</a>
+          <a href="" ng-click="path('/contato');" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          <a href="" ng-click="path('/contato');" title="Facebook"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+        </p>
+        <p class="right white-text">&copy; 2007 - 2017 - AGÊNCIA GALHARUFA</p>
+        <div class="clearfix"></div>
       </div>
     </div>
   </div>
 </footer>
 
 <script>
-    $('#galharufa').fullpage();
+    // $('#galharufa').fullpage();
 
-    $(window).scroll(function(){
-      if ($(this).scrollTop() > 100) {
-        $('.scrollToTop').fadeIn();
-      } else {
-        $('.scrollToTop').fadeOut();
-      }
-    });
+    // $(window).scroll(function(){
+    //   if ($(this).scrollTop() > 100) {
+    //     $('.scrollToTop').fadeIn();
+    //   } else {
+    //     $('.scrollToTop').fadeOut();
+    //   }
+    // });
 
-    $('.scrollToTop').click(function(){
-      $('html, body').animate({scrollTop : 0},800);
-      return false;
-    });
-
-  //});
+    // $('.scrollToTop').click(function(){
+    //   $('html, body').animate({scrollTop : 0},800);
+    //   return false;
+    // });
 </script>

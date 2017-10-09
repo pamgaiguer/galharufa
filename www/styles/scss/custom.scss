@@ -2,18 +2,10 @@
 @import 'variables';
 
 body {
-    margin: 10px;
-    display: flex; /*sticky footer property*/
-    min-height: 100vh; /*sticky footer property*/
-    flex-direction: column; /*sticky footer property*/
-    // color: $gray-dark;
     font-size: 14px;
 }
 
 main {
-    flex: 1 0 auto;
-    padding-top: 5px;
-    /*sticky footer property*/
 }
 
 @import 'webapp/header';

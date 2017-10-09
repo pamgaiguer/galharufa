@@ -27,8 +27,7 @@ var paths = {
     ],
     css: [
         './bower_components/materialize/dist/css/materialize.min.css',
-        './bower_components/wow/css/libs/animate.css',
-        './bower_components/fullpage.js/dist/jquery.fullpage.min.css',
+        './bower_components/font-awesome/font-awesome.min.css',
         './styles/**/*min.css'
     ]
 };
