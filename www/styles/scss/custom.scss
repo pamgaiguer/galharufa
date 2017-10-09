@@ -7,6 +7,125 @@ body {
 }
 
 main {
+    .btn {
+    &:hover {
+      background-color: #006974;
+    }
+    &:focus {
+      background-color: #006974;
+    }
+  }
+  .btn-large {
+    &:hover {
+      background-color: #006974;
+    }
+    &:focus {
+      background-color: #006974;
+    }
+  }
+  .btn-floating {
+    &:focus {
+      background-color: #006974;
+    }
+  }
+  .input-field {
+    label {
+      color: #000;
+    }
+    input[type=text] {
+      &:focus {
+        + {
+          label {
+            color: #000;
+          }
+        }
+        border-bottom: 1px solid #000;
+        box-shadow: 0 1px 0 0 #000;
+      }
+    }
+    input[type=password] {
+      &:focus {
+        + {
+          label {
+            color: #000;
+          }
+        }
+        border-bottom: 1px solid #000;
+        box-shadow: 0 1px 0 0 #000;
+      }
+    }
+    input[type=email] {
+      &:focus {
+        + {
+          label {
+            color: #000;
+          }
+        }
+        border-bottom: 1px solid #000;
+        box-shadow: 0 1px 0 0 #000;
+      }
+    }
+    input[type=tel] {
+      &:focus {
+        + {
+          label {
+            color: #000;
+          }
+        }
+        border-bottom: 1px solid #000;
+        box-shadow: 0 1px 0 0 #000;
+      }
+    }
+    input[type=number] {
+      &:focus {
+        + {
+          label {
+            color: #000;
+          }
+        }
+        border-bottom: 1px solid #000;
+        box-shadow: 0 1px 0 0 #000;
+      }
+    }
+    textarea{
+      &:focus{
+        +{
+          label{
+            color: #000;
+          }
+        }
+        border-bottom: 1px solid #000;
+        box-shadow: 0 1px 0 0 #000;
+      }
+    }
+    input[type=text].valid {
+      border-bottom: 1px solid #000;
+      box-shadow: 0 1px 0 0 #000;
+    }
+    input[type=password].valid {
+      border-bottom: 1px solid #000;
+      box-shadow: 0 1px 0 0 #000;
+    }
+    input[type=email].valid {
+      border-bottom: 1px solid #000;
+      box-shadow: 0 1px 0 0 #000;
+    }
+    input[type=tel].valid {
+      border-bottom: 1px solid #000;
+      box-shadow: 0 1px 0 0 #000;
+    }
+    input[type=number].valid {
+      border-bottom: 1px solid #000;
+      box-shadow: 0 1px 0 0 #000;
+    }
+    input[type=text].invalid {
+      border-bottom: 1px solid #000;
+      box-shadow: 0 1px 0 0 #000;
+    }
+    .prefix.active {
+      color: #000;
+    }
+  }
 }
 
 @import 'webapp/header';
