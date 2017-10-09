@@ -10,6 +10,12 @@
 .bg-salmon-light {
   background-color: #F69C80; }
 
+.bg-navy-main {
+  background-color: #0097A7; }
+
+.bg-gray-light {
+  background-color: #FAFAFA; }
+
 .white {
   color: #FFF; }
 
@@ -17,7 +23,8 @@
   color: #000; }
 
 body {
-  font-size: 14px; }
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif; }
 
 header nav.nav-extended .nav-wrapper {
   background-image: url("/images/header.png");
@@ -44,7 +51,9 @@ footer.page-footer {
       text-decoration: underline; }
 
 .home .section {
-  padding: 100px 0; }
+  padding: 250px 0; }
+  .home .section.servicos h4 {
+    font-weight: 300; }
 
 .login .card-panel {
   background-color: #eee;

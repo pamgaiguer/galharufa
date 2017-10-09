@@ -1,5 +1,14 @@
 .home{
   .section{
-    padding: 100px 0;
+    padding: 250px 0;
+    // border: 1px solid #f0f;
+
+    &.servicos{
+      h4{
+        font-weight: 300;
+      }
+      .card-image{
+      }
+    }
   }
 }

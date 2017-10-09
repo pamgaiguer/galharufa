@@ -17,7 +17,6 @@ var paths = {
         './js/libs/angular.min.js',
         './js/libs/angular-route.min.js',
         './js/libs/materialize.min.js',
-        './js/libs/jquery.fullpage.min.js',
         './js/libs/ng-file-upload.min.js',
         './js/libs/',
         './js/app.js',

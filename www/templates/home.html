@@ -1,7 +1,8 @@
 <img ng-if="hold" class="responsive-img" src="/images/hold.jpg"/>
 
 <main ng-show="!hold" ng-init="init()" class="home" id="home">
-  <div class="section">
+
+  <section class="section">
     <div class="container">
       <div class="row">
         <div class="col s12 m4 l4 xl4"></div>
@@ -11,13 +12,137 @@
         <div class="col s12 m4 l4 xl4"></div>
       </div>
     </div>
-  </div>
-  <div class="section bg-salmon-light">quem somos</div>
-  <div class="section">casting</div>
-  <div class="section">services</div>
+  </section>
+
+  <section class="section bg-yellow-main casting">
+    <div class="container">
+      casting
+    </div>
+  </section>
+
+  <section class="section bg-salmon-light servicos">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m12 l12 xl12">
+          <h4 class="center">Serviços</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6 l6 xl6">
+          <div class="card horizontal">
+            <div class="card-image valign-wrapper">
+              <img src="/images/serv-interpretacao.png" class="center-align">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <h4 class="card-title">Curso de interpretação</h4>
+                <p>I am a very simple card. I am good at containing small bits of information.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l6 xl6">
+          <div class="card horizontal">
+            <div class="card-stacked">
+              <div class="card-content">
+                <h4 class="card-title">Curso de Circo</h4>
+                <p>I am a very simple card. I am good at containing small bits of information.</p>
+              </div>
+            </div>
+            <div class="card-image valign-wrapper">
+              <img src="/images/serv-circo.png" class="center-align">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6 l6 xl6">
+          <div class="card horizontal">
+            <div class="card-image valign-wrapper">
+              <img src="/images/serv-fotos.png" class="center-align">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <h4 class="card-title">Material Fotográfico</h4>
+                <p>I am a very simple card. I am good at containing small bits of information.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l6 xl6">
+          <div class="card horizontal">
+            <div class="card-stacked">
+              <div class="card-content">
+                <h4 class="card-title">Eventos</h4>
+                <p>I am a very simple card. I am good at containing small bits of information.</p>
+              </div>
+            </div>
+            <div class="card-image valign-wrapper">
+              <img src="/images/serv-eventos.png" class="center-align">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6 l6 xl6">
+          <div class="card horizontal">
+            <div class="card-image valign-wrapper">
+              <img src="/images/serv-audiovisual.png" class="center-align">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <h4 class="card-title">Audiovisual</h4>
+                <p>I am a very simple card. I am good at containing small bits of information.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l6 xl6">
+          <div class="card horizontal">
+            <div class="card-stacked">
+              <div class="card-content">
+                <h4 class="card-title">Moda</h4>
+                <p>I am a very simple card. I am good at containing small bits of information.</p>
+              </div>
+            </div>
+            <div class="card-image valign-wrapper valign-wrapper">
+              <img src="/images/serv-moda.png" class="center-align">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="section bg-gray-light contato">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m12 l12 xl12">
+          <h4 class="center-align">
+            Bem vindos a Agência Galharufa!
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 <script>
   $(document).ready(function(){
     $('ul.tabs').tabs();
+
+   //  $(".home").onepage_scroll({ AQUITHOMPROCURAISSO
+   //   sectionContainer: "section",
+   //   easing: "ease",
+   //   animationTime: 1000,
+   //   pagination: true,
+   //   updateURL: false,
+   //   loop: false,
+   //   keyboard: true,
+   //   responsiveFallback: false,
+   //   direction: "vertical"
+   // });
   });
 </script>
