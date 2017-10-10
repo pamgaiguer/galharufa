@@ -1,0 +1,29 @@
+.servicos{
+  .tabs{
+    height: auto;
+    white-space: normal;
+  }
+  .tab{
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+  .tab-content{
+  }
+  .indicator{
+    display: none;
+  }
+
+  .collection{
+    .collection-item{
+    }
+    .collection-item.avatar{
+      min-height: 15px;
+    }
+
+    .collection-item.avatar:not(.circle-clipper)>.circle{
+      margin-top: 2px;
+    }
+
+  }
+}

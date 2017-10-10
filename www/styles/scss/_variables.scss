@@ -3,12 +3,17 @@ $yellow-main:  #FFD740;
 
 $black-main: #212121;
 
-$salmon-main: #FF9E80;
 $salmon-light: #F69C80;
+$salmon-main: #FF9E80;
+$salmon-dark: #CC7E66;
 
+$navy-light: #36A9B6;
 $navy-main: #0097A7;
+$navy-dark: #006974;
 
+$purple-light: #B2AFE9;
 $purple-main: #78769D;
+$purple-dark: #51506A;
 
 $gray-light: #FAFAFA;
 
@@ -18,10 +23,22 @@ $black: #000;
 .bg-white {@include bg-color($white);}
 .bg-black {@include bg-color($black);}
 .bg-yellow-main {@include bg-color($yellow-main);}
+.bg-yellow-dark {@include bg-color($yellow-dark);}
+
 .bg-salmon-light {@include bg-color($salmon-light);}
+.bg-salmon-main {@include bg-color($salmon-main);}
+.bg-salmon-dark {@include bg-color($salmon-dark);}
+
+.bg-navy-light {@include bg-color($navy-light);}
 .bg-navy-main {@include bg-color($navy-main);}
-.bg-gray-light {@include bg-color($gray-light);}
+.bg-navy-dark {@include bg-color($navy-dark);}
+
+.bg-purple-light {@include bg-color($purple-light);}
 .bg-purple-main {@include bg-color($purple-main);}
+.bg-purple-dark {@include bg-color($purple-dark);}
+
+.bg-gray-light {@include bg-color($gray-light);}
+
 
 
 .white {@include color($white);}

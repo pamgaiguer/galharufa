@@ -1,3 +1,56 @@
-<main ng-init="init()" class="services">
-  servicos
+<main ng-init="init()" class="servicos">
+  <div class="spacing"></div>
+  <div class="spacing"></div>
+  <div class="spacing"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m4 l4 xl4">
+
+        <ul class="collection tabs">
+          <li class="collection-item avatar tab">
+            <img class="bg-yellow-main circle" src="/images/icon-interpretacao.png">
+            <a href="#curso1">Curso de interpretação</a>
+          </li>
+          <li class="collection-item avatar tab">
+            <img class="bg-salmon-light circle" src="/images/icon-circo.png">
+            <a href="#curso2">Curso de Circo</a>
+          </li>
+          <li class="collection-item avatar tab">
+            <img class="bg-purple-light circle" src="/images/icon-foto.png">
+            <a href="#curso3">Material fotográfico</a>
+          </li>
+          <li class="collection-item avatar tab">
+            <img class="bg-yellow-main circle" src="/images/icon-eventos.png">
+            <a href="#curso4">Eventos</a>
+          </li>
+          <li class="collection-item avatar tab">
+            <img class="bg-salmon-light circle" src="/images/icon-audiovisual.png">
+            <a href="#curso5">Audiovisual</a>
+          </li>
+          <li class="collection-item avatar tab">
+            <img class="bg-purple-light circle" src="/images/icon-moda.png">
+            <a href="#curso6">Moda</a>
+          </li>
+        </ul>
+
+      </div>
+      <div class="col s12 m8 l8 xl8">
+
+        <div id="curso1">Curso de interpretação</div>
+        <div id="curso2">Curso de Circo</div>
+        <div id="curso3">Material fotográfico</div>
+        <div id="curso4">Eventos</div>
+        <div id="curso5">Audiovisual</div>
+        <div id="curso6">Moda</div>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
 </main>
+<script>
+  $(document).ready(function(){
+    $('ul.tabs').tabs();
+  });
+</script>

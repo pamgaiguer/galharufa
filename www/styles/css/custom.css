@@ -7,17 +7,38 @@
 .bg-yellow-main {
   background-color: #FFD740; }
 
+.bg-yellow-dark {
+  background-color: #FFAB33; }
+
 .bg-salmon-light {
   background-color: #F69C80; }
+
+.bg-salmon-main {
+  background-color: #FF9E80; }
+
+.bg-salmon-dark {
+  background-color: #CC7E66; }
+
+.bg-navy-light {
+  background-color: #36A9B6; }
 
 .bg-navy-main {
   background-color: #0097A7; }
 
-.bg-gray-light {
-  background-color: #FAFAFA; }
+.bg-navy-dark {
+  background-color: #006974; }
+
+.bg-purple-light {
+  background-color: #B2AFE9; }
 
 .bg-purple-main {
   background-color: #78769D; }
+
+.bg-purple-dark {
+  background-color: #51506A; }
+
+.bg-gray-light {
+  background-color: #FAFAFA; }
 
 .white {
   color: #FFF; }
@@ -301,7 +322,10 @@ footer.page-footer {
   color: #000; }
 
 .home .section {
-  padding: 250px 0; }
+  padding: 25px 0;
+  height: 800px; }
+  .home .section.main-logo {
+    padding-top: 225px; }
   .home .section.servicos h4 {
     font-weight: 300; }
 
@@ -328,3 +352,21 @@ footer.page-footer {
     font-weight: 300;
     font-size: 16px;
     text-align: justify; }
+
+.servicos .tabs {
+  height: auto;
+  white-space: normal; }
+
+.servicos .tab {
+  display: block;
+  width: 100%;
+  text-align: left; }
+
+.servicos .indicator {
+  display: none; }
+
+.servicos .collection .collection-item.avatar {
+  min-height: 15px; }
+
+.servicos .collection .collection-item.avatar:not(.circle-clipper) > .circle {
+  margin-top: 2px; }
