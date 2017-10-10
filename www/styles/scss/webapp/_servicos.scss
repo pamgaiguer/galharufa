@@ -7,8 +7,19 @@
     display: block;
     width: 100%;
     text-align: left;
-  }
-  .tab-content{
+
+    a{
+      color: $navy-main;
+
+      &:hover, &:focus, &:active{
+        color: $navy-dark;
+        text-decoration: underline;
+      }
+      &.active{
+        font-weight: 700;
+        color: $navy-main;
+      }
+    }
   }
   .indicator{
     display: none;

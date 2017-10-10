@@ -361,6 +361,14 @@ footer.page-footer {
   display: block;
   width: 100%;
   text-align: left; }
+  .servicos .tab a {
+    color: #0097A7; }
+    .servicos .tab a:hover, .servicos .tab a:focus, .servicos .tab a:active {
+      color: #006974;
+      text-decoration: underline; }
+    .servicos .tab a.active {
+      font-weight: 700;
+      color: #0097A7; }
 
 .servicos .indicator {
   display: none; }
