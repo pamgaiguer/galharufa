@@ -53,11 +53,42 @@ CREATE TABLE `usuarios` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 
+CREATE TABLE `servicos` (
+  `svc_id` int(11) NOT NULL,
+  `svc_descricao` varchar(100) DEFAULT NULL,
+  `svc_img` varchar(50) DEFAULT NULL,
+  `svc_titulo` varchar(100) DEFAULT NULL,
+  `svc_conteudo` varchar(10000) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
+
 INSERT INTO `usuarios` (`usu_id`, `usu_nome`, `usu_login`, `usu_senha`, `usu_tipo`) VALUES
 (1, 'tom', 'tom', 'tom', 0);
 
 INSERT INTO `usuarios` (`usu_id`, `usu_nome`, `usu_login`, `usu_senha`, `usu_tipo`) VALUES
 (2, 'ju', 'ju', 'ju', 1);
+
+
+INSERT INTO `servicos` (`svc_id`, `svc_descricao`, `svc_img`, `svc_titulo`, `svc_conteudo`) VALUES
+(1, 'Curso de interpretação', '/images/icon-interpretacao.png', 'Curso de Interpretação para TV e Cinema', '');
+
+INSERT INTO `servicos` (`svc_id`, `svc_descricao`, `svc_img`, `svc_titulo`, `svc_conteudo`) VALUES
+(2, 'Curso de circo', '/images/icon-circo.png', 'Curso de Circo', '');
+
+INSERT INTO `servicos` (`svc_id`, `svc_descricao`, `svc_img`, `svc_titulo`, `svc_conteudo`) VALUES
+(3, 'Material fotográfico', '/images/icon-foto.png', 'Material fotográfico', '');
+
+INSERT INTO `servicos` (`svc_id`, `svc_descricao`, `svc_img`, `svc_titulo`, `svc_conteudo`) VALUES
+(4, 'Eventos', '/images/icon-eventos.png', 'Eventos', '');
+
+INSERT INTO `servicos` (`svc_id`, `svc_descricao`, `svc_img`, `svc_titulo`, `svc_conteudo`) VALUES
+(5, 'Audiovisual', '/images/icon-audiovisual.png', 'Audiovisual', '');
+
+INSERT INTO `servicos` (`svc_id`, `svc_descricao`, `svc_img`, `svc_titulo`, `svc_conteudo`) VALUES
+(6, 'Moda', '/images/icon-moda.png', 'Moda', '');
+
+
 
 
 ALTER TABLE `casting`
@@ -66,6 +97,10 @@ ALTER TABLE `casting`
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`usu_id`);
 
+ALTER TABLE `servicos`
+  ADD PRIMARY KEY (`svc_id`);
+
+
 
 ALTER TABLE `casting`
   MODIFY `cas_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
@@ -73,3 +108,5 @@ ALTER TABLE `casting`
 
 ALTER TABLE `usuarios`
   MODIFY `usu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+

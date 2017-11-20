@@ -10,6 +10,7 @@ var connection  = require('express-myconnection');
 
 var users = require('./routes/usuarios');
 var casting = require('./routes/casting');
+var servicos = require('./routes/servicos');
 /*var trabalhos = require('./routes/trabalhos');
 var blog = require('./routes/blog');
 var email = require('./routes/email');
@@ -28,12 +29,12 @@ app.all('*', function(req, res, next) {
 
 app.use(
    connection(mysql,{
-     /*host: 'localhost',
+     host: 'localhost',
      user: 'root',
-     password : '',*/
-     host: 'mysql857.umbler.com',
+     password : '',
+     /*host: 'mysql857.umbler.com',
      user: 'galharufa',
-     password: 'agenciagalharufa',     
+     password: 'agenciagalharufa',     */
      port : 3306, //port mysql     
      database:'galharufa',
      typeCast: function castField( field, useDefaultTypeCasting ) {        
@@ -60,11 +61,12 @@ app.use(express.static(path.join(__dirname, 'www')));
 
 app.use('/usuarios', users);
 app.use('/casting', casting);
+app.use('/servicos', servicos);
 
 
 app.use(express.static(__dirname + '/www'));
 
-app.use('/bower_components',express.static(path.join(__dirname, 'bower_components')));
+app.use('/bower_components',express.static(path.join(__dirname, 'www/bower_components')));
 app.use('/js',express.static(path.join(__dirname, 'www/js')));
 app.use('/shared',express.static(path.join(__dirname, 'www/shared')));
 app.use('/styles',express.static(path.join(__dirname, 'www/styles')));
