@@ -378,3 +378,15 @@ footer.page-footer {
 
 .servicos .collection .collection-item.avatar:not(.circle-clipper) > .circle {
   margin-top: 2px; }
+
+.casting .card .card-content {
+  padding: 12px; }
+
+.casting .card .card-title {
+  font-size: 20px; }
+
+.casting .grow {
+  transition: all .2s ease-in-out; }
+
+.casting .grow:hover {
+  transform: scale(1.1); }
