@@ -1,12 +1,12 @@
 .home{
   .section{
-    padding: 25px 0;
+    // padding: 25px 0;
     height: 800px;
     // border: 1px solid #f0f;
 
-&.main-logo{
-  padding-top: 225px;
-}
+    &.main-logo{
+      padding-top: 225px;
+    }
 
     &.servicos{
       h4{
@@ -16,4 +16,32 @@
       }
     }
   }
+
+
+  &.casting-home{
+    .card {
+      .card-content {
+        padding: 8px;
+      }
+      .card-title{
+        font-size: 20px;
+      }
+    }
+    .card-content{
+      img{
+        width: 250px;
+        height: 300px;
+        &:hover{
+          cursor: pointer !important;
+        }
+      }
+    }
+    .grow {
+      transition: all .2s ease-in-out;
+    }
+    .grow:hover {
+      transform: scale(1.1);
+    }
+  }
 }
+

@@ -360,12 +360,29 @@ footer.page-footer {
   color: #000; }
 
 .home .section {
-  padding: 25px 0;
   height: 800px; }
   .home .section.main-logo {
     padding-top: 225px; }
   .home .section.servicos h4 {
     font-weight: 300; }
+
+.home.casting-home .card .card-content {
+  padding: 8px; }
+
+.home.casting-home .card .card-title {
+  font-size: 20px; }
+
+.home.casting-home .card-content img {
+  width: 250px;
+  height: 300px; }
+  .home.casting-home .card-content img:hover {
+    cursor: pointer !important; }
+
+.home.casting-home .grow {
+  transition: all .2s ease-in-out; }
+
+.home.casting-home .grow:hover {
+  transform: scale(1.1); }
 
 .quemsomos {
   background-color: #78769D;
@@ -427,8 +444,11 @@ footer.page-footer {
 .casting .card .card-title {
   font-size: 20px; }
 
-.casting .card-content img:hover {
-  cursor: pointer; }
+.casting .card-content img {
+  width: 315px;
+  height: 450px; }
+  .casting .card-content img:hover {
+    cursor: pointer; }
 
 .casting .grow {
   transition: all .2s ease-in-out; }
