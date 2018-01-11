@@ -6,6 +6,7 @@ var app = angular.module('galharufa', [
   'galharufa.controllers.contato',
   'galharufa.controllers.servicos',
   'galharufa.controllers.casting',
+  'galharufa.controllers.casting-details',
   'galharufa.controllers.quemsomos',
   'galharufa.controllers.adm-home',
   'galharufa.controllers.adm-casting-register',
@@ -75,6 +76,10 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
   .when('/casting/', {
     templateUrl: '/templates/casting.html',
     controller: 'CastingCtrl'
+  })
+    .when('/casting-details', {
+    templateUrl: '/templates/casting-details.html',
+    controller: 'CastingDetailsCtrl'
   })
   .when('/quemsomos/', {
     templateUrl: '/templates/quemsomos.html',

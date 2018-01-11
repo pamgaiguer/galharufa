@@ -366,22 +366,22 @@ footer.page-footer {
   .home .section.servicos h4 {
     font-weight: 300; }
 
-.home.casting-home .card .card-content {
-  padding: 8px; }
+.home .casting-home .card .card-content {
+  padding: 10px; }
 
-.home.casting-home .card .card-title {
-  font-size: 20px; }
+.home .casting-home .card .card-title {
+  font-size: 22px; }
 
-.home.casting-home .card-content img {
+.home .casting-home .card-content img {
   width: 250px;
   height: 300px; }
-  .home.casting-home .card-content img:hover {
+  .home .casting-home .card-content img:hover {
     cursor: pointer !important; }
 
-.home.casting-home .grow {
+.home .casting-home .grow {
   transition: all .2s ease-in-out; }
 
-.home.casting-home .grow:hover {
+.home .casting-home .grow:hover {
   transform: scale(1.1); }
 
 .quemsomos {

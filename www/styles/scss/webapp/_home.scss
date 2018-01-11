@@ -18,19 +18,20 @@
   }
 
 
-  &.casting-home{
+  & .casting-home{
     .card {
       .card-content {
-        padding: 8px;
+        padding: 10px;
       }
       .card-title{
-        font-size: 20px;
+        font-size: 22px;
       }
     }
     .card-content{
       img{
         width: 250px;
         height: 300px;
+
         &:hover{
           cursor: pointer !important;
         }
