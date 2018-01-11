@@ -1,10 +1,22 @@
 .casting{
+
+    .main-title{
+        font-weight: 300;
+        font-size: 40px;
+    }
     .card {
         .card-content {
             padding: 12px;
         }
         .card-title{
             font-size: 20px;
+        }
+    }
+    .card-content{
+        img{
+            &:hover{
+                cursor: pointer;
+            }
         }
     }
     .grow {

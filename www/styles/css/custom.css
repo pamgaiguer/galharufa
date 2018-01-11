@@ -1,4 +1,4 @@
-.bg-white {
+.white {
   background-color: #FFF; }
 
 .bg-black {
@@ -6,6 +6,8 @@
 
 .bg-yellow-main {
   background-color: #FFD740; }
+  .bg-yellow-main:hover {
+    background-color: #FFD740; }
 
 .bg-yellow-dark {
   background-color: #FFAB33; }
@@ -45,6 +47,42 @@
 
 .black {
   color: #000; }
+
+.yellow-main {
+  color: #FFD740; }
+
+.yellow-dark {
+  color: #FFAB33; }
+
+.salmon-light {
+  color: #F69C80; }
+
+.salmon-main {
+  color: #FF9E80; }
+
+.salmon-dark {
+  color: #CC7E66; }
+
+.navy-light {
+  color: #36A9B6; }
+
+.navy-main {
+  color: #0097A7; }
+
+.navy-dark {
+  color: #006974; }
+
+.purple-light {
+  color: #B2AFE9; }
+
+.purple-main {
+  color: #78769D; }
+
+.purple-dark {
+  color: #51506A; }
+
+.gray-light {
+  color: #FAFAFA; }
 
 body {
   font-size: 14px;
@@ -379,11 +417,18 @@ footer.page-footer {
 .servicos .collection .collection-item.avatar:not(.circle-clipper) > .circle {
   margin-top: 2px; }
 
+.casting .main-title {
+  font-weight: 300;
+  font-size: 40px; }
+
 .casting .card .card-content {
   padding: 12px; }
 
 .casting .card .card-title {
   font-size: 20px; }
+
+.casting .card-content img:hover {
+  cursor: pointer; }
 
 .casting .grow {
   transition: all .2s ease-in-out; }

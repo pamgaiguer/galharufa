@@ -20,9 +20,15 @@ $gray-light: #FAFAFA;
 $white: #FFF;
 $black: #000;
 
-.bg-white {@include bg-color($white);}
+.white {@include bg-color($white);}
 .bg-black {@include bg-color($black);}
-.bg-yellow-main {@include bg-color($yellow-main);}
+.bg-yellow-main {
+    @include bg-color($yellow-main);
+
+    &:hover{
+        @include bg-color($yellow-main);
+    }
+}
 .bg-yellow-dark {@include bg-color($yellow-dark);}
 
 .bg-salmon-light {@include bg-color($salmon-light);}
@@ -43,3 +49,20 @@ $black: #000;
 
 .white {@include color($white);}
 .black {@include color($black);}
+
+.yellow-main {@include color($yellow-main);}
+.yellow-dark {@include color($yellow-dark);}
+
+.salmon-light {@include color($salmon-light);}
+.salmon-main {@include color($salmon-main);}
+.salmon-dark {@include color($salmon-dark);}
+
+.navy-light {@include color($navy-light);}
+.navy-main {@include color($navy-main);}
+.navy-dark {@include color($navy-dark);}
+
+.purple-light {@include color($purple-light);}
+.purple-main {@include color($purple-main);}
+.purple-dark {@include color($purple-dark);}
+
+.gray-light {@include color($gray-light);}

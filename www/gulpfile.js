@@ -18,7 +18,6 @@ var paths = {
         './js/libs/angular-route.min.js',
         './js/libs/materialize.min.js',
         './js/libs/ng-file-upload.min.js',
-        './bower_components/onepage-scroll/jquery.onepage-scroll.min.js',
         './js/libs/',
         './js/app.js',
         './js/services/*.js',
@@ -28,7 +27,6 @@ var paths = {
     css: [
         './bower_components/materialize/dist/css/materialize.min.css',
         './bower_components/font-awesome/font-awesome.min.css',
-        './bower_components/onepage-scroll/onepage-scroll.css',
         './styles/**/*min.css'
     ]
 };
