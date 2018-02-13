@@ -12,8 +12,7 @@ var inject = require('gulp-inject');
 
 var paths = {
     sass: [
-    'styles/scss/**/*.scss',
-    './bower_components/materialize/sass/materialize.scss',
+    'styles/scss/**/*.scss'
     ],
     javascript: [
     './js/libs/jquery.min.js',
