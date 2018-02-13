@@ -15,7 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "materialize": "^0.100.1",
+    "materialize": "^0.100.2",
     "angular": "^1.6.5",
     "angular-route": "^1.6.5",
     "fullpage.js": "^2.9.4",

@@ -1,33 +1,35 @@
 var gulp = require('gulp'),
-    plumber = require('gulp-plumber'),
-    rename = require('gulp-rename');
+plumber = require('gulp-plumber'),
+rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin'),
-    cache = require('gulp-cache');
+cache = require('gulp-cache');
 var minifycss = require('gulp-minify-css');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 var inject = require('gulp-inject');
 
 var paths = {
-    sass: ['styles/scss/**/*.scss'],
+    sass: [
+    'styles/scss/**/*.scss',
+    './bower_components/materialize/sass/materialize.scss',
+    ],
     javascript: [
-        './js/libs/jquery.min.js',
-        './js/libs/angular.min.js',
-        './js/libs/angular-route.min.js',
-        './js/libs/materialize.min.js',
-        './js/libs/ng-file-upload.min.js',
-        './js/libs/',
-        './js/app.js',
-        './js/services/*.js',
-        './shared/**/*.js',
-        './js/controllers/*.js',
+    './js/libs/jquery.min.js',
+    './js/libs/angular.min.js',
+    './js/libs/angular-route.min.js',
+    './js/libs/materialize.min.js',
+    './js/libs/ng-file-upload.min.js',
+    './js/libs/',
+    './js/app.js',
+    './js/services/*.js',
+    './shared/**/*.js',
+    './js/controllers/*.js',
     ],
     css: [
-        './bower_components/materialize/dist/css/materialize.min.css',
-        './bower_components/font-awesome/font-awesome.min.css',
-        './styles/**/*min.css'
+    // './bower_components/font-awesome/font-awesome.min.css',
+    './styles/**/*min.css'
     ]
 };
 
@@ -45,33 +47,33 @@ gulp.task('server-sync', function() {
 
 gulp.task('images', function() {
     gulp.src('styles/images/**/*')
-        .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-        .pipe(gulp.dest('styles/images/'));
+    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+    .pipe(gulp.dest('styles/images/'));
 });
 
 gulp.task('styles', function() {
     gulp.src(['styles/scss/custom.scss'])
-        .pipe(plumber({
-            errorHandler: function(error) {
-                console.log(error.message);
-                this.emit('end');
-            }
-        }))
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('styles/css/'))
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(minifycss())
-        .pipe(gulp.dest('styles/css/'))
-        .pipe(browserSync.reload({ stream: true }))
+    .pipe(plumber({
+        errorHandler: function(error) {
+            console.log(error.message);
+            this.emit('end');
+        }
+    }))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('styles/css/'))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(minifycss())
+    .pipe(gulp.dest('styles/css/'))
+    .pipe(browserSync.reload({ stream: true }))
 });
 
 
 gulp.task('index', function() {
     return gulp.src('./index.html')
-        .pipe(inject(gulp.src(paths.javascript, { read: false }), { relative: true }))
-        .pipe(gulp.dest('./'))
-        .pipe(inject(gulp.src(paths.css, { read: false }), { relative: true }))
-        .pipe(gulp.dest('./'));
+    .pipe(inject(gulp.src(paths.javascript, { read: false }), { relative: true }))
+    .pipe(gulp.dest('./'))
+    .pipe(inject(gulp.src(paths.css, { read: false }), { relative: true }))
+    .pipe(gulp.dest('./'));
 });
 
 
@@ -85,5 +87,5 @@ gulp.task('default', ['browser-sync', 'index'], function() {
     gulp.watch([
         paths.javascript,
         paths.css
-    ], ['index']);
+        ], ['index']);
 });
