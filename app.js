@@ -35,7 +35,7 @@ app.use(
      host: 'mysql427.umbler.com',
      user: 'admagencia',
      password: 'agenciagalharufa',
-     port : 3306, //port mysql
+     port : 41890, //port mysql
      database:'galharufa',
      typeCast: function castField( field, useDefaultTypeCasting ) {
       if ( ( field.type === "BIT" ) && ( field.length === 1 ) ) {
