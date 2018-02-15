@@ -64,7 +64,7 @@ CREATE TABLE `servicos` (
 
 
 INSERT INTO `usuarios` (`usu_id`, `usu_nome`, `usu_login`, `usu_senha`, `usu_tipo`) VALUES
-(1, 'tom', 'tom', 'tom', 0);
+(1, 'pam', 'pam', 'pam', 0);
 
 INSERT INTO `usuarios` (`usu_id`, `usu_nome`, `usu_login`, `usu_senha`, `usu_tipo`) VALUES
 (2, 'ju', 'ju', 'ju', 1);

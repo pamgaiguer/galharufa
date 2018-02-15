@@ -29,17 +29,17 @@ app.all('*', function(req, res, next) {
 
 app.use(
    connection(mysql,{
-     host: 'localhost',
-     user: 'root',
-     password : '',
-     /*host: 'mysql857.umbler.com',
-     user: 'galharufa',
-     password: 'agenciagalharufa',     */
-     port : 3306, //port mysql     
+     // host: 'localhost',
+     // user: 'root',
+     // password : '',
+     host: 'mysql427.umbler.com',
+     user: 'admagencia',
+     password: 'agenciagalharufa',
+     port : 3306, //port mysql
      database:'galharufa',
-     typeCast: function castField( field, useDefaultTypeCasting ) {        
+     typeCast: function castField( field, useDefaultTypeCasting ) {
       if ( ( field.type === "BIT" ) && ( field.length === 1 ) ) {
-          var bytes = field.buffer();            
+          var bytes = field.buffer();
           return( bytes[0] === 1 );
       }
       return( useDefaultTypeCasting() );
