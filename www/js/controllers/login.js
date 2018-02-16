@@ -16,7 +16,10 @@ angular.module('galharufa.controllers.login', [])
     $('body').css('background-color', '#212121');
 
 
-    if (UserServices.currentUser.usu_id != undefined) $location.path('/adm-home');
+    if (UserServices.currentUser.usu_id != undefined) { 
+      $('body').css('background-color', '#fff');
+      $location.path('/adm-home');
+    }
 
     $scope.login = function(form) {
       console.log('Form Valid!');
@@ -33,6 +36,7 @@ angular.module('galharufa.controllers.login', [])
           return;
         }
         UserServices.saveUserLocalStorage();
+        $('body').css('background-color', '#fff');
         $location.path('/adm-home');
       });
     }

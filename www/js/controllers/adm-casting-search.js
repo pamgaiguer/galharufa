@@ -2,8 +2,6 @@ angular.module('galharufa.controllers.adm-casting-search', [])
 
 .controller('AdminCastingSearchCtrl', function($scope, $rootScope, $q, $timeout, $location, UserServices, CastingServices) {
 
-  console.log("AdminCastingSearchCtrl :: Iniciado");
-
   $scope.vm = {
     'isLoading':false,
     'casting': []
@@ -20,7 +18,6 @@ angular.module('galharufa.controllers.adm-casting-search', [])
     CastingServices.getCastings().then(function(r){ $scope.vm.casting = r; });
   }
 
-
   $scope.alterar = function(c){
     CastingServices.casting = c;
     $rootScope.path("/adm-casting-register");
@@ -34,15 +31,12 @@ angular.module('galharufa.controllers.adm-casting-search', [])
   }
 
   $scope.visualizar = function(c){
-    console.log(c);
+    CastingServices.casting = c;
+    $location.path('/adm-casting-show');
   }
-
 
   $scope.buscar = function(){
     CastingServices.getCastingsPorBusca($scope.vm.tipo, $scope.vm.busca).then(function(r){ $scope.vm.casting = r; });
   }
-
-
-
 
 });

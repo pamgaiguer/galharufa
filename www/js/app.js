@@ -97,6 +97,10 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     templateUrl: '/templates/adm-casting-search.html',
     controller: 'AdminCastingSearchCtrl'
   })
+  .when('/adm-casting-show/', {
+    templateUrl: '/templates/adm-casting-show.html',
+    controller: 'AdminCastingShowCtrl'
+  })
   .when('/adm-users/', {
     templateUrl: '/templates/adm-users.html',
     controller: 'AdminUsersCtrl'
