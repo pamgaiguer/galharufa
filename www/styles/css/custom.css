@@ -7001,6 +7001,16 @@ body {
   font-size: 14px;
   font-family: 'Roboto', sans-serif; }
 
+header, main, footer {
+  padding-left: 300px; }
+
+@media only screen and (max-width: 992px) {
+  header, main, footer {
+    padding-left: 0; } }
+
+nav .session-title {
+  padding-left: 315px; }
+
 main .btn:hover, main .btn-large:hover {
   background-color: #006974; }
 

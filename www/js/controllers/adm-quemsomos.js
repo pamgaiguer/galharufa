@@ -18,7 +18,7 @@ angular.module('galharufa.controllers.adm-quemsomos', [])
     console.log("startou o adm-quemsomos");
     $rootScope.headerId = 2;
     $rootScope.hold = false;
-    $rootScope.session_title= 'Galharufa Dashboard - Quem Somos';
+    $rootScope.session_title= 'Dash - Quem Somos';
   }
 
 });

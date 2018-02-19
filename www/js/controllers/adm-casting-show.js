@@ -12,8 +12,7 @@ angular.module('galharufa.controllers.adm-casting-show', [])
         console.log("startou o adm Casting show");
         $rootScope.headerId = 2;
         $rootScope.hold = false;
-        $('body').css('background-color', '#eee');
-        $rootScope.session_title= 'Galharufa Dashboard - Casting Visualizar';
+        $rootScope.session_title = "Visualizar";
     }
 
 });

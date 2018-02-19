@@ -9,6 +9,21 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+
+header, main, footer {
+  padding-left: 300px;
+}
+
+@media only screen and (max-width:992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+
+nav .session-title{
+  padding-left: 315px;
+}
+
 main {
   .btn {
     &:hover {
@@ -131,7 +146,7 @@ main {
   }
 }
 .spacing{
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 @import 'webapp/header';
