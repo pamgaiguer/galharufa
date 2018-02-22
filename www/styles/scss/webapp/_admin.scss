@@ -1,6 +1,17 @@
-.dash-casting, .dash-casting-search, .dash-users, .dash-quemsomos{
+.dash-home, .dash-casting, .dash-casting-search, .dash-users, .dash-quemsomos, .dash-servicos{
+
+  padding-left: 305px;
+  padding-top: 5px;
+
   blockquote {
     border-left: 5px solid $black-main;
+  }
+  .session-name{
+    .material-icons{
+      position: relative;
+      top: 5px;
+      margin: 0 5px;
+    }
   }
   .btn {
     &:hover {
@@ -121,4 +132,9 @@
       color: #000;
     }
   }
+
+  @media only screen and (max-width:992px) {
+  padding-left: 0;
+}
+
 }
