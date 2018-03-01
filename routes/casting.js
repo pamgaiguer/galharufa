@@ -39,14 +39,14 @@ router.get('/buscar', function(req, res, next) {
 
   req.getConnection(function(err,connection){        
 
-    if (tipo == "nome" || tipo == "manequim" || tipo == "etnia" || tipo == "nacionalidade")
-      connection.query('SELECT * FROM casting where cas_'+tipo+' like ?',['%' + busca + '%'],function(err,result){
+    if (tipo == "nomeart" || tipo == "nome" || tipo == "manequim" || tipo == "etnia" || tipo == "nacionalidade")
+      connection.query('SELECT * FROM casting where lcase(cas_'+tipo+') like ?',['%' + busca.toLowerCase() + '%'],function(err,result){
           if(err) return res.status(400).json(err);
           return res.status(200).json(result);
       });
 
     else
-      connection.query('SELECT * FROM casting where cas_'+tipo+' = ?',[busca],function(err,result){
+      connection.query('SELECT * FROM casting where lcase(cas_'+tipo+') = ?',[busca.toLowerCase()],function(err,result){
           if(err) return res.status(400).json(err);
           return res.status(200).json(result);
       });

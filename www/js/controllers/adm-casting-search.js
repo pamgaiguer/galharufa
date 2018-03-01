@@ -36,7 +36,10 @@ angular.module('galharufa.controllers.adm-casting-search', [])
   }
 
   $scope.buscar = function(){
-    CastingServices.getCastingsPorBusca($scope.vm.tipo, $scope.vm.busca).then(function(r){ $scope.vm.casting = r; });
+    if ($scope.vm.busca.length === 0)
+      CastingServices.getCastings().then(function(r){ $scope.vm.casting = r; });
+    else
+      CastingServices.getCastingsPorBusca($scope.vm.tipo, $scope.vm.busca).then(function(r){ $scope.vm.casting = r; });
   }
 
 });
