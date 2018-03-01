@@ -6,16 +6,25 @@
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
   <title>Agência Galharufa</title>
 
-
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700,900">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
   <!-- inject:css -->
   <link rel="stylesheet" href="styles/css/custom.min.css">
   <!-- endinject -->
+  <link rel="stylesheet" href="styles/css/jquery.fullpage.min.css">
+</head>
+
+<body ng-app="galharufa">
+  <main-header ng-show="headerId == 1 && !hold"></main-header>
+  <app-header ng-show="headerId == 2 && !hold"></app-header>
+  <div ng-view></div>
+  <main-footer ng-show="headerId == 1 && !hold"></main-footer>
+  <app-footer ng-show="headerId == 2 && !hold"></app-footer>
 
   <!-- inject:js -->
   <script src="js/libs/jquery.min.js"></script>
+  <script src="js/libs/jquery.fullpage.min.js"></script>
   <script src="js/libs/angular.min.js"></script>
   <script src="js/libs/angular-route.min.js"></script>
   <script src="js/libs/materialize.min.js"></script>
@@ -41,15 +50,6 @@
   <script src="js/controllers/quemsomos.js"></script>
   <script src="js/controllers/servicos.js"></script>
   <!-- endinject -->
-
-</head>
-
-<body ng-app="galharufa">
-    <main-header ng-show="headerId == 1 && !hold"></main-header>
-    <app-header ng-show="headerId == 2 && !hold"></app-header>
-    <div ng-view></div>
-    <main-footer ng-show="headerId == 1 && !hold"></main-footer>
-    <app-footer ng-show="headerId == 2 && !hold"></app-footer>
 </body>
 
 </html>

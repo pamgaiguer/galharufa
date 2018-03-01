@@ -1,18 +1,23 @@
 angular.module('galharufa.controllers.home', [])
 
-.controller('HomeCtrl', function($scope, $rootScope, $q, $timeout, $location) {
+.controller('HomeCtrl', function($scope, $rootScope, $q, $timeout, $location, CastingServices) {
 
   console.log("HomeCtrl :: Iniciado");
 
   $scope.vm = {
     'login':'',
     'pwd':'',
-    'isLoading':false
+    'isLoading':false,
+    casting: []
   }
 
   $scope.init = function () {
     console.log("startou o login");
     $rootScope.hold = $location.path() != "/teste";
+    CastingServices.getCastings().then(function(r){ 
+      $scope.vm.casting = r;
+      console.log('casting', $scope.vm.casting);
+    });
   }
 
   $scope.login = function(form) {
