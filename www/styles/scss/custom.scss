@@ -2,6 +2,7 @@
 
 @import 'mixins';
 @import 'variables';
+@import 'typography';
 
 
 body {
@@ -131,7 +132,7 @@ main {
   }
 }
 .spacing{
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 @import 'webapp/header';

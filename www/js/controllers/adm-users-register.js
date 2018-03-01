@@ -1,8 +1,8 @@
-angular.module('galharufa.controllers.adm-users', [])
+angular.module('galharufa.controllers.adm-users-register', [])
 
-.controller('AdminUsersCtrl', function($scope, $rootScope, $q, $timeout, UserServices) {
+.controller('AdminUsersRegisterCtrl', function($scope, $rootScope, $q, $timeout, UserServices) {
 
-  console.log("AdminUsersCtrl :: Iniciado");
+  console.log("AdminUsersRegisterCtrl :: Iniciado");
 
   $scope.vm = {
     'user': {

@@ -11,6 +11,7 @@ var app = angular.module('galharufa', [
   'galharufa.controllers.adm-home',
   'galharufa.controllers.adm-casting-register',
   'galharufa.controllers.adm-casting-search',
+  'galharufa.controllers.adm-casting-show',
   'galharufa.controllers.adm-users',
   'galharufa.controllers.adm-quemsomos',
   'galharufa.controllers.adm-servicos',

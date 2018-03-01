@@ -1,25 +1,27 @@
-<nav class="black lighten-1 white-text">
-  <a class="brand-logo center white-text"><!-- <img src="/images/logo.png" class="responsive-img" alt=""> -->{{session_title}}</a>
-  <ul id="slide-out" class="side-nav">
-    <li><a href="" ng-click="path('/adm-home');">Home</a></li>
-    <li><a href="" ng-click="path('/adm-users')">Usuários</a></li>
+<nav class="grey lighten-4">
+  <ul id="slide-out" class="grey lighten-4 side-nav fixed">
+    <li class="brand-logo center"><img class="responsive-img" src="/images/logo-horizontal.png" alt="logotipo"></li>
+    <li><a href=""></a></li>
+
+    <li><a href="" ng-click="path('/adm-home');"><i class="material-icons">dashboard</i> Home</a></li>
+    <li><a href="" ng-click="path('/adm-users')"><i class="material-icons">person</i> Usuários</a></li>
     <li class="no-padding">
       <ul class="collapsible collapsible-accordion">
         <li>
           <a class="collapsible-header">Casting <i class="material-icons">arrow_drop_down</i></a>
           <div class="collapsible-body">
             <ul>
-              <li><a href="" ng-click="path('/adm-casting-register');">Cadastrar</a></li>
-              <li><a href="" ng-click="path('/adm-casting-search');">Pesquisar</a></li>
+              <li><a href="" ng-click="path('/adm-casting-register');"><i class="material-icons">person_add</i> Cadastrar</a></li>
+              <li><a href="" ng-click="path('/adm-casting-search');"><i class="material-icons">search</i> Pesquisar</a></li>
             </ul>
           </div>
         </li>
       </ul>
     </li>
-    <li><a href="" ng-click="path('/adm-quemsomos')">Quem Somos</a></li>
-    <li><a href="" ng-click="path('/adm-servicos')">Serviços</a></li>
+    <li><a href="" ng-click="path('/adm-quemsomos')"><i class="material-icons">question_answer</i> Quem Somos</a></li>
+    <li><a href="" ng-click="path('/adm-servicos')"><i class="material-icons">mode_edit</i> Serviços</a></li>
     <li class="divider"></li>
-    <li><a href="" ng-click="logout()">Logout</a></li>
+    <li><a href="" ng-click="logout()"><i class="material-icons">exit_to_app</i> Logout</a></li>
   </ul>
   <a href="" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
 </nav>

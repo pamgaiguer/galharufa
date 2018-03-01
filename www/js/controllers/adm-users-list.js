@@ -1,8 +1,8 @@
-angular.module('galharufa.controllers.adm-users', [])
+angular.module('galharufa.controllers.adm-users-list', [])
 
-.controller('AdminUsersCtrl', function($scope, $rootScope, $q, $timeout, UserServices) {
+.controller('AdminUsersListCtrl', function($scope, $rootScope, $q, $timeout, UserServices) {
 
-  console.log("AdminUsersCtrl :: Iniciado");
+  console.log("AdminUsersListCtrl :: Iniciado");
 
   $scope.vm = {
     'user': {

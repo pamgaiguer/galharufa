@@ -6997,6 +6997,78 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 .gray-light {
   color: #FAFAFA; }
 
+.font-light {
+  font-weight: 300; }
+
+.font-regular {
+  font-weight: 400; }
+
+.font-medium {
+  font-weight: 500; }
+
+.font-semibold {
+  font-weight: 600; }
+
+.font-bold {
+  font-weight: 700; }
+
+.font-extrabold {
+  font-weight: 800; }
+
+.font-black {
+  font-weight: 900; }
+
+.font-italic {
+  font-style: italic !important; }
+
+.font-8 {
+  font-size: 8px; }
+
+.font-10 {
+  font-size: 10px; }
+
+.font-11 {
+  font-size: 11px; }
+
+.font-12 {
+  font-size: 12px; }
+
+.font-14 {
+  font-size: 14px; }
+
+.font-15 {
+  font-size: 15px; }
+
+.font-16 {
+  font-size: 16px; }
+
+.font-17 {
+  font-size: 17px; }
+
+.font-18 {
+  font-size: 18px; }
+
+.font-20 {
+  font-size: 20px; }
+
+.font-26 {
+  font-size: 26px; }
+
+.font-30 {
+  font-size: 30px; }
+
+.font-36 {
+  font-size: 36px; }
+
+.font-40 {
+  font-size: 40px; }
+
+.font-46 {
+  font-size: 46px; }
+
+.font-50 {
+  font-size: 50px; }
+
 body {
   font-size: 14px;
   font-family: 'Roboto', sans-serif; }
@@ -7188,89 +7260,80 @@ footer.page-footer {
 .login .btn-floating:focus {
   background-color: #FFAB33; }
 
-.dash-casting blockquote, .dash-casting-search blockquote, .dash-users blockquote, .dash-quemsomos blockquote {
-  border-left: 5px solid #212121; }
-
-.dash-casting .btn:hover, .dash-casting .btn-large:hover, .dash-casting-search .btn:hover, .dash-casting-search .btn-large:hover, .dash-users .btn:hover, .dash-users .btn-large:hover, .dash-quemsomos .btn:hover, .dash-quemsomos .btn-large:hover {
-  background-color: #FFAB33; }
-
-.dash-casting .btn:focus, .dash-casting .btn-large:focus, .dash-casting-search .btn:focus, .dash-casting-search .btn-large:focus, .dash-users .btn:focus, .dash-users .btn-large:focus, .dash-quemsomos .btn:focus, .dash-quemsomos .btn-large:focus {
-  background-color: #FFAB33; }
-
-.dash-casting .btn-large:hover, .dash-casting-search .btn-large:hover, .dash-users .btn-large:hover, .dash-quemsomos .btn-large:hover {
-  background-color: #FFAB33; }
-
-.dash-casting .btn-large:focus, .dash-casting-search .btn-large:focus, .dash-users .btn-large:focus, .dash-quemsomos .btn-large:focus {
-  background-color: #FFAB33; }
-
-.dash-casting .btn-floating:focus, .dash-casting-search .btn-floating:focus, .dash-users .btn-floating:focus, .dash-quemsomos .btn-floating:focus {
-  background-color: #FFAB33; }
-
-.dash-casting .input-field label, .dash-casting-search .input-field label, .dash-users .input-field label, .dash-quemsomos .input-field label {
-  color: #000; }
-
-.dash-casting .input-field input[type=text]:focus, .dash-casting-search .input-field input[type=text]:focus, .dash-users .input-field input[type=text]:focus, .dash-quemsomos .input-field input[type=text]:focus {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-  .dash-casting .input-field input[type=text]:focus + label, .dash-casting-search .input-field input[type=text]:focus + label, .dash-users .input-field input[type=text]:focus + label, .dash-quemsomos .input-field input[type=text]:focus + label {
+.dash-home, .dash-casting, .dash-casting-search, .dash-users, .dash-quemsomos, .dash-servicos {
+  padding-left: 305px;
+  padding-top: 5px; }
+  .dash-home blockquote, .dash-casting blockquote, .dash-casting-search blockquote, .dash-users blockquote, .dash-quemsomos blockquote, .dash-servicos blockquote {
+    border-left: 5px solid #212121; }
+  .dash-home .session-name .material-icons, .dash-casting .session-name .material-icons, .dash-casting-search .session-name .material-icons, .dash-users .session-name .material-icons, .dash-quemsomos .session-name .material-icons, .dash-servicos .session-name .material-icons {
+    position: relative;
+    top: 5px;
+    margin: 0 5px; }
+  .dash-home .btn:hover, .dash-home .btn-large:hover, .dash-casting .btn:hover, .dash-casting .btn-large:hover, .dash-casting-search .btn:hover, .dash-casting-search .btn-large:hover, .dash-users .btn:hover, .dash-users .btn-large:hover, .dash-quemsomos .btn:hover, .dash-quemsomos .btn-large:hover, .dash-servicos .btn:hover, .dash-servicos .btn-large:hover {
+    background-color: #FFAB33; }
+  .dash-home .btn:focus, .dash-home .btn-large:focus, .dash-casting .btn:focus, .dash-casting .btn-large:focus, .dash-casting-search .btn:focus, .dash-casting-search .btn-large:focus, .dash-users .btn:focus, .dash-users .btn-large:focus, .dash-quemsomos .btn:focus, .dash-quemsomos .btn-large:focus, .dash-servicos .btn:focus, .dash-servicos .btn-large:focus {
+    background-color: #FFAB33; }
+  .dash-home .btn-large:hover, .dash-casting .btn-large:hover, .dash-casting-search .btn-large:hover, .dash-users .btn-large:hover, .dash-quemsomos .btn-large:hover, .dash-servicos .btn-large:hover {
+    background-color: #FFAB33; }
+  .dash-home .btn-large:focus, .dash-casting .btn-large:focus, .dash-casting-search .btn-large:focus, .dash-users .btn-large:focus, .dash-quemsomos .btn-large:focus, .dash-servicos .btn-large:focus {
+    background-color: #FFAB33; }
+  .dash-home .btn-floating:focus, .dash-casting .btn-floating:focus, .dash-casting-search .btn-floating:focus, .dash-users .btn-floating:focus, .dash-quemsomos .btn-floating:focus, .dash-servicos .btn-floating:focus {
+    background-color: #FFAB33; }
+  .dash-home .input-field label, .dash-casting .input-field label, .dash-casting-search .input-field label, .dash-users .input-field label, .dash-quemsomos .input-field label, .dash-servicos .input-field label {
     color: #000; }
-
-.dash-casting .input-field input[type=password]:focus, .dash-casting-search .input-field input[type=password]:focus, .dash-users .input-field input[type=password]:focus, .dash-quemsomos .input-field input[type=password]:focus {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-  .dash-casting .input-field input[type=password]:focus + label, .dash-casting-search .input-field input[type=password]:focus + label, .dash-users .input-field input[type=password]:focus + label, .dash-quemsomos .input-field input[type=password]:focus + label {
+  .dash-home .input-field input[type=text]:focus, .dash-casting .input-field input[type=text]:focus, .dash-casting-search .input-field input[type=text]:focus, .dash-users .input-field input[type=text]:focus, .dash-quemsomos .input-field input[type=text]:focus, .dash-servicos .input-field input[type=text]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+    .dash-home .input-field input[type=text]:focus + label, .dash-casting .input-field input[type=text]:focus + label, .dash-casting-search .input-field input[type=text]:focus + label, .dash-users .input-field input[type=text]:focus + label, .dash-quemsomos .input-field input[type=text]:focus + label, .dash-servicos .input-field input[type=text]:focus + label {
+      color: #000; }
+  .dash-home .input-field input[type=password]:focus, .dash-casting .input-field input[type=password]:focus, .dash-casting-search .input-field input[type=password]:focus, .dash-users .input-field input[type=password]:focus, .dash-quemsomos .input-field input[type=password]:focus, .dash-servicos .input-field input[type=password]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+    .dash-home .input-field input[type=password]:focus + label, .dash-casting .input-field input[type=password]:focus + label, .dash-casting-search .input-field input[type=password]:focus + label, .dash-users .input-field input[type=password]:focus + label, .dash-quemsomos .input-field input[type=password]:focus + label, .dash-servicos .input-field input[type=password]:focus + label {
+      color: #000; }
+  .dash-home .input-field input[type=email]:focus, .dash-casting .input-field input[type=email]:focus, .dash-casting-search .input-field input[type=email]:focus, .dash-users .input-field input[type=email]:focus, .dash-quemsomos .input-field input[type=email]:focus, .dash-servicos .input-field input[type=email]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+    .dash-home .input-field input[type=email]:focus + label, .dash-casting .input-field input[type=email]:focus + label, .dash-casting-search .input-field input[type=email]:focus + label, .dash-users .input-field input[type=email]:focus + label, .dash-quemsomos .input-field input[type=email]:focus + label, .dash-servicos .input-field input[type=email]:focus + label {
+      color: #000; }
+  .dash-home .input-field input[type=tel]:focus, .dash-casting .input-field input[type=tel]:focus, .dash-casting-search .input-field input[type=tel]:focus, .dash-users .input-field input[type=tel]:focus, .dash-quemsomos .input-field input[type=tel]:focus, .dash-servicos .input-field input[type=tel]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+    .dash-home .input-field input[type=tel]:focus + label, .dash-casting .input-field input[type=tel]:focus + label, .dash-casting-search .input-field input[type=tel]:focus + label, .dash-users .input-field input[type=tel]:focus + label, .dash-quemsomos .input-field input[type=tel]:focus + label, .dash-servicos .input-field input[type=tel]:focus + label {
+      color: #000; }
+  .dash-home .input-field input[type=number]:focus, .dash-casting .input-field input[type=number]:focus, .dash-casting-search .input-field input[type=number]:focus, .dash-users .input-field input[type=number]:focus, .dash-quemsomos .input-field input[type=number]:focus, .dash-servicos .input-field input[type=number]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+    .dash-home .input-field input[type=number]:focus + label, .dash-casting .input-field input[type=number]:focus + label, .dash-casting-search .input-field input[type=number]:focus + label, .dash-users .input-field input[type=number]:focus + label, .dash-quemsomos .input-field input[type=number]:focus + label, .dash-servicos .input-field input[type=number]:focus + label {
+      color: #000; }
+  .dash-home .input-field textarea:focus, .dash-casting .input-field textarea:focus, .dash-casting-search .input-field textarea:focus, .dash-users .input-field textarea:focus, .dash-quemsomos .input-field textarea:focus, .dash-servicos .input-field textarea:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+    .dash-home .input-field textarea:focus + label, .dash-casting .input-field textarea:focus + label, .dash-casting-search .input-field textarea:focus + label, .dash-users .input-field textarea:focus + label, .dash-quemsomos .input-field textarea:focus + label, .dash-servicos .input-field textarea:focus + label {
+      color: #000; }
+  .dash-home .input-field input[type=text].valid, .dash-casting .input-field input[type=text].valid, .dash-casting-search .input-field input[type=text].valid, .dash-users .input-field input[type=text].valid, .dash-quemsomos .input-field input[type=text].valid, .dash-servicos .input-field input[type=text].valid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+  .dash-home .input-field input[type=password].valid, .dash-casting .input-field input[type=password].valid, .dash-casting-search .input-field input[type=password].valid, .dash-users .input-field input[type=password].valid, .dash-quemsomos .input-field input[type=password].valid, .dash-servicos .input-field input[type=password].valid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+  .dash-home .input-field input[type=email].valid, .dash-casting .input-field input[type=email].valid, .dash-casting-search .input-field input[type=email].valid, .dash-users .input-field input[type=email].valid, .dash-quemsomos .input-field input[type=email].valid, .dash-servicos .input-field input[type=email].valid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+  .dash-home .input-field input[type=tel].valid, .dash-casting .input-field input[type=tel].valid, .dash-casting-search .input-field input[type=tel].valid, .dash-users .input-field input[type=tel].valid, .dash-quemsomos .input-field input[type=tel].valid, .dash-servicos .input-field input[type=tel].valid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+  .dash-home .input-field input[type=number].valid, .dash-casting .input-field input[type=number].valid, .dash-casting-search .input-field input[type=number].valid, .dash-users .input-field input[type=number].valid, .dash-quemsomos .input-field input[type=number].valid, .dash-servicos .input-field input[type=number].valid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+  .dash-home .input-field input[type=text].invalid, .dash-casting .input-field input[type=text].invalid, .dash-casting-search .input-field input[type=text].invalid, .dash-users .input-field input[type=text].invalid, .dash-quemsomos .input-field input[type=text].invalid, .dash-servicos .input-field input[type=text].invalid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+  .dash-home .input-field .prefix.active, .dash-casting .input-field .prefix.active, .dash-casting-search .input-field .prefix.active, .dash-users .input-field .prefix.active, .dash-quemsomos .input-field .prefix.active, .dash-servicos .input-field .prefix.active {
     color: #000; }
-
-.dash-casting .input-field input[type=email]:focus, .dash-casting-search .input-field input[type=email]:focus, .dash-users .input-field input[type=email]:focus, .dash-quemsomos .input-field input[type=email]:focus {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-  .dash-casting .input-field input[type=email]:focus + label, .dash-casting-search .input-field input[type=email]:focus + label, .dash-users .input-field input[type=email]:focus + label, .dash-quemsomos .input-field input[type=email]:focus + label {
-    color: #000; }
-
-.dash-casting .input-field input[type=tel]:focus, .dash-casting-search .input-field input[type=tel]:focus, .dash-users .input-field input[type=tel]:focus, .dash-quemsomos .input-field input[type=tel]:focus {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-  .dash-casting .input-field input[type=tel]:focus + label, .dash-casting-search .input-field input[type=tel]:focus + label, .dash-users .input-field input[type=tel]:focus + label, .dash-quemsomos .input-field input[type=tel]:focus + label {
-    color: #000; }
-
-.dash-casting .input-field input[type=number]:focus, .dash-casting-search .input-field input[type=number]:focus, .dash-users .input-field input[type=number]:focus, .dash-quemsomos .input-field input[type=number]:focus {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-  .dash-casting .input-field input[type=number]:focus + label, .dash-casting-search .input-field input[type=number]:focus + label, .dash-users .input-field input[type=number]:focus + label, .dash-quemsomos .input-field input[type=number]:focus + label {
-    color: #000; }
-
-.dash-casting .input-field textarea:focus, .dash-casting-search .input-field textarea:focus, .dash-users .input-field textarea:focus, .dash-quemsomos .input-field textarea:focus {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-  .dash-casting .input-field textarea:focus + label, .dash-casting-search .input-field textarea:focus + label, .dash-users .input-field textarea:focus + label, .dash-quemsomos .input-field textarea:focus + label {
-    color: #000; }
-
-.dash-casting .input-field input[type=text].valid, .dash-casting-search .input-field input[type=text].valid, .dash-users .input-field input[type=text].valid, .dash-quemsomos .input-field input[type=text].valid {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-
-.dash-casting .input-field input[type=password].valid, .dash-casting-search .input-field input[type=password].valid, .dash-users .input-field input[type=password].valid, .dash-quemsomos .input-field input[type=password].valid {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-
-.dash-casting .input-field input[type=email].valid, .dash-casting-search .input-field input[type=email].valid, .dash-users .input-field input[type=email].valid, .dash-quemsomos .input-field input[type=email].valid {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-
-.dash-casting .input-field input[type=tel].valid, .dash-casting-search .input-field input[type=tel].valid, .dash-users .input-field input[type=tel].valid, .dash-quemsomos .input-field input[type=tel].valid {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-
-.dash-casting .input-field input[type=number].valid, .dash-casting-search .input-field input[type=number].valid, .dash-users .input-field input[type=number].valid, .dash-quemsomos .input-field input[type=number].valid {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-
-.dash-casting .input-field input[type=text].invalid, .dash-casting-search .input-field input[type=text].invalid, .dash-users .input-field input[type=text].invalid, .dash-quemsomos .input-field input[type=text].invalid {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-
-.dash-casting .input-field .prefix.active, .dash-casting-search .input-field .prefix.active, .dash-users .input-field .prefix.active, .dash-quemsomos .input-field .prefix.active {
-  color: #000; }
+  @media only screen and (max-width: 992px) {
+    .dash-home, .dash-casting, .dash-casting-search, .dash-users, .dash-quemsomos, .dash-servicos {
+      padding-left: 0; } }
 
 .home .section {
   height: 800px; }

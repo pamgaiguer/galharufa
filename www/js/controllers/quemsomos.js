@@ -14,7 +14,7 @@ angular.module('galharufa.controllers.quemsomos', [])
     console.log("startou o quem somos");
     $rootScope.headerId = 1;
     $rootScope.hold = false;
-    $('body, html').animate({ scrollTop: 350 });
+    // $('body, html').animate({ scrollTop: 350 });
   }
 
 });

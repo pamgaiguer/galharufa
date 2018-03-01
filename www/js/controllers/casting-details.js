@@ -14,7 +14,7 @@ angular.module('galharufa.controllers.casting-details', [])
     console.log("startou o casting details");
     $rootScope.headerId = 1;
     $rootScope.hold = false;
-    $('body, html').animate({ scrollTop: 250 });
+    // $('body, html').animate({ scrollTop: 250 });
   }
 
 });
