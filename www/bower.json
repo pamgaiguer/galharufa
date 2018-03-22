@@ -15,10 +15,10 @@
     "tests"
   ],
   "dependencies": {
-    "materialize": "^0.100.2",
+    "materialize": "^1.0.0-beta",
     "angular": "^1.6.5",
     "angular-route": "^1.6.5",
-    "fullpage.js": "^2.9.4",
-    "wow": "wowjs#^1.1.2"
+    "fullpage.js": "^2.9.6",
+    "wow": "^1.1.2"
   }
 }
