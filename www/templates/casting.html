@@ -13,145 +13,33 @@
       <div class="col s12 m6 l6 xl6">
         <form action="">
           <div class="input-field left-align">
-            <input type="search" class="center-align validate" placeholder="Informe aqui seu critério de busca">
+            <input ng-model="vm.busca" type="search" class="center-align validate" placeholder="Informe aqui seu critério de busca">
           </div>
-          <a class="btn-floating waves-effect waves-light right bg-yellow-main black-text"><i class="material-icons">search</i></a>
+          <a class="btn-floating waves-effect waves-light right bg-yellow-main black-text" ng-click="buscar()"><i class="material-icons">search</i></a>
         </form>
       </div>
       <div class="col s12 m3 l3 xl3"></div>
     </div>
 
     <div class="row">
-      <div class="col s12 m3 l3 xl3">
+      <div class="col s12 m3 l3 xl3" ng-repeat="model in vm.casting">
         <div class="card black grow">
           <div class="card-content white-text">
-            <span class="card-title center-align">[[NOME-ATOR]]</span>
-            <img src="/images/modelo5CAPA.jpg" class="responsive-img activator" alt="">
+            <span class="card-title center-align">{{model.cas_nome}}</span>
+            <img ng-src="{{model.cas_foto34}}" class="responsive-img activator" alt="{{model.cas_nome}}">
           </div>
           <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">[[NOME-ATOR]]<i class="material-icons right">close</i></span>
+            <span class="card-title grey-text text-darken-4">{{model.cas_nome}}<i class="material-icons right">close</i></span>
             <ul>
-              <li>dado 1</li>
-              <li>dado 2</li>
-              <li>dado 3</li>
+              <li>Altura: {{model.cas_altura}}</li>
+              <li>Ano: {{model.cas_ano}}</li>
+              <li>Cabelo: {{model.cas_cabelo}}</li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="col s12 m3 l3 xl3">
-        <div class="card black grow">
-          <div class="card-content white-text">
-            <span class="card-title center-align">[[NOME-ATOR]]</span>
-            <img src="/images/modelo5CAPA.jpg" class="responsive-img activator" alt="">
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">[[NOME-ATOR]]<i class="material-icons right">close</i></span>
-            <ul>
-              <li>dado 1</li>
-              <li>dado 2</li>
-              <li>dado 3</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col s12 m3 l3 xl3">
-        <div class="card black grow">
-          <div class="card-content white-text">
-            <span class="card-title center-align">[[NOME-ATOR]]</span>
-            <img src="/images/modelo5CAPA.jpg" class="responsive-img activator" alt="">
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">[[NOME-ATOR]]<i class="material-icons right">close</i></span>
-            <ul>
-              <li>dado 1</li>
-              <li>dado 2</li>
-              <li>dado 3</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col s12 m3 l3 xl3">
-        <div class="card black grow">
-          <div class="card-content white-text">
-            <span class="card-title center-align">[[NOME-ATOR]]</span>
-            <img src="/images/modelo5CAPA.jpg" class="responsive-img activator" alt="">
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">[[NOME-ATOR]]<i class="material-icons right">close</i></span>
-            <ul>
-              <li>dado 1</li>
-              <li>dado 2</li>
-              <li>dado 3</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      
     </div>
-    <div class="row">
-      <div class="col s12 m3 l3 xl3">
-        <div class="card black grow">
-          <div class="card-content white-text">
-            <span class="card-title center-align">[[NOME-ATOR]]</span>
-            <img src="/images/modelo5CAPA.jpg" class="responsive-img activator" alt="">
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">[[NOME-ATOR]]<i class="material-icons right">close</i></span>
-            <ul>
-              <li>dado 1</li>
-              <li>dado 2</li>
-              <li>dado 3</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col s12 m3 l3 xl3">
-        <div class="card black grow">
-          <div class="card-content white-text">
-            <span class="card-title center-align">[[NOME-ATOR]]</span>
-            <img src="/images/modelo5CAPA.jpg" class="responsive-img activator" alt="">
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">[[NOME-ATOR]]<i class="material-icons right">close</i></span>
-            <ul>
-              <li>dado 1</li>
-              <li>dado 2</li>
-              <li>dado 3</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col s12 m3 l3 xl3">
-        <div class="card black grow">
-          <div class="card-content white-text">
-            <span class="card-title center-align">[[NOME-ATOR]]</span>
-            <img src="/images/modelo5CAPA.jpg" class="responsive-img activator" alt="">
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">[[NOME-ATOR]]<i class="material-icons right">close</i></span>
-            <ul>
-              <li>dado 1</li>
-              <li>dado 2</li>
-              <li>dado 3</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col s12 m3 l3 xl3">
-        <div class="card black grow">
-          <div class="card-content white-text">
-            <span class="card-title center-align">[[NOME-ATOR]]</span>
-            <img src="/images/modelo5CAPA.jpg" class="responsive-img activator" alt="">
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">[[NOME-ATOR]]<i class="material-icons right">close</i></span>
-            <ul>
-              <li>dado 1</li>
-              <li>dado 2</li>
-              <li>dado 3</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+    
   </div>
 </main>
