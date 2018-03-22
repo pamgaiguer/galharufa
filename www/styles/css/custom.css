@@ -347,79 +347,95 @@ footer.page-footer {
 .login .btn-floating:focus {
   background-color: #FFAB33; }
 
-.dash-home, .dash-casting, .dash-casting-search, .dash-users, .dash-quemsomos, .dash-servicos {
+.dash-home, .dash-casting, .dash-casting-search, .dash-casting-show, .dash-users, .dash-quemsomos, .dash-servicos {
   padding-left: 305px;
   padding-top: 5px; }
-  .dash-home blockquote, .dash-casting blockquote, .dash-casting-search blockquote, .dash-users blockquote, .dash-quemsomos blockquote, .dash-servicos blockquote {
+  .dash-home blockquote, .dash-casting blockquote, .dash-casting-search blockquote, .dash-casting-show blockquote, .dash-users blockquote, .dash-quemsomos blockquote, .dash-servicos blockquote {
     border-left: 5px solid #212121; }
-  .dash-home .session-name .material-icons, .dash-casting .session-name .material-icons, .dash-casting-search .session-name .material-icons, .dash-users .session-name .material-icons, .dash-quemsomos .session-name .material-icons, .dash-servicos .session-name .material-icons {
+  .dash-home .session-name .material-icons, .dash-casting .session-name .material-icons, .dash-casting-search .session-name .material-icons, .dash-casting-show .session-name .material-icons, .dash-users .session-name .material-icons, .dash-quemsomos .session-name .material-icons, .dash-servicos .session-name .material-icons {
     position: relative;
     top: 5px;
     margin: 0 5px; }
-  .dash-home .btn:hover, .dash-casting .btn:hover, .dash-casting-search .btn:hover, .dash-users .btn:hover, .dash-quemsomos .btn:hover, .dash-servicos .btn:hover {
-    background-color: #FFAB33; }
-  .dash-home .btn:focus, .dash-casting .btn:focus, .dash-casting-search .btn:focus, .dash-users .btn:focus, .dash-quemsomos .btn:focus, .dash-servicos .btn:focus {
-    background-color: #FFAB33; }
-  .dash-home .btn-large:hover, .dash-casting .btn-large:hover, .dash-casting-search .btn-large:hover, .dash-users .btn-large:hover, .dash-quemsomos .btn-large:hover, .dash-servicos .btn-large:hover {
-    background-color: #FFAB33; }
-  .dash-home .btn-large:focus, .dash-casting .btn-large:focus, .dash-casting-search .btn-large:focus, .dash-users .btn-large:focus, .dash-quemsomos .btn-large:focus, .dash-servicos .btn-large:focus {
-    background-color: #FFAB33; }
-  .dash-home .btn-floating:focus, .dash-casting .btn-floating:focus, .dash-casting-search .btn-floating:focus, .dash-users .btn-floating:focus, .dash-quemsomos .btn-floating:focus, .dash-servicos .btn-floating:focus {
-    background-color: #FFAB33; }
-  .dash-home .input-field label, .dash-casting .input-field label, .dash-casting-search .input-field label, .dash-users .input-field label, .dash-quemsomos .input-field label, .dash-servicos .input-field label {
+  .dash-home .btn, .dash-casting .btn, .dash-casting-search .btn, .dash-casting-show .btn, .dash-users .btn, .dash-quemsomos .btn, .dash-servicos .btn {
+    background-color: #FFD740;
     color: #000; }
-  .dash-home .input-field input[type=text]:focus, .dash-casting .input-field input[type=text]:focus, .dash-casting-search .input-field input[type=text]:focus, .dash-users .input-field input[type=text]:focus, .dash-quemsomos .input-field input[type=text]:focus, .dash-servicos .input-field input[type=text]:focus {
-    border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000; }
-    .dash-home .input-field input[type=text]:focus + label, .dash-casting .input-field input[type=text]:focus + label, .dash-casting-search .input-field input[type=text]:focus + label, .dash-users .input-field input[type=text]:focus + label, .dash-quemsomos .input-field input[type=text]:focus + label, .dash-servicos .input-field input[type=text]:focus + label {
-      color: #000; }
-  .dash-home .input-field input[type=password]:focus, .dash-casting .input-field input[type=password]:focus, .dash-casting-search .input-field input[type=password]:focus, .dash-users .input-field input[type=password]:focus, .dash-quemsomos .input-field input[type=password]:focus, .dash-servicos .input-field input[type=password]:focus {
-    border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000; }
-    .dash-home .input-field input[type=password]:focus + label, .dash-casting .input-field input[type=password]:focus + label, .dash-casting-search .input-field input[type=password]:focus + label, .dash-users .input-field input[type=password]:focus + label, .dash-quemsomos .input-field input[type=password]:focus + label, .dash-servicos .input-field input[type=password]:focus + label {
-      color: #000; }
-  .dash-home .input-field input[type=email]:focus, .dash-casting .input-field input[type=email]:focus, .dash-casting-search .input-field input[type=email]:focus, .dash-users .input-field input[type=email]:focus, .dash-quemsomos .input-field input[type=email]:focus, .dash-servicos .input-field input[type=email]:focus {
-    border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000; }
-    .dash-home .input-field input[type=email]:focus + label, .dash-casting .input-field input[type=email]:focus + label, .dash-casting-search .input-field input[type=email]:focus + label, .dash-users .input-field input[type=email]:focus + label, .dash-quemsomos .input-field input[type=email]:focus + label, .dash-servicos .input-field input[type=email]:focus + label {
-      color: #000; }
-  .dash-home .input-field input[type=tel]:focus, .dash-casting .input-field input[type=tel]:focus, .dash-casting-search .input-field input[type=tel]:focus, .dash-users .input-field input[type=tel]:focus, .dash-quemsomos .input-field input[type=tel]:focus, .dash-servicos .input-field input[type=tel]:focus {
-    border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000; }
-    .dash-home .input-field input[type=tel]:focus + label, .dash-casting .input-field input[type=tel]:focus + label, .dash-casting-search .input-field input[type=tel]:focus + label, .dash-users .input-field input[type=tel]:focus + label, .dash-quemsomos .input-field input[type=tel]:focus + label, .dash-servicos .input-field input[type=tel]:focus + label {
-      color: #000; }
-  .dash-home .input-field input[type=number]:focus, .dash-casting .input-field input[type=number]:focus, .dash-casting-search .input-field input[type=number]:focus, .dash-users .input-field input[type=number]:focus, .dash-quemsomos .input-field input[type=number]:focus, .dash-servicos .input-field input[type=number]:focus {
-    border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000; }
-    .dash-home .input-field input[type=number]:focus + label, .dash-casting .input-field input[type=number]:focus + label, .dash-casting-search .input-field input[type=number]:focus + label, .dash-users .input-field input[type=number]:focus + label, .dash-quemsomos .input-field input[type=number]:focus + label, .dash-servicos .input-field input[type=number]:focus + label {
-      color: #000; }
-  .dash-home .input-field textarea:focus, .dash-casting .input-field textarea:focus, .dash-casting-search .input-field textarea:focus, .dash-users .input-field textarea:focus, .dash-quemsomos .input-field textarea:focus, .dash-servicos .input-field textarea:focus {
-    border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000; }
-    .dash-home .input-field textarea:focus + label, .dash-casting .input-field textarea:focus + label, .dash-casting-search .input-field textarea:focus + label, .dash-users .input-field textarea:focus + label, .dash-quemsomos .input-field textarea:focus + label, .dash-servicos .input-field textarea:focus + label {
-      color: #000; }
-  .dash-home .input-field input[type=text].valid, .dash-casting .input-field input[type=text].valid, .dash-casting-search .input-field input[type=text].valid, .dash-users .input-field input[type=text].valid, .dash-quemsomos .input-field input[type=text].valid, .dash-servicos .input-field input[type=text].valid {
-    border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000; }
-  .dash-home .input-field input[type=password].valid, .dash-casting .input-field input[type=password].valid, .dash-casting-search .input-field input[type=password].valid, .dash-users .input-field input[type=password].valid, .dash-quemsomos .input-field input[type=password].valid, .dash-servicos .input-field input[type=password].valid {
-    border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000; }
-  .dash-home .input-field input[type=email].valid, .dash-casting .input-field input[type=email].valid, .dash-casting-search .input-field input[type=email].valid, .dash-users .input-field input[type=email].valid, .dash-quemsomos .input-field input[type=email].valid, .dash-servicos .input-field input[type=email].valid {
-    border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000; }
-  .dash-home .input-field input[type=tel].valid, .dash-casting .input-field input[type=tel].valid, .dash-casting-search .input-field input[type=tel].valid, .dash-users .input-field input[type=tel].valid, .dash-quemsomos .input-field input[type=tel].valid, .dash-servicos .input-field input[type=tel].valid {
-    border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000; }
-  .dash-home .input-field input[type=number].valid, .dash-casting .input-field input[type=number].valid, .dash-casting-search .input-field input[type=number].valid, .dash-users .input-field input[type=number].valid, .dash-quemsomos .input-field input[type=number].valid, .dash-servicos .input-field input[type=number].valid {
-    border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000; }
-  .dash-home .input-field input[type=text].invalid, .dash-casting .input-field input[type=text].invalid, .dash-casting-search .input-field input[type=text].invalid, .dash-users .input-field input[type=text].invalid, .dash-quemsomos .input-field input[type=text].invalid, .dash-servicos .input-field input[type=text].invalid {
-    border-bottom: 1px solid #000;
-    box-shadow: 0 1px 0 0 #000; }
-  .dash-home .input-field .prefix.active, .dash-casting .input-field .prefix.active, .dash-casting-search .input-field .prefix.active, .dash-users .input-field .prefix.active, .dash-quemsomos .input-field .prefix.active, .dash-servicos .input-field .prefix.active {
+    .dash-home .btn:hover, .dash-casting .btn:hover, .dash-casting-search .btn:hover, .dash-casting-show .btn:hover, .dash-users .btn:hover, .dash-quemsomos .btn:hover, .dash-servicos .btn:hover {
+      background-color: #FFAB33; }
+    .dash-home .btn:focus, .dash-casting .btn:focus, .dash-casting-search .btn:focus, .dash-casting-show .btn:focus, .dash-users .btn:focus, .dash-quemsomos .btn:focus, .dash-servicos .btn:focus {
+      background-color: #FFAB33; }
+  .dash-home .btn-large:hover, .dash-casting .btn-large:hover, .dash-casting-search .btn-large:hover, .dash-casting-show .btn-large:hover, .dash-users .btn-large:hover, .dash-quemsomos .btn-large:hover, .dash-servicos .btn-large:hover {
+    background-color: #FFAB33; }
+  .dash-home .btn-large:focus, .dash-casting .btn-large:focus, .dash-casting-search .btn-large:focus, .dash-casting-show .btn-large:focus, .dash-users .btn-large:focus, .dash-quemsomos .btn-large:focus, .dash-servicos .btn-large:focus {
+    background-color: #FFAB33; }
+  .dash-home .btn-floating:focus, .dash-casting .btn-floating:focus, .dash-casting-search .btn-floating:focus, .dash-casting-show .btn-floating:focus, .dash-users .btn-floating:focus, .dash-quemsomos .btn-floating:focus, .dash-servicos .btn-floating:focus {
+    background-color: #FFAB33; }
+  .dash-home .input-field label, .dash-casting .input-field label, .dash-casting-search .input-field label, .dash-casting-show .input-field label, .dash-users .input-field label, .dash-quemsomos .input-field label, .dash-servicos .input-field label {
     color: #000; }
+  .dash-home .input-field input[type=text]:focus, .dash-casting .input-field input[type=text]:focus, .dash-casting-search .input-field input[type=text]:focus, .dash-casting-show .input-field input[type=text]:focus, .dash-users .input-field input[type=text]:focus, .dash-quemsomos .input-field input[type=text]:focus, .dash-servicos .input-field input[type=text]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+    .dash-home .input-field input[type=text]:focus + label, .dash-casting .input-field input[type=text]:focus + label, .dash-casting-search .input-field input[type=text]:focus + label, .dash-casting-show .input-field input[type=text]:focus + label, .dash-users .input-field input[type=text]:focus + label, .dash-quemsomos .input-field input[type=text]:focus + label, .dash-servicos .input-field input[type=text]:focus + label {
+      color: #000; }
+  .dash-home .input-field input[type=password]:focus, .dash-casting .input-field input[type=password]:focus, .dash-casting-search .input-field input[type=password]:focus, .dash-casting-show .input-field input[type=password]:focus, .dash-users .input-field input[type=password]:focus, .dash-quemsomos .input-field input[type=password]:focus, .dash-servicos .input-field input[type=password]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+    .dash-home .input-field input[type=password]:focus + label, .dash-casting .input-field input[type=password]:focus + label, .dash-casting-search .input-field input[type=password]:focus + label, .dash-casting-show .input-field input[type=password]:focus + label, .dash-users .input-field input[type=password]:focus + label, .dash-quemsomos .input-field input[type=password]:focus + label, .dash-servicos .input-field input[type=password]:focus + label {
+      color: #000; }
+  .dash-home .input-field input[type=email]:focus, .dash-casting .input-field input[type=email]:focus, .dash-casting-search .input-field input[type=email]:focus, .dash-casting-show .input-field input[type=email]:focus, .dash-users .input-field input[type=email]:focus, .dash-quemsomos .input-field input[type=email]:focus, .dash-servicos .input-field input[type=email]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+    .dash-home .input-field input[type=email]:focus + label, .dash-casting .input-field input[type=email]:focus + label, .dash-casting-search .input-field input[type=email]:focus + label, .dash-casting-show .input-field input[type=email]:focus + label, .dash-users .input-field input[type=email]:focus + label, .dash-quemsomos .input-field input[type=email]:focus + label, .dash-servicos .input-field input[type=email]:focus + label {
+      color: #000; }
+  .dash-home .input-field input[type=tel]:focus, .dash-casting .input-field input[type=tel]:focus, .dash-casting-search .input-field input[type=tel]:focus, .dash-casting-show .input-field input[type=tel]:focus, .dash-users .input-field input[type=tel]:focus, .dash-quemsomos .input-field input[type=tel]:focus, .dash-servicos .input-field input[type=tel]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+    .dash-home .input-field input[type=tel]:focus + label, .dash-casting .input-field input[type=tel]:focus + label, .dash-casting-search .input-field input[type=tel]:focus + label, .dash-casting-show .input-field input[type=tel]:focus + label, .dash-users .input-field input[type=tel]:focus + label, .dash-quemsomos .input-field input[type=tel]:focus + label, .dash-servicos .input-field input[type=tel]:focus + label {
+      color: #000; }
+  .dash-home .input-field input[type=number]:focus, .dash-casting .input-field input[type=number]:focus, .dash-casting-search .input-field input[type=number]:focus, .dash-casting-show .input-field input[type=number]:focus, .dash-users .input-field input[type=number]:focus, .dash-quemsomos .input-field input[type=number]:focus, .dash-servicos .input-field input[type=number]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+    .dash-home .input-field input[type=number]:focus + label, .dash-casting .input-field input[type=number]:focus + label, .dash-casting-search .input-field input[type=number]:focus + label, .dash-casting-show .input-field input[type=number]:focus + label, .dash-users .input-field input[type=number]:focus + label, .dash-quemsomos .input-field input[type=number]:focus + label, .dash-servicos .input-field input[type=number]:focus + label {
+      color: #000; }
+  .dash-home .input-field textarea:focus, .dash-casting .input-field textarea:focus, .dash-casting-search .input-field textarea:focus, .dash-casting-show .input-field textarea:focus, .dash-users .input-field textarea:focus, .dash-quemsomos .input-field textarea:focus, .dash-servicos .input-field textarea:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+    .dash-home .input-field textarea:focus + label, .dash-casting .input-field textarea:focus + label, .dash-casting-search .input-field textarea:focus + label, .dash-casting-show .input-field textarea:focus + label, .dash-users .input-field textarea:focus + label, .dash-quemsomos .input-field textarea:focus + label, .dash-servicos .input-field textarea:focus + label {
+      color: #000; }
+  .dash-home .input-field input[type=text].valid, .dash-casting .input-field input[type=text].valid, .dash-casting-search .input-field input[type=text].valid, .dash-casting-show .input-field input[type=text].valid, .dash-users .input-field input[type=text].valid, .dash-quemsomos .input-field input[type=text].valid, .dash-servicos .input-field input[type=text].valid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+  .dash-home .input-field input[type=password].valid, .dash-casting .input-field input[type=password].valid, .dash-casting-search .input-field input[type=password].valid, .dash-casting-show .input-field input[type=password].valid, .dash-users .input-field input[type=password].valid, .dash-quemsomos .input-field input[type=password].valid, .dash-servicos .input-field input[type=password].valid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+  .dash-home .input-field input[type=email].valid, .dash-casting .input-field input[type=email].valid, .dash-casting-search .input-field input[type=email].valid, .dash-casting-show .input-field input[type=email].valid, .dash-users .input-field input[type=email].valid, .dash-quemsomos .input-field input[type=email].valid, .dash-servicos .input-field input[type=email].valid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+  .dash-home .input-field input[type=tel].valid, .dash-casting .input-field input[type=tel].valid, .dash-casting-search .input-field input[type=tel].valid, .dash-casting-show .input-field input[type=tel].valid, .dash-users .input-field input[type=tel].valid, .dash-quemsomos .input-field input[type=tel].valid, .dash-servicos .input-field input[type=tel].valid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+  .dash-home .input-field input[type=number].valid, .dash-casting .input-field input[type=number].valid, .dash-casting-search .input-field input[type=number].valid, .dash-casting-show .input-field input[type=number].valid, .dash-users .input-field input[type=number].valid, .dash-quemsomos .input-field input[type=number].valid, .dash-servicos .input-field input[type=number].valid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+  .dash-home .input-field input[type=text].invalid, .dash-casting .input-field input[type=text].invalid, .dash-casting-search .input-field input[type=text].invalid, .dash-casting-show .input-field input[type=text].invalid, .dash-users .input-field input[type=text].invalid, .dash-quemsomos .input-field input[type=text].invalid, .dash-servicos .input-field input[type=text].invalid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000; }
+  .dash-home .input-field .prefix.active, .dash-casting .input-field .prefix.active, .dash-casting-search .input-field .prefix.active, .dash-casting-show .input-field .prefix.active, .dash-users .input-field .prefix.active, .dash-quemsomos .input-field .prefix.active, .dash-servicos .input-field .prefix.active {
+    color: #000; }
+  .dash-home .tabs .indicator, .dash-casting .tabs .indicator, .dash-casting-search .tabs .indicator, .dash-casting-show .tabs .indicator, .dash-users .tabs .indicator, .dash-quemsomos .tabs .indicator, .dash-servicos .tabs .indicator {
+    background-color: #d0d0d0; }
+  .dash-home .tabs .tab a, .dash-casting .tabs .tab a, .dash-casting-search .tabs .tab a, .dash-casting-show .tabs .tab a, .dash-users .tabs .tab a, .dash-quemsomos .tabs .tab a, .dash-servicos .tabs .tab a {
+    color: black;
+    font-weight: 700; }
+  .dash-home .profile-img img, .dash-casting .profile-img img, .dash-casting-search .profile-img img, .dash-casting-show .profile-img img, .dash-users .profile-img img, .dash-quemsomos .profile-img img, .dash-servicos .profile-img img {
+    text-align: center; }
+  .dash-home .dropdown-content li > a, .dash-home .dropdown-content li > span, .dash-casting .dropdown-content li > a, .dash-casting .dropdown-content li > span, .dash-casting-search .dropdown-content li > a, .dash-casting-search .dropdown-content li > span, .dash-casting-show .dropdown-content li > a, .dash-casting-show .dropdown-content li > span, .dash-users .dropdown-content li > a, .dash-users .dropdown-content li > span, .dash-quemsomos .dropdown-content li > a, .dash-quemsomos .dropdown-content li > span, .dash-servicos .dropdown-content li > a, .dash-servicos .dropdown-content li > span {
+    color: #455a64; }
+  .dash-home .btn-table a, .dash-casting .btn-table a, .dash-casting-search .btn-table a, .dash-casting-show .btn-table a, .dash-users .btn-table a, .dash-quemsomos .btn-table a, .dash-servicos .btn-table a {
+    color: #FFAB33; }
+    .dash-home .btn-table a:hover, .dash-home .btn-table a:focus, .dash-home .btn-table a:active, .dash-casting .btn-table a:hover, .dash-casting .btn-table a:focus, .dash-casting .btn-table a:active, .dash-casting-search .btn-table a:hover, .dash-casting-search .btn-table a:focus, .dash-casting-search .btn-table a:active, .dash-casting-show .btn-table a:hover, .dash-casting-show .btn-table a:focus, .dash-casting-show .btn-table a:active, .dash-users .btn-table a:hover, .dash-users .btn-table a:focus, .dash-users .btn-table a:active, .dash-quemsomos .btn-table a:hover, .dash-quemsomos .btn-table a:focus, .dash-quemsomos .btn-table a:active, .dash-servicos .btn-table a:hover, .dash-servicos .btn-table a:focus, .dash-servicos .btn-table a:active {
+      color: #FFD740; }
   @media only screen and (max-width: 992px) {
-    .dash-home, .dash-casting, .dash-casting-search, .dash-users, .dash-quemsomos, .dash-servicos {
+    .dash-home, .dash-casting, .dash-casting-search, .dash-casting-show, .dash-users, .dash-quemsomos, .dash-servicos {
       padding-left: 0; } }
 
 .home .section {
@@ -518,3 +534,20 @@ footer.page-footer {
 
 .casting .grow:hover {
   transform: scale(1.1); }
+
+.contato .btn {
+  background-color: #FFD740;
+  color: #000; }
+  .contato .btn:hover {
+    background-color: #FFAB33; }
+  .contato .btn:focus {
+    background-color: #FFAB33; }
+
+.contato .btn-large:hover {
+  background-color: #FFAB33; }
+
+.contato .btn-large:focus {
+  background-color: #FFAB33; }
+
+.contato .btn-floating:focus {
+  background-color: #FFAB33; }

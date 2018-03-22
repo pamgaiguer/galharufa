@@ -1,0 +1,26 @@
+.contato{
+  .btn {
+      background-color: $yellow-main;
+      color: $black;
+
+    &:hover {
+      background-color: $yellow-dark;
+    }
+    &:focus {
+      background-color: $yellow-dark;
+    }
+  }
+  .btn-large {
+    &:hover {
+      background-color: $yellow-dark;
+    }
+    &:focus {
+      background-color: $yellow-dark;
+    }
+  }
+  .btn-floating {
+    &:focus {
+      background-color: $yellow-dark;
+    }
+  }
+}

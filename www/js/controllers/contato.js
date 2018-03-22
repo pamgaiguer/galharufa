@@ -17,4 +17,8 @@ angular.module('galharufa.controllers.contato', [])
     // $('body, html').animate({ scrollTop: 350 });
   }
 
+  $scope.enviar = function () {
+    console.log("teste contato");
+  }
+
 });

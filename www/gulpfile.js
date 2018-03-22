@@ -27,7 +27,7 @@ var paths = {
     './js/controllers/*.js',
     ],
     css: [
-    './bower_components/materialize/dist/css/materialize.min.css',
+    './styles/scss/libs/materialize/dist/css/materialize.min.css',
     './styles/**/*min.css'
     ]
 };

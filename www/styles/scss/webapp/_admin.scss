@@ -1,140 +1,173 @@
-.dash-home, .dash-casting, .dash-casting-search, .dash-users, .dash-quemsomos, .dash-servicos{
+.dash-home, .dash-casting, .dash-casting-search, .dash-casting-show, .dash-users, .dash-quemsomos, .dash-servicos{
 
-  padding-left: 305px;
-  padding-top: 5px;
+    padding-left: 305px;
+    padding-top: 5px;
 
-  blockquote {
-    border-left: 5px solid $black-main;
-  }
-  .session-name{
-    .material-icons{
-      position: relative;
-      top: 5px;
-      margin: 0 5px;
+    blockquote {
+        border-left: 5px solid $black-main;
     }
-  }
-  .btn {
-    &:hover {
-      background-color: $yellow-dark;
-    }
-    &:focus {
-      background-color: $yellow-dark;
-    }
-  }
-  .btn-large {
-    &:hover {
-      background-color: $yellow-dark;
-    }
-    &:focus {
-      background-color: $yellow-dark;
-    }
-  }
-  .btn-floating {
-    &:focus {
-      background-color: $yellow-dark;
-    }
-  }
-  .input-field {
-    label {
-      color: #000;
-    }
-    input[type=text] {
-      &:focus {
-        + {
-          label {
-            color: #000;
-          }
+    .session-name{
+        .material-icons{
+            position: relative;
+            top: 5px;
+            margin: 0 5px;
         }
-        border-bottom: 1px solid #000;
-        box-shadow: 0 1px 0 0 #000;
-      }
     }
-    input[type=password] {
-      &:focus {
-        + {
-          label {
-            color: #000;
-          }
+    .btn {
+        background-color: $yellow-main;
+        color: $black;
+        &:hover {
+            background-color: $yellow-dark;
         }
-        border-bottom: 1px solid #000;
-        box-shadow: 0 1px 0 0 #000;
-      }
-    }
-    input[type=email] {
-      &:focus {
-        + {
-          label {
-            color: #000;
-          }
+        &:focus {
+            background-color: $yellow-dark;
         }
-        border-bottom: 1px solid #000;
-        box-shadow: 0 1px 0 0 #000;
-      }
     }
-    input[type=tel] {
-      &:focus {
-        + {
-          label {
-            color: #000;
-          }
+    .btn-large {
+        &:hover {
+            background-color: $yellow-dark;
         }
-        border-bottom: 1px solid #000;
-        box-shadow: 0 1px 0 0 #000;
-      }
-    }
-    input[type=number] {
-      &:focus {
-        + {
-          label {
-            color: #000;
-          }
+        &:focus {
+            background-color: $yellow-dark;
         }
-        border-bottom: 1px solid #000;
-        box-shadow: 0 1px 0 0 #000;
-      }
     }
-    textarea{
-      &:focus{
-        +{
-          label{
-            color: #000;
-          }
+    .btn-floating {
+        &:focus {
+            background-color: $yellow-dark;
         }
-        border-bottom: 1px solid #000;
-        box-shadow: 0 1px 0 0 #000;
-      }
     }
-    input[type=text].valid {
-      border-bottom: 1px solid #000;
-      box-shadow: 0 1px 0 0 #000;
+    .input-field {
+        label {
+            color: #000;
+        }
+        input[type=text] {
+            &:focus {
+                + {
+                    label {
+                        color: #000;
+                    }
+                }
+                border-bottom: 1px solid #000;
+                box-shadow: 0 1px 0 0 #000;
+            }
+        }
+        input[type=password] {
+            &:focus {
+                + {
+                    label {
+                        color: #000;
+                    }
+                }
+                border-bottom: 1px solid #000;
+                box-shadow: 0 1px 0 0 #000;
+            }
+        }
+        input[type=email] {
+            &:focus {
+                + {
+                    label {
+                        color: #000;
+                    }
+                }
+                border-bottom: 1px solid #000;
+                box-shadow: 0 1px 0 0 #000;
+            }
+        }
+        input[type=tel] {
+            &:focus {
+                + {
+                    label {
+                        color: #000;
+                    }
+                }
+                border-bottom: 1px solid #000;
+                box-shadow: 0 1px 0 0 #000;
+            }
+        }
+        input[type=number] {
+            &:focus {
+                + {
+                    label {
+                        color: #000;
+                    }
+                }
+                border-bottom: 1px solid #000;
+                box-shadow: 0 1px 0 0 #000;
+            }
+        }
+        textarea{
+            &:focus{
+                +{
+                    label{
+                        color: #000;
+                    }
+                }
+                border-bottom: 1px solid #000;
+                box-shadow: 0 1px 0 0 #000;
+            }
+        }
+        input[type=text].valid {
+            border-bottom: 1px solid #000;
+            box-shadow: 0 1px 0 0 #000;
+        }
+        input[type=password].valid {
+            border-bottom: 1px solid #000;
+            box-shadow: 0 1px 0 0 #000;
+        }
+        input[type=email].valid {
+            border-bottom: 1px solid #000;
+            box-shadow: 0 1px 0 0 #000;
+        }
+        input[type=tel].valid {
+            border-bottom: 1px solid #000;
+            box-shadow: 0 1px 0 0 #000;
+        }
+        input[type=number].valid {
+            border-bottom: 1px solid #000;
+            box-shadow: 0 1px 0 0 #000;
+        }
+        input[type=text].invalid {
+            border-bottom: 1px solid #000;
+            box-shadow: 0 1px 0 0 #000;
+        }
+        .prefix.active {
+            color: #000;
+        }
     }
-    input[type=password].valid {
-      border-bottom: 1px solid #000;
-      box-shadow: 0 1px 0 0 #000;
+    .tabs {
+        .indicator{
+            background-color: #d0d0d0;
+        }
+        .tab{
+            a{
+                color: black;
+                font-weight: 700;
+            }
+        }
     }
-    input[type=email].valid {
-      border-bottom: 1px solid #000;
-      box-shadow: 0 1px 0 0 #000;
+    .profile-img{
+        img{
+            text-align: center;
+        }
+        figure{
+        }
+        figcaption{
+        }
     }
-    input[type=tel].valid {
-      border-bottom: 1px solid #000;
-      box-shadow: 0 1px 0 0 #000;
+    .dropdown-content li>a, .dropdown-content li>span {
+        color: #455a64;
     }
-    input[type=number].valid {
-      border-bottom: 1px solid #000;
-      box-shadow: 0 1px 0 0 #000;
+    .btn-table{
+        a{
+            color: $yellow-dark;
+            &:hover, &:focus, &:active{
+                color: $yellow-main;
+            }
+        }
     }
-    input[type=text].invalid {
-      border-bottom: 1px solid #000;
-      box-shadow: 0 1px 0 0 #000;
-    }
-    .prefix.active {
-      color: #000;
-    }
-  }
 
-  @media only screen and (max-width:992px) {
-  padding-left: 0;
-}
 
+    @media only screen and (max-width:992px) {
+        padding-left: 0;
+    }
 }

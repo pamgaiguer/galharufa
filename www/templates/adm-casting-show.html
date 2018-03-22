@@ -1,27 +1,273 @@
-<main ng-init="init()" class="dash-casting-search">
+<main ng-init="init()" class="dash-casting-show">
 
-  <nav class="grey darken-3 white-text">
-    <div class="nav-wrapper">
-      <div class="col s5 m5 l5 xl5">
-          <a href="#" class="breadcrumb">Casting</a>
-          <a href="#" class="breadcrumb">{{session_title}}</a>
+  <div class="row">
+    <div class="col s12">
+      <h5 class="session-name">Casting <i class="material-icons">keyboard_arrow_right</i> Visualizar {{nome_casting}}</h5>
+      <blockquote>
+      Dados sobre o {{nome_casting}} </span>
+    </blockquote>
+  </div>
+</div>
+
+<ul class="tabs">
+
+  <li class="tab col s3"><a class="active" href="#dados">Dados Gerais</a></li>
+  <li class="tab col s3"><a class="" href="#documents">Documentos</a></li>
+  <li class="tab col s3"><a class="" href="#photos">Fotos</a></li>
+  <li class="tab col s3"><a class="" href="#contact">Contato</a></li>
+  <li class="tab col s3"><a class="" href="#assets">Bens materiais</a></li>
+  <li class="tab col s3"><a class="" href="#extraData">Dados extras</a></li>
+
+</ul>
+
+<div class="spacing"></div>
+<div class="spacing"></div>
+<div class="row">
+  <div class="col s12">
+    <div id="dados">
+
+      <div class="row">
+        <div class="col s4">
+          <div class="input-field">
+            <input placeholder="tipo-casting" type="text" disabled>
+            <label>Tipo de casting</label>
+          </div>
         </div>
+      </div>
+
+      <div class="row">
+        <div class="col s3">
+          <div class="input-field">
+            <input placeholder="nome-completo" type="text" disabled>
+            <label>Nome Completo</label>
+          </div>
+        </div>
+        <div class="col s3">
+          <div class="input-field">
+            <input placeholder="nome-artistico" type="text" disabled>
+            <label>Nome artístico</label>
+          </div>
+        </div>
+        <div class="col s2">
+          <div class="input-field">
+            <input placeholder="Genero" type="text" disabled>
+            <label>Genero</label>
+          </div>
+        </div>
+        <div class="col s2">
+          <div class="input-field">
+            <input placeholder="nacionalidade" type="text" disabled>
+            <label>Nacionalidade</label>
+          </div>
+        </div>
+        <div class="col s2">
+          <div class="input-field">
+            <input placeholder="ano ator" type="text" disabled>
+            <label>ano ator</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s2">
+          <div class="input-field">
+            <input placeholder="etnia" type="text" disabled>
+            <label>Etnia</label>
+          </div>
+        </div>
+        <div class="col s2">
+          <div class="input-field">
+            <input placeholder="cabelo" type="text" disabled>
+            <label>Cabelo</label>
+          </div>
+        </div>
+        <div class="col s2">
+          <div class="input-field">
+            <input placeholder="Olhos" type="text" disabled>
+            <label>Olhos</label>
+          </div>
+        </div>
+        <div class="col s3">
+          <div class="input-field">
+            <input placeholder="Peso" type="text" disabled>
+            <label>Peso</label>
+          </div>
+        </div>
+        <div class="col s3">
+          <div class="input-field">
+            <input placeholder="DataNascimento" type="text" disabled>
+            <label>DataNascimento</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s4">
+          <div class="input-field">
+            <input placeholder="Altura" type="text" disabled>
+            <label>Altura</label>
+          </div>
+        </div>
+        <div class="col s4">
+          <div class="input-field">
+            <input placeholder="Manequim" type="text" disabled>
+            <label>Manequim</label>
+          </div>
+        </div>
+        <div class="col s4">
+          <div class="input-field">
+            <input placeholder="Sapato" type="text" disabled>
+            <label>Sapato</label>
+          </div>
+        </div>
+      </div>
     </div>
-  </nav>
+    <div id="documents">
+      <div class="row">
+        <div class="col s3">
+          <div class="input-field">
+            <input placeholder="rg" type="text" disabled>
+            <label>rg</label>
+          </div>
+        </div>
+        <div class="col s3">
+          <div class="input-field">
+            <input placeholder="cpf" type="text" disabled>
+            <label>cpf</label>
+          </div>
+        </div>
+        <div class="col s3">
+          <div class="input-field">
+            <input placeholder="cnh_numero" type="text" disabled>
+            <label>cnh_numero</label>
+          </div>
+        </div>
+        <div class="col s3">
+          <div class="input-field">
+            <input placeholder="drt" type="text" disabled>
+            <label>drt</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <div class="input-field">
+            <input placeholder="endereco" type="text" disabled>
+            <label>endereco</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="photos">
+      <div class="row">
+        <div class="col s4">
+          <div class="profile-img">
+            <figure>
+              <img class="materialboxed" data-caption="foto 3x4" src="../images/user_placeholder.png">
+              <figcaption>
+                foto 3x4
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="col s4">
+          <div class="profile-img">
+            <figure>
+              <img class="materialboxed" data-caption="foto corpo inteiro" src="../images/user_placeholder.png">
+              <figcaption>
+                foto corpo inteiro
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="col s4">
+          <div class="profile-img">
+            <figure>
+              <img class="materialboxed" data-caption="foto sorriso" src="../images/user_placeholder.png">
+              <figcaption>
+                foto sorriso
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contact">
+      <div class="row">
+        <div class="col s12 m4 l4 xl4">
+          <div class="input-field">
+            <input placeholder="Telefone" type="text" disabled>
+            <label>Telefone</label>
+          </div>
+        </div>
+        <div class="col s12 m4 l4 xl4">
+          <div class="input-field">
+            <input placeholder="celular" type="text" disabled>
+            <label>celular</label>
+          </div>
+        </div>
+        <div class="col s12 m4 l4 xl4">
+          <div class="input-field">
+            <input placeholder="email" type="text" disabled>
+            <label>email</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="assets">
+      <div class="row">
+        <div class="col s12 m3 l3 xl3">
+          <input type="checkbox" checked disabled class="filled-in materialize-checkbox"  />
+          <label for="car">Carro</label>
+        </div>
+        <div class="col s12 m3 l3 xl3">
+          <input type="checkbox"  disabled class=" materialize-checkbox" />
+          <label for="mot">Moto</label>
+        </div>
+        <div class="col s12 m3 l3 xl3">
+          <input type="checkbox"  disabled class=" materialize-checkbox" />
+          <label for="trt">Trator</label>
+        </div>
+        <div class="col s12 m3 l3 xl3">
+          <input type="checkbox" checked disabled class="filled-in materialize-checkbox" />
+          <label for="jsk">JetSki</label>
+        </div>
 
-  <ul class="tabs">
 
-    <li class="tab col s3"><a class="active " href="#general-data">Dados Gerais</a></li>
-    <li class="tab col s3"><a class="" href="#documents">Documentação</a></li>
-    <li class="tab col s3"><a class="" href="#contact">Contato</a></li>
-    <li class="tab col s3"><a class="" href="#documentsImages">Anexos</a></li>
-    <li class="tab col s3"><a class="" href="#resAddress">Endereços</a></li>
-    <li class="tab col s3"><a class="" href="#boletagemHistory">Histórico Boletagem</a></li>
+      </div>
+    </div>
+    <div id="extraData">
+      <div class="row">
+        <div class="col s12 m4 l4 xl4">
+          <div class="input-field">
+            <input placeholder="link portfolio youtube" type="text" disabled>
+            <label>link portfolio youtube</label>
+          </div>
+        </div>
+                <div class="col s12 m4 l4 xl4">
+          <div class="input-field">
+            <input placeholder="dados bancarios" type="text" disabled>
+            <label>dados bancarios</label>
+          </div>
+        </div>
 
-  </ul>
+                <div class="col s12 m4 l4 xl4">
+          <div class="input-field">
+            <input placeholder="habilidades" type="text" disabled>
+            <label>habilidades</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <div class="spacing"></div>
+
 </main>
 
 <script>
+  $(document).ready(function(){
+    $('.tabs').tabs();
+    $('.materialboxed').materialbox();
+  });
 </script>

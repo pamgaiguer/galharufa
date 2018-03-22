@@ -13,6 +13,7 @@ angular.module('galharufa.controllers.adm-casting-show', [])
         $rootScope.headerId = 2;
         $rootScope.hold = false;
         $rootScope.session_title = "Visualizar";
+        $rootScope.nome_casting = "FAKE-ATOR";
     }
 
 });

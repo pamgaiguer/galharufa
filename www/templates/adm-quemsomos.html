@@ -1,14 +1,14 @@
 <main ng-init="init()" class="dash-quemsomos">
 
 
-    <div class="row">
-      <div class="col s12 m12 l12 xl12">
-        <h5 class="session-name">Quem Somos <i class="material-icons">keyboard_arrow_right</i> Edição</h5>
-        <blockquote>
-          Edição do texto <em>Quem Somos</em> no site da <span class="font-semibold">Galharufa</span>
-        </blockquote>
-      </div>
+  <div class="row">
+    <div class="col s12 m12 l12 xl12">
+      <h5 class="session-name">Quem Somos <i class="material-icons">keyboard_arrow_right</i> Edição</h5>
+      <blockquote>
+        Edição do texto <em>Quem Somos</em> no site da <span class="font-semibold">Galharufa</span>
+      </blockquote>
     </div>
+  </div>
 
   <div class="row">
     <div class="col s12 m6 l6 xl6">
@@ -22,15 +22,27 @@
             <input class="file-path validate" type="text">
           </div>
         </div>
+
+        <div class="spacing"></div>
+        <div class="input-field">
+          <textarea id="quem-somos-text" class="materialize-textarea"></textarea>
+          <label for="quem-somos-text">Texto "Quem Somos"</label>
+        </div>
+
+        <button class="btn right" type="submit" name="action">
+          Editar
+          <i class="material-icons right">send</i>
+        </button>
+        <div class="clearfix"></div>
       </form>
-      <div class="spacing"></div>
-      <div class="input-field">
-        <textarea id="textarea1" class="materialize-textarea"></textarea>
-        <label for="textarea1">Texto "Quem Somos"</label>
-      </div>
+
     </div>
     <div class="col s12 m6 l6 xl6">
       <h5>Preview</h5>
+      <div class="input-field">
+        <textarea id="texto-quemsomos-editado" class="materialize-textarea" disabled=""></textarea>
+        <label for="texto-quemsomos-editado">Como irá aparecer no site</label>
+      </div>
     </div>
   </div>
 </main>
