@@ -29,8 +29,9 @@ angular.module('galharufa.controllers.adm-casting-search', [])
   }
 
   $scope.visualizar = function(c){
-    CastingServices.casting = c;
-    $location.path('/adm-casting-show');
+    // CastingServices.casting = c;
+    console.log('showing', c)
+    $location.path('/adm-casting-show/' + c);
   }
 
   $scope.buscar = function(){

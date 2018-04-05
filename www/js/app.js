@@ -98,7 +98,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     templateUrl: '/templates/adm-casting-search.html',
     controller: 'AdminCastingSearchCtrl'
   })
-  .when('/adm-casting-show/', {
+  .when('/adm-casting-show/:id', {
     templateUrl: '/templates/adm-casting-show.html',
     controller: 'AdminCastingShowCtrl'
   })

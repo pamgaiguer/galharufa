@@ -2,269 +2,282 @@
 
   <div class="row">
     <div class="col s12">
-      <h5 class="session-name">Casting <i class="material-icons">keyboard_arrow_right</i> Visualizar {{nome_casting}}</h5>
+      <h5 class="session-name">Casting
+        <i class="material-icons">keyboard_arrow_right</i> Visualizar {{vm.casting.cas_nome}}</h5>
       <blockquote>
-      Dados sobre o {{nome_casting}} </span>
-    </blockquote>
+        Dados sobre {{vm.casting.cas_nome}} </span>
+      </blockquote>
+    </div>
   </div>
-</div>
 
-<ul class="tabs">
+  <ul class="tabs">
 
-  <li class="tab col s3"><a class="active" href="#dados">Dados Gerais</a></li>
-  <li class="tab col s3"><a class="" href="#documents">Documentos</a></li>
-  <li class="tab col s3"><a class="" href="#photos">Fotos</a></li>
-  <li class="tab col s3"><a class="" href="#contact">Contato</a></li>
-  <li class="tab col s3"><a class="" href="#assets">Bens materiais</a></li>
-  <li class="tab col s3"><a class="" href="#extraData">Dados extras</a></li>
+    <li class="tab col s3">
+      <a class="active" href="#dados">Dados Gerais</a>
+    </li>
+    <li class="tab col s3">
+      <a class="" href="#documents">Documentos</a>
+    </li>
+    <li class="tab col s3">
+      <a class="" href="#photos">Fotos</a>
+    </li>
+    <li class="tab col s3">
+      <a class="" href="#contact">Contato</a>
+    </li>
+    <li class="tab col s3">
+      <a class="" href="#assets">Bens materiais</a>
+    </li>
+    <li class="tab col s3">
+      <a class="" href="#extraData">Dados extras</a>
+    </li>
 
-</ul>
+  </ul>
 
-<div class="spacing"></div>
-<div class="spacing"></div>
-<div class="row">
-  <div class="col s12">
-    <div id="dados">
+  <div class="spacing"></div>
+  <div class="spacing"></div>
+  <div class="row">
+    <div class="col s12">
+      <div id="dados">
 
-      <div class="row">
-        <div class="input-field col s4">
-            <input id="tipo_casting" placeholder=" " type="text" disabled value="Teste">
+        <div class="row">
+          <div class="input-field col s4">
+            <input id="tipo_casting" placeholder=" " type="text" disabled ng-value="vm.casting.cas_tipo">
             <label for="tipo_casting">Tipo de casting</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col s3">
-          <div class="input-field">
-            <input placeholder=" " type="text" disabled>
-            <label>Nome Completo</label>
-          </div>
-        </div>
-        <div class="col s3">
-          <div class="input-field">
-            <input placeholder=" " type="text" disabled>
-            <label>Nome artístico</label>
-          </div>
-        </div>
-        <div class="col s2">
-          <div class="input-field">
-            <input placeholder=" " type="text" disabled>
-            <label>Genero</label>
-          </div>
-        </div>
-        <div class="col s2">
-          <div class="input-field">
-            <input placeholder=" " type="text" disabled>
-            <label>Nacionalidade</label>
-          </div>
-        </div>
-        <div class="col s2">
-          <div class="input-field">
-            <input placeholder=" " type="text" disabled>
-            <label>ano ator</label>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col s2">
-          <div class="input-field">
-            <input placeholder=" " type="text" disabled>
-            <label>Etnia</label>
-          </div>
-        </div>
-        <div class="col s2">
-          <div class="input-field">
-            <input placeholder=" " type="text" disabled>
-            <label>Cabelo</label>
-          </div>
-        </div>
-        <div class="col s2">
-          <div class="input-field">
-            <input placeholder=" " type="text" disabled>
-            <label>Olhos</label>
-          </div>
-        </div>
-        <div class="col s3">
-          <div class="input-field">
-            <input placeholder=" " type="text" disabled>
-            <label>Peso</label>
-          </div>
-        </div>
-        <div class="col s3">
-          <div class="input-field">
-            <input placeholder=" " type="text" disabled>
-            <label>DataNascimento</label>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col s4">
-          <div class="input-field">
-            <input placeholder=" " type="text" disabled>
-            <label>Altura</label>
-          </div>
-        </div>
-        <div class="col s4">
-          <div class="input-field">
-            <input placeholder=" " type="text" disabled>
-            <label>Manequim</label>
-          </div>
-        </div>
-        <div class="col s4">
-          <div class="input-field">
-            <input placeholder=" " type="text" disabled>
-            <label>Sapato</label>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="documents">
-      <div class="row">
-        <div class="col s3">
-          <div class="input-field">
-            <input placeholder=" " type="text" disabled>
-            <label>rg</label>
-          </div>
-        </div>
-        <div class="col s3">
-          <div class="input-field">
-            <input placeholder=" " type="text" disabled>
-            <label>cpf</label>
-          </div>
-        </div>
-        <div class="col s3">
-          <div class="input-field">
-            <input placeholder=" " type="text" disabled>
-            <label>cnh_numero</label>
-          </div>
-        </div>
-        <div class="col s3">
-          <div class="input-field">
-            <input placeholder=" " type="text" disabled>
-            <label>drt</label>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s12">
-          <div class="input-field">
-            <input placeholder=" " type="text" disabled>
-            <label>endereco</label>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="photos">
-      <div class="row">
-        <div class="col s4">
-          <div class="profile-img">
-            <figure>
-              <img class="materialboxed" data-caption="foto 3x4" src="../images/user_placeholder.png">
-              <figcaption>
-                foto 3x4
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-        <div class="col s4">
-          <div class="profile-img">
-            <figure>
-              <img class="materialboxed" data-caption="foto corpo inteiro" src="../images/user_placeholder.png">
-              <figcaption>
-                foto corpo inteiro
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-        <div class="col s4">
-          <div class="profile-img">
-            <figure>
-              <img class="materialboxed" data-caption="foto sorriso" src="../images/user_placeholder.png">
-              <figcaption>
-                foto sorriso
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="contact">
-      <div class="row">
-        <div class="col s12 m4 l4 xl4">
-          <div class="input-field">
-            <input placeholder=" " type="text" disabled>
-            <label>Telefone</label>
-          </div>
-        </div>
-        <div class="col s12 m4 l4 xl4">
-          <div class="input-field">
-            <input placeholder=" " type="text" disabled>
-            <label>celular</label>
-          </div>
-        </div>
-        <div class="col s12 m4 l4 xl4">
-          <div class="input-field">
-            <input placeholder=" " type="text" disabled>
-            <label>email</label>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="assets">
-      <div class="row">
-        <div class="col s12 m3 l3 xl3">
-          <input type="checkbox" checked disabled class="filled-in materialize-checkbox"  />
-          <label for="car">Carro</label>
-        </div>
-        <div class="col s12 m3 l3 xl3">
-          <input type="checkbox"  disabled class=" materialize-checkbox" />
-          <label for="mot">Moto</label>
-        </div>
-        <div class="col s12 m3 l3 xl3">
-          <input type="checkbox"  disabled class=" materialize-checkbox" />
-          <label for="trt">Trator</label>
-        </div>
-        <div class="col s12 m3 l3 xl3">
-          <input type="checkbox" checked disabled class="filled-in materialize-checkbox" />
-          <label for="jsk">JetSki</label>
-        </div>
-
-
-      </div>
-    </div>
-    <div id="extraData">
-      <div class="row">
-        <div class="col s12 m4 l4 xl4">
-          <div class="input-field">
-            <input placeholder=" " type="text" disabled>
-            <label>link portfolio youtube</label>
-          </div>
-        </div>
-                <div class="col s12 m4 l4 xl4">
-          <div class="input-field">
-            <input placeholder=" " type="text" disabled>
-            <label>dados bancarios</label>
           </div>
         </div>
 
-                <div class="col s12 m4 l4 xl4">
-          <div class="input-field">
-            <input placeholder=" " type="text" disabled>
-            <label>habilidades</label>
+        <div class="row">
+          <div class="col s3">
+            <div class="input-field">
+              <input placeholder=" " type="text" disabled ng-value="vm.casting.cas_nome">
+              <label>Nome Completo</label>
+            </div>
+          </div>
+          <div class="col s3">
+            <div class="input-field">
+              <input placeholder=" " type="text" disabled ng-value="vm.casting.cas_nomeart">
+              <label>Nome artístico</label>
+            </div>
+          </div>
+          <div class="col s2">
+            <div class="input-field">
+              <input placeholder=" " type="text" disabled ng-value="vm.casting.cas_genero">
+              <label>Genero</label>
+            </div>
+          </div>
+          <div class="col s2">
+            <div class="input-field">
+              <input placeholder=" " type="text" disabled ng-value="vm.casting.cas_nacionalidade">
+              <label>Nacionalidade</label>
+            </div>
+          </div>
+          <div class="col s2">
+            <div class="input-field">
+              <input placeholder=" " type="text" disabled ng-value="vm.casting.cas_ano">
+              <label>ano ator</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s2">
+            <div class="input-field">
+              <input placeholder=" " type="text" disabled ng-value="vm.casting.cas_etnia">
+              <label>Etnia</label>
+            </div>
+          </div>
+          <div class="col s2">
+            <div class="input-field">
+              <input placeholder=" " type="text" disabled ng-value="vm.casting.cas_cabelo">
+              <label>Cabelo</label>
+            </div>
+          </div>
+          <div class="col s2">
+            <div class="input-field">
+              <input placeholder=" " type="text" disabled ng-value="vm.casting.cas_olhos">
+              <label>Olhos</label>
+            </div>
+          </div>
+          <div class="col s3">
+            <div class="input-field">
+              <input placeholder=" " type="text" disabled ng-value="vm.casting.cas_peso">
+              <label>Peso</label>
+            </div>
+          </div>
+          <div class="col s3">
+            <div class="input-field">
+              <input placeholder=" " type="text" disabled ng-value="vm.casting.cas_dtnasc | date : 'dd/MM/yyyy'">
+              <label>Data Nascimento</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s4">
+            <div class="input-field">
+              <input placeholder=" " type="text" disabled ng-value="vm.casting.cas_altura">
+              <label>Altura</label>
+            </div>
+          </div>
+          <div class="col s4">
+            <div class="input-field">
+              <input placeholder=" " type="text" disabled ng-value="vm.casting.cas_manequim">
+              <label>Manequim</label>
+            </div>
+          </div>
+          <div class="col s4">
+            <div class="input-field">
+              <input placeholder=" " type="text" disabled ng-value="vm.casting.cas_sapato">
+              <label>Sapato</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="documents">
+        <div class="row">
+          <div class="col s3">
+            <div class="input-field">
+              <input placeholder=" " type="text" disabled ng-value="vm.casting.cas_rg">
+              <label>RG</label>
+            </div>
+          </div>
+          <div class="col s3">
+            <div class="input-field">
+              <input placeholder=" " type="text" disabled ng-value="vm.casting.cas_cpf">
+              <label>CPF</label>
+            </div>
+          </div>
+          <div class="col s3">
+            <div class="input-field">
+              <input placeholder=" " type="text" disabled ng-value="vm.casting.cas_cnh">
+              <label>CNH</label>
+            </div>
+          </div>
+          <div class="col s3">
+            <div class="input-field">
+              <input placeholder=" " type="text" disabled ng-value="vm.casting.cas_drt">
+              <label>DRT</label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <div class="input-field">
+              <input placeholder=" " type="text" disabled ng-value="vm.casting.cas_endereco">
+              <label>Endereço</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="photos">
+        <div class="row">
+          <div class="col s4">
+            <div class="profile-img">
+              <figure>
+                <img class="materialboxed" data-caption="foto 3x4" ng-src="{{vm.casting.cas_foto34}}">
+                <figcaption>
+                  Foto 3x4
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="col s4">
+            <div class="profile-img">
+              <figure>
+                <img class="materialboxed" data-caption="foto corpo inteiro" ng-src="{{vm.casting.cas_fotobody}}">
+                <figcaption>
+                  Foto Corpo Inteiro
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="col s4">
+            <div class="profile-img">
+              <figure>
+                <img class="materialboxed" data-caption="foto sorriso" ng-src="{{vm.casting.cas_fotosmile}}">
+                <figcaption>
+                  Foto Sorriso
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="contact">
+        <div class="row">
+          <div class="col s12 m4 l4 xl4">
+            <div class="input-field">
+              <input placeholder=" " type="text" disabled>
+              <label>Telefone</label>
+            </div>
+          </div>
+          <div class="col s12 m4 l4 xl4">
+            <div class="input-field">
+              <input placeholder=" " type="text" disabled>
+              <label>celular</label>
+            </div>
+          </div>
+          <div class="col s12 m4 l4 xl4">
+            <div class="input-field">
+              <input placeholder=" " type="text" disabled>
+              <label>Email</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="assets">
+        <div class="row">
+          <div class="col s12 m3 l3 xl3">
+            <input type="checkbox" checked disabled class="filled-in materialize-checkbox" ng-checked="vm.casting.cas_carro" />
+            <label for="car">Carro</label>
+          </div>
+          <div class="col s12 m3 l3 xl3">
+            <input type="checkbox" disabled class=" materialize-checkbox" ng-checked="vm.casting.cas_moto" />
+            <label for="mot">Moto</label>
+          </div>
+          <div class="col s12 m3 l3 xl3">
+            <input type="checkbox" disabled class=" materialize-checkbox" ng-checked="vm.casting.cas_trator" />
+            <label for="trt">Trator</label>
+          </div>
+          <div class="col s12 m3 l3 xl3">
+            <input type="checkbox" checked disabled class="filled-in materialize-checkbox" ng-checked="vm.casting.cas_jetski" />
+            <label for="jsk">JetSki</label>
+          </div>
+
+
+        </div>
+      </div>
+      <div id="extraData">
+        <div class="row">
+          <div class="col s12 m4 l4 xl4">
+            <div class="input-field">
+              <input placeholder=" " type="text" disabled>
+              <label>link portfolio youtube</label>
+            </div>
+          </div>
+          <div class="col s12 m4 l4 xl4">
+            <div class="input-field">
+              <input placeholder=" " type="text" disabled ng-value="vm.casting.cas_dadosbancarios">
+              <label>Dados Bancarios</label>
+            </div>
+          </div>
+
+          <div class="col s12 m4 l4 xl4">
+            <div class="input-field">
+              <input placeholder=" " type="text" disabled >
+              <label>Habilidades</label>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
 
 </main>
 
 <script>
-  $(document).ready(function(){
+  $(document).ready(function () {
     $('.tabs').tabs();
     $('.materialboxed').materialbox();
     Materialize.updateTextFields();
