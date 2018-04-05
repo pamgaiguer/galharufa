@@ -2,8 +2,6 @@ angular.module('galharufa.controllers.adm-quemsomos', [])
 
 .controller('AdminQuemsomosCtrl', function($scope, $rootScope, $q, $timeout, UserServices) {
 
-  console.log("AdminQuemsomosCtrl :: Iniciado");
-
   $scope.vm = {
     'user': {
       'usu_nome': '',

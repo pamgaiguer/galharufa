@@ -15,11 +15,11 @@
       <form action="#">
         <div class="spacing"></div>
         <div class="input-field">
-          <textarea id="quem-somos-text" class="materialize-textarea"></textarea>
+          <textarea id="quem-somos-text" class="materialize-textarea" ng-model="vm.quemsomos"></textarea>
           <label for="quem-somos-text">Texto "Quem Somos"</label>
         </div>
 
-        <button class="btn right" type="submit" name="action">
+        <button class="btn right" type="submit" name="action" ng-click="alterar()">
           Editar
           <i class="material-icons right">send</i>
         </button>
@@ -30,7 +30,7 @@
     <div class="col s12 m6 l6 xl6">
       <h5>Preview</h5>
       <div class="input-field">
-        <textarea id="texto-quemsomos-editado" class="materialize-textarea" disabled=""></textarea>
+        <textarea id="texto-quemsomos-editado" class="materialize-textarea" disabled="" ng-value="vm.quemsomos"></textarea>
         <label for="texto-quemsomos-editado">Como irá aparecer no site</label>
       </div>
     </div>
