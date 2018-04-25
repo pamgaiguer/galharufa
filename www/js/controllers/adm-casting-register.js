@@ -59,7 +59,10 @@ angular.module('galharufa.controllers.adm-casting-register', [])
       'ptf' : '',
       'sks' : '',
       'dbc' : '',
-      'uid' : 0
+      'uid' : 0,
+      email: '',
+      phone: '',
+      mobile: ''
     }
   }
 
@@ -111,6 +114,9 @@ angular.module('galharufa.controllers.adm-casting-register', [])
       $scope.vm.casting.sks = CastingServices.casting.cas_skills;
       $scope.vm.casting.dbc = CastingServices.casting.cas_dadosbancarios;
       $scope.vm.casting.uid = CastingServices.casting.cas_usu_id;
+      $scope.vm.casting.email = CastingServices.casting.cas_email;
+      $scope.vm.casting.phone = CastingServices.casting.cas_phone;
+      $scope.vm.casting.mobile = CastingServices.casting.cas_mobile;
 
     } else {
       $scope.vm.state = "insert";
@@ -152,7 +158,9 @@ angular.module('galharufa.controllers.adm-casting-register', [])
       imgSm != "" ? imgSm : CastingServices.casting.cas_fotosmile,
       $scope.vm.casting.car, $scope.vm.casting.mot, $scope.vm.casting.tra,
       $scope.vm.casting.jsk, $scope.vm.casting.ptf, $scope.vm.casting.sks,
-      $scope.vm.casting.dbc, UserServices.currentUser.usu_id)
+      $scope.vm.casting.dbc, UserServices.currentUser.usu_id, $scope.vm.casting.email,
+      $scope.vm.casting.phone, $scope.vm.casting.mobile
+    )
 
     .then(function(r){
       if (r == undefined || r < 1) return;
@@ -186,6 +194,7 @@ angular.module('galharufa.controllers.adm-casting-register', [])
 
     dataNascimento = tratarDateTime($scope.vm.casting.dtn);
 
+    console.log('Changin casting', $scope.vm.casting)
     CastingServices.alterCasting($scope.vm.casting.id,
       $scope.vm.casting.tpo, $scope.vm.casting.nme, $scope.vm.casting.nma,
       $scope.vm.casting.gen, $scope.vm.casting.ano, $scope.vm.casting.nac,
@@ -199,15 +208,16 @@ angular.module('galharufa.controllers.adm-casting-register', [])
       $scope.vm.casting.mnq, tratarDecimal($scope.vm.casting.spt), img34, imgBd, imgSm,
       $scope.vm.casting.car, $scope.vm.casting.mot, $scope.vm.casting.tra,
       $scope.vm.casting.jsk, $scope.vm.casting.ptf, $scope.vm.casting.sks,
-      $scope.vm.casting.dbc, UserServices.currentUser.usu_id)
+      $scope.vm.casting.dbc, UserServices.currentUser.usu_id, $scope.vm.casting.email,
+      $scope.vm.casting.phone, $scope.vm.casting.mobile
+    )
 
     .then(function(r){
-      if (r == undefined || r < 1) return;
       if ($scope.vm.casting.f34) $scope.upload($scope.vm.casting.f34, img34);
       if ($scope.vm.casting.fbd) $scope.upload($scope.vm.casting.fbd, imgBd);
       if ($scope.vm.casting.fsm) $scope.upload($scope.vm.casting.fsm, imgSm);
 
-      Materialize.toast($scope.vm.casting.tpo + ' alterado com sucesso!', 4000);
+      Materialize.toast($scope.vm.casting.nme + ' alterado com sucesso!', 4000);
       $rootScope.path("/adm-casting-search");
     });
   }

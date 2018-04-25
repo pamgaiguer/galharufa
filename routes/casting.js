@@ -92,6 +92,9 @@ router.post('/adicionar', function(req, res, next) {
   skills = req.query.sks;
   dadosbancarios = req.query.dbc; 
   usuarioId = req.query.uid;
+  email = req.query.email;
+  phone = req.query.phone;
+  mobile = req.query.mobile;
 
   req.getConnection(function(err,connection){    
   connection.query('insert into casting ( ' +
@@ -100,12 +103,13 @@ router.post('/adicionar', function(req, res, next) {
 	' cas_olhos, cas_peso, cas_dtnasc, cas_rg, cas_cpf, cas_cnh, cas_drt, cas_endereco, ' +
 	' cas_altura, cas_manequim, cas_sapato, cas_foto34, cas_fotobody, cas_fotosmile, ' +
 	' cas_carro, cas_moto, cas_trator, cas_jetski, cas_portfolio, cas_skills, cas_dadosbancarios, ' +
-	' cas_usu_id, cas_datamodificacao) ' + 
-	' values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, now())',
+	' cas_usu_id, cas_datamodificacao, cas_email, cas_phone, cas_mobile) ' + 
+	' values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, now(),?,?,?)',
 		
     [tipo, nome, nomeart, genero, ano, nacionalidade, torax, terno, camisa, busto, cintura, quadril, etnia, cabelo, olhos, 
 		peso, dtnasc, rg, cpf, cnh, drt, endereco, altura, manequim, sapato, foto34, fotobody,
-		fotosmile, parseInt(carro), parseInt(moto), parseInt(trator), parseInt(jetski), portfolio, skills, dadosbancarios, usuarioId],
+    fotosmile, parseInt(carro), parseInt(moto), parseInt(trator), parseInt(jetski), portfolio, skills, dadosbancarios, usuarioId,
+    email, phone, mobile],
 	function(err,result){
         if(err) return res.status(400).json(err);
         return res.status(200).json(result);
@@ -164,6 +168,11 @@ router.post('/alterar', function(req, res, next) {
   skills = req.query.sks;
   dadosbancarios = req.query.dbc; 
   usuarioId = req.query.uid;
+  email = req.query.email;
+  phone = req.query.phone;
+  mobile = req.query.mobile;
+
+  console.log('changing casting on server', email, phone, mobile)
 
   req.getConnection(function(err,connection){    
   connection.query('update casting set cas_tipo = ?, ' +
@@ -173,10 +182,11 @@ router.post('/alterar', function(req, res, next) {
   ' cas_altura = ?, cas_manequim = ?, cas_sapato = ?, ' + 
   ' cas_foto34 = ?, cas_fotobody = ?, cas_fotosmile = ?, ' +
   ' cas_carro = ?, cas_moto = ?, cas_trator = ?, cas_jetski = ?, cas_portfolio = ?, cas_skills = ?, cas_dadosbancarios = ?, ' +
-  ' cas_usu_id = ?, cas_datamodificacao = now() where cas_id = ?', 
+  ' cas_usu_id = ?, cas_datamodificacao = now(), cas_email = ?, cas_phone = ?, cas_mobile = ? where cas_id = ?', 
   [tipo, nome, nomeart, genero, ano, nacionalidade, torax, terno, camisa, busto, cintura, quadril, etnia, cabelo, olhos, 
    peso, dtnasc, rg, cpf, cnh, drt, endereco, altura, manequim, sapato, foto34, fotobody,
-   fotosmile, parseInt(carro), parseInt(moto), parseInt(trator), parseInt(jetski), portfolio, skills, dadosbancarios, usuarioId, id],
+   fotosmile, parseInt(carro), parseInt(moto), parseInt(trator), parseInt(jetski), portfolio, skills, dadosbancarios, usuarioId,
+  email, phone, mobile, id],
   function(err,result){
         if(err) return res.status(400).json(err);
         return res.status(200).json(result);
