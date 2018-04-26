@@ -1,5 +1,5 @@
 .servicos{
-  .tabs{
+  .collection{
     height: auto;
     white-space: normal;
   }
@@ -7,17 +7,22 @@
     display: block;
     width: 100%;
     text-align: left;
+    height: 62px;
 
     a{
-      color: $navy-main;
+      color: $salmon-main;
+      font-weight: 500;
+      line-height: 3.5;
+      text-align: center;
+      text-transform: uppercase;
 
       &:hover, &:focus, &:active{
-        color: $navy-dark;
+        color: $salmon-dark;
         text-decoration: underline;
       }
       &.active{
         font-weight: 700;
-        color: $navy-main;
+        color: $salmon-main;
       }
     }
   }
@@ -27,6 +32,8 @@
 
   .collection{
     .collection-item{
+    border-bottom: transparent;
+
     }
     .collection-item.avatar{
       min-height: 15px;

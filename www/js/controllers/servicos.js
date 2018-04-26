@@ -14,7 +14,6 @@ angular.module('galharufa.controllers.servicos', [])
     console.log("startou o servicos");
     $rootScope.headerId = 1;
     $rootScope.hold = false;
-    // $('body, html').animate({ scrollTop: 250 });
   }
 
 });

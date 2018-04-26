@@ -175,71 +175,15 @@ main .btn-large:focus {
 main .btn-floating:focus {
   background-color: #006974; }
 
-main .input-field label {
+main .input-field {
   color: #000; }
-
-main .input-field input[type=text]:focus {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-  main .input-field input[type=text]:focus + label {
-    color: #000; }
-
-main .input-field input[type=password]:focus {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-  main .input-field input[type=password]:focus + label {
-    color: #000; }
-
-main .input-field input[type=email]:focus {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-  main .input-field input[type=email]:focus + label {
-    color: #000; }
-
-main .input-field input[type=tel]:focus {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-  main .input-field input[type=tel]:focus + label {
-    color: #000; }
-
-main .input-field input[type=number]:focus {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-  main .input-field input[type=number]:focus + label {
-    color: #000; }
-
-main .input-field textarea:focus {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-  main .input-field textarea:focus + label {
-    color: #000; }
-
-main .input-field input[type=text].valid {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-
-main .input-field input[type=password].valid {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-
-main .input-field input[type=email].valid {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-
-main .input-field input[type=tel].valid {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-
-main .input-field input[type=number].valid {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-
-main .input-field input[type=text].invalid {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-
-main .input-field .prefix.active {
-  color: #000; }
+  main .input-field label {
+    color: #888; }
+  main .input-field input:focus, main .input-field textarea:focus {
+    border-bottom: 1px solid #bbb !important;
+    box-shadow: 0 1px 0 0 #BBB !important; }
+    main .input-field input:focus + label, main .input-field textarea:focus + label {
+      color: #bbb !important; }
 
 .spacing {
   padding-bottom: 10px; }
@@ -271,6 +215,16 @@ footer.page-footer {
 .login .card-panel {
   background-color: #eee;
   color: #212121; }
+
+.login .input-field {
+  color: #000; }
+  .login .input-field label {
+    color: #888; }
+  .login .input-field input:focus, .login .input-field textarea:focus {
+    border-bottom: 1px solid #bbb !important;
+    box-shadow: 0 1px 0 0 #BBB !important; }
+    .login .input-field input:focus + label, .login .input-field textarea:focus + label {
+      color: #bbb !important; }
 
 .login .btn {
   background-color: #FFD740; }
@@ -385,25 +339,33 @@ footer.page-footer {
     font-size: 16px;
     text-align: justify; }
 
-.servicos .tabs {
+.servicos .collection {
   height: auto;
   white-space: normal; }
 
 .servicos .tab {
   display: block;
   width: 100%;
-  text-align: left; }
+  text-align: left;
+  height: 62px; }
   .servicos .tab a {
-    color: #0097A7; }
+    color: #FF9E80;
+    font-weight: 500;
+    line-height: 3.5;
+    text-align: center;
+    text-transform: uppercase; }
     .servicos .tab a:hover, .servicos .tab a:focus, .servicos .tab a:active {
-      color: #006974;
+      color: #CC7E66;
       text-decoration: underline; }
     .servicos .tab a.active {
       font-weight: 700;
-      color: #0097A7; }
+      color: #FF9E80; }
 
 .servicos .indicator {
   display: none; }
+
+.servicos .collection .collection-item {
+  border-bottom: transparent; }
 
 .servicos .collection .collection-item.avatar {
   min-height: 15px; }
