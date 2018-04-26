@@ -1,53 +1,54 @@
 <main ng-init="init()" class="dash-servicos">
-    <div class="row">
-        <div class="col s12 m12 l12 xl12">
-            <h5 class="session-name">Serviços <i class="material-icons">keyboard_arrow_right</i> Edição</h5>
-            <blockquote>
-                Edição do texto <em>Serviços</em> no site da <span class="font-semibold">Galharufa</span>
-            </blockquote>
-        </div>
+  <div class="row">
+    <div class="col s12 m12 l12 xl12">
+      <h5 class="session-name">Serviços <i class="material-icons">keyboard_arrow_right</i> Edição</h5>
+      <blockquote>
+        Edição do texto <em>Serviços</em> no site da <span class="font-semibold">Galharufa</span>
+      </blockquote>
     </div>
+  </div>
 
-    <div class="row">
-        <div class="col s12 m6 l6 xl6">
+  <div class="row">
+    <div class="col s12 m6 l6 xl6">
 
-          <div class="input-field">
-            <select>
-              <option value="" disabled selected>Escolha sua opção</option>
-              <option value="1">Curso de interpretação</option>
-              <option value="2">Curso de Circo</option>
-              <option value="3">Material Fotográfico</option>
-              <option value="4">Eventos</option>
-              <option value="5">Audiovisual</option>
-              <option value="6">Moda</option>
-          </select>
-          <label>Tipo de Curso</label>
+      <div class="input-field">
+        <select>
+          <option value="" disabled selected>Escolha sua opção</option>
+          <option value="1">Curso de interpretação</option>
+          <option value="2">Curso de Circo</option>
+          <option value="3">Material Fotográfico</option>
+          <option value="4">Eventos</option>
+          <option value="5">Audiovisual</option>
+          <option value="6">Moda</option>
+        </select>
+        <label>Tipo de Curso</label>
       </div>
 
       <div class="input-field">
-          <textarea id="texto-servico-selecionado" class="materialize-textarea"></textarea>
-          <label for="texto-servico-selecionado">Texto a ser editado</label>
+        <textarea id="texto-servico-selecionado" class="materialize-textarea"></textarea>
+        <label for="texto-servico-selecionado">Texto a ser editado</label>
       </div>
 
-    <div class="row">
+      <div class="row">
         <button type="submit" value="Editar" class="btn btn-submit black-text bg-yellow-main right">Cadastrar <i class="material-icons right">send</i></button>
         <div class="clearfix"></div>
+      </div>
+
+
     </div>
-
-
-  </div>
-  <div class="col s12 m6 l6 xl6">
+    <div class="col s12 m6 l6 xl6">
       <h5>Preview</h5>
       <div class="input-field">
-          <textarea id="texto-servico-selecionado" class="materialize-textarea" disabled=""></textarea>
-          <label for="texto-servico-selecionado">Como irá aparecer no site</label>
+        <textarea id="texto-servico-selecionado" class="materialize-textarea" disabled=""></textarea>
+        <label for="texto-servico-selecionado">Como irá aparecer no site</label>
       </div>
+    </div>
   </div>
-</div>
 </main>
 
 <script>
-    $(document).ready(function(){
-     $('select').material_select();
- });
+  $(document).ready(function(){
+    Materialize.updateTextFields();
+    $('select').material_select();
+  });
 </script>

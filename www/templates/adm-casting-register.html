@@ -351,19 +351,22 @@
 
 <script type="text/javascript">
 
-  $("#genre").change(function(){
-    if ($(this).val() == "F"){
-      $(".woman-data").fadeIn(300);
-      $(".man-data").fadeOut(300);
-    } else if ($(this).val() == "M"){
-      $(".man-data").fadeIn(300);
-      $(".woman-data").fadeOut(300);
-    }
-  });
+  $(document).ready(function () {
 
-  $("#genre").change();
-  Materialize.updateTextFields();
-  $('select').material_select();
+    Materialize.updateTextFields();
+
+    $("#genre").change(function(){
+      if ($(this).val() == "F"){
+        $(".woman-data").fadeIn(300);
+        $(".man-data").fadeOut(300);
+      } else if ($(this).val() == "M"){
+        $(".man-data").fadeIn(300);
+        $(".woman-data").fadeOut(300);
+      }
+    });
+
+    $('select').material_select();
+  });
 
 
 </script>
