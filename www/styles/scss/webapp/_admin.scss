@@ -36,104 +36,26 @@
             background-color: $yellow-dark;
         }
     }
+
     .input-field {
+        color: #000;
         label {
-            color: #000;
+            color: #888;
+
         }
-        input[type=text] {
+
+        input, textarea {
             &:focus {
-                + {
-                    label {
-                        color: #000;
-                    }
+                + label {
+                    color: #bbb !important;
                 }
-                border-bottom: 1px solid #000;
-                box-shadow: 0 1px 0 0 #000;
+                border-bottom: 1px solid #bbb !important;
+                box-shadow: 0 1px 0 0 #BBB !important;
             }
         }
-        input[type=password] {
-            &:focus {
-                + {
-                    label {
-                        color: #000;
-                    }
-                }
-                border-bottom: 1px solid #000;
-                box-shadow: 0 1px 0 0 #000;
-            }
-        }
-        input[type=email] {
-            &:focus {
-                + {
-                    label {
-                        color: #000;
-                    }
-                }
-                border-bottom: 1px solid #000;
-                box-shadow: 0 1px 0 0 #000;
-            }
-        }
-        input[type=tel] {
-            &:focus {
-                + {
-                    label {
-                        color: #000;
-                    }
-                }
-                border-bottom: 1px solid #000;
-                box-shadow: 0 1px 0 0 #000;
-            }
-        }
-        input[type=number] {
-            &:focus {
-                + {
-                    label {
-                        color: #000;
-                    }
-                }
-                border-bottom: 1px solid #000;
-                box-shadow: 0 1px 0 0 #000;
-            }
-        }
-        textarea{
-            &:focus{
-                +{
-                    label{
-                        color: #000;
-                    }
-                }
-                border-bottom: 1px solid #000;
-                box-shadow: 0 1px 0 0 #000;
-            }
-        }
-        input[type=text].valid {
-            border-bottom: 1px solid #000;
-            box-shadow: 0 1px 0 0 #000;
-        }
-        input[type=password].valid {
-            border-bottom: 1px solid #000;
-            box-shadow: 0 1px 0 0 #000;
-        }
-        input[type=email].valid {
-            border-bottom: 1px solid #000;
-            box-shadow: 0 1px 0 0 #000;
-        }
-        input[type=tel].valid {
-            border-bottom: 1px solid #000;
-            box-shadow: 0 1px 0 0 #000;
-        }
-        input[type=number].valid {
-            border-bottom: 1px solid #000;
-            box-shadow: 0 1px 0 0 #000;
-        }
-        input[type=text].invalid {
-            border-bottom: 1px solid #000;
-            box-shadow: 0 1px 0 0 #000;
-        }
-        .prefix.active {
-            color: #000;
-        }
+
     }
+
     .tabs {
         .indicator{
             background-color: #d0d0d0;
@@ -166,8 +88,7 @@
         }
     }
 
-
     @media only screen and (max-width:992px) {
-        padding-left: 0;
-    }
+    padding-left: 0;
+}
 }

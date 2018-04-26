@@ -13,10 +13,10 @@ angular.module('galharufa.controllers.login', [])
     console.log("startou o login");
     $rootScope.headerId = 0;
 
-    $('body').css('background-color', '#212121');
+    $('body').css('background-color', '#f5f5f5');
 
 
-    if (UserServices.currentUser.usu_id != undefined) { 
+    if (UserServices.currentUser.usu_id != undefined) {
       $('body').css('background-color', '#fff');
       $location.path('/adm-home');
     }
