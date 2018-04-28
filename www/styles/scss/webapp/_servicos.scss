@@ -6,15 +6,14 @@
   .tab{
     display: block;
     width: 100%;
-    text-align: left;
     height: 62px;
 
     a{
       color: $salmon-main;
       font-weight: 500;
       line-height: 3.5;
-      text-align: center;
       text-transform: uppercase;
+      text-align: left !important;
 
       &:hover, &:focus, &:active{
         color: $salmon-dark;

@@ -346,14 +346,13 @@ footer.page-footer {
 .servicos .tab {
   display: block;
   width: 100%;
-  text-align: left;
   height: 62px; }
   .servicos .tab a {
     color: #FF9E80;
     font-weight: 500;
     line-height: 3.5;
-    text-align: center;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-align: left !important; }
     .servicos .tab a:hover, .servicos .tab a:focus, .servicos .tab a:active {
       color: #CC7E66;
       text-decoration: underline; }
