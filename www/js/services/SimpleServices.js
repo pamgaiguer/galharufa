@@ -12,6 +12,10 @@ function SimpleServices(Configs, $http) {
 
     getServicos: function () {
       return $http.get(Configs.apiUrl + 'servicos/')
+    },
+
+    editaServico: function (servicoId, textoAtual) {
+      console.log('TODO - Atualizar serviço', servicoId, textoAtual)
     }
   }
 

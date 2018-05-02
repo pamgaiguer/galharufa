@@ -12,20 +12,16 @@
     <div class="col s12 m6 l6 xl6">
 
       <div class="input-field">
-        <select>
+        <select ng-model="vm.servicoAtual" ng-change="changeServico()" 
+          ng-options="item.svc_descricao for item in vm.servicos track by item.svc_id">
           <option value="" disabled selected>Escolha sua opção</option>
-          <option value="1">Curso de interpretação</option>
-          <option value="2">Curso de Circo</option>
-          <option value="3">Material Fotográfico</option>
-          <option value="4">Eventos</option>
-          <option value="6">Moda</option>
-          <option value="7">Agenciamento</option>
         </select>
         <label>Tipo de Curso</label>
       </div>
 
       <div class="input-field">
-        <textarea id="texto-servico-selecionado" class="materialize-textarea"></textarea>
+        <textarea id="texto-servico-selecionado" class="materialize-textarea"
+          ng-bind-html="vm.textoAtual"></textarea>
         <label for="texto-servico-selecionado">Texto a ser editado</label>
       </div>
 
@@ -37,10 +33,11 @@
 
     </div>
     <div class="col s12 m6 l6 xl6">
-      <h5>Preview</h5>
+      <h5>Preview (Como irá aparecer)</h5>
       <div class="input-field">
-        <textarea id="texto-servico-selecionado" class="materialize-textarea" disabled=""></textarea>
-        <label for="texto-servico-selecionado">Como irá aparecer no site</label>
+        <!-- <textarea id="texto-servico-selecionado" class="materialize-textarea" disabled=""
+          ></textarea> -->
+        <div class="materialize-textarea" ng-bind-html="vm.textoAtual"></div>
       </div>
     </div>
   </div>
@@ -49,6 +46,5 @@
 <script>
   $(document).ready(function(){
     Materialize.updateTextFields();
-    $('select').material_select();
   });
 </script>
