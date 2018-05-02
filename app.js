@@ -11,6 +11,7 @@ var connection  = require('express-myconnection');
 var users = require('./routes/usuarios');
 var casting = require('./routes/casting');
 var servicos = require('./routes/servicos');
+const quemsomos = require('./routes/quemsomos');
 /*var trabalhos = require('./routes/trabalhos');
 var blog = require('./routes/blog');
 var email = require('./routes/email');
@@ -62,7 +63,7 @@ app.use(express.static(path.join(__dirname, 'www')));
 app.use('/usuarios', users);
 app.use('/casting', casting);
 app.use('/servicos', servicos);
-
+app.use('/quemsomos', quemsomos);
 
 app.use(express.static(__dirname + '/www'));
 

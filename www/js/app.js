@@ -1,6 +1,7 @@
 var app = angular.module('galharufa', [
   'ngRoute',
   'ngFileUpload',
+  'ngSanitize',
   'galharufa.controllers.home',
   'galharufa.controllers.login',
   'galharufa.controllers.contato',
@@ -16,7 +17,8 @@ var app = angular.module('galharufa', [
   'galharufa.controllers.adm-quemsomos',
   'galharufa.controllers.adm-servicos',
   'galharufa.services.UserServices',
-  'galharufa.services.CastingServices']);
+  'galharufa.services.CastingServices',
+  'galharufa.services.SimpleServices']);
 
 app.run(function($rootScope, $timeout, UserServices, $location, $route) {
 

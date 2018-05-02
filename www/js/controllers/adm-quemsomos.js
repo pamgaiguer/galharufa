@@ -1,6 +1,6 @@
 angular.module('galharufa.controllers.adm-quemsomos', [])
 
-.controller('AdminQuemsomosCtrl', function($scope, $rootScope, $q, $timeout, UserServices) {
+.controller('AdminQuemsomosCtrl', function($scope, $rootScope, $q, $timeout, UserServices, SimpleServices) {
 
   $scope.vm = {
     'user': {
@@ -9,7 +9,8 @@ angular.module('galharufa.controllers.adm-quemsomos', [])
       'usu_senha': ''
     },
     'users': [],
-    'isLoading':false
+    'isLoading':false,
+    quemsomos: ''
   }
 
   $scope.init = function () {
@@ -17,6 +18,21 @@ angular.module('galharufa.controllers.adm-quemsomos', [])
     $rootScope.headerId = 2;
     $rootScope.hold = false;
     $rootScope.session_title= 'Dash - Quem Somos';
+
+    SimpleServices
+      .getQuemSomos()
+      .then(function (result) {
+        $scope.vm.quemsomos = result.data.qsm_descricao;
+      })
+  }
+
+  $scope.save = function () {
+    console.log('Salvando', $scope.vm.quemsomos)
+    SimpleServices
+      .editQuemSomos($scope.vm.quemsomos)
+      .then(function() {
+        $rootScope.path("/adm-home");
+      });
   }
 
 });
