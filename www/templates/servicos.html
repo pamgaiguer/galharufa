@@ -7,222 +7,27 @@
       <div class="col s12 m5 l5 xl5">
 
         <ul class="collection tabs">
-          <li class="collection-item avatar tab">
-            <img class="bg-yellow-main circle" src="/images/icon-interpretacao.png">
-            <a href="#curso1">Curso de Interpretação</a>
-          </li>
-          <li class="collection-item avatar tab">
-            <img class="bg-salmon-light circle" src="/images/icon-circo.png">
-            <a href="#curso2">Curso de Circo</a>
-          </li>
-          <li class="collection-item avatar tab">
-            <img class="bg-purple-light circle" src="/images/icon-foto.png">
-            <a href="#curso3">Material fotográfico</a>
-          </li>
-          <li class="collection-item avatar tab">
-            <img class="bg-yellow-main circle" src="/images/icon-eventos.png">
-            <a href="#curso4">Eventos</a>
-          </li>
-          <li class="collection-item avatar tab">
-            <img class="bg-purple-light circle" src="/images/icon-moda.png">
-            <a href="#curso6">Moda</a>
-          </li>
-          <li class="collection-item avatar tab">
-            <img class="bg-yellow-main circle" src="/images/icon-moda.png">
-            <a href="#curso7">Agenciamento</a>
+          <li class="collection-item avatar tab" ng-repeat="servico in vm.servicos | orderBy: 'svc_id'">
+            <img class="{{servico.svc_iconclass}} circle" ng-src="{{servico.svc_img}}">
+            <a href="{{'#curso' + servico.svc_id}}" ng-bind="servico.svc_descricao"></a>
           </li>
         </ul>
 
       </div>
       <div class="col s12 m7 l7 xl7">
 
-        <div id="curso1">
-          <h4>Curso de Interpretação para TV e Cinema</h4>
-          <p>
-            O curso de interpretação para TV e cinema da <strong>agência galharufa</strong> proporciona aos alunos o domínio das técnicas de atuação para câmera, permitindo que eles desenvolvam suas habilidades cênicas nas linguagens de televisão e cinema.
-          </p>
-          <p>Além de exercícios práticos com gravações, leituras e avaliações, o curso é uma introdução para a carreira de ator ou aprimoramento para aqueles que já possuem uma base em teatro.
-          </p>
-          <p>
-            A partir da gravação de cenas dramáticas e de constante avaliação do professor, são trabalhadas técnicas de posicionamento em cena, noções de enquadramento, áreas, planos e movimentos de câmera, entre outros exercícios específicos para atuação na câmera.
-          </p>
-          <p>
-            Com textos de teledramaturgia, séries e cinema, o aluno aprende a construir personagens partindo de pontos pré-definidos ou de criação própria.
-          </p>
-          <p><strong>Conteúdo:</strong></p>
-
-          <ol>
-            <li>Posicionamento entre ator e câmera</li>
-            <li>Exercícios práticos, simulações e improvisações</li>
-            <li>Exercícios de sensibilização com a cena e de estimulo</li>
-            <li>Intensidade do olhar</li>
-            <li>Dicção, entonação de voz e limpeza de sotaques</li>
-            <li>Linguagem Naturalista, Realista e Coloquial</li>
-            <li>Limpeza e criação de mascaras faciais</li>
-            <li>Conscientização de plano, contra plano e ambientação no estúdio</li>
-            <li>Trabalho em grupo</li>
-            <li>A percepção do outro</li>
-            <li>Retorno do lúdico.</li>
-            <li>Avaliação e Auto Avaliação</li>
-            <li>Improvisação com exercícios de foco, objetivo, conflito e argumentação</li>
-            <li>Improviso com pré definições de texto e personagem.</li>
-            <li>Expressão corporal e exploração do espaço, utilizando o corpo e a voz como ferramentas.</li>
-            <li>Desinibição e a espontaneidade, auxiliando a superar a timidez e expandir com eficácia sua comunicação.</li>
-          </ol>
-
-          <p>
-            <strong>
-              Solicite seu orçamento através do e-mail <a href="mailto:atendimento@agenciagalharufa.com.br">atendimento@agenciagalharufa.com.br</a> ou através da nossa página de <a href="" ng-click="path('/contato');">Contato</a>
-            </strong>
-          </p>
-
+        <div id="{{'curso' + servico.svc_id}}" ng-repeat="servico in vm.servicos" ng-bind-html="servico.svc_conteudo">
         </div>
-        <div id="curso2">
-
-          <h4>Curso de Circo</h4>
-
-          <p>Este Projeto tem a importância de atender ao público em geral sem restrições de idade.</p>
-          <p> Nosso foco de divulgação será a cultura, dando a possibilidade de conhecerem o mundo circense com técnicas renovadas, equipamentos e aparelhos diferenciados, buscando encantar e resgatar a criança que existe em cada um de nós.</p>
-          <p>
-            Proporcionar um diálogo melhor com o público e, conseqüentemente, reacendendo seu desejo em conhecer melhor mundo do circo, doando artes circenses e recebendo cultura popular.
-          </p>
-          <p>Entre causos e prosas surge uma história de paixão inseparável pelo circo. As oficinas circenses irão proporcionar aos participantes a oportunidade de conhecer e praticar algumas atividades com equipamentos de circo Tradicional.
-          </p>
-
-          <p>
-            <strong>
-              Solicite seu orçamento através do e-mail <a href="mailto:atendimento@agenciagalharufa.com.br">atendimento@agenciagalharufa.com.br</a> ou através da nossa página de <a href="" ng-click="path('/contato');">Contato</a>
-            </strong>
-          </p>
-
-        </div>
-        <div id="curso3">
-          <h4>Material fotográfico</h4>
-
-          <p>
-            A importância de uma boa apresentação de material é essencial para aprovação do cliente, ou seja, possuir um material fotográfico de qualidade é o primeiro passo para obter o sucesso desejado na sua carreira.
-          </p>
-          <p>Nosso material é composto por:</p>
-
-          <ul>
-            <li>20 fotos contendo 10 delas tratadas pela equipe de design.</li>
-            <li>2 trocas de look(roupa)</li>
-            <li>Maquiagem inclusa no pacote</li>
-            <li><span class="red-text">*</span> Todas as fotos são realizadas em estudio</li>
-          </ul>
 
 
-          <p>
-            <strong>
-              Solicite seu orçamento através do e-mail <a href="mailto:atendimento@agenciagalharufa.com.br">atendimento@agenciagalharufa.com.br</a> ou através da nossa página de <a href="" ng-click="path('/contato');">Contato</a>
-            </strong>
-          </p>
-        </div>
-        <div id="curso4">
-          <h4>Seja única! Seja Galharufa!</h4>
-          <h6>Seu evento influencia todos os outros!</h6>
-          <div class="spacing"></div>
-
-          <p>A nossa missão é oferecer serviços em organizações e produções de eventos com qualidade e profissionalismo, buscando a satisfação de seus clientes.</p>
-          <p>
-            A nossa equipe de profissionais é treinada especificamente para cada segmento, garantido o sucesso do evento.
-          </p>
-
-          <ul>
-            <li>Recepcionistas</li>
-            <li>Bartenders</li>
-            <li>Garçons</li>
-            <li>Seguranças</li>
-            <li>Promotoras</li>
-            <li>Degustadoras</li>
-            <li>Equipe de limpeza</li>
-            <li>DJ's</li>
-          </ul>
-        </div>
-        <div id="curso6">
-          <p>A Agência Galharufa, conta com uma equipe de produção de moda altamente qualificada para atender a demanda do setor.
-            <br>
-          Na criação ou desenvolvimento de seu projeto, conte conosco!</p>
-
-          <div class="row">
-            <div class="col s12 m3 l3 xl3">
-              <ul>
-                <li><strong>Equipe produção de backstage</strong></li>
-                <li> Staffs</li>
-                <li> Camareira</li>
-                <li>Assistentes</li>
-                <li>Produtores</li>
-                <li>Diretores</li>
-              </ul>
-
-              <div class="spacing"></div>
-
-              <ul>
-                <li><strong>Figurinos de época e atuais</strong></li>
-                <li>Acervo</li>
-                <li>Cenário</li>
-                <li>Peças</li>
-                <li>Equipamentos</li>
-                <li>Locações</li>
-              </ul>
-            </div>
-            <div class="col s12 m3 l3 xl3">
-              <ul>
-                <li><strong>Assessoria de imagem</strong> </li>
-                <li>Personal style</li>
-                <li>Artista</li>
-                <li>Marca</li>
-                <li>Empresa ou Produto</li>
-                <li>Personalidade</li>
-              </ul>
-            </div>
-            <div class="col s12 m3 l3 xl3">
-              <ul>
-                <li><strong>Desfile</strong></li>
-                <li>Equipe</li>
-                <li>Projeto</li>
-                <li>Criação</li>
-                <li>Desenvolvimento</li>
-                <li>Marketing</li>
-              </ul>
-            </div>
-            <div class="col s12 m3 l3 xl3">          <ul>
-              <li><strong>Confecção de figurinos</strong></li>
-              <li>Criação</li>
-              <li>Elaboração</li>
-              <li>Finalização</li>
-              <li>Desenvolvimento</li>
-              <li>Estilistas</li>
-              <li>Modelagem</li>
-              <li>Ateliê</li>
-            </ul></div>
-          </div>
-        </div>
-        <div id="curso7">
-          <h4>Venha ser agenciado pela Galharufa!</h4>
-
-          <div class="spacing"></div>
-
-          <p><strong>Departamento Galharufa Infanto Juvenil</strong> - de 06 meses à 17 anos:
-            <br>
-            Para pré-avaliação  – enviar 03 fotos com nome e data de nascimento e telefone para contato com DDD para <a href="mailto:infantil@agenciagalharufa.com.br" target="_blank">infantil@agenciagalharufa.com.br</a> e aguarde resposta.</p>
-
-            <p><strong>Departamento Galharufa Adulto</strong> - A partir de 18 anos: <br>
-              Para pré-avaliação – ENVIAR MATERIAL  - 03 fotos nome,data de nascimento, telefone para contato com DDD para <a href="mailto:contato@agenciagalharufa.com.br" target="_blank">contato@agenciagalharufa.com.br</a></p>
-
-              <p>Para pré avaliação - para ATORES, alem do material acima, encaminhar currículo atualizado e link de atuação (se tiver) <a href="mailto:contato@agenciagalharufa.com.br" target="_blank">contato@agenciagalharufa.com.br</a> e aguarde resposta</p>
-
-            </div>
-
-
-          </div>
-        </div>
       </div>
-      <div class="spacing"></div>
-    </main>
-    <script>
-      $(document).ready(function(){
-        Materialize.updateTextFields();
-        $('ul.tabs').tabs();
-      });
-    </script>
+    </div>
+  </div>
+  <div class="spacing"></div>
+</main>
+<script>
+  $(document).ready(function () {
+    Materialize.updateTextFields();
+    
+  });
+</script>

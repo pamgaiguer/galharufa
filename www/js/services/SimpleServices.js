@@ -8,6 +8,10 @@ function SimpleServices(Configs, $http) {
 
     getQuemSomos: function () {
       return $http.get(Configs.apiUrl + 'quemsomos/');
+    },
+
+    getServicos: function () {
+      return $http.get(Configs.apiUrl + 'servicos/')
     }
   }
 
