@@ -17,6 +17,7 @@ var paths = {
     javascript: [
     './js/libs/jquery.min.js',
     './js/libs/angular.min.js',
+    './js/libs/angular-sanitize.min.js',
     './js/libs/angular-route.min.js',
     './js/libs/materialize.min.js',
     './js/libs/ng-file-upload.min.js',

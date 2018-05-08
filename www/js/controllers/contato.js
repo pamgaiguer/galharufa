@@ -14,7 +14,6 @@ angular.module('galharufa.controllers.contato', [])
     console.log("startou o contato");
     $rootScope.headerId = 1;
     $rootScope.hold = false;
-    // $('body, html').animate({ scrollTop: 350 });
   }
 
   $scope.enviar = function () {

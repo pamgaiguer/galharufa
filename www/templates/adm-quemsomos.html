@@ -11,12 +11,11 @@
   </div>
 
   <div class="row">
-    <div class="col s12 m6 l6 xl6">
+    <div class="col s12 m12 l12 xl12">
       <form ng-submit="save()">
         <div class="spacing"></div>
         <div class="input-field">
           <textarea id="quem-somos-text" class="materialize-textarea" ng-model="vm.quemsomos"></textarea>
-          <label for="quem-somos-text">Texto "Quem Somos"</label>
         </div>
 
         <button class="btn right" type="submit" ng-submit="save()">
@@ -25,19 +24,11 @@
         </button>
         <div class="clearfix"></div>
       </form>
-
-    </div>
-    <div class="col s12 m6 l6 xl6">
-      <h5>Preview</h5>
-      <div class="input-field">
-        <textarea id="texto-quemsomos-editado" class="materialize-textarea" disabled="" ng-value="vm.quemsomos"></textarea>
-        <label for="texto-quemsomos-editado">Como irá aparecer no site</label>
-      </div>
     </div>
   </div>
 </main>
 <script>
-    $(document).ready(function(){
-      Materialize.updateTextFields();
+  $(document).ready(function(){
+    Materialize.updateTextFields();
   });
 </script>
