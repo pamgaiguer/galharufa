@@ -11,8 +11,9 @@
     <form ng-submit="vm.state == 'insert' ? adicionar() : alterar()">
       <div class="row">
         <div class="col s12 m4 l4 xl4">
-          <div class="input-field">
-            <select ng-model="vm.casting.tpo" id="casting">
+            <label>Tipo de ator</label>
+
+            <select class="browser-default" ng-model="vm.casting.tpo" id="casting">
               <option value="" disabled selected>Escolha sua opção</option>
 
               <option value="Ator">Ator</option>
@@ -20,8 +21,6 @@
               <option value="Modelo">Modelo</option>
               <option value="Figuração">Figuração</option>
             </select>
-            <label>Tipo de ator</label>
-          </div>
         </div>
       </div>
       <div class="row">
@@ -44,13 +43,14 @@
           </div>
         </div>
         <div class="col s12 m2 l2 xl2">
-          <div class="input-field">
-            <select ng-model="vm.casting.gen" id="genre" my-material-select>
+          <div>
+            <label>Gênero</label>
+
+            <select class="browser-default" ng-model="vm.casting.gen" id="genre" my-material-select>
               <option value="" ng-selected="vm.casting.gen == ''">Escolha sua opção</option>
               <option value="F" ng-selected="vm.casting.gen == 'F'">Feminino</option>
               <option value="M" ng-selected="vm.casting.gen == 'M'">Masculino</option>
             </select>
-            <label>Gênero</label>
           </div>
         </div>
         <div class="col s12 m2 l2 xl2">
@@ -126,8 +126,9 @@
 
       <div class="row">
         <div class="col s12 m2 l2 xl2">
-          <div class="input-field">
-            <select ng-model="vm.casting.etn" my-material-select>
+          <div>
+            <label>Etnia</label>
+            <select class="browser-default" ng-model="vm.casting.etn" my-material-select>
               <option value="" selected>Escolha sua opção</option>
               <option value="Branco">Branco</option>
               <option value="Negro">Negro</option>
@@ -135,12 +136,12 @@
               <option value="Asiático">Asiático</option>
               <option value="Indígena">Indígena</option>
             </select>
-            <label>Etnia</label>
           </div>
         </div>
         <div class="col s12 m2 l2 xl2">
-          <div class="input-field">
-            <select ng-model="vm.casting.cbl" my-material-select>
+          <div>
+            <label>Cabelo</label>
+            <select class="browser-default" ng-model="vm.casting.cbl" my-material-select>
               <option value="" selected>Escolha sua opção</option>
               <option value="Grisalhos">Grisalhos</option>
               <option value="Loiro">Loiro</option>
@@ -148,18 +149,17 @@
               <option value="Colorido">Colorido</option>
               <option value="Castanho">Castanho</option>
             </select>
-            <label>Cabelo</label>
           </div>
         </div>
         <div class="col s12 m2 l2 xl2">
-          <div class="input-field">
-            <select ng-model="vm.casting.olh" my-material-select>
+          <div>
+            <label>Olhos</label>
+            <select class="browser-default" ng-model="vm.casting.olh" my-material-select>
               <option value="" selected>Escolha sua opção</option>
               <option value="Azuis">Azuis</option>
               <option value="Verdes">Verdes</option>
               <option value="Castanhos">Castanhos</option>
             </select>
-            <label>Olhos</label>
           </div>
         </div>
         <div class="col s12 m4 l4 xl4">
