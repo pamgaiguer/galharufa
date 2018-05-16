@@ -29,16 +29,14 @@ router.get('/', function(req, res, next) {
 
 router.post('/alterar', function(req, res, next) {  
   
-  id = req.query.id;
-  descricao = req.query.d;
-  titulo = req.query.t;
-  conteudo = req.query.c;
+  id = req.body.id;
+  conteudo = req.body.conteudo;
 
   req.getConnection(function(err,connection){
   	connection.query(
-  	  'update servicos set svc_descricao = ?, ' +
-	  ' svc_titulo = ?, svc_conteudo = ? where svc_id = ?', 
-	  [descricao, titulo, conteudo, id],
+  	  'update servicos set svc_conteudo = ? ' +
+	  ' where svc_id = ?', 
+	  [conteudo, id],
   	function(err,result){
         if(err) return res.status(400).json(err);
         return res.status(200).json(result);

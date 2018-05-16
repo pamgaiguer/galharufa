@@ -42,13 +42,13 @@ angular.module('galharufa.controllers.adm-servicos', [])
     SimpleServices
       .editaServico(servicoAtual.svc_id, textoAtual)
       .then(function () {
-        console.log('Serviço atualizado com sucesso!')
+        Materialize.toast('Serviço atualizado com sucesso!', 2000)
       })
   }
 
   $scope.changeServico = function () {
-    console.log('Mudando o serviço', $scope.vm.servicoAtual)
     $scope.vm.textoAtual = $scope.vm.servicoAtual.svc_conteudo
+
     setTimeout(function () {
       Materialize.updateTextFields();
     }, 200)

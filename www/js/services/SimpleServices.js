@@ -15,7 +15,10 @@ function SimpleServices(Configs, $http) {
     },
 
     editaServico: function (servicoId, textoAtual) {
-      console.log('TODO - Atualizar serviço', servicoId, textoAtual)
+      return $http.post(Configs.apiUrl + 'servicos/alterar', {
+        id: servicoId,
+        conteudo: textoAtual
+      })
     }
   }
 

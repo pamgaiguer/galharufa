@@ -17,7 +17,7 @@
 
     <div class="input-field">
       <textarea id="texto-servico-selecionado" class="materialize-textarea"
-      ng-bind-html="vm.textoAtual"></textarea>
+      ng-model="vm.textoAtual"></textarea>
       <label for="texto-servico-selecionado">Texto a ser editado</label>
     </div>
   </div>
@@ -25,7 +25,7 @@
 
 <div class="row">
   <div class="col s12 m12 l12 xl12">
-    <button type="submit" value="Editar" class="btn btn-submit black-text bg-yellow-main right">Cadastrar <i class="material-icons right">send</i></button>
+    <button type="submit" value="Editar" class="btn btn-submit black-text bg-yellow-main right" ng-click="save()">Cadastrar <i class="material-icons right">send</i></button>
     <div class="clearfix"></div>
   </div>
 </div>
