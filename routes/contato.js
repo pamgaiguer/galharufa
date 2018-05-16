@@ -10,12 +10,12 @@ router.post('/', function (req, res, next) {
 
     const mailOptions = {
         from: 'Galharufa Contato <contato@agenciagalharufa.com.br>',
-        to: 'austin.felipe@live.com',
+        to: 'ontato@agenciagalharufa.com.br',
         subject: 'Contato pelo site',
         text: `Nome: ${nome}
-            Email: ${email}
-            Telefone: ${telefone}
-            Mensagem: ${mensagem}
+Email: ${email}
+Telefone: ${telefone}
+Mensagem: ${mensagem}
         `
     }
 
