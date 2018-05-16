@@ -16,7 +16,7 @@ angular.module('galharufa.controllers.adm-casting-register', [])
   }
 }])
 
-.controller('AdminCastingRegCtrl', function($scope, $rootScope, $q, $timeout, $location, Upload, UserServices, CastingServices) {
+.controller('AdminCastingRegCtrl', function($scope, $rootScope, $q, $timeout, $location, Upload, UserServices, CastingServices, $sce) {
 
   console.log("AdminCastingRegCtrl :: Iniciado");
 
@@ -242,6 +242,14 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
         console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
     });
+  }
+
+  $scope.embbedVideo = function () {
+    if ($scope.vm.casting.ptf === '') {
+      $scope.vm.embbedVideo = ''
+      return
+    }
+    $scope.vm.embbedVideo = $sce.trustAsResourceUrl($scope.vm.casting.ptf)
   }
 
 
