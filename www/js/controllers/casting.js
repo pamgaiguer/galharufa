@@ -24,7 +24,7 @@ angular.module('galharufa.controllers.casting', [])
     if ($scope.vm.busca.length === 0)
       CastingServices.getCastings().then(function(r){ $scope.vm.casting = r; });
     else
-      CastingServices.getCastingsPorBusca('nome', $scope.vm.busca).then(function(r){ $scope.vm.casting = r; });
+      CastingServices.getCastingsPorBusca($scope.vm.tipo, $scope.vm.busca).then(function(r){ $scope.vm.casting = r; });
   }
 
 });
