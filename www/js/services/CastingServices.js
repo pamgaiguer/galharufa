@@ -1,6 +1,6 @@
 var app = angular.module('galharufa.services.CastingServices', []);
 
-app.service('CastingServices', function (q$, $http, Configs) {
+app.service('CastingServices', function ($q, $http, Configs) {
 
   console.log("CastingServices :: Iniciado");
 
