@@ -19,6 +19,10 @@ function SimpleServices(Configs, $http) {
         id: servicoId,
         conteudo: textoAtual
       })
+    },
+
+    enviaContato: function (form) {
+      return $http.post(Configs.apiUrl + 'contato/', form)
     }
   }
 

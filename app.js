@@ -12,10 +12,8 @@ var users = require('./routes/usuarios');
 var casting = require('./routes/casting');
 var servicos = require('./routes/servicos');
 const quemsomos = require('./routes/quemsomos');
-/*var trabalhos = require('./routes/trabalhos');
-var blog = require('./routes/blog');
-var email = require('./routes/email');
-*/
+const contato = require('./routes/contato');
+
 var app = express();
 
 app.all('*', function(req, res, next) {
@@ -64,6 +62,7 @@ app.use('/usuarios', users);
 app.use('/casting', casting);
 app.use('/servicos', servicos);
 app.use('/quemsomos', quemsomos);
+app.use('/contato', contato);
 
 app.use(express.static(__dirname + '/www'));
 
