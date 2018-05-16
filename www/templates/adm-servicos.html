@@ -10,37 +10,35 @@
 
   <div class="row">
     <div class="col s12 m12 l12 xl12">
+      <label>Tipo de Curso</label>
+      <select class="browser-default" ng-model="vm.servicoAtual" ng-change="changeServico()"
+      ng-options="item.svc_descricao for item in vm.servicos track by item.svc_id">
+    </select>
 
-      <div class="input-field">
-        <select ng-model="vm.servicoAtual" ng-change="changeServico()"
-          ng-options="item.svc_descricao for item in vm.servicos track by item.svc_id">
-          <option value="" disabled selected>Escolha sua opção</option>
-        </select>
-        <label>Tipo de Curso</label>
-      </div>
-
-      <div class="input-field">
-        <textarea id="texto-servico-selecionado" class="materialize-textarea"
-          ng-bind-html="vm.textoAtual"></textarea>
-        <label for="texto-servico-selecionado">Texto a ser editado</label>
-      </div>
-
-      <div class="row">
-        <button type="submit" value="Editar" class="btn btn-submit black-text bg-yellow-main right">Cadastrar <i class="material-icons right">send</i></button>
-        <div class="clearfix"></div>
-      </div>
-
-
-    </div>
-    <div class="col s12 m12 l12 xl12">
-      <h5>Preview (Como irá aparecer)</h5>
-      <div class="input-field">
-        <!-- <textarea id="texto-servico-selecionado" class="materialize-textarea" disabled=""
-          ></textarea> -->
-        <div class="materialize-textarea" ng-bind-html="vm.textoAtual"></div>
-      </div>
+    <div class="input-field">
+      <textarea id="texto-servico-selecionado" class="materialize-textarea"
+      ng-bind-html="vm.textoAtual"></textarea>
+      <label for="texto-servico-selecionado">Texto a ser editado</label>
     </div>
   </div>
+</div>
+
+<div class="row">
+  <div class="col s12 m12 l12 xl12">
+    <button type="submit" value="Editar" class="btn btn-submit black-text bg-yellow-main right">Cadastrar <i class="material-icons right">send</i></button>
+    <div class="clearfix"></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12 m12 l12 xl12">
+    <h5>Preview (Como irá aparecer)</h5>
+    <div class="input-field">
+      <div class="materialize-textarea" ng-bind-html="vm.textoAtual"></div>
+    </div>
+  </div>
+</div>
+
 </main>
 
 <script>
