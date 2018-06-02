@@ -24,6 +24,7 @@
     "main-bower-files": "^2.13.1"
   },
   "dependencies": {
+    "angular-file-upload": "^2.5.0",
     "material-components-web": "^0.10.0",
     "serve-favicon": "~2.4.2"
   }

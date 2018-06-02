@@ -236,8 +236,8 @@
           <div class="file-field input-field ">
             <div class="btn black-text bg-yellow-main">
               <span>Foto 3x4</span>
-              <input type="file" ngf-select ng-model="vm.casting.f34" name="foto34" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB"
-                ngf-min-height="100" />
+              <input type="file" name="foto34" options="{alias: 'ft34'}"
+                nv-file-select="" uploader="uploader" />
             </div>
             <div class="file-path-wrapper">
               <input class="file-path validate" type="text">
@@ -248,8 +248,8 @@
           <div class="file-field input-field">
             <div class="btn black-text bg-yellow-main">
               <span>Foto Corpo Inteiro</span>
-              <input type="file" ngf-select ng-model="vm.casting.fbd" name="fotobd" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB"
-                ngf-min-height="100" />
+              <input type="file" name="fotobd" options="{alias: 'ftbd'}"
+                nv-file-select="" uploader="uploader" />
             </div>
             <div class="file-path-wrapper">
               <input class="file-path validate" type="text">
@@ -260,8 +260,8 @@
           <div class="file-field input-field">
             <div class="btn black-text bg-yellow-main">
               <span>Foto com Sorriso</span>
-              <input type="file" ngf-select ng-model="vm.casting.fsm" name="fotosm" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB"
-                ngf-min-height="100" />
+              <input type="file" name="fotosm" options="{alias: 'ftsm'}"
+                nv-file-select="" uploader="uploader" />
             </div>
             <div class="file-path-wrapper">
               <input class="file-path validate" type="text">
