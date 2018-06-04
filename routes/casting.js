@@ -227,7 +227,7 @@ router.post('/upload', function (req, res) {
 
       jimp.read(old_path).then(function (img) {
         img.resize(w, h).quality(72).write(new_path);
-        return res.status(200).json(new_path);
+        return res.json(new_path);
       }).catch(function (err) {
         console.error(err);
       });     
@@ -235,53 +235,10 @@ router.post('/upload', function (req, res) {
 
     let nma = req.query.name
   
-    if (ft34) return savePhoto(ft34, `ft34_${nma}`, 300, 400)
-    if (ftbd) return savePhoto(ftbd, `ftbd_${nma}`, 700, 1000)
-    if (ftsm) return savePhoto(ftsm, `ftsm_${nma}`, 700, 1000)
+    if (ft34) savePhoto(ft34, `ft34_${nma}`, 300, 400)
+    if (ftbd) savePhoto(ftbd, `ftbd_${nma}`, 700, 1000)
+    if (ftsm) savePhoto(ftsm, `ftsm_${nma}`, 700, 1000)
   });
-  // var f = req.files.file;
-  // var tempPath = f.path;
-
-  // var t = req.query.n;
-
-  // var w = 0;
-  // var h = 0;
-
-  // if (t.indexOf("f34" > -1)){
-  //   w = 300;
-  //   h = 400;
-  // } else {
-  //   w = 700;
-  //   h = 1000;
-  // }
-
-
-
-  // console.log(t);
-
-  // var targetPath = path.resolve('./www'+t);
-
-
-  // if (path.extname(f.originalFilename).toLowerCase() === '.png' ||
-  //     path.extname(f.originalFilename).toLowerCase() === '.jpg' ||
-  //     path.extname(f.originalFilename).toLowerCase() === '.jpeg')
-
-  // {
-
-  //     console.log(tempPath);
-  //     console.log(targetPath);
-
-  //     jimp.read(tempPath).then(function (img) {
-  //         img.resize(w, h).quality(72).write(targetPath);
-  //         return res.status(200).json(targetPath);
-  //     }).catch(function (err) {
-  //         console.error(err);
-  //     });      
-
-  // }
-  // else 
-
-  return res.status(200).json("0");
 
 });
 
