@@ -135,14 +135,32 @@ angular.module('galharufa.controllers.adm-casting-register', [])
       var imgBd = "";
       var imgSm = "";
 
-      if ($scope.vm.casting.f34) img34Ext = $scope.vm.casting.f34.name.slice(($scope.vm.casting.f34.name.lastIndexOf(".") - 1 >>> 0) + 2);
-      if ($scope.vm.casting.fbd) imgBdExt = $scope.vm.casting.fbd.name.slice(($scope.vm.casting.fbd.name.lastIndexOf(".") - 1 >>> 0) + 2);
-      if ($scope.vm.casting.fsm) imgSmExt = $scope.vm.casting.fsm.name.slice(($scope.vm.casting.fsm.name.lastIndexOf(".") - 1 >>> 0) + 2);
+      // if ($scope.vm.casting.f34) img34Ext = $scope.vm.casting.f34.name.slice(($scope.vm.casting.f34.name.lastIndexOf(".") - 1 >>> 0) + 2);
+      // if ($scope.vm.casting.fbd) imgBdExt = $scope.vm.casting.fbd.name.slice(($scope.vm.casting.fbd.name.lastIndexOf(".") - 1 >>> 0) + 2);
+      // if ($scope.vm.casting.fsm) imgSmExt = $scope.vm.casting.fsm.name.slice(($scope.vm.casting.fsm.name.lastIndexOf(".") - 1 >>> 0) + 2);
 
-      if ($scope.vm.casting.f34) img34 = "/styles/casting/ft34_" + $scope.vm.casting.nma.replace(/\s/g, "") + "." + img34Ext;
-      if ($scope.vm.casting.fbd) imgBd = "/styles/casting/ftbd_" + $scope.vm.casting.nma.replace(/\s/g, "") + "." + imgBdExt;
-      if ($scope.vm.casting.fsm) imgSm = "/styles/casting/ftsm_" + $scope.vm.casting.nma.replace(/\s/g, "") + "." + imgSmExt;
+      // if ($scope.vm.casting.f34) img34 = "/styles/casting/ft34_" + $scope.vm.casting.nma.replace(/\s/g, "") + "." + img34Ext;
+      // if ($scope.vm.casting.fbd) imgBd = "/styles/casting/ftbd_" + $scope.vm.casting.nma.replace(/\s/g, "") + "." + imgBdExt;
+      // if ($scope.vm.casting.fsm) imgSm = "/styles/casting/ftsm_" + $scope.vm.casting.nma.replace(/\s/g, "") + "." + imgSmExt;
 
+      for (let index = 0; index < uploader.queue.length; index++) {
+        const element = uploader.queue[index];
+
+        element.url = '/casting/upload?name=' + $scope.vm.casting.nme
+        
+        if (element.alias === 'ft34') {
+          img34Ext = element.file.name.slice((element.file.name.lastIndexOf(".") - 1 >>> 0) + 2)
+          img34 = "/styles/casting/ft34_" + $scope.vm.casting.nme.replace(/\s/g, "") + "." + img34Ext
+        }
+        else if (element.alias === 'ftbd') {
+          imgBdExt = element.file.name.slice((element.file.name.lastIndexOf(".") - 1 >>> 0) + 2)
+          imgBd = "/styles/casting/ftbd_" + $scope.vm.casting.nme.replace(/\s/g, "") + "." + imgBdExt
+        }
+        else if (element.alias === 'ftsm') {
+          imgSmExt = element.file.name.slice((element.file.name.lastIndexOf(".") - 1 >>> 0) + 2)
+          imgSm = "/styles/casting/ftsm_" + $scope.vm.casting.nme.replace(/\s/g, "") + "." + imgSmExt
+        }
+      }
 
       dataNascimento = tratarDateTime($scope.vm.casting.dtn);
 
@@ -167,12 +185,7 @@ angular.module('galharufa.controllers.adm-casting-register', [])
       )
 
         .then(function (r) {
-          if (r == undefined || r < 1) return;
-
-
-          if ($scope.vm.casting.f34) $scope.upload($scope.vm.casting.f34, img34);
-          if ($scope.vm.casting.fbd) $scope.upload($scope.vm.casting.fbd, imgBd);
-          if ($scope.vm.casting.fsm) $scope.upload($scope.vm.casting.fsm, imgSm);
+          $scope.upload();
 
           Materialize.toast($scope.vm.casting.tpo + ' inserido com sucesso!', 4000);
           $rootScope.path("/adm-casting-search");
