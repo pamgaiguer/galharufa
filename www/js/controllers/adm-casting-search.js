@@ -21,9 +21,10 @@ angular.module('galharufa.controllers.adm-casting-search', [])
     $rootScope.path("/adm-casting-register");
   }
 
-  $scope.excluir = function(c){
-    CastingServices.deleteCasting(c.cas_id).then(function(r){
+  $scope.excluir = function(id){
+    CastingServices.deleteCasting(id).then(function(r){
       CastingServices.getCastings().then(function(r){ $scope.vm.casting = r; });
+      Materialize.toast('Registro excluído com sucesso!', 4000);
     });
 
   }
