@@ -21,7 +21,7 @@
     "mysql": "^2.14.1",
     "node-datetime": "^2.0.3",
     "nodemailer": "^4.1.0",
-    "npm": "^6.0.0",
+    "npm": "^6.1.0",
     "serve-favicon": "~2.4.2"
   },
   "devDependencies": {

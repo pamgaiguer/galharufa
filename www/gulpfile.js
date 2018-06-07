@@ -21,7 +21,7 @@ var paths = {
     './js/libs/angular-route.min.js',
     './js/libs/materialize.min.js',
     './js/libs/ng-file-upload.min.js',
-    './js/libs/',
+    './js/libs/*',
     './js/app.js',
     './js/services/*.js',
     './shared/**/*.js',
