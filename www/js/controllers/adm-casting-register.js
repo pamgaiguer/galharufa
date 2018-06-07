@@ -301,7 +301,8 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         $scope.vm.embbedVideo = ''
         return
       }
-      $scope.vm.embbedVideo = $sce.trustAsResourceUrl($scope.vm.casting.ptf)
+      let embedUrl = $scope.vm.casting.ptf.replace('watch?v=', 'embed/')
+      $scope.vm.embbedVideo = $sce.trustAsResourceUrl(embedUrl)
     }
 
 

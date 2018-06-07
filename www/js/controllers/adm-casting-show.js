@@ -23,7 +23,8 @@ angular.module('galharufa.controllers.adm-casting-show', [])
                 $scope.vm.embbedVideo = ''
                 return
             }
-            $scope.vm.embbedVideo = $sce.trustAsResourceUrl($scope.vm.casting.cas_portfolio)
+            let embedUrl = $scope.vm.casting.cas_portfolio.replace('watch?v=', 'embed/')
+            $scope.vm.embbedVideo = $sce.trustAsResourceUrl(embedUrl)
         });
     }
 
