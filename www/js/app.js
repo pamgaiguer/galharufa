@@ -47,7 +47,7 @@ app.run(function($rootScope, $timeout, UserServices, $location, $route) {
 
 app.constant('Configs', {
   appToken:'',
-  apiUrl:'http://localhost:3000/'
+  apiUrl:'/'
   //apiUrl:'http://agenciagalharufa.com.br/'
   //apiUrl:'https://agenciagalharufa.com.br/'
 });
