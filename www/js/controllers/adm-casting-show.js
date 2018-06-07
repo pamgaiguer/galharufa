@@ -1,6 +1,6 @@
 angular.module('galharufa.controllers.adm-casting-show', [])
 
-.controller('AdminCastingShowCtrl', function($scope, $rootScope, $routeParams, CastingServices) {
+.controller('AdminCastingShowCtrl', function($scope, $sce, $rootScope, $routeParams, CastingServices) {
 
     $scope.vm = {
         'isLoading':false,
@@ -18,6 +18,12 @@ angular.module('galharufa.controllers.adm-casting-show', [])
         CastingServices.getCasting($routeParams.id).then(function(r){
             console.log('casting', r); 
             $scope.vm.casting = r[0] || {}; 
+
+            if ($scope.vm.casting.cas_portfolio === '') {
+                $scope.vm.embbedVideo = ''
+                return
+            }
+            $scope.vm.embbedVideo = $sce.trustAsResourceUrl($scope.vm.casting.cas_portfolio)
         });
     }
 
