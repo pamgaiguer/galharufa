@@ -1,7 +1,6 @@
 angular.module('galharufa.controllers.blog', [])
 
-.controller('BlogCtrl', function($scope, $rootScope, $q,
-  $timeout, $location, SimpleServices) {
+.controller('BlogCtrl', function($scope, $rootScope, $q, $timeout, $location) {
 
   console.log("BlogCtrl :: Iniciado");
 
@@ -12,7 +11,6 @@ angular.module('galharufa.controllers.blog', [])
   }
 
   $scope.init = function () {
-    console.log("startou o blog");
     $rootScope.headerId = 1;
     $rootScope.hold = false;
   }
