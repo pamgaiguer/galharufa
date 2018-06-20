@@ -1,0 +1,25 @@
+<main ng-init="init()" class="blog" id="blog">
+
+  <section class="main-logo section">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m4 l4 xl4"></div>
+        <div class="col s12 m4 l4 xl4">
+          <img src="/images/logo-home.png" class="responsive-img">
+          <div class="spacing"></div>
+          <small>Utilize o menu acima para navegar no site :) <br></small>
+          <small>Se quiser entrar em contato, só ir no menu <a href="" ng-click="path('/contato')">contato</a>.</small>
+        </div>
+        <div class="col s12 m4 l4 xl4"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  $(document).ready(function(){
+    Materialize.updateTextFields();
+    $('ul.tabs').tabs();
+  });
+</script>

@@ -5,6 +5,7 @@ var app = angular.module('galharufa', [
   'angularFileUpload',
   'galharufa.controllers.home',
   'galharufa.controllers.login',
+  'galharufa.controllers.blog',
   'galharufa.controllers.contato',
   'galharufa.controllers.servicos',
   'galharufa.controllers.casting',
@@ -68,6 +69,10 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
   .when('/login/', {
     templateUrl: '/templates/login.html',
     controller: 'LoginCtrl'
+  })
+  .when('/blog/', {
+    templateUrl: '/templates/blog.html',
+    controller: 'BlogCtrl'
   })
   .when('/contato/', {
     templateUrl: '/templates/contato.html',
