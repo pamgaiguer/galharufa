@@ -58,11 +58,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
   // $locationProvider.html5Mode(true);
 
   $routeProvider
-  .when('/', {
-    templateUrl: '/templates/home.html',
-    controller: 'HomeCtrl'
-  })
-  .when('/teste', {
+  .when('/home', {
     templateUrl: '/templates/home.html',
     controller: 'HomeCtrl'
   })
