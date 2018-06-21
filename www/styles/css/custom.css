@@ -200,7 +200,7 @@ header nav.nav-extended .nav-content {
   padding: 20px 0; }
   header nav.nav-extended .nav-content .tabs .tab a {
     color: #212121;
-    text-transform: lowercase; }
+    text-transform: capitalize; }
 
 footer.page-footer {
   padding-top: 0px;

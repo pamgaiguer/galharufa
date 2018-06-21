@@ -58,6 +58,10 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
   // $locationProvider.html5Mode(true);
 
   $routeProvider
+  .when('/', {
+    templateUrl: '/templates/home.html',
+    controller: 'HomeCtrl'
+  })
   .when('/home', {
     templateUrl: '/templates/home.html',
     controller: 'HomeCtrl'
@@ -82,7 +86,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     templateUrl: '/templates/casting.html',
     controller: 'CastingCtrl'
   })
-    .when('/casting-details', {
+  .when('/casting-details', {
     templateUrl: '/templates/casting-details.html',
     controller: 'CastingDetailsCtrl'
   })
