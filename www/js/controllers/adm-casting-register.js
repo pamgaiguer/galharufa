@@ -60,7 +60,10 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         'mot': false,
         'tra': false,
         'jsk': false,
-        'ptf': '',
+        'youtube': '',
+        'youtube2': '',
+        'vimeo': '',
+        'vimeo2': '',
         'sks': '',
         'dbc': '',
         'uid': 0,
@@ -114,7 +117,10 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         $scope.vm.casting.mot = CastingServices.casting.cas_moto;
         $scope.vm.casting.tra = CastingServices.casting.cas_trator;
         $scope.vm.casting.jsk = CastingServices.casting.cas_jetski;
-        $scope.vm.casting.ptf = CastingServices.casting.cas_portfolio;
+        $scope.vm.casting.youtube = CastingServices.casting.cas_portfolio;
+        $scope.vm.casting.youtube2 = CastingServices.casting.youtube2;
+        $scope.vm.casting.vimeo = CastingServices.casting.vimeo;
+        $scope.vm.casting.vimeo2 = CastingServices.casting.vimeo2;
         $scope.vm.casting.sks = CastingServices.casting.cas_skills;
         $scope.vm.casting.dbc = CastingServices.casting.cas_dadosbancarios;
         $scope.vm.casting.uid = CastingServices.casting.cas_usu_id;
@@ -134,14 +140,6 @@ angular.module('galharufa.controllers.adm-casting-register', [])
       var img34 = "";
       var imgBd = "";
       var imgSm = "";
-
-      // if ($scope.vm.casting.f34) img34Ext = $scope.vm.casting.f34.name.slice(($scope.vm.casting.f34.name.lastIndexOf(".") - 1 >>> 0) + 2);
-      // if ($scope.vm.casting.fbd) imgBdExt = $scope.vm.casting.fbd.name.slice(($scope.vm.casting.fbd.name.lastIndexOf(".") - 1 >>> 0) + 2);
-      // if ($scope.vm.casting.fsm) imgSmExt = $scope.vm.casting.fsm.name.slice(($scope.vm.casting.fsm.name.lastIndexOf(".") - 1 >>> 0) + 2);
-
-      // if ($scope.vm.casting.f34) img34 = "/styles/casting/ft34_" + $scope.vm.casting.nma.replace(/\s/g, "") + "." + img34Ext;
-      // if ($scope.vm.casting.fbd) imgBd = "/styles/casting/ftbd_" + $scope.vm.casting.nma.replace(/\s/g, "") + "." + imgBdExt;
-      // if ($scope.vm.casting.fsm) imgSm = "/styles/casting/ftsm_" + $scope.vm.casting.nma.replace(/\s/g, "") + "." + imgSmExt;
 
       for (let index = 0; index < uploader.queue.length; index++) {
         const element = uploader.queue[index];
@@ -179,7 +177,8 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         imgBd != "" ? imgBd : CastingServices.casting.cas_fotobody,
         imgSm != "" ? imgSm : CastingServices.casting.cas_fotosmile,
         $scope.vm.casting.car, $scope.vm.casting.mot, $scope.vm.casting.tra,
-        $scope.vm.casting.jsk, $scope.vm.casting.ptf, $scope.vm.casting.sks,
+        $scope.vm.casting.jsk, $scope.vm.casting.youtube, $scope.vm.casting.youtube2, 
+        $scope.vm.casting.vimeo, $scope.vm.casting.vimeo2, $scope.vm.casting.sks,
         $scope.vm.casting.dbc, UserServices.currentUser.usu_id, $scope.vm.casting.email,
         $scope.vm.casting.phone, $scope.vm.casting.mobile
       )
@@ -199,14 +198,6 @@ angular.module('galharufa.controllers.adm-casting-register', [])
       var img34 = "";
       var imgBd = "";
       var imgSm = "";
-
-      // if ($scope.vm.casting.f34) img34Ext = $scope.vm.casting.f34.name.slice(($scope.vm.casting.f34.name.lastIndexOf(".") - 1 >>> 0) + 2);
-      // if ($scope.vm.casting.fbd) imgBdExt = $scope.vm.casting.fbd.name.slice(($scope.vm.casting.fbd.name.lastIndexOf(".") - 1 >>> 0) + 2);
-      // if ($scope.vm.casting.fsm) imgSmExt = $scope.vm.casting.fsm.name.slice(($scope.vm.casting.fsm.name.lastIndexOf(".") - 1 >>> 0) + 2);
-
-      // if ($scope.vm.casting.f34) img34 = "/styles/casting/ft34_" + $scope.vm.casting.nma.replace(/\s/g, "") + "." + img34Ext;
-      // if ($scope.vm.casting.fbd) imgBd = "/styles/casting/ftbd_" + $scope.vm.casting.nma.replace(/\s/g, "") + "." + imgBdExt;
-      // if ($scope.vm.casting.fsm) imgSm = "/styles/casting/ftsm_" + $scope.vm.casting.nma.replace(/\s/g, "") + "." + imgSmExt;
 
       for (let index = 0; index < uploader.queue.length; index++) {
         const element = uploader.queue[index];
@@ -229,8 +220,6 @@ angular.module('galharufa.controllers.adm-casting-register', [])
 
       dataNascimento = tratarDateTime($scope.vm.casting.dtn);
 
-      console.log('foto34', img34)
-
       CastingServices.alterCasting($scope.vm.casting.id,
         $scope.vm.casting.tpo, $scope.vm.casting.nme, $scope.vm.casting.nma,
         $scope.vm.casting.gen, $scope.vm.casting.ano, $scope.vm.casting.nac,
@@ -243,7 +232,8 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         $scope.vm.casting.drt, $scope.vm.casting.end, tratarDecimal($scope.vm.casting.alt),
         $scope.vm.casting.mnq, tratarDecimal($scope.vm.casting.spt), img34, imgBd, imgSm,
         $scope.vm.casting.car, $scope.vm.casting.mot, $scope.vm.casting.tra,
-        $scope.vm.casting.jsk, $scope.vm.casting.ptf, $scope.vm.casting.sks,
+        $scope.vm.casting.jsk, $scope.vm.casting.youtube, $scope.vm.casting.youtube2, 
+        $scope.vm.casting.vimeo, $scope.vm.casting.vimeo2, $scope.vm.casting.sks,
         $scope.vm.casting.dbc, UserServices.currentUser.usu_id, $scope.vm.casting.email,
         $scope.vm.casting.phone, $scope.vm.casting.mobile
       )
@@ -256,53 +246,39 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         });
     }
 
-
-
     $scope.upload = function (file, n) {
       uploader.uploadAll()
-
-      uploader.onWhenAddingFileFailed = function (item /*{File|FileLikeObject}*/, filter, options) {
-        console.info('onWhenAddingFileFailed', item, filter, options);
-      };
-      uploader.onAfterAddingFile = function (fileItem) {
-        console.info('onAfterAddingFile', fileItem);
-      };
-      uploader.onAfterAddingAll = function (addedFileItems) {
-        console.info('onAfterAddingAll', addedFileItems);
-      };
-      uploader.onBeforeUploadItem = function (item) {
-        console.info('onBeforeUploadItem', item);
-      };
-      uploader.onProgressItem = function (fileItem, progress) {
-        console.info('onProgressItem', fileItem, progress);
-      };
-      uploader.onProgressAll = function (progress) {
-        console.info('onProgressAll', progress);
-      };
-      uploader.onSuccessItem = function (fileItem, response, status, headers) {
-        console.info('onSuccessItem', fileItem, response, status, headers);
-      };
-      uploader.onErrorItem = function (fileItem, response, status, headers) {
-        console.info('onErrorItem', fileItem, response, status, headers);
-      };
-      uploader.onCancelItem = function (fileItem, response, status, headers) {
-        console.info('onCancelItem', fileItem, response, status, headers);
-      };
-      uploader.onCompleteItem = function (fileItem, response, status, headers) {
-        console.info('onCompleteItem', fileItem, response, status, headers);
-      };
-      uploader.onCompleteAll = function () {
-        console.info('onCompleteAll');
-      };
     }
 
     $scope.embbedVideo = function () {
-      if ($scope.vm.casting.ptf === '') {
-        $scope.vm.embbedVideo = ''
-        return
+      $scope.vm.embbedYoutube = ''
+      $scope.vm.embbedYoutube2 = ''
+      $scope.vm.embbedVimeo = ''
+      $scope.vm.embbedVimeo2 = ''
+
+      if ($scope.vm.casting.youtube !== '') {
+        $scope.vm.embbedYoutube = $sce.trustAsResourceUrl(
+          $scope.vm.casting.youtube.replace('watch?v=', 'embed/')
+        )
       }
-      let embedUrl = $scope.vm.casting.ptf.replace('watch?v=', 'embed/')
-      $scope.vm.embbedVideo = $sce.trustAsResourceUrl(embedUrl)
+
+      if ($scope.vm.casting.youtube2 !== '') {
+        $scope.vm.embbedYoutube2 = $sce.trustAsResourceUrl(
+          $scope.vm.casting.youtube2.replace('watch?v=', 'embed/')
+        )
+      }
+    
+      if ($scope.vm.casting.vimeo !== '') {
+        $scope.vm.embbedVimeo = $sce.trustAsResourceUrl(
+          'https://player.vimeo.com/video/' + $scope.vm.casting.vimeo.split("/").pop()
+        )
+      }
+
+      if ($scope.vm.casting.vimeo2 !== '') {
+        $scope.vm.embbedVimeo2 = $sce.trustAsResourceUrl(
+          'https://player.vimeo.com/video/' + $scope.vm.casting.vimeo2.split("/").pop()
+        )
+      }
     }
 
 
@@ -320,9 +296,5 @@ angular.module('galharufa.controllers.adm-casting-register', [])
       dc += "";
       return dc.replace(".", "").replace(",", ".");
     }
-
-
-
-
 
   });

@@ -28,7 +28,7 @@ app.service('CastingServices', function ($q, $http, Configs) {
     },
 
     addCasting: function (tpo, nme, nma, gen, ano, nac, trx, trn, cms, bst, ctr, qdl, etn, cbl, olh, pes, dtn, rg, cpf, cnh, drt, end, alt, 
-		mnq, spt, f34, fbd, fsm, car, mot, tra, jsk, ptf, sks, dbc, uid, email, phone, mobile) {
+		mnq, spt, f34, fbd, fsm, car, mot, tra, jsk, youtube, youtube2, vimeo, vimeo2, sks, dbc, uid, email, phone, mobile) {
 
       carro = car ? 1 : 0;
       moto = mot ? 1 : 0;
@@ -41,9 +41,13 @@ app.service('CastingServices', function ($q, $http, Configs) {
       	'&etn='+etn+'&cbl='+cbl+'&olh='+olh+'&pes='+pes+'&dtn='+dtn+'&rg='+rg+'&cpf='+cpf+
       	'&cnh='+cnh+'&drt='+drt+'&end='+end+'&alt='+alt+'&mnq='+mnq+'&spt='+spt+'&f34='+f34+
       	'&fbd='+fbd+'&fsm='+fsm+'&car='+carro+'&mot='+moto+'&tra='+trator+'&jsk='+jetski+
-		    '&ptf='+ptf+'&sks='+sks+'&dbc='+ dbc+ '&uid='+uid+'&email='+email+'&phone='+phone+'&mobile='+mobile)
+		    '&sks='+sks+'&dbc='+ dbc+ '&uid='+uid+'&email='+email+'&phone='+phone+'&mobile='+mobile, {
+          youtube,
+          youtube2,
+          vimeo,
+          vimeo2
+        })
       .then(function (r) {
-        console.log(r);
         d.resolve(r.data.insertId);
       });
 
@@ -62,7 +66,7 @@ app.service('CastingServices', function ($q, $http, Configs) {
     },
 
     alterCasting: function (id, tpo, nme, nma, gen, ano, nac, trx, trn, cms, bst, ctr, qdl, etn, cbl, olh, pes, dtn, rg, cpf, cnh, drt, end, alt, 
-    mnq, spt, f34, fbd, fsm, car, mot, tra, jsk, ptf, sks, dbc, uid, email, phone, mobile) {
+    mnq, spt, f34, fbd, fsm, car, mot, tra, jsk, youtube, youtube2, vimeo, vimeo2, sks, dbc, uid, email, phone, mobile) {
 
       carro = car ? 1 : 0;
       moto = mot ? 1 : 0;
@@ -75,7 +79,13 @@ app.service('CastingServices', function ($q, $http, Configs) {
         '&etn='+etn+'&cbl='+cbl+'&olh='+olh+'&pes='+pes+'&dtn='+dtn+'&rg='+rg+'&cpf='+cpf+
         '&cnh='+cnh+'&drt='+drt+'&end='+end+'&alt='+alt+'&mnq='+mnq+'&spt='+spt+'&f34='+f34+
         '&fbd='+fbd+'&fsm='+fsm+'&car='+carro+'&mot='+moto+'&tra='+trator+'&jsk='+jetski+
-        '&ptf='+ptf+'&sks='+sks+'&dbc='+ dbc+ '&uid='+uid+'&email='+email+'&phone='+phone+'&mobile='+mobile)
+        '&sks='+sks+'&dbc='+ dbc+ '&uid='+uid+'&email='+email+'&phone='+phone+'&mobile='+mobile,
+        {
+          youtube,
+          youtube2,
+          vimeo,
+          vimeo2
+        })
       .then(function (r) {
         console.log(r);
         d.resolve(r.data.affectedRows);
@@ -108,5 +118,4 @@ app.service('CastingServices', function ($q, $http, Configs) {
   };
 
   return self;
-})
-;
+});

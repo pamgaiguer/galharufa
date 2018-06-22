@@ -1,11 +1,7 @@
 var path = require('path');
-var fs = require('fs');
 var express = require('express');
 var router = express.Router();
-var multipart = require('connect-multiparty');
-var gambUpload = multipart();
 var jimp = require("jimp");
-var dateTime = require('node-datetime');
 let formidable = require('formidable')
 
 router.get('/', function (req, res, next) {
@@ -89,7 +85,10 @@ router.post('/adicionar', function (req, res, next) {
   moto = req.query.mot;
   trator = req.query.tra;
   jetski = req.query.jsk;
-  portfolio = req.query.ptf;
+  const youtube = req.body.youtube;
+  const youtube2 = req.body.youtube2;
+  const vimeo = req.body.vimeo;
+  const vimeo2 = req.body.vimeo2;
   skills = req.query.sks;
   dadosbancarios = req.query.dbc;
   usuarioId = req.query.uid;
@@ -103,14 +102,14 @@ router.post('/adicionar', function (req, res, next) {
       ' cas_busto, cas_cintura, cas_quadril, cas_etnia, cas_cabelo, ' +
       ' cas_olhos, cas_peso, cas_dtnasc, cas_rg, cas_cpf, cas_cnh, cas_drt, cas_endereco, ' +
       ' cas_altura, cas_manequim, cas_sapato, cas_foto34, cas_fotobody, cas_fotosmile, ' +
-      ' cas_carro, cas_moto, cas_trator, cas_jetski, cas_portfolio, cas_skills, cas_dadosbancarios, ' +
+      ' cas_carro, cas_moto, cas_trator, cas_jetski, cas_portfolio, cas_youtube2, cas_vimeo, cas_vimeo2, cas_skills, cas_dadosbancarios, ' +
       ' cas_usu_id, cas_datamodificacao, cas_email, cas_phone, cas_mobile) ' +
-      ' values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, now(),?,?,?)',
+      ' values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, now(),?,?,?)',
 
       [tipo, nome, nomeart, genero, ano, nacionalidade, torax, terno, camisa, busto, cintura, quadril, etnia, cabelo, olhos,
         peso, dtnasc, rg, cpf, cnh, drt, endereco, altura, manequim, sapato, foto34, fotobody,
-        fotosmile, parseInt(carro), parseInt(moto), parseInt(trator), parseInt(jetski), portfolio, skills, dadosbancarios, usuarioId,
-        email, phone, mobile],
+        fotosmile, parseInt(carro), parseInt(moto), parseInt(trator), parseInt(jetski), youtube, youtube2, vimeo, vimeo2, skills, 
+        dadosbancarios, usuarioId, email, phone, mobile],
       function (err, result) {
         if (err) return res.status(400).json(err);
         return res.status(200).json(result);
@@ -165,7 +164,10 @@ router.post('/alterar', function (req, res, next) {
   moto = req.query.mot;
   trator = req.query.tra;
   jetski = req.query.jsk;
-  portfolio = req.query.ptf;
+  const youtube = req.body.youtube;
+  const youtube2 = req.body.youtube2;
+  const vimeo = req.body.vimeo;
+  const vimeo2 = req.body.vimeo2;
   skills = req.query.sks;
   dadosbancarios = req.query.dbc;
   usuarioId = req.query.uid;
@@ -182,12 +184,13 @@ router.post('/alterar', function (req, res, next) {
       ' cas_olhos = ?, cas_peso = ?, cas_dtnasc = ?, cas_rg = ?, cas_cpf = ?, cas_cnh = ?, cas_drt = ?, cas_endereco = ?, ' +
       ' cas_altura = ?, cas_manequim = ?, cas_sapato = ?, ' +
       ' cas_foto34 = ?, cas_fotobody = ?, cas_fotosmile = ?, ' +
-      ' cas_carro = ?, cas_moto = ?, cas_trator = ?, cas_jetski = ?, cas_portfolio = ?, cas_skills = ?, cas_dadosbancarios = ?, ' +
+      ' cas_carro = ?, cas_moto = ?, cas_trator = ?, cas_jetski = ?, cas_portfolio = ?, cas_youtube2 = ?, cas_vimeo = ?, cas_vimeo2 = ?, ' + 
+      ' cas_skills = ?, cas_dadosbancarios = ?, ' +
       ' cas_usu_id = ?, cas_datamodificacao = now(), cas_email = ?, cas_phone = ?, cas_mobile = ? where cas_id = ?',
       [tipo, nome, nomeart, genero, ano, nacionalidade, torax, terno, camisa, busto, cintura, quadril, etnia, cabelo, olhos,
         peso, dtnasc, rg, cpf, cnh, drt, endereco, altura, manequim, sapato, foto34, fotobody,
-        fotosmile, parseInt(carro), parseInt(moto), parseInt(trator), parseInt(jetski), portfolio, skills, dadosbancarios, usuarioId,
-        email, phone, mobile, id],
+        fotosmile, parseInt(carro), parseInt(moto), parseInt(trator), parseInt(jetski), youtube, youtube2, vimeo, vimeo2, skills, 
+        dadosbancarios, usuarioId, email, phone, mobile, id],
       function (err, result) {
         if (err) return res.status(400).json(err);
         return res.status(200).json(result);
