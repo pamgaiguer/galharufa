@@ -9,47 +9,37 @@
     </div>
 
     <div class="row">
-      <!-- <form action="">
-          <div class="input-field left-align">
-            <input ng-model="vm.busca" type="search" class="center-align validate" placeholder="Informe aqui seu critério de busca">
-          </div>
-          <a class="btn-floating waves-effect waves-light right bg-yellow-main black-text" ng-click="buscar()"><i class="material-icons">search</i></a>
-        </form> -->
-
       <form ng-submit="buscar()">
-        <div class="row">
-
-          <div class="col s12 m3 l3 xl3">
-            <label>Filtro</label>
-            <select ng-model="vm.tipo" class="browser-default">
-              <option value="" disabled selected>Escolha sua opção</option>
-              <option value="nomeart">Nome</option>
-              <option value="nacionalidade">Nacionalidade</option>
-              <option value="ano">Ano</option>
-              <option value="altura">Altura</option>
-              <option value="manequim">Manequim</option>
-              <option value="etnia">Etnia</option>
-            </select>
+        <div class="col s12 m3 l3 xl3">
+          <label>Filtro</label>
+          <select ng-model="vm.tipo" class="browser-default">
+            <option value="" disabled selected>Escolha sua opção</option>
+            <option value="nomeart">Nome</option>
+            <option value="nacionalidade">Nacionalidade</option>
+            <option value="ano">Ano</option>
+            <option value="altura">Altura</option>
+            <option value="manequim">Manequim</option>
+            <option value="etnia">Etnia</option>
+          </select>
+        </div>
+        <div class="col s12 m3 l3 xl3">
+          <div class="input-field">
+            <input ng-model="vm.busca" type="text" class="validate">
           </div>
-          <div class="col s12 m3 l3 xl3">
-            <div class="input-field">
-              <input ng-model="vm.busca" type="text" class="validate">
-            </div>
-          </div>
+        </div>
 
-          <div class="col s12 m3 l3 xl3">
-            <div class="input-field">
-              <button type="submit" value="Buscar" class="btn black-text bg-yellow-main btn-submit">Buscar
-                <i class="material-icons right">search</i>
-              </button>
-            </div>
+        <div class="col s12 m3 l3 xl3">
+          <div class="input-field">
+            <button type="submit" value="Buscar" class="btn black-text bg-yellow-main btn-submit">Buscar
+              <i class="material-icons right">search</i>
+            </button>
           </div>
         </div>
       </form>
     </div>
 
     <div class="row">
-      <div class="col s12 m3 l3 xl3" ng-repeat="model in vm.casting">
+      <div class="col s12 m4 l4 xl4" ng-repeat="model in vm.casting">
         <div class="card black grow">
           <div class="card-content white-text">
             <span class="card-title center-align">{{model.cas_nome}}</span>
@@ -63,6 +53,7 @@
               <li>Altura: {{model.cas_altura}}</li>
               <li>Ano: {{model.cas_ano}}</li>
               <li>Cabelo: {{model.cas_cabelo}}</li>
+              <li>Video portfolio: <a class="waves-effect waves-light btn modal-trigger" href="#modal1">clique aqui</a></li>
             </ul>
           </div>
         </div>
@@ -71,10 +62,21 @@
     </div>
 
   </div>
+
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
 </main>
 
 <script>
   $(document).ready(function () {
     Materialize.updateTextFields();
+    $('.modal').modal();
   });
 </script>
