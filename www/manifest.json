@@ -1,0 +1,15 @@
+{
+  "short_name": "Galharufa",
+  "name": "Galharufa",
+  "icons": [
+    {
+      "src":"images/main_logo@3x.png",
+      "sizes": "276x276",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#FFD740",
+  "Theme_color": "#333",
+  "display": "standalone"
+}

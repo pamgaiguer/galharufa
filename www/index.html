@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="styles/css/jquery.fullpage.min.css">
   <link rel="stylesheet" href="styles/css/materialize.min.css">
   <!-- endinject -->
+
+  <link rel="manifest" href="/manifest.json">
 </head>
 
 <body ng-app="galharufa">
@@ -60,6 +62,17 @@
   <script src="js/controllers/quemsomos.js"></script>
   <script src="js/controllers/servicos.js"></script>
   <!-- endinject -->
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(function(reg){
+          console.log("Service worker started.");
+        }).catch(function(err) {
+          console.log("No service worker. What's happening? ", err)
+        });
+    }
+  </script>
 </body>
 
 </html>
