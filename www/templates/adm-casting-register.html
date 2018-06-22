@@ -4,406 +4,422 @@
       <div class="col s12 m12 l12 xl12">
         <h5 class="session-name">Casting
           <i class="material-icons">keyboard_arrow_right</i> Cadastrar</h5>
-        <blockquote>
-          Cadastrar membros do Casting
-          <span class="font-semibold">Galharufa</span>
-        </blockquote>
-      </div>
-    </div>
-    <form ng-submit="vm.state == 'insert' ? adicionar() : alterar()">
-      <div class="row">
-        <div class="col s12 m4 l4 xl4">
-          <label>Tipo de ator</label>
-
-          <select class="browser-default" ng-model="vm.casting.tpo" id="casting">
-            <option value="" disabled selected>Escolha sua opção</option>
-
-            <option value="Ator">Ator</option>
-            <option value="Criança">Criança</option>
-            <option value="Modelo">Modelo</option>
-            <option value="Figuração">Figuração</option>
-          </select>
+          <blockquote>
+            Cadastrar membros do Casting
+            <span class="font-semibold">Galharufa</span>
+          </blockquote>
         </div>
       </div>
-      <div class="row">
-        <div class="col s12 m3 l3 xl3">
-          <div class="input-field">
-            <input ng-model="vm.casting.nme" type="text" required>
-            <label>Nome Completo</label>
-          </div>
-        </div>
-        <div class="col s12 m3 l3 xl3">
-          <div class="input-field">
-            <input ng-model="vm.casting.nma" type="text" required>
-            <label>Nome Artístico</label>
-          </div>
-        </div>
-        <div class="col s12 m3 l3 xl2">
-          <div class="input-field">
-            <input ng-model="vm.casting.nac" type="text">
-            <label>Nacionalidade</label>
-          </div>
-        </div>
-        <div class="col s12 m2 l2 xl2">
-          <div>
-            <label>Gênero</label>
+      <form ng-submit="vm.state == 'insert' ? adicionar() : alterar()">
+        <div class="row">
+          <div class="col s12 m4 l4 xl4">
+            <label>Tipo de ator</label>
 
-            <select class="browser-default" ng-model="vm.casting.gen" id="genre" my-material-select>
-              <option value="" ng-selected="vm.casting.gen == ''">Escolha sua opção</option>
-              <option value="F" ng-selected="vm.casting.gen == 'F'">Feminino</option>
-              <option value="M" ng-selected="vm.casting.gen == 'M'">Masculino</option>
+            <select class="browser-default" ng-model="vm.casting.tpo" id="casting">
+              <option value="" disabled selected>Escolha sua opção</option>
+
+              <option value="Ator">Ator</option>
+              <option value="Criança">Criança</option>
+              <option value="Modelo">Modelo</option>
+              <option value="Figuração">Figuração</option>
             </select>
           </div>
         </div>
-        <div class="col s12 m2 l2 xl2">
-          <div class="input-field">
-            <input ng-model="vm.casting.ano" type="tel">
-            <label>Ano</label>
+        <div class="row">
+          <div class="col s12 m3 l3 xl3">
+            <div class="input-field">
+              <input ng-model="vm.casting.nme" type="text" required>
+              <label>Nome Completo</label>
+            </div>
           </div>
-        </div>
-      </div>
+          <div class="col s12 m3 l3 xl3">
+            <div class="input-field">
+              <input ng-model="vm.casting.nma" type="text" required>
+              <label>Nome Artístico</label>
+            </div>
+          </div>
+          <div class="col s12 m3 l3 xl2">
+            <div class="input-field">
+              <input ng-model="vm.casting.nac" type="text">
+              <label>Nacionalidade</label>
+            </div>
+          </div>
+          <div class="col s12 m2 l2 xl2">
+            <div>
+              <label>Gênero</label>
 
-      <div class="row">
-        <div class="col s12 m4 l4 xl4">
-          <div class="input-field">
-            <input type="tel" ng-model="vm.casting.phone">
-            <label>Telefone</label>
+              <select class="browser-default" ng-model="vm.casting.gen" id="genre" my-material-select>
+                <option value="" ng-selected="vm.casting.gen == ''">Escolha sua opção</option>
+                <option value="F" ng-selected="vm.casting.gen == 'F'">Feminino</option>
+                <option value="M" ng-selected="vm.casting.gen == 'M'">Masculino</option>
+              </select>
+            </div>
+          </div>
+          <div class="col s12 m2 l2 xl2">
+            <div class="input-field">
+              <input ng-model="vm.casting.ano" type="tel">
+              <label>Ano</label>
+            </div>
           </div>
         </div>
-        <div class="col s12 m4 l4 xl4">
-          <div class="input-field">
-            <input type="tel" required ng-model="vm.casting.mobile">
-            <label>Celular</label>
-          </div>
-        </div>
-        <div class="col s12 m4 l4 xl4">
-          <div class="input-field">
-            <input type="email" required ng-model="vm.casting.email">
-            <label>E-mail</label>
-          </div>
-        </div>
-      </div>
 
-      <div class="row man-data" style="display: none">
-        <div class="col s12 m4 l4 xl4">
-          <div class="input-field">
-            <input ng-model="vm.casting.trx" type="text">
-            <label>Tórax</label>
+        <div class="row">
+          <div class="col s12 m4 l4 xl4">
+            <div class="input-field">
+              <input type="tel" ng-model="vm.casting.phone">
+              <label>Telefone</label>
+            </div>
+          </div>
+          <div class="col s12 m4 l4 xl4">
+            <div class="input-field">
+              <input type="tel" required ng-model="vm.casting.mobile">
+              <label>Celular</label>
+            </div>
+          </div>
+          <div class="col s12 m4 l4 xl4">
+            <div class="input-field">
+              <input type="email" required ng-model="vm.casting.email">
+              <label>E-mail</label>
+            </div>
           </div>
         </div>
-        <div class="col s12 m4 l4 xl4">
-          <div class="input-field">
-            <input ng-model="vm.casting.trn" type="text">
-            <label>Terno</label>
-          </div>
-        </div>
-        <div class="col s12 m4 l4 xl4">
-          <div class="input-field">
-            <input ng-model="vm.casting.cms" type="text">
-            <label>Camisa</label>
-          </div>
-        </div>
-      </div>
 
-      <div class="row woman-data" style="display: none">
-        <div class="col s12 m4 l4 xl4">
-          <div class="input-field">
-            <input ng-model="vm.casting.bst" type="text">
-            <label>Busto</label>
+        <div class="row man-data" style="display: none">
+          <div class="col s12 m4 l4 xl4">
+            <div class="input-field">
+              <input ng-model="vm.casting.trx" type="text">
+              <label>Tórax</label>
+            </div>
+          </div>
+          <div class="col s12 m4 l4 xl4">
+            <div class="input-field">
+              <input ng-model="vm.casting.trn" type="text">
+              <label>Terno</label>
+            </div>
+          </div>
+          <div class="col s12 m4 l4 xl4">
+            <div class="input-field">
+              <input ng-model="vm.casting.cms" type="text">
+              <label>Camisa</label>
+            </div>
           </div>
         </div>
-        <div class="col s12 m4 l4 xl4">
-          <div class="input-field">
-            <input ng-model="vm.casting.ctr" type="text">
-            <label>Cintura</label>
-          </div>
-        </div>
-        <div class="col s12 m4 l4 xl4">
-          <div class="input-field">
-            <input ng-model="vm.casting.qdl" type="text">
-            <label>Quadril</label>
-          </div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col s12 m2 l2 xl2">
-          <div>
-            <label>Etnia</label>
-            <select class="browser-default" ng-model="vm.casting.etn" my-material-select>
-              <option value="" selected>Escolha sua opção</option>
-              <option value="Branco">Branco</option>
-              <option value="Negro">Negro</option>
-              <option value="Pardo">Pardo</option>
-              <option value="Asiático">Asiático</option>
-              <option value="Indígena">Indígena</option>
-            </select>
+        <div class="row woman-data" style="display: none">
+          <div class="col s12 m4 l4 xl4">
+            <div class="input-field">
+              <input ng-model="vm.casting.bst" type="text">
+              <label>Busto</label>
+            </div>
+          </div>
+          <div class="col s12 m4 l4 xl4">
+            <div class="input-field">
+              <input ng-model="vm.casting.ctr" type="text">
+              <label>Cintura</label>
+            </div>
+          </div>
+          <div class="col s12 m4 l4 xl4">
+            <div class="input-field">
+              <input ng-model="vm.casting.qdl" type="text">
+              <label>Quadril</label>
+            </div>
           </div>
         </div>
-        <div class="col s12 m2 l2 xl2">
-          <div>
-            <label>Cabelo</label>
-            <select class="browser-default" ng-model="vm.casting.cbl" my-material-select>
-              <option value="" selected>Escolha sua opção</option>
-              <option value="Grisalhos">Grisalhos</option>
-              <option value="Loiro">Loiro</option>
-              <option value="Ruivo">Ruivo</option>
-              <option value="Colorido">Colorido</option>
-              <option value="Castanho">Castanho</option>
-            </select>
-          </div>
-        </div>
-        <div class="col s12 m2 l2 xl2">
-          <div>
-            <label>Olhos</label>
-            <select class="browser-default" ng-model="vm.casting.olh" my-material-select>
-              <option value="" selected>Escolha sua opção</option>
-              <option value="Azuis">Azuis</option>
-              <option value="Verdes">Verdes</option>
-              <option value="Castanhos">Castanhos</option>
-            </select>
-          </div>
-        </div>
-        <div class="col s12 m4 l4 xl4">
-          <div class="input-field">
-            <input ng-model="vm.casting.pes" type="text">
-            <label>Peso</label>
-          </div>
-        </div>
-        <div class="col s12 m2 l2 xl2">
-          <div class="input-field">
-            <input id="dtn" ng-model="vm.casting.dtn" required type="text" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}">
-            <label for="dtn">Data de nascimento</label>
-          </div>
-        </div>
-      </div>
 
-      <div class="row">
+        <div class="row">
+          <div class="col s12 m2 l2 xl2">
+            <div>
+              <label>Etnia</label>
+              <select class="browser-default" ng-model="vm.casting.etn" my-material-select>
+                <option value="" selected>Escolha sua opção</option>
+                <option value="Branco">Branco</option>
+                <option value="Negro">Negro</option>
+                <option value="Pardo">Pardo</option>
+                <option value="Asiático">Asiático</option>
+                <option value="Indígena">Indígena</option>
+              </select>
+            </div>
+          </div>
+          <div class="col s12 m2 l2 xl2">
+            <div>
+              <label>Cabelo</label>
+              <select class="browser-default" ng-model="vm.casting.cbl" my-material-select>
+                <option value="" selected>Escolha sua opção</option>
+                <option value="Grisalhos">Grisalhos</option>
+                <option value="Loiro">Loiro</option>
+                <option value="Ruivo">Ruivo</option>
+                <option value="Colorido">Colorido</option>
+                <option value="Castanho">Castanho</option>
+              </select>
+            </div>
+          </div>
+          <div class="col s12 m2 l2 xl2">
+            <div>
+              <label>Olhos</label>
+              <select class="browser-default" ng-model="vm.casting.olh" my-material-select>
+                <option value="" selected>Escolha sua opção</option>
+                <option value="Azuis">Azuis</option>
+                <option value="Verdes">Verdes</option>
+                <option value="Castanhos">Castanhos</option>
+              </select>
+            </div>
+          </div>
+          <div class="col s12 m4 l4 xl4">
+            <div class="input-field">
+              <input ng-model="vm.casting.pes" type="text">
+              <label>Peso</label>
+            </div>
+          </div>
+          <div class="col s12 m2 l2 xl2">
+            <div class="input-field">
+              <input id="dtn" ng-model="vm.casting.dtn" required type="text" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}">
+              <label for="dtn">Data de nascimento</label>
+            </div>
+          </div>
+        </div>
 
-        <div class="col s12 m3 l3 xl3">
-          <div class="input-field">
-            <input ng-model="vm.casting.rg" type="text">
-            <label>R.G.</label>
+        <div class="row">
+
+          <div class="col s12 m3 l3 xl3">
+            <div class="input-field">
+              <input ng-model="vm.casting.rg" type="text">
+              <label>R.G.</label>
+            </div>
+          </div>
+          <div class="col s12 m3 l3 xl3">
+            <div class="input-field">
+              <input ng-model="vm.casting.cpf" type="text">
+              <label>C.P.F.</label>
+            </div>
+          </div>
+          <div class="col s12 m3 l3 xl3">
+            <div class="input-field">
+              <input ng-model="vm.casting.cnh" type="text">
+              <label>CNH Número</label>
+            </div>
+          </div>
+          <div class="col s12 m3 l3 xl3">
+            <div class="input-field">
+              <input ng-model="vm.casting.drt" type="text">
+              <label>D.R.T.</label>
+            </div>
           </div>
         </div>
-        <div class="col s12 m3 l3 xl3">
-          <div class="input-field">
-            <input ng-model="vm.casting.cpf" type="text">
-            <label>C.P.F.</label>
+        <div class="row">
+          <div class="col s12 m6 l6 xl6">
+            <div class="input-field">
+              <input ng-model="vm.casting.end" type="text">
+              <label>Endereço</label>
+            </div>
+          </div>
+          <div class="col s12 m2 l2 xl2">
+            <div class="input-field">
+              <input ng-model="vm.casting.alt" type="text">
+              <label>Altura</label>
+            </div>
+          </div>
+          <div class="col s12 m2 l2 xl2">
+            <div class="input-field">
+              <input ng-model="vm.casting.mnq" type="text">
+              <label>Manequim</label>
+            </div>
+          </div>
+          <div class="col s12 m2 l2 xl2">
+            <div class="input-field">
+              <input ng-model="vm.casting.spt" type="text">
+              <label>Sapato</label>
+            </div>
           </div>
         </div>
-        <div class="col s12 m3 l3 xl3">
-          <div class="input-field">
-            <input ng-model="vm.casting.cnh" type="text">
-            <label>CNH Número</label>
-          </div>
-        </div>
-        <div class="col s12 m3 l3 xl3">
-          <div class="input-field">
-            <input ng-model="vm.casting.drt" type="text">
-            <label>D.R.T.</label>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s12 m6 l6 xl6">
-          <div class="input-field">
-            <input ng-model="vm.casting.end" type="text">
-            <label>Endereço</label>
-          </div>
-        </div>
-        <div class="col s12 m2 l2 xl2">
-          <div class="input-field">
-            <input ng-model="vm.casting.alt" type="text">
-            <label>Altura</label>
-          </div>
-        </div>
-        <div class="col s12 m2 l2 xl2">
-          <div class="input-field">
-            <input ng-model="vm.casting.mnq" type="text">
-            <label>Manequim</label>
-          </div>
-        </div>
-        <div class="col s12 m2 l2 xl2">
-          <div class="input-field">
-            <input ng-model="vm.casting.spt" type="text">
-            <label>Sapato</label>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s12 m4 l4 xl4">
-          <div class="file-field input-field ">
-            <div class="btn black-text bg-yellow-main">
-              <span>Foto 3x4</span>
-              <input type="file" name="foto34" options="{alias: 'ft34'}"
+        <div class="row">
+          <div class="col s12 m4 l4 xl4">
+            <div class="file-field input-field ">
+              <div class="btn black-text bg-yellow-main">
+                <span>Foto 3x4</span>
+                <input type="file" name="foto34" options="{alias: 'ft34'}"
                 nv-file-select="" uploader="uploader" />
-            </div>
-            <div class="file-path-wrapper">
-              <input class="file-path validate" type="text">
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col s12 m4 l4 xl4">
-          <div class="file-field input-field">
-            <div class="btn black-text bg-yellow-main">
-              <span>Foto Corpo Inteiro</span>
-              <input type="file" name="fotobd" options="{alias: 'ftbd'}"
+          <div class="col s12 m4 l4 xl4">
+            <div class="file-field input-field">
+              <div class="btn black-text bg-yellow-main">
+                <span>Foto Corpo Inteiro</span>
+                <input type="file" name="fotobd" options="{alias: 'ftbd'}"
                 nv-file-select="" uploader="uploader" />
-            </div>
-            <div class="file-path-wrapper">
-              <input class="file-path validate" type="text">
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col s12 m4 l4 xl4">
-          <div class="file-field input-field">
-            <div class="btn black-text bg-yellow-main">
-              <span>Foto com Sorriso</span>
-              <input type="file" name="fotosm" options="{alias: 'ftsm'}"
+          <div class="col s12 m4 l4 xl4">
+            <div class="file-field input-field">
+              <div class="btn black-text bg-yellow-main">
+                <span>Foto com Sorriso</span>
+                <input type="file" name="fotosm" options="{alias: 'ftsm'}"
                 nv-file-select="" uploader="uploader" />
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+              </div>
             </div>
-            <div class="file-path-wrapper">
-              <input class="file-path validate" type="text">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m3 l3 xl3">
+            <input id="car" ng-model="vm.casting.car" type="checkbox" class="filled-in materialize-checkbox" />
+            <label for="car">Carro</label>
+          </div>
+          <div class="col s12 m3 l3 xl3">
+            <input id="mot" ng-model="vm.casting.mot" type="checkbox" class="filled-in materialize-checkbox" />
+            <label for="mot">Moto</label>
+          </div>
+          <div class="col s12 m3 l3 xl3">
+            <input id="trt" ng-model="vm.casting.trt" type="checkbox" class="filled-in materialize-checkbox" />
+            <label for="trt">Trator</label>
+          </div>
+          <div class="col s12 m3 l3 xl3">
+            <input id="jsk" ng-model="vm.casting.jsk" type="checkbox" class="filled-in materialize-checkbox" />
+            <label for="jsk">JetSki</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m5 l5 xl5">
+            <div class="input-field">
+              <input ng-model="vm.casting.ptf" type="text" class="validate" ng-change="embbedVideo()">
+              <label>Link 1 Portfólio YouTube</label>
+            </div>
+          </div>
+          <div class="col s12 m2 l2 xl2">
+            <div class="input-field">
+              <p>
+                <input type="checkbox" id="test5" />
+                <label for="test5">Video principal</label>
+              </p>
+            </div>
+          </div>
+          <div class="col s12 m5 l5 xl5">
+            <iframe width="100%" height="315" ng-src="{{vm.embbedVideo}}" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12 m6 l6 xl6">
+            <div class="input-field">
+              <input ng-model="vm.casting.ptf" type="text" class="validate" ng-change="embbedVideo()">
+              <label>Link 2 Portfólio YouTube</label>
+            </div>
+          </div>
+          <div class="col s12 m6 l6 xl6">
+            <iframe width="100%" height="315" ng-src="{{vm.embbedVideo}}" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12 m5 l5 xl5">
+            <div class="input-field">
+              <input ng-model="vm.casting.ptf" type="text" class="validate" ng-change="embbedVideo()">
+              <label>Link 1 Portfólio Vimeo</label>
+            </div>
+          </div>
+          <div class="col s12 m2 l2 xl2">
+            <div class="input-field">
+              <p>
+                <input type="checkbox" id="test5" />
+                <label for="test5">Video principal</label>
+              </p>
+            </div>
+          </div>
+          <div class="col s12 m5 l5 xl5">
+            <iframe width="100%" height="315" ng-src="{{vm.embbedVideo}}" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12 m6 l6 xl6">
+            <div class="input-field">
+              <input ng-model="vm.casting.ptf" type="text" class="validate" ng-change="embbedVideo()">
+              <label>Link 2 Portfólio Vimeo</label>
+            </div>
+          </div>
+          <div class="col s12 m6 l6 xl6">
+            <iframe width="100%" height="315" ng-src="{{vm.embbedVideo}}" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+
+
+
+        <div class="row">
+          <div class="col s12 m6 l6 xl6">
+            <div class="input-field">
+              <input ng-model="vm.casting.ptf" type="text" class="validate" ng-change="embbedVideo()">
+              <label>Link 1 Portfólio YouTube</label>
+            </div>
+          </div>
+          <div class="col s12 m6 l6 xl6">
+            <iframe width="100%" height="315" ng-src="{{vm.embbedVideo}}" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12 m6 l6 xl6">
+            <div class="input-field">
+              <textarea ng-model="vm.casting.sks" class="materialize-textarea"></textarea>
+              <label>Habilidades</label>
+            </div>
+          </div>
+          <div class="col s12 m6 l6 xl6">
+            <div class="input-field">
+              <textarea ng-model="vm.casting.dbc" class="materialize-textarea"></textarea>
+              <label>Dados Bancários</label>
             </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col s12 m3 l3 xl3">
-          <input id="car" ng-model="vm.casting.car" type="checkbox" class="filled-in materialize-checkbox" />
-          <label for="car">Carro</label>
-        </div>
-        <div class="col s12 m3 l3 xl3">
-          <input id="mot" ng-model="vm.casting.mot" type="checkbox" class="filled-in materialize-checkbox" />
-          <label for="mot">Moto</label>
-        </div>
-        <div class="col s12 m3 l3 xl3">
-          <input id="trt" ng-model="vm.casting.trt" type="checkbox" class="filled-in materialize-checkbox" />
-          <label for="trt">Trator</label>
-        </div>
-        <div class="col s12 m3 l3 xl3">
-          <input id="jsk" ng-model="vm.casting.jsk" type="checkbox" class="filled-in materialize-checkbox" />
-          <label for="jsk">JetSki</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s12 m6 l6 xl6">
-          <div class="input-field">
-            <input ng-model="vm.casting.ptf" type="text" class="validate" ng-change="embbedVideo()">
-            <label>Link 1 Portfólio YouTube</label>
+
+
+        <div class="row">
+          <div class="col s12 m12 l12 xl12">
+
+            <button ng-if="vm.state == 'insert'" class="btn waves-effect waves-light right black-text bg-yellow-main" type="submit" name="action">
+              Cadastrar
+              <i class="material-icons right">send</i>
+            </button>
+
+            <button ng-if="vm.state == 'alter'" class="btn waves-effect waves-light right black-text bg-yellow-main" type="submit" name="action">
+              Alterar
+              <i class="material-icons right">send</i>
+            </button>
+
+
           </div>
         </div>
-        <div class="col s12 m6 l6 xl6">
-          <iframe width="100%" height="315" ng-src="{{vm.embbedVideo}}" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col s12 m6 l6 xl6">
-          <div class="input-field">
-            <input ng-model="vm.casting.ptf" type="text" class="validate" ng-change="embbedVideo()">
-            <label>Link 2 Portfólio YouTube</label>
-          </div>
-        </div>
-        <div class="col s12 m6 l6 xl6">
-          <iframe width="100%" height="315" ng-src="{{vm.embbedVideo}}" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col s12 m6 l6 xl6">
-          <div class="input-field">
-            <input ng-model="vm.casting.ptf" type="text" class="validate" ng-change="embbedVideo()">
-            <label>Link 1 Portfólio Vimeo</label>
-          </div>
-        </div>
-        <div class="col s12 m6 l6 xl6">
-          <iframe width="100%" height="315" ng-src="{{vm.embbedVideo}}" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-
-            <div class="row">
-        <div class="col s12 m6 l6 xl6">
-          <div class="input-field">
-            <input ng-model="vm.casting.ptf" type="text" class="validate" ng-change="embbedVideo()">
-            <label>Link 2 Portfólio Vimeo</label>
-          </div>
-        </div>
-        <div class="col s12 m6 l6 xl6">
-          <iframe width="100%" height="315" ng-src="{{vm.embbedVideo}}" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
+      </form>
+    </section>
+  </main>
 
 
+  <script type="text/javascript">
 
-      <div class="row">
-        <div class="col s12 m6 l6 xl6">
-          <div class="input-field">
-            <input ng-model="vm.casting.ptf" type="text" class="validate" ng-change="embbedVideo()">
-            <label>Link 1 Portfólio YouTube</label>
-          </div>
-        </div>
-        <div class="col s12 m6 l6 xl6">
-          <iframe width="100%" height="315" ng-src="{{vm.embbedVideo}}" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
+    $(document).ready(function () {
 
-      <div class="row">
-        <div class="col s12 m6 l6 xl6">
-          <div class="input-field">
-            <textarea ng-model="vm.casting.sks" class="materialize-textarea"></textarea>
-            <label>Habilidades</label>
-          </div>
-        </div>
-        <div class="col s12 m6 l6 xl6">
-          <div class="input-field">
-            <textarea ng-model="vm.casting.dbc" class="materialize-textarea"></textarea>
-            <label>Dados Bancários</label>
-          </div>
-        </div>
-      </div>
+      Materialize.updateTextFields();
 
+      $("#genre").change(function () {
+        if ($(this).val() == "F") {
+          $(".woman-data").fadeIn(300);
+          $(".man-data").fadeOut(300);
+        } else if ($(this).val() == "M") {
+          $(".man-data").fadeIn(300);
+          $(".woman-data").fadeOut(300);
+        }
+      });
 
-      <div class="row">
-        <div class="col s12 m12 l12 xl12">
-
-          <button ng-if="vm.state == 'insert'" class="btn waves-effect waves-light right black-text bg-yellow-main" type="submit" name="action">
-            Cadastrar
-            <i class="material-icons right">send</i>
-          </button>
-
-          <button ng-if="vm.state == 'alter'" class="btn waves-effect waves-light right black-text bg-yellow-main" type="submit" name="action">
-            Alterar
-            <i class="material-icons right">send</i>
-          </button>
-
-
-        </div>
-      </div>
-    </form>
-  </section>
-</main>
-
-
-<script type="text/javascript">
-
-  $(document).ready(function () {
-
-    Materialize.updateTextFields();
-
-    $("#genre").change(function () {
-      if ($(this).val() == "F") {
-        $(".woman-data").fadeIn(300);
-        $(".man-data").fadeOut(300);
-      } else if ($(this).val() == "M") {
-        $(".man-data").fadeIn(300);
-        $(".woman-data").fadeOut(300);
-      }
+      $('select').material_select();
     });
 
-    $('select').material_select();
-  });
 
-
-</script>
+  </script>
