@@ -1,6 +1,7 @@
 
 # Created by https://www.gitignore.io/api/node,bower,sass
 www/bower_components/*
+www/node_modules/*
 ### Node ###
 # Logs
 logs
@@ -110,3 +111,4 @@ Desktop.ini
 # node_modules/*
 # node_modules/*
 www/package-json.lock
+package-json.lock
