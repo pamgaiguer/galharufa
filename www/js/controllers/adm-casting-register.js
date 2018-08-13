@@ -131,16 +131,16 @@ angular.module('galharufa.controllers.adm-casting-register', [])
 
         // Load habilities
         $scope.vm.casting.habilidades = CastingServices.casting.cas_habilidade.split(';');
-        console.log('habilidades', CastingServices.casting.cas_habilidade.split(';'))
-
       } else {
         $scope.vm.state = "insert";
       }
 
+      var data = [] 
+      $scope.vm.casting.habilidades.forEach(function (e) {
+        data.push({ tag: e })
+      })
       $('.chips').material_chip({
-        data: $scope.vm.casting.habilidades.forEach(function (e) {
-          return { tag: e }
-        })
+        data: data
       })
     }
 
