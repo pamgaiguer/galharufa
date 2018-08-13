@@ -69,7 +69,8 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         'uid': 0,
         email: '',
         phone: '',
-        mobile: ''
+        mobile: '',
+        habilidades: []
       }
     }
 
@@ -128,9 +129,27 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         $scope.vm.casting.phone = CastingServices.casting.cas_phone;
         $scope.vm.casting.mobile = CastingServices.casting.cas_mobile;
 
+        // Load habilities
+        $scope.vm.casting.habilidades = CastingServices.casting.cas_habilidade.split(';');
+        console.log('habilidades', CastingServices.casting.cas_habilidade.split(';'))
+
       } else {
         $scope.vm.state = "insert";
       }
+
+      $('.chips').material_chip({
+        data: $scope.vm.casting.habilidades.forEach(function (e) {
+          return { tag: e }
+        })
+      })
+    }
+
+    function getHabilidades () {
+      var t = $('.chips').data().chips.reduce(function (acc, curr) {
+        return (typeof acc == 'string' ? acc : acc.tag) + ';' + curr.tag
+      })
+
+      return t
     }
 
     $scope.adicionar = function () {
@@ -180,7 +199,7 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         $scope.vm.casting.jsk, $scope.vm.casting.youtube, $scope.vm.casting.youtube2, 
         $scope.vm.casting.vimeo, $scope.vm.casting.vimeo2, $scope.vm.casting.sks,
         $scope.vm.casting.dbc, UserServices.currentUser.usu_id, $scope.vm.casting.email,
-        $scope.vm.casting.phone, $scope.vm.casting.mobile
+        $scope.vm.casting.phone, $scope.vm.casting.mobile, getHabilidades()
       )
 
         .then(function (r) {
@@ -235,7 +254,7 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         $scope.vm.casting.jsk, $scope.vm.casting.youtube, $scope.vm.casting.youtube2, 
         $scope.vm.casting.vimeo, $scope.vm.casting.vimeo2, $scope.vm.casting.sks,
         $scope.vm.casting.dbc, UserServices.currentUser.usu_id, $scope.vm.casting.email,
-        $scope.vm.casting.phone, $scope.vm.casting.mobile
+        $scope.vm.casting.phone, $scope.vm.casting.mobile, getHabilidades()
       )
 
         .then(function (r) {

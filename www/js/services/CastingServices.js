@@ -28,7 +28,8 @@ app.service('CastingServices', function ($q, $http, Configs) {
     },
 
     addCasting: function (tpo, nme, nma, gen, ano, nac, trx, trn, cms, bst, ctr, qdl, etn, cbl, olh, pes, dtn, rg, cpf, cnh, drt, end, alt, 
-		mnq, spt, f34, fbd, fsm, car, mot, tra, jsk, youtube, youtube2, vimeo, vimeo2, sks, dbc, uid, email, phone, mobile) {
+    mnq, spt, f34, fbd, fsm, car, mot, tra, jsk, youtube, youtube2, vimeo, vimeo2, sks, dbc, uid, email, phone, 
+    mobile, habilidade) {
 
       carro = car ? 1 : 0;
       moto = mot ? 1 : 0;
@@ -45,7 +46,8 @@ app.service('CastingServices', function ($q, $http, Configs) {
           youtube,
           youtube2,
           vimeo,
-          vimeo2
+          vimeo2,
+          habilidade
         })
       .then(function (r) {
         d.resolve(r.data.insertId);
@@ -66,7 +68,8 @@ app.service('CastingServices', function ($q, $http, Configs) {
     },
 
     alterCasting: function (id, tpo, nme, nma, gen, ano, nac, trx, trn, cms, bst, ctr, qdl, etn, cbl, olh, pes, dtn, rg, cpf, cnh, drt, end, alt, 
-    mnq, spt, f34, fbd, fsm, car, mot, tra, jsk, youtube, youtube2, vimeo, vimeo2, sks, dbc, uid, email, phone, mobile) {
+    mnq, spt, f34, fbd, fsm, car, mot, tra, jsk, youtube, youtube2, vimeo, vimeo2, sks, 
+    dbc, uid, email, phone, mobile, habilidade) {
 
       carro = car ? 1 : 0;
       moto = mot ? 1 : 0;
@@ -84,7 +87,8 @@ app.service('CastingServices', function ($q, $http, Configs) {
           youtube,
           youtube2,
           vimeo,
-          vimeo2
+          vimeo2,
+          habilidade
         })
       .then(function (r) {
         console.log(r);
