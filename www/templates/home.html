@@ -3,17 +3,9 @@
 <main ng-show="!hold" ng-init="init()" class="home" id="home">
 
   <section class="main-logo section">
-    <div class="container">
-      <div class="row">
-        <div class="col s12 m4 l4 xl4"></div>
-        <div class="col s12 m4 l4 xl4">
-          <img src="/images/logo-home.png" class="responsive-img">
-          <div class="spacing"></div>
-          <small>Utilize o menu acima para navegar no site :) <br></small>
-          <small>Se quiser entrar em contato, só ir no menu <a href="" ng-click="path('/contato')">contato</a>.</small>
-        </div>
-        <div class="col s12 m4 l4 xl4"></div>
-      </div>
+    <div class="carousel carousel-slider">
+      <a class="carousel-item" href="#one!"><img src="/images/slider-home-001.png"></a>
+      <a class="carousel-item" href="#two!"><img src="/images/slider-home-002.jpg"></a>
     </div>
   </section>
 
@@ -168,5 +160,18 @@
 <script>
   $(document).ready(function(){
     $('ul.tabs').tabs();
-  });
+
+    $('.carousel.carousel-slider').carousel({
+     fullWidth: true,
+     padding: 200
+   }, setTimeout(autoplay, 4500));
+
+    function autoplay() {
+     $('.carousel').carousel('next');
+     setTimeout(autoplay, 4500);
+   }
+
+
+
+ });
 </script>

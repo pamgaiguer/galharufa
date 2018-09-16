@@ -290,12 +290,8 @@ footer.page-footer {
     .dash-home, .dash-casting, .dash-casting-search, .dash-casting-show, .dash-users, .dash-quemsomos, .dash-servicos {
       padding-left: 0; } }
 
-.home .section {
-  height: 800px; }
-  .home .section.main-logo {
-    padding-top: 225px; }
-  .home .section.servicos h4 {
-    font-weight: 300; }
+.home .section.servicos h4 {
+  font-weight: 300; }
 
 .home .casting-home .card .card-content {
   padding: 10px; }
