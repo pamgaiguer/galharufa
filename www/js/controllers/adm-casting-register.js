@@ -135,7 +135,7 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         $scope.vm.state = "insert";
       }
 
-      var data = [] 
+      var data = []
       $scope.vm.casting.habilidades.forEach(function (e) {
         data.push({ tag: e })
       })
@@ -164,7 +164,7 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         const element = uploader.queue[index];
 
         element.url = '/casting/upload?name=' + $scope.vm.casting.nme
-        
+
         if (element.alias === 'ft34') {
           img34Ext = element.file.name.slice((element.file.name.lastIndexOf(".") - 1 >>> 0) + 2)
           img34 = "/styles/casting/ft34_" + $scope.vm.casting.nme.replace(/\s/g, "") + "." + img34Ext
@@ -196,7 +196,7 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         imgBd != "" ? imgBd : CastingServices.casting.cas_fotobody,
         imgSm != "" ? imgSm : CastingServices.casting.cas_fotosmile,
         $scope.vm.casting.car, $scope.vm.casting.mot, $scope.vm.casting.tra,
-        $scope.vm.casting.jsk, $scope.vm.casting.youtube, $scope.vm.casting.youtube2, 
+        $scope.vm.casting.jsk, $scope.vm.casting.youtube, $scope.vm.casting.youtube2,
         $scope.vm.casting.vimeo, $scope.vm.casting.vimeo2, $scope.vm.casting.sks,
         $scope.vm.casting.dbc, UserServices.currentUser.usu_id, $scope.vm.casting.email,
         $scope.vm.casting.phone, $scope.vm.casting.mobile, getHabilidades()
@@ -222,7 +222,7 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         const element = uploader.queue[index];
 
         element.url = '/casting/upload?name=' + $scope.vm.casting.nme
-        
+
         if (element.alias === 'ft34') {
           img34Ext = element.file.name.slice((element.file.name.lastIndexOf(".") - 1 >>> 0) + 2)
           img34 = "/styles/casting/ft34_" + $scope.vm.casting.nme.replace(/\s/g, "") + "." + img34Ext
@@ -251,7 +251,7 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         $scope.vm.casting.drt, $scope.vm.casting.end, tratarDecimal($scope.vm.casting.alt),
         $scope.vm.casting.mnq, tratarDecimal($scope.vm.casting.spt), img34, imgBd, imgSm,
         $scope.vm.casting.car, $scope.vm.casting.mot, $scope.vm.casting.tra,
-        $scope.vm.casting.jsk, $scope.vm.casting.youtube, $scope.vm.casting.youtube2, 
+        $scope.vm.casting.jsk, $scope.vm.casting.youtube, $scope.vm.casting.youtube2,
         $scope.vm.casting.vimeo, $scope.vm.casting.vimeo2, $scope.vm.casting.sks,
         $scope.vm.casting.dbc, UserServices.currentUser.usu_id, $scope.vm.casting.email,
         $scope.vm.casting.phone, $scope.vm.casting.mobile, getHabilidades()
@@ -286,7 +286,7 @@ angular.module('galharufa.controllers.adm-casting-register', [])
           $scope.vm.casting.youtube2.replace('watch?v=', 'embed/')
         )
       }
-    
+
       if ($scope.vm.casting.vimeo !== '') {
         $scope.vm.embbedVimeo = $sce.trustAsResourceUrl(
           'https://player.vimeo.com/video/' + $scope.vm.casting.vimeo.split("/").pop()
