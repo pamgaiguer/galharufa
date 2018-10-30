@@ -5,6 +5,7 @@
         font-size: 40px;
     }
     .card {
+        height: 250px;
         .card-content {
             padding: 12px;
         }
@@ -26,5 +27,8 @@
     }
     .grow:hover {
         transform: scale(1.1);
+    }
+    .card-reveal{
+        height: 275px;
     }
 }

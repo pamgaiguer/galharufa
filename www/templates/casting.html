@@ -38,8 +38,9 @@
       </form>
     </div>
 
+
     <div class="row">
-      <div class="col s12 m4 l4 xl4" ng-repeat="model in vm.casting">
+      <div class="col s12 m12 l12 xl12" ng-repeat="model in vm.casting">
         <div class="card black grow">
           <div class="card-content white-text">
             <span class="card-title center-align">{{model.cas_nome}}</span>
@@ -49,12 +50,36 @@
             <span class="card-title grey-text text-darken-4">{{model.cas_nome}}
               <i class="material-icons right">close</i>
             </span>
-            <ul>
+<!--             <ul>
               <li>Altura: {{model.cas_altura}}</li>
               <li>Ano: {{model.cas_ano}}</li>
               <li>Cabelo: {{model.cas_cabelo}}</li>
               <li>Video portfolio: <a class="waves-effect waves-light btn modal-trigger" href="#modal1">clique aqui</a></li>
-            </ul>
+            </ul> -->
+      <pre>{{model|json}}</pre>
+
+
+ <table>
+
+        <tbody>
+          <tr>
+            <td>Altura:</td>
+            <td>{{model.cas_altura}}</td>
+          </tr>
+          <tr>
+            <td>Ano:</td>
+            <td>{{model.cas_ano}}</td>
+          </tr>
+          <tr>
+            <td>Cabelo:</td>
+            <td>{{model.cas_cabelo}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+
           </div>
         </div>
       </div>
