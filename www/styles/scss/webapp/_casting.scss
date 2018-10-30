@@ -5,12 +5,16 @@
         font-size: 40px;
     }
     .card {
-        height: 250px;
         .card-content {
             padding: 12px;
         }
         .card-title{
             font-size: 20px;
+        }
+        .card-image{
+            img{
+                padding: 5px;
+            }
         }
     }
     .card-content{
@@ -24,11 +28,12 @@
     }
     .grow {
         transition: all .2s ease-in-out;
+        border:1px solid #f0f;
+
     }
     .grow:hover {
         transform: scale(1.1);
     }
     .card-reveal{
-        height: 275px;
     }
 }

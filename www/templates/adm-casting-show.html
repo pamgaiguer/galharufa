@@ -45,11 +45,11 @@
             <label for="tipo_casting">Tipo de casting</label>
           </div>
           <div class="input-field col s4">
-            <input id="matricula" placeholder=" " type="text" disabled ng-value="">
+            <input id="matricula" placeholder=" " type="text" disabled ng-value="vm.casting.cas_id">
             <label for="matricula">Matricula <!-- (esse eh o campo do banco de dados) --></label>
           </div>
         </div>
-
+<!-- <pre>{{vm.casting | json}}</pre> -->
         <div class="row">
           <div class="col s3">
             <div class="input-field">
@@ -271,7 +271,7 @@
 
           <div class="col s12 m4 l4 xl4">
             <div class="input-field">
-              <input placeholder=" " type="text" disabled ng-value="vm.casting.cas_skills">
+              <input placeholder=" " type="text" disabled ng-value="vm.casting.cas_habilidade">
               <label>Habilidades</label>
             </div>
 
