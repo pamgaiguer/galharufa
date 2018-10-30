@@ -10,7 +10,7 @@
 
     <div class="row">
       <form ng-submit="buscar()">
-        <div class="col s12 m3 l3 xl3">
+        <div class="col s12 m4 l4 xl4">
           <label>Filtro</label>
           <select ng-model="vm.tipo" class="browser-default">
             <option value="" disabled selected>Escolha sua opção</option>
@@ -22,13 +22,13 @@
             <option value="etnia">Etnia</option>
           </select>
         </div>
-        <div class="col s12 m3 l3 xl3">
+        <div class="col s12 m4 l4 xl4">
           <div class="input-field">
             <input ng-model="vm.busca" type="text" class="validate">
           </div>
         </div>
 
-        <div class="col s12 m3 l3 xl3">
+        <div class="col s12 m4 l4 xl4">
           <div class="input-field">
             <button type="submit" value="Buscar" class="btn black-text bg-yellow-main btn-submit">Buscar
               <i class="material-icons right">search</i>
@@ -49,12 +49,16 @@
             <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
             <p><a class="activator">This is a link</a></p>
           </div>
+
+
           <div class="card-reveal">
             <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Card Title</span>
-            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        <pre>{{model|json}}</pre>
           </div>
         </div>
-        <pre>{{model|json}}</pre>
+
+
+
 
       </div>
     </div>
