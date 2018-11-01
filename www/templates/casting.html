@@ -38,30 +38,108 @@
       </form>
     </div>
 
+    <hr>
+
+
 
     <div class="row">
       <div class="col s12 m3 l3 xl3" ng-repeat="model in vm.casting">
-        <div class="card">
+
+
+        <!--card do MODELO -->
+        <div class="card" ng-show="{{ model.cas_tipo == 'Modelo' }}">
           <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator responsive-img" src="images/logo.png">
+            <img class="activator responsive-img" src="{{model.cas_foto34}}">
           </div>
           <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-            <p><a class="activator">This is a link</a></p>
+            <span class="card-title activator grey-text text-darken-4">{{model.cas_nomeart}}<i class="material-icons right">more_vert</i></span>
+            <p><a class="activator">Mais detalhes</a></p>
           </div>
 
 
           <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Card Title</span>
-        <pre>{{model|json}}</pre>
+            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>{{model.cas_nomeart}}</span>
+            <ul>
+              <li class="grey-text text-darken-4">{{model.cas_nomeart}}</li>
+              <li class="grey-text text-darken-4">{{model.cas_tipo}}</li>
+              <li class="grey-text text-darken-4"></li>
+              <li class="grey-text text-darken-4"></li>
+            </ul>
           </div>
         </div>
 
+        <!--card do FIGURACAO -->
+        <div class="card" ng-show="{{ model.cas_tipo == 'Figuração' }}">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator responsive-img" src="{{model.cas_foto34}}">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">{{model.cas_nomeart}}<i class="material-icons right">more_vert</i></span>
+            <p><a class="activator">Mais detalhes</a></p>
+          </div>
 
 
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>{{model.cas_nomeart}}</span>
+            <ul>
+              <li class="grey-text text-darken-4">{{model.cas_nomeart}}</li>
+              <li class="grey-text text-darken-4">{{model.cas_tipo}}</li>
+              <li class="grey-text text-darken-4"></li>
+              <li class="grey-text text-darken-4"></li>
+            </ul>
+          </div>
+        </div>
+
+        <!--card do Crianca -->
+        <div class="card" ng-show="{{ model.cas_tipo == 'Criança' }}">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator responsive-img" src="{{model.cas_foto34}}">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">{{model.cas_nomeart}}<i class="material-icons right">more_vert</i></span>
+            <p><a class="activator">Mais detalhes</a></p>
+          </div>
+
+
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>{{model.cas_nomeart}}</span>
+            <ul>
+              <li class="grey-text text-darken-4">{{model.cas_nomeart}}</li>
+              <li class="grey-text text-darken-4">{{model.cas_tipo}}</li>
+              <li class="grey-text text-darken-4"></li>
+              <li class="grey-text text-darken-4"></li>
+            </ul>
+          </div>
+        </div>
+
+        <!--card do Ator -->
+        <div class="card" ng-show="{{ model.cas_tipo == 'Ator' }}">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator responsive-img" src="{{model.cas_foto34}}">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">{{model.cas_nomeart}}<i class="material-icons right">more_vert</i></span>
+            <p><a class="activator">Mais detalhes</a></p>
+          </div>
+
+
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>{{model.cas_nomeart}}</span>
+            <ul>
+              <li class="grey-text text-darken-4">{{model.cas_nomeart}}</li>
+              <li class="grey-text text-darken-4">{{model.cas_tipo}}</li>
+              <li class="grey-text text-darken-4"></li>
+              <li class="grey-text text-darken-4"></li>
+            </ul>
+          </div>
+        </div>
 
       </div>
     </div>
+
+    <hr>
+
+
   </div>
 
 </div>

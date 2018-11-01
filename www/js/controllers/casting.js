@@ -18,6 +18,12 @@ angular.module('galharufa.controllers.casting', [])
     $rootScope.hold = false;
     // $('body, html').animate({ scrollTop: 250 });
     CastingServices.getCastings().then(function(r){ $scope.vm.casting = r; });
+
+    // $rootScope.modelo = false;
+    // $rootScope.verificaModelo = function(value){
+    //   if
+
+    // };
   }
 
   $scope.buscar = function(){
