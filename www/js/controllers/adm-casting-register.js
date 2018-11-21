@@ -167,15 +167,15 @@ angular.module('galharufa.controllers.adm-casting-register', [])
 
         if (element.alias === 'ft34') {
           img34Ext = element.file.name.slice((element.file.name.lastIndexOf(".") - 1 >>> 0) + 2)
-          img34 = "/styles/casting/ft34_" + $scope.vm.casting.nme.replace(/\s/g, "") + "." + img34Ext
+          img34 = "/images/casting/ft34_" + $scope.vm.casting.nme.replace(/\s/g, "") + "." + img34Ext
         }
         else if (element.alias === 'ftbd') {
           imgBdExt = element.file.name.slice((element.file.name.lastIndexOf(".") - 1 >>> 0) + 2)
-          imgBd = "/styles/casting/ftbd_" + $scope.vm.casting.nme.replace(/\s/g, "") + "." + imgBdExt
+          imgBd = "/images/casting/ftbd_" + $scope.vm.casting.nme.replace(/\s/g, "") + "." + imgBdExt
         }
         else if (element.alias === 'ftsm') {
           imgSmExt = element.file.name.slice((element.file.name.lastIndexOf(".") - 1 >>> 0) + 2)
-          imgSm = "/styles/casting/ftsm_" + $scope.vm.casting.nme.replace(/\s/g, "") + "." + imgSmExt
+          imgSm = "/images/casting/ftsm_" + $scope.vm.casting.nme.replace(/\s/g, "") + "." + imgSmExt
         }
       }
 
@@ -225,15 +225,15 @@ angular.module('galharufa.controllers.adm-casting-register', [])
 
         if (element.alias === 'ft34') {
           img34Ext = element.file.name.slice((element.file.name.lastIndexOf(".") - 1 >>> 0) + 2)
-          img34 = "/styles/casting/ft34_" + $scope.vm.casting.nme.replace(/\s/g, "") + "." + img34Ext
+          img34 = "/images/casting/ft34_" + $scope.vm.casting.nme.replace(/\s/g, "") + "." + img34Ext
         }
         else if (element.alias === 'ftbd') {
           imgBdExt = element.file.name.slice((element.file.name.lastIndexOf(".") - 1 >>> 0) + 2)
-          imgBd = "/styles/casting/ftbd_" + $scope.vm.casting.nme.replace(/\s/g, "") + "." + imgBdExt
+          imgBd = "/images/casting/ftbd_" + $scope.vm.casting.nme.replace(/\s/g, "") + "." + imgBdExt
         }
         else if (element.alias === 'ftsm') {
           imgSmExt = element.file.name.slice((element.file.name.lastIndexOf(".") - 1 >>> 0) + 2)
-          imgSm = "/styles/casting/ftsm_" + $scope.vm.casting.nme.replace(/\s/g, "") + "." + imgSmExt
+          imgSm = "/images/casting/ftsm_" + $scope.vm.casting.nme.replace(/\s/g, "") + "." + imgSmExt
         }
       }
 

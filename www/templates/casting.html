@@ -44,6 +44,7 @@
 
     <div class="row">
       <div class="col s12 m3 l3 xl3" ng-repeat="model in vm.casting">
+        <pre>{{ model | json }}</pre>
 
 
         <!--card do MODELO -->
@@ -105,9 +106,8 @@
             <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>{{model.cas_nomeart}}</span>
             <ul>
               <li class="grey-text text-darken-4">{{model.cas_nomeart}}</li>
-              <li class="grey-text text-darken-4">{{model.cas_tipo}}</li>
-              <li class="grey-text text-darken-4"></li>
-              <li class="grey-text text-darken-4"></li>
+              <li class="grey-text text-darken-4">{{model.cas_ano}}</li>
+              <li class="grey-text text-darken-4">descricao</li>
             </ul>
           </div>
         </div>
