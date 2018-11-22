@@ -206,10 +206,8 @@ router.post('/alterar', function (req, res, next) {
 
 router.post('/upload', function (req, res) {
   let form = new formidable.IncomingForm()
-
   form.parse(req, function (err, fields, files) {
     // `file` is the name of the <input> field of type `file`
-
     let ft34 = files.ft34
     let ftbd = files.ftbd
     let ftsm = files.ftsm
@@ -227,11 +225,10 @@ router.post('/upload', function (req, res) {
         file_ext !== 'jpeg')
         return res.status(200).json("0");
 
-      let new_path = path.join(process.env.PWD, 'www/styles/casting/', 
+      let new_path = path.join(process.env.PWD, 'www/images/casting/', 
         new_file_name + '.' + file_ext);
 
       // old_path = path.join(old_path, photo.name)
-
       jimp.read(old_path).then(function (img) {
         img.resize(w, h).quality(72).write(new_path);
         return res.json(new_path);
@@ -240,7 +237,7 @@ router.post('/upload', function (req, res) {
       });     
     }
 
-    let nma = req.query.name
+    let nma = req.query.name.replace(/\s/gm, '');
   
     if (ft34) savePhoto(ft34, `ft34_${nma}`, 300, 400)
     if (ftbd) savePhoto(ftbd, `ftbd_${nma}`, 700, 1000)
