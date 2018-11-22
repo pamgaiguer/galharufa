@@ -193,14 +193,15 @@ header nav.nav-extended .nav-wrapper {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 190px; }
+  height: 190px;
+  background-color: black; }
 
 header nav.nav-extended .nav-content {
   background-color: #FFD740;
-  padding: 20px 0; }
-  header nav.nav-extended .nav-content .tabs .tab a {
-    color: #212121;
-    text-transform: capitalize; }
+  padding: 20px 0;
+  height: 80px;
+  text-align: center;
+  font-weight: 700; }
 
 footer.page-footer {
   padding-top: 0px;

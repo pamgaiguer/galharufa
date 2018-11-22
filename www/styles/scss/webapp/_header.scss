@@ -5,18 +5,14 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     height: 190px;
+    background-color: black;
   }
   nav.nav-extended .nav-content{
     background-color: $yellow-main;
     padding: 20px 0;
-    .tabs{
-      .tab{
-        a{
-          color: $black-main;
-          text-transform: capitalize;
-        }
-      }
-    }
+    height: 80px;
+    text-align: center;
+    font-weight: 700;
   }
 }
 

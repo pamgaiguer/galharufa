@@ -7,12 +7,27 @@
                     <li class="tab"><img src="/images/mini-chair.png" srcset="/images/mini-chair@2x.png 2x, /images/mini-chair@3x.png 3x" alt="logo"></li>
                     <li class="tab"><a href="" ng-click="path('/home');">Home</a></li>
                     <li class="tab"><a href="" ng-click="path('/quemsomos');">Quem Somos</a></li>
+
+                    <li class="drop-tab">
+                        <a href="" class="dropdown-button" data-activates="drop-casting">Casting</a>
+                    </li>
+
                     <li class="tab"><a href="" ng-click="path('/blog');">News</a></li>
-                    <li class="tab"><a href="" ng-click="path('/casting');">Casting</a></li>
                     <li class="tab"><a href="" ng-click="path('/servicos');">Serviços</a></li>
                     <li class="tab"><img src="/images/mini-chair.png" srcset="/images/mini-chair@2x.png 2x, /images/mini-chair@3x.png 3x" alt="logo"></li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <ul id="drop-casting" class="dropdown-content bg-yellow-main black-text">
+        <li><a href="">one</a></li>
+        <li><a href="">two</a></li>
+        <li><a href="">three</a></li>
+    </ul>
 </header>
+<script>
+    $(document).ready(function() {
+        $('.dropdown-button').dropdown();
+    });
+</script>
