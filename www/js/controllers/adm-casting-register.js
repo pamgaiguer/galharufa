@@ -220,7 +220,6 @@ angular.module('galharufa.controllers.adm-casting-register', [])
 
       for (let index = 0; index < uploader.queue.length; index++) {
         const element = uploader.queue[index];
-
         element.url = '/casting/upload?name=' + $scope.vm.casting.nme
 
         if (element.alias === 'ft34') {
@@ -249,7 +248,10 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         $scope.vm.casting.olh, tratarDecimal($scope.vm.casting.pes), dataNascimento,
         $scope.vm.casting.rg, $scope.vm.casting.cpf, $scope.vm.casting.cnh,
         $scope.vm.casting.drt, $scope.vm.casting.end, tratarDecimal($scope.vm.casting.alt),
-        $scope.vm.casting.mnq, tratarDecimal($scope.vm.casting.spt), img34, imgBd, imgSm,
+        $scope.vm.casting.mnq, tratarDecimal($scope.vm.casting.spt), 
+        img34 != "" ? img34 : CastingServices.casting.cas_foto34,
+        imgBd != "" ? imgBd : CastingServices.casting.cas_fotobody,
+        imgSm != "" ? imgSm : CastingServices.casting.cas_fotosmile,
         $scope.vm.casting.car, $scope.vm.casting.mot, $scope.vm.casting.tra,
         $scope.vm.casting.jsk, $scope.vm.casting.youtube, $scope.vm.casting.youtube2,
         $scope.vm.casting.vimeo, $scope.vm.casting.vimeo2, $scope.vm.casting.sks,

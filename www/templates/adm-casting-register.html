@@ -16,12 +16,12 @@
           <label>Tipo de ator</label>
 
           <select class="browser-default" ng-model="vm.casting.tpo" id="casting">
-            <option value="" disabled selected>Selecionar...</option>
+            <option value="" disabled ng-selected="!vm.casting.tpo">Selecionar...</option>
 
-            <option value="Ator">Ator</option>
-            <option value="Criança">Criança</option>
-            <option value="Modelo">Modelo</option>
-            <option value="Figuração">Figuração</option>
+            <option value="Ator" ng-selected="vm.casting.tpo == 'Ator'">Ator</option>
+            <option value="Criança" ng-selected="vm.casting.tpo == 'Criança'">Criança</option>
+            <option value="Modelo" ng-selected="vm.casting.tpo == 'Modelo'">Modelo</option>
+            <option value="Figuração" ng-selected="vm.casting.tpo == 'Figuração'">Figuração</option>
           </select>
         </div>
       </div>
