@@ -2,6 +2,7 @@
 # Created by https://www.gitignore.io/api/node,bower,sass
 www/bower_components/*
 www/node_modules/*
+www/images/*
 ### Node ###
 # Logs
 logs
