@@ -1,5 +1,6 @@
 header {
-  nav.nav-extended .nav-wrapper{
+
+  nav .nav-wrapper{
     background-image: url('/images/header.png');
     background-position: center top;
     background-repeat: no-repeat;
@@ -7,12 +8,11 @@ header {
     height: 190px;
     background-color: black;
   }
-  nav.nav-extended .nav-content{
+  nav .navbar{
     background-color: $yellow-main;
-    padding: 20px 0;
-    height: 80px;
+    height: 65px;
+    position: relative;
     text-align: center;
-    font-weight: 700;
   }
 }
 

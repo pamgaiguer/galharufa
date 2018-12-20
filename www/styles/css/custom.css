@@ -188,7 +188,7 @@ main .input-field {
 .spacing {
   padding-bottom: 10px; }
 
-header nav.nav-extended .nav-wrapper {
+header nav .nav-wrapper {
   background-image: url("/images/header.png");
   background-position: center top;
   background-repeat: no-repeat;
@@ -196,12 +196,11 @@ header nav.nav-extended .nav-wrapper {
   height: 190px;
   background-color: black; }
 
-header nav.nav-extended .nav-content {
+header nav .navbar {
   background-color: #FFD740;
-  padding: 20px 0;
-  height: 80px;
-  text-align: center;
-  font-weight: 700; }
+  height: 65px;
+  position: relative;
+  text-align: center; }
 
 footer.page-footer {
   padding-top: 0px;
@@ -291,8 +290,12 @@ footer.page-footer {
     .dash-home, .dash-casting, .dash-casting-search, .dash-casting-show, .dash-users, .dash-quemsomos, .dash-servicos {
       padding-left: 0; } }
 
-.home .section.servicos h4 {
-  font-weight: 300; }
+.home .section {
+  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0; }
+  .home .section.servicos h4 {
+    font-weight: 300; }
 
 .home .casting-home .card .card-content {
   padding: 10px; }
