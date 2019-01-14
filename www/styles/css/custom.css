@@ -216,7 +216,7 @@ header nav .navbar {
     padding: 0px;
     background: #FFAB33; }
   header nav .navbar ul a {
-    color: black; }
+    color: #212121; }
 
 footer.page-footer {
   padding-top: 0px;
@@ -373,13 +373,28 @@ footer.page-footer {
   font-size: 42px;
   font-weight: 600; }
 
-.casting .actor-name {
+.casting .card {
+  margin: 0;
+  box-shadow: none; }
+  .casting .card .card-nomeart {
+    border: 1px solid #212121;
+    padding: 0 10px; }
+    .casting .card .card-nomeart p {
+      color: #006974;
+      font-weight: 700; }
+
+.casting-details .title-name {
+  text-transform: uppercase;
+  font-size: 42px;
+  font-weight: 600; }
+
+.casting-details .actor-name {
   border: 3px solid #FFAB33;
   padding: 5px 10px;
   font-size: 28px;
   font-weight: 400; }
 
-.casting .card {
+.casting-details .card {
   margin: 0; }
 
 .contato .btn {
