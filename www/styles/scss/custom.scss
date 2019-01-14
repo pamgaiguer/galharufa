@@ -3,7 +3,9 @@
 @import 'mixins';
 @import 'variables';
 @import 'typography';
-
+ html {
+    font-family: Lato, Calibri, Trebuchet, sans-serif;
+  }
 
 body {
   font-size: 14px;

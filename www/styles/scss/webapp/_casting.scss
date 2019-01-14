@@ -1,39 +1,18 @@
 .casting{
+    .title-name{
+    text-transform: uppercase;
+    font-size: 42px;
+    font-weight: 600;
 
-    .main-title{
-        font-weight: 300;
-        font-size: 40px;
-    }
-    .card {
-        .card-content {
-            padding: 12px;
-        }
-        .card-title{
-            font-size: 20px;
-        }
-        .card-image{
-            img{
-                padding: 5px;
-            }
-        }
-    }
-    .card-content{
-        img{
-            width: 315px;
-            height: 450px;
-            &:hover{
-                cursor: pointer;
-            }
-        }
-    }
-    .grow {
-        transition: all .2s ease-in-out;
-        border:1px solid #f0f;
+}
+.actor-name{
+    border:3px solid $yellow-dark;
+    padding: 5px 10px;
+    font-size: 28px;
+    font-weight: 400;
+}
 
-    }
-    .grow:hover {
-        transform: scale(1.1);
-    }
-    .card-reveal{
-    }
+.card{
+    margin: 0;
+}
 }

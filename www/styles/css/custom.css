@@ -156,6 +156,9 @@
 .font-50 {
   font-size: 50px; }
 
+html {
+  font-family: Lato, Calibri, Trebuchet, sans-serif; }
+
 body {
   font-size: 14px;
   font-family: 'Roboto', sans-serif; }
@@ -365,31 +368,19 @@ footer.page-footer {
 .servicos .collection .collection-item.avatar:not(.circle-clipper) > .circle {
   margin-top: 2px; }
 
-.casting .main-title {
-  font-weight: 300;
-  font-size: 40px; }
+.casting .title-name {
+  text-transform: uppercase;
+  font-size: 42px;
+  font-weight: 600; }
 
-.casting .card .card-content {
-  padding: 12px; }
+.casting .actor-name {
+  border: 3px solid #FFAB33;
+  padding: 5px 10px;
+  font-size: 28px;
+  font-weight: 400; }
 
-.casting .card .card-title {
-  font-size: 20px; }
-
-.casting .card .card-image img {
-  padding: 5px; }
-
-.casting .card-content img {
-  width: 315px;
-  height: 450px; }
-  .casting .card-content img:hover {
-    cursor: pointer; }
-
-.casting .grow {
-  transition: all .2s ease-in-out;
-  border: 1px solid #f0f; }
-
-.casting .grow:hover {
-  transform: scale(1.1); }
+.casting .card {
+  margin: 0; }
 
 .contato .btn {
   background-color: #FFD740;
