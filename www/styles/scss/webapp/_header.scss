@@ -13,14 +13,34 @@ header {
     height: 65px;
     position: relative;
     text-align: center;
-  }
+
+    i{
+        line-height: 65px;
+    }
+
+    ul {
+      li{
+        padding: 0 30px;
+        line-height: 65px;
+
+        img{
+          display: inline-block;
+          margin-top: 10px;
+        }
+      }
+        .dropdown-content li{
+            padding: 0px;
+            background: $yellow-dark;
+        }
+        a{
+          color: black;
+        }
+      }
+    }
+
 }
 
-@media (min-width: 0px) and (max-width: 375px) {
-}
-
+@media (min-width: 0px) and (max-width: 375px) {}
 @media (min-width: 376px) and (max-width: 992px) {}
-
 @media (min-width: 993px) and (max-width: 1024px) {}
-
 @media (min-width: 1025px) {}

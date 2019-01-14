@@ -201,6 +201,19 @@ header nav .navbar {
   height: 65px;
   position: relative;
   text-align: center; }
+  header nav .navbar i {
+    line-height: 65px; }
+  header nav .navbar ul li {
+    padding: 0 30px;
+    line-height: 65px; }
+    header nav .navbar ul li img {
+      display: inline-block;
+      margin-top: 10px; }
+  header nav .navbar ul .dropdown-content li {
+    padding: 0px;
+    background: #FFAB33; }
+  header nav .navbar ul a {
+    color: black; }
 
 footer.page-footer {
   padding-top: 0px;
@@ -294,26 +307,6 @@ footer.page-footer {
   padding: 0;
   padding-top: 0;
   padding-bottom: 0; }
-  .home .section.servicos h4 {
-    font-weight: 300; }
-
-.home .casting-home .card .card-content {
-  padding: 10px; }
-
-.home .casting-home .card .card-title {
-  font-size: 22px; }
-
-.home .casting-home .card-content img {
-  width: 250px;
-  height: 300px; }
-  .home .casting-home .card-content img:hover {
-    cursor: pointer !important; }
-
-.home .casting-home .grow {
-  transition: all .2s ease-in-out; }
-
-.home .casting-home .grow:hover {
-  transform: scale(1.1); }
 
 .quemsomos {
   background-color: #78769D;

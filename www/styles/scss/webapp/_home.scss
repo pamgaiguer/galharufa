@@ -6,45 +6,5 @@
     padding: 0;
     padding-top: 0;
     padding-bottom: 0;
-
-    &.main-logo{
-    }
-
-    &.servicos{
-      h4{
-        font-weight: 300;
-      }
-      .card-image{
-      }
-    }
-  }
-
-
-  & .casting-home{
-    .card {
-      .card-content {
-        padding: 10px;
-      }
-      .card-title{
-        font-size: 22px;
-      }
-    }
-    .card-content{
-      img{
-        width: 250px;
-        height: 300px;
-
-        &:hover{
-          cursor: pointer !important;
-        }
-      }
-    }
-    .grow {
-      transition: all .2s ease-in-out;
-    }
-    .grow:hover {
-      transform: scale(1.1);
-    }
   }
 }
-
