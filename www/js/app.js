@@ -90,6 +90,10 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     templateUrl: '/templates/casting-details.html',
     controller: 'CastingDetailsCtrl'
   })
+  .when('/casting-details/:id', {
+    templateUrl: '/templates/casting-details.html',
+    controller: 'CastingDetailsCtrl'
+  })
   .when('/quemsomos/', {
     templateUrl: '/templates/quemsomos.html',
     controller: 'QuemsomosCtrl'

@@ -35,8 +35,9 @@ var paths = {
 
 gulp.task('browser-sync', function() {
     browserSync({
+        port: 3002,
         server: {
-            baseDir: ""
+            baseDir: "./",
         }
     });
 });
@@ -78,7 +79,7 @@ gulp.task('index', function() {
 
 
 
-gulp.task('default', ['browser-sync', 'index'], function() {
+gulp.task('default', gulp.series('browser-sync', 'index', function() {
     gulp.watch("styles/scss/custom.scss", ['styles']);
     // gulp.watch("styles/js/**/*.js", ['scripts']);
     gulp.watch("shared/**/*.html", ['server-sync']);
@@ -87,5 +88,5 @@ gulp.task('default', ['browser-sync', 'index'], function() {
     gulp.watch([
         paths.javascript,
         paths.css
-        ], ['index']);
-});
+    ], ['index']);
+}));
