@@ -11,7 +11,7 @@ angular.module('galharufa.controllers.casting', [])
     casting: [],
     busca: ''
   };
-  
+
   $scope.title = $location.search().cas_tipo;
 
   $scope.init = function () {

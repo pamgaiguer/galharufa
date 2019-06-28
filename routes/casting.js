@@ -6,22 +6,26 @@ let formidable = require('formidable')
 
 router.get('/', function (req, res, next) {
 
-  id = req.query.id;
+  const { cas_tipo, id } = req.query;
   req.getConnection(function (err, connection) {
-
     if (id) {
-
       connection.query('SELECT * FROM casting where cas_id = ?', [id], function (err, result) {
         if (err) return res.status(400).json(err);
         return res.status(200).json(result);
       });
 
     } else {
-
-      connection.query('SELECT * FROM casting', [], function (err, result) {
-        if (err) return res.status(400).json(err);
-        return res.status(200).json(result);
-      });
+      if(cas_tipo){
+        connection.query('SELECT * FROM casting where cas_tipo = ?', [cas_tipo], function (err, result) {
+          if (err) return res.status(400).json(err);
+          return res.status(200).json(result);
+        });
+      }else{
+        connection.query('SELECT * FROM casting', [], function (err, result) {
+          if (err) return res.status(400).json(err);
+          return res.status(200).json(result);
+        });
+      }
 
     }
 
@@ -109,7 +113,7 @@ router.post('/adicionar', function (req, res, next) {
 
       [tipo, nome, nomeart, genero, ano, nacionalidade, torax, terno, camisa, busto, cintura, quadril, etnia, cabelo, olhos,
         peso, dtnasc, rg, cpf, cnh, drt, endereco, altura, manequim, sapato, foto34, fotobody,
-        fotosmile, parseInt(carro), parseInt(moto), parseInt(trator), parseInt(jetski), youtube, youtube2, vimeo, vimeo2, skills, 
+        fotosmile, parseInt(carro), parseInt(moto), parseInt(trator), parseInt(jetski), youtube, youtube2, vimeo, vimeo2, skills,
         dadosbancarios, usuarioId, email, phone, mobile, habilidade],
       function (err, result) {
         if (err) return res.status(400).json(err);
@@ -186,14 +190,14 @@ router.post('/alterar', function (req, res, next) {
       ' cas_olhos = ?, cas_peso = ?, cas_dtnasc = ?, cas_rg = ?, cas_cpf = ?, cas_cnh = ?, cas_drt = ?, cas_endereco = ?, ' +
       ' cas_altura = ?, cas_manequim = ?, cas_sapato = ?, ' +
       ' cas_foto34 = ?, cas_fotobody = ?, cas_fotosmile = ?, ' +
-      ' cas_carro = ?, cas_moto = ?, cas_trator = ?, cas_jetski = ?, cas_portfolio = ?, cas_youtube2 = ?, cas_vimeo = ?, cas_vimeo2 = ?, ' + 
+      ' cas_carro = ?, cas_moto = ?, cas_trator = ?, cas_jetski = ?, cas_portfolio = ?, cas_youtube2 = ?, cas_vimeo = ?, cas_vimeo2 = ?, ' +
       ' cas_skills = ?, cas_dadosbancarios = ?, ' +
       ' cas_usu_id = ?, cas_datamodificacao = now(), '+
       ' cas_email = ?, cas_phone = ?, cas_mobile = ?, cas_habilidade = ? '+
       'where cas_id = ?',
       [tipo, nome, nomeart, genero, ano, nacionalidade, torax, terno, camisa, busto, cintura, quadril, etnia, cabelo, olhos,
         peso, dtnasc, rg, cpf, cnh, drt, endereco, altura, manequim, sapato, foto34, fotobody,
-        fotosmile, parseInt(carro), parseInt(moto), parseInt(trator), parseInt(jetski), youtube, youtube2, vimeo, vimeo2, skills, 
+        fotosmile, parseInt(carro), parseInt(moto), parseInt(trator), parseInt(jetski), youtube, youtube2, vimeo, vimeo2, skills,
         dadosbancarios, usuarioId, email, phone, mobile, habilidade, id],
       function (err, result) {
         if (err) return res.status(400).json(err);
@@ -213,7 +217,7 @@ router.post('/upload', function (req, res) {
     let ftsm = files.ftsm
 
     let savePhoto = (photo, new_file_name, w, h) => {
-      
+
       let old_path = photo.path
       let file_size = photo.size
       let file_ext = photo.name.split('.').pop()
@@ -225,7 +229,7 @@ router.post('/upload', function (req, res) {
         file_ext !== 'jpeg')
         return res.status(200).json("0");
 
-      let new_path = path.join(process.env.PWD, 'www/images/casting/', 
+      let new_path = path.join(process.env.PWD, 'www/images/casting/',
         new_file_name + '.' + file_ext);
 
       // old_path = path.join(old_path, photo.name)
@@ -234,11 +238,11 @@ router.post('/upload', function (req, res) {
         return res.json(new_path);
       }).catch(function (err) {
         console.error(err);
-      });     
+      });
     }
 
     let nma = req.query.name.replace(/\s/gm, '');
-  
+
     if (ft34) savePhoto(ft34, `ft34_${nma}`, 300, 400)
     if (ftbd) savePhoto(ftbd, `ftbd_${nma}`, 700, 1000)
     if (ftsm) savePhoto(ftsm, `ftsm_${nma}`, 700, 1000)
