@@ -10,8 +10,9 @@ angular.module('galharufa.controllers.casting', [])
     'isLoading':false,
     casting: [],
     busca: ''
-  }
-  $scope.title = "batata";
+  };
+  
+  $scope.title = $location.search().cas_tipo;
 
   $scope.init = function () {
     console.log("startou o contato");
