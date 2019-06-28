@@ -4,6 +4,7 @@
   "description": "A Gulp file and project generator.",
   "main": "gulpfile.js",
   "scripts": {
+    "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./api/bin/www"
   },
@@ -11,7 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.18.8",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-cache": "^0.4.6",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^3.2.0",

@@ -1,13 +1,14 @@
 angular.module('galharufa.controllers.casting-details', [])
 
-.controller('CastingDetailsCtrl', function($scope, $rootScope, $q, $timeout, $location) {
+.controller('CastingDetailsCtrl', function($scope, $rootScope, CastingServices, $routeParams) {
 
   console.log("CastingDetailsCtrl :: Iniciado");
 
   $scope.vm = {
     'login':'',
     'pwd':'',
-    'isLoading':false
+    'isLoading':false,
+    'cast': null,
   }
 
   $scope.init = function () {
@@ -15,6 +16,9 @@ angular.module('galharufa.controllers.casting-details', [])
     $rootScope.headerId = 1;
     $rootScope.hold = false;
     // $('body, html').animate({ scrollTop: 250 });
+    CastingServices.getCasting($routeParams.id).then(function(r){
+      $scope.vm.casting = r[0];
+    });
   }
 
 });
