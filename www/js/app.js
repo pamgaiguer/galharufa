@@ -34,9 +34,12 @@ app.run(function($rootScope, $timeout, UserServices, $location, $route) {
   UserServices.loadUserLocalStorage();
 
 
-  $rootScope.path = function(p){
-    console.log("path: " + p);
-    $location.path(p);
+  $rootScope.path = function(p,params={}){
+    if(params && Object.keys(params).length){
+      $location.path(p).search(params);
+    }else{
+      $location.path(p);
+    }
     $route.reload();
   }
 
