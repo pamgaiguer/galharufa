@@ -41,5 +41,8 @@ angular.module('galharufa.controllers.login', [])
       });
     }
     $scope.esqueceuSenha = function(){}
+    $scope.logout = function(){
+      console.log("logout");
+    }
   }
 });
