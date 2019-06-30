@@ -11,14 +11,13 @@ angular.module('galharufa.controllers.casting', [])
     casting: [],
     busca: ''
   };
-
-  $scope.title = $location.search().cas_tipo;
+  const cas_tipo = $location.search().cas_tipo;
+  $scope.title = cas_tipo;
 
   $scope.init = function () {
     console.log("startou o contato");
     $rootScope.headerId = 1;
     $rootScope.hold = false;
-    const cas_tipo = 'Figuração';
     CastingServices.getCastings({cas_tipo}).then(function(r){ $scope.vm.casting = r; });
     // $rootScope.modelo = false;
     // $rootScope.verificaModelo = function(value){
