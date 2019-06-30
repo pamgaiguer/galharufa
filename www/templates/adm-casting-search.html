@@ -46,6 +46,7 @@
         <th>Nome</th>
         <th>Ano</th>
         <th>Altura</th>
+        <th>Tipo Casting</th>
         <th>Manequim</th>
         <th>Etnia</th>
         <th class="center">Visualizar</th>
@@ -58,6 +59,7 @@
         <td >{{c.cas_nome}}</td>
         <td >{{c.cas_ano}}</td>
         <td >{{c.cas_altura}}</td>
+        <td >{{c.cas_tipo}}</td>
         <td >{{c.cas_manequim}}</td>
         <td >{{c.cas_etnia}}</td>
         <td class="center btn-table"><a href="" ng-click="visualizar(c.cas_id)"><i class="material-icons">assignment</i></a></td>
@@ -66,8 +68,6 @@
       </tr>
     </tbody>
   </table>
-
-
 </main>
 
 <script>
