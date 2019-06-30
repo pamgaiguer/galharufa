@@ -27,6 +27,6 @@
   },
   "devDependencies": {
     "connect-multiparty": "^2.1.0",
-    "nodemon": "^1.17.5"
+    "nodemon": "^1.19.1"
   }
 }
