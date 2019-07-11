@@ -3,9 +3,10 @@
 @import 'mixins';
 @import 'variables';
 @import 'typography';
- html {
-    font-family: Lato, Calibri, Trebuchet, sans-serif;
-  }
+
+html {
+  font-family: Lato, Calibri, Trebuchet, sans-serif;
+}
 
 body {
   font-size: 14px;
@@ -38,7 +39,7 @@ main {
     color: #000;
     label {
       color: #888;
-
+      
     }
     input, textarea {
       &:focus {
@@ -54,6 +55,8 @@ main {
 .spacing{
   padding-bottom: 10px;
 }
+
+
 
 @import 'webapp/header';
 @import 'webapp/footer';
