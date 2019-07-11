@@ -8,7 +8,7 @@ angular.module('galharufa.controllers.servicos', [])
     'login':'',
     'pwd':'',
     'isLoading':false,
-    servicos: []
+    servicos: 'Carregando...'
   }
 
   $scope.init = function () {
@@ -19,7 +19,7 @@ angular.module('galharufa.controllers.servicos', [])
     SimpleServices
       .getServicos()
       .then(function (result) {
-        console.log(result);
+        // console.log(result);
         $scope.vm.servicos = result.data;
         setTimeout(function () {
           $('ul.tabs').tabs();

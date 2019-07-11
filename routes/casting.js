@@ -206,8 +206,6 @@ router.post('/alterar', function (req, res, next) {
   });
 });
 
-
-
 router.post('/upload', function (req, res) {
   let form = new formidable.IncomingForm()
   form.parse(req, function (err, fields, files) {
@@ -249,7 +247,4 @@ router.post('/upload', function (req, res) {
   });
 
 });
-
-
-
 module.exports = router;

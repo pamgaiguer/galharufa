@@ -15,7 +15,6 @@ angular.module('galharufa.controllers.quemsomos', [])
     console.log("startou o quem somos");
     $rootScope.headerId = 1;
     $rootScope.hold = false;
-    // $('body, html').animate({ scrollTop: 350 });
 
     SimpleServices
       .getQuemSomos()
@@ -23,5 +22,4 @@ angular.module('galharufa.controllers.quemsomos', [])
         $scope.vm.quemsomos = result.data.qsm_descricao;
       })
   }
-
 });
