@@ -1,3 +1,4 @@
+@import "../node_modules/ng2-slim-loading-bar/style.css";
 .white {
   background-color: #FFF;
 }
@@ -479,7 +480,7 @@ footer.page-footer a:hover, footer.page-footer a:focus {
 .casting .title-name {
   text-transform: uppercase;
   font-size: 42px;
-  font-weight: 300;
+  font-weight: 600;
 }
 .casting .card {
   margin: 0;

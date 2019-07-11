@@ -3,7 +3,7 @@
 @import 'mixins';
 @import 'variables';
 @import 'typography';
-
+@import "../node_modules/ng2-slim-loading-bar/style.css";
 html {
   font-family: Lato, Calibri, Trebuchet, sans-serif;
 }
