@@ -16,7 +16,7 @@ angular.module('galharufa.controllers.home', [])
     // $rootScope.hold = $location.path() != "/teste";
     CastingServices.getCastings().then(function(r){
       $scope.vm.casting = r;
-      console.log('casting', $scope.vm.casting);
+      // console.log('casting', $scope.vm.casting);
     });
   }
 
@@ -25,20 +25,16 @@ angular.module('galharufa.controllers.home', [])
     $scope.formData.isLoading = true;
     UserServices.login($scope.vm.login,$scope.vm.pwd)
     .then(function(success){
-
       if (success == 0) {
         $scope.vm.isLoading = false;
         $scope.vm.ready = true;
         return;
       }
-
       UserServices.deleteUserLocalStorage();
       UserServices.saveUserLocalStorage();
     });
 
   }
-
-
   $scope.esqueceuSenha = function(){}
 
 });
