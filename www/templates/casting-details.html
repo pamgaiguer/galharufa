@@ -1,4 +1,5 @@
 <main ng-init="init()" class="casting-details">
+
   <div class="container">
 
     <div class="row">
@@ -9,7 +10,7 @@
       </div>
     </div>
 
-<pre>{{vm.casting | json }}</pre>
+<!-- <pre>{{vm.casting | json }}</pre> -->
 
     <div class="row">
         <div class="col s12 m6 l6 xl6">
@@ -41,10 +42,16 @@
           <div class="card teal">
             <div class="card-content">
               <ul>
-                <li>lorem ipsum</li>
-                <li>lorem ipsum</li>
-                <li>lorem ipsum</li>
-                <li>lorem ipsum</li>
+                <li>Ano: {{vm.casting.cas_ano}}</li>
+                <li ng-show="vm.casting.cas_tipo=='Atores'">DRT: {{vm.casting.cas_drt}}</li>
+                <li>Altura: {{vm.casting.cas_altura}}</li>
+                <li>Manequim: {{vm.casting.cas_manequim}}</li>
+                <li>Sapato: {{vm.casting.cas_sapato}}</li>
+                <li ng-show="vm.casting.cas_tipo=='Modelo'">Camisa: {{vm.casting.cas_camisa}}</li>
+                <li ng-show="vm.casting.cas_tipo=='Modelo'">Busto: {{vm.casting.cas_busto}}</li>
+                <li ng-show="vm.casting.cas_tipo=='Modelo'">Cintura: {{vm.casting.cas_cintura}}</li>
+                <li ng-show="vm.casting.cas_tipo=='Modelo'">Quadril: {{vm.casting.cas_quadril}}</li>
+                <li ng-show="vm.casting.cas_tipo=='Crianças'">Data Nascimento: {{vm.casting.cas_dtnasc | date : 'dd/M/yyyy' }}</li>
               </ul>
             </div>
 
