@@ -1,34 +1,35 @@
 .casting{
     .title-name{
-    text-transform: uppercase;
-    font-size: 42px;
-    font-weight: 600;
+        text-transform: uppercase;
+        font-size: 42px;
+        font-weight: 300;
     }
     .card{
         margin: 0;
         box-shadow: none;
 
+        &:hover{
+            cursor: pointer;
+        }
         .card-nomeart{
-            border:1px solid $black-main;
-            padding: 0 10px;
-
             p{
-                color: $navy-dark;
+                color: $black-main;
                 font-weight: 700;
             }
+            
         }
     }
 }
 
 .casting-details{
     .title-name{
-    text-transform: uppercase;
-    font-size: 42px;
-    font-weight: 600;
+        text-transform: uppercase;
+        font-size: 42px;
+        font-weight: 400;
+        color: $navy-dark;
     }
     .actor-name{
         border:3px solid $yellow-dark;
-        padding: 5px 10px;
         font-size: 28px;
         font-weight: 400;
     }

@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
-    "dev": "nodemon ./bin/www"
+    "dev": "nodemon ./bin/www",
+    "scss": "node-sass --watch *.scss -o css"
   },
   "dependencies": {
-    "@angular-devkit/build-angular": "^0.801.1",
     "@angular/cli": "^8.1.1",
     "body-parser": "^1.18.3",
     "cookie-parser": "~1.4.3",
@@ -24,6 +24,7 @@
     "mysql": "^2.15.0",
     "ng2-slim-loading-bar": "^4.0.0",
     "node-datetime": "^2.0.6",
+    "node-sass": "^4.12.0",
     "nodemailer": "^4.6.7",
     "npm": "^6.4.1",
     "rxjs-compat": "^6.5.2",
