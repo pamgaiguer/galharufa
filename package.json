@@ -5,7 +5,7 @@
   "scripts": {
     "start": "nodemon ./bin/www",
     "dev": "nodemon ./bin/www",
-    "scss": "node-sass --watch *.scss -o css"
+    "scss": "node-sass --watch custom.scss -o ."
   },
   "dependencies": {
     "@angular/cli": "^8.1.1",
