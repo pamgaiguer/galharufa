@@ -15,15 +15,13 @@ angular.module('galharufa.controllers.casting', [])
   $scope.title = cas_tipo;
 
   $scope.init = function () {
-    console.log("startou o contato");
+
+    $scope.mainUrl = $location.host();
+    console.log($scope.mainUrl);
+
     $rootScope.headerId = 1;
     $rootScope.hold = false;
     CastingServices.getCastings({cas_tipo}).then(function(r){ $scope.vm.casting = r; });
-    // $rootScope.modelo = false;
-    // $rootScope.verificaModelo = function(value){
-    //   if
-
-    // };
   }
 
   $scope.buscar = function(){

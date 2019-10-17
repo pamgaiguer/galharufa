@@ -16,6 +16,9 @@ angular.module('galharufa.controllers.casting-details', [])
     $rootScope.headerId = 1;
     $rootScope.hold = false;
 
+    $scope.mainUrl = $location.host();
+    console.log($scope.mainUrl);
+
     // $('body, html').animate({ scrollTop: 250 });
     CastingServices.getCasting($routeParams.id).then(function(r){
       $scope.vm.casting = r[0];
