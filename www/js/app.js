@@ -33,9 +33,9 @@ app.run(function($rootScope, $timeout, UserServices, $location, $route) {
   $rootScope.hold = false;
   UserServices.loadUserLocalStorage();
 
-  $scope.mainUrl = $location.host();
+  $rootScope.mainUrl = $location.host();
 
-  console.log($scope.mainUrl);
+  console.log($rootScope.mainUrl);
 
 
   $rootScope.path = function(p,params={}){
