@@ -114,3 +114,4 @@ Desktop.ini
 # node_modules/*
 www/package-json.lock
 package-json.lock
+sql/galharufa2.sql
