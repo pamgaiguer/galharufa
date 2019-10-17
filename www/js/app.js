@@ -1,6 +1,6 @@
 var app = angular.module('galharufa', [
   'ngRoute',
-  // 'ngFileUpload',
+  'ngFileUpload',
   'ngSanitize',
   'angularFileUpload',
   'galharufa.controllers.home',
