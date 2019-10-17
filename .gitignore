@@ -3,6 +3,7 @@
 www/bower_components/*
 www/node_modules/*
 www/images/*
+mail_bkp/
 ### Node ###
 # Logs
 logs
