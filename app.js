@@ -25,9 +25,6 @@ app.all('*', function(req, res, next) {
 
 app.use(
    connection(mysql,{
-     // host: 'localhost',
-     // user: 'root',
-     // password : '',
      host: 'mysql669.umbler.com',
      user: 'admagencia',
      password: 'agenciagalharufa',
