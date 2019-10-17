@@ -10,24 +10,24 @@
       </div>
     </div>
 
-<!-- <pre>{{vm.casting | json }}</pre> -->
+<!-- <pre>{{vm.casting | json }}</pre> -->    
 
     <div class="row">
         <div class="col s12 m6 l6 xl6">
           <div class="carousel carousel-slider center" data-indicators="true">
             <div class="carousel-item red white-text" href="#one!">
               <h2>Foto 1</h2>
-              <img src="http://www.agenciagalharufa.com.br/'+'{{vm.casting.cas_foto34}}}" alt="foto 3x4">
+              <img ng-src="https://www.agenciagalharufa.com.br{{vm.casting.cas_foto34}}" alt="foto 3x4">
               <p class="white-text">Foto 3x4</p>
             </div>
             <div class="carousel-item amber white-text" href="#two!">
               <h2>Foto 2</h2>
-              <img src="{{vm.casting.cas_fotobody}}}" alt="foto de corpo inteiro">
+              <img ng-src="https://www.agenciagalharufa.com.br{{vm.casting.cas_fotobody}}" alt="foto de corpo inteiro">
               <p class="white-text">Foto corpo</p>
             </div>
             <div class="carousel-item green white-text" href="#three!">
               <h2>Foto 3</h2>
-              <img src="{{vm.casting.cas_fotosmile}}}" alt="foto sorrindo">
+              <img ng-src="https://www.agenciagalharufa.com.br{{vm.casting.cas_fotosmile}}" alt="foto sorrindo">
               <p class="white-text">Foto sorriso</p>
             </div>
             <div class="carousel-item blue white-text" href="#four!" ng-show="vm.casting.cas_portfolio.length">

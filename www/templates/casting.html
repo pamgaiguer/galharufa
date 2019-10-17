@@ -6,20 +6,9 @@
         <h3 class="title-name center-align">{{title}}</h3>
       </div>
     </div>
-
-    <div class="row">
-      <div class="col s12 m12 l12 xl12">
-        <p>Filtro:</p>
-            <input  class="with-gap"  name="group1" type="radio" id="test1" />
-            <label for="test1">Masculino</label>
-            <input  class="with-gap"  name="group1" type="radio" id="test2" />
-            <label for="test2">Feminino</label>
-        </div>
-    </div>
     
     <div class="row">
       <div ng-repeat="model in vm.casting">
-        <pre>{{model | json}}</pre>
         <div class="col s12 m3 l3 xl3">
           <div class="card" ng-click="path('/casting-details/'+model.cas_id)">
             <div class="card-image">
@@ -38,12 +27,5 @@
 <script>
   $(document).ready(function () {
     Materialize.updateTextFields();
-    
-    $('.carousel.carousel-slider').carousel({
-      fullWidth: true,
-      noWrap: true
-    });
   });
 </script>
-
-<!-- <div ng-repeat="model in vm.casting"></div> -->

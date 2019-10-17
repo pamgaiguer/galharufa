@@ -11,9 +11,10 @@ angular.module('galharufa.controllers.adm-casting-show', [])
         $rootScope.headerId = 2;
         $rootScope.hold = false;
 
-        $scope.mainUrl = $location.absUrl().split('/#')[0];
+        // $scope.mainUrl = $location.absUrl().split('')[0];
+        // $scope.mainUrl = $location.host();
 
-        console.log($scope.mainUrl);
+        // console.log($scope.mainUrl);
         
         CastingServices.getCasting($routeParams.id).then(function(r){
             // console.log('casting', r); 
