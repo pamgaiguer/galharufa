@@ -19,6 +19,7 @@ angular.module('galharufa.controllers.adm-casting-search', [])
   $scope.alterar = function(c){
     CastingServices.casting = c;
     $rootScope.path("/adm-casting-register");
+    Materialize.toast('Registro alterado com sucesso!', 4000);
   }
 
   $scope.excluir = function(id){
@@ -26,7 +27,6 @@ angular.module('galharufa.controllers.adm-casting-search', [])
       CastingServices.getCastings().then(function(r){ $scope.vm.casting = r; });
       Materialize.toast('Registro excluído com sucesso!', 4000);
     });
-
   }
 
   $scope.visualizar = function(c){
@@ -40,5 +40,4 @@ angular.module('galharufa.controllers.adm-casting-search', [])
     else
       CastingServices.getCastingsPorBusca($scope.vm.tipo, $scope.vm.busca).then(function(r){ $scope.vm.casting = r; });
   }
-
 });

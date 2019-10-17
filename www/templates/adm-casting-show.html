@@ -3,9 +3,9 @@
   <div class="row">
     <div class="col s12">
       <h5 class="session-name">Casting
-        <i class="material-icons">keyboard_arrow_right</i> Visualizar {{vm.casting.cas_nome}}</h5>
+        <i class="material-icons">keyboard_arrow_right</i> Visualizar "{{vm.casting.cas_nome}}"</h5>
         <blockquote>
-        Dados sobre {{vm.casting.cas_nome}} </span>
+        Dados sobre "{{vm.casting.cas_nome}}" </span>
       </blockquote>
     </div>
   </div>
@@ -176,9 +176,12 @@
       <div id="photos">
         <div class="row">
           <div class="col s4">
+<!-- <pre>{{mainUrl}}{{ vm.casting.cas_foto34 }} </pre> -->
+
+
             <div class="profile-img">
               <figure>
-                <img class="materialboxed" data-caption="foto 3x4" ng-src="{{vm.casting.cas_foto34}}">
+                <img class="materialboxed" data-caption="foto 3x4" ng-src="{{mainUrl}}{{ vm.casting.cas_foto34 }}">
                 <figcaption>
                   Foto 3x4
                 </figcaption>
@@ -188,7 +191,7 @@
           <div class="col s4">
             <div class="profile-img">
               <figure>
-                <img class="materialboxed" data-caption="foto corpo inteiro" ng-src="{{vm.casting.cas_fotobody}}">
+                <img class="materialboxed" data-caption="foto corpo inteiro" ng-src="{{mainUrl}}{{vm.casting.cas_fotobody}}">
                 <figcaption>
                   Foto Corpo Inteiro
                 </figcaption>
@@ -198,7 +201,7 @@
           <div class="col s4">
             <div class="profile-img">
               <figure>
-                <img class="materialboxed" data-caption="foto sorriso" ng-src="{{vm.casting.cas_fotosmile}}">
+                <img class="materialboxed" data-caption="foto sorriso" ng-src="{{mainUrl}}{{vm.casting.cas_fotosmile}}">
                 <figcaption>
                   Foto Sorriso
                 </figcaption>

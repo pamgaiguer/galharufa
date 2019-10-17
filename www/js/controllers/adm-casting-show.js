@@ -1,22 +1,22 @@
 angular.module('galharufa.controllers.adm-casting-show', [])
 
-.controller('AdminCastingShowCtrl', function($scope, $sce, $rootScope, $routeParams, CastingServices) {
+.controller('AdminCastingShowCtrl', function($scope, $sce, $rootScope, $routeParams, $location, CastingServices) {
 
     $scope.vm = {
         'isLoading':false,
-        'casting': {}
+        'casting': {},
     }
-
-
     $scope.init = function () {
-        console.log("startou o adm Casting show");
+        // console.log("startou o adm Casting show");
         $rootScope.headerId = 2;
         $rootScope.hold = false;
-        $rootScope.session_title = "Visualizar";
-        $rootScope.nome_casting = "FAKE-ATOR";
+
+        $scope.mainUrl = $location.absUrl().split('/#')[0];
+
+        console.log($scope.mainUrl);
         
         CastingServices.getCasting($routeParams.id).then(function(r){
-            console.log('casting', r); 
+            // console.log('casting', r); 
             $scope.vm.casting = r[0] || {}; 
 
             if ($scope.vm.casting.cas_portfolio === '') {
@@ -27,5 +27,4 @@ angular.module('galharufa.controllers.adm-casting-show', [])
             $scope.vm.embbedVideo = $sce.trustAsResourceUrl(embedUrl)
         });
     }
-
 });
