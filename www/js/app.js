@@ -58,8 +58,6 @@ app.constant('Configs', {
 
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
-  // $locationProvider.html5Mode(true);
-
   $routeProvider
   .when('/', {
     templateUrl: '/templates/home.html',
@@ -72,10 +70,6 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
   .when('/login/', {
     templateUrl: '/templates/login.html',
     controller: 'LoginCtrl'
-  })
-  .when('/blog/', {
-    templateUrl: '/templates/blog.html',
-    controller: 'BlogCtrl'
   })
   .when('/contato/', {
     templateUrl: '/templates/contato.html',
@@ -132,4 +126,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
   .otherwise({
     redirectTo: '/'
   });
+
+    $locationProvider.html5Mode(true);
+
 }]);
