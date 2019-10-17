@@ -28,7 +28,7 @@ app.use(
      // host: 'localhost',
      // user: 'root',
      // password : '',
-     host: 'mysql427.umbler.com',
+     host: 'mysql669.umbler.com',
      user: 'admagencia',
      password: 'agenciagalharufa',
      port : 41890, //port mysql
