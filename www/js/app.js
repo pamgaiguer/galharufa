@@ -122,9 +122,6 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
   .when('/adm-servicos/', {
     templateUrl: '/templates/adm-servicos.html',
     controller: 'AdminServicosCtrl'
-  })
-  .otherwise({
-    redirectTo: '/'
   });
 
     $locationProvider.html5Mode(true);
