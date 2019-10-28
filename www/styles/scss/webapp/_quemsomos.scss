@@ -1,13 +1,13 @@
 .quemsomos{
-  background-color: $purple-main;
-  color: $yellow-main;
+  background-color: white;
+  color: black;
 
   .row{
     margin-bottom: 0;
   }
   .whoweare{
-    border-left: 5px solid $navy-main;
-    border-right: 5px solid $navy-main;
+    border-left: 5px solid $yellow-main;
+    border-right: 5px solid $yellow-main;
     padding: 20px 25px;
   }
   .side-text{
@@ -17,7 +17,7 @@
     }
     .topics{
       font-weight: 300;
-      color: white;
+      color: black;
       font-size: 18px;
       padding-left: 25px;
 
