@@ -1,35 +1,23 @@
 header {
   margin-bottom: 10px;
-  background-color: $yellow-main;
-
-    .navbar{
-      height: 65px;
-      position: relative;
-      text-align: center;
-      
-      i{
-        line-height: 65px;
-      }
-    }
-    .nav-content{
-      .tabs{
-        .tab{
-          img{
-            display: inline-block;
-            margin-top: 3px;
-          }
-          a{
+  
+  nav{
+    background: $yellow-main;
+    
+    
+    ul{
+      li{
+        a{
+          color: $black-main;
+          font-weight: 500;
+          &.active, &:active, &:hover{
             color: $black-main;
-            font-weight: bold;
-            
-            &.active, &:active, &:hover{
-              color: $black-main;
-            };
           }
         }
       }
     }
   }
+}
 
 @media (min-width: 0px) and (max-width: 375px) {}
 @media (min-width: 376px) and (max-width: 992px) {}

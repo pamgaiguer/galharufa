@@ -258,25 +258,15 @@ main .input-field input:focus + label, main .input-field textarea:focus + label 
 
 header {
   margin-bottom: 10px;
-  background-color: #FFD740;
 }
-header .navbar {
-  height: 65px;
-  position: relative;
-  text-align: center;
+header nav {
+  background: #FFD740;
 }
-header .navbar i {
-  line-height: 65px;
-}
-header .nav-content .tabs .tab img {
-  display: inline-block;
-  margin-top: 3px;
-}
-header .nav-content .tabs .tab a {
+header nav ul li a {
   color: #212121;
-  font-weight: bold;
+  font-weight: 500;
 }
-header .nav-content .tabs .tab a.active, header .nav-content .tabs .tab a:active, header .nav-content .tabs .tab a:hover {
+header nav ul li a.active, header nav ul li a:active, header nav ul li a:hover {
   color: #212121;
 }
 
