@@ -1,44 +1,35 @@
 header {
+  margin-bottom: 10px;
+  background-color: $yellow-main;
 
-  nav .nav-wrapper{
-    background-image: url('/images/header.png');
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 190px;
-    background-color: black;
+    .navbar{
+      height: 65px;
+      position: relative;
+      text-align: center;
+      
+      i{
+        line-height: 65px;
+      }
+    }
+    .nav-content{
+      .tabs{
+        .tab{
+          img{
+            display: inline-block;
+            margin-top: 3px;
+          }
+          a{
+            color: $black-main;
+            font-weight: bold;
+            
+            &.active, &:active, &:hover{
+              color: $black-main;
+            };
+          }
+        }
+      }
+    }
   }
-  nav .navbar{
-    background-color: $yellow-main;
-    height: 65px;
-    position: relative;
-    text-align: center;
-
-    i{
-        line-height: 65px;
-    }
-
-    ul {
-      li{
-        padding: 0 30px;
-        line-height: 65px;
-
-        img{
-          display: inline-block;
-          margin-top: 10px;
-        }
-      }
-        .dropdown-content li{
-            padding: 0px;
-            background: $yellow-dark;
-        }
-        a{
-          color: $black-main;
-        }
-      }
-    }
-
-}
 
 @media (min-width: 0px) and (max-width: 375px) {}
 @media (min-width: 376px) and (max-width: 992px) {}

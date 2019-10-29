@@ -256,36 +256,27 @@ main .input-field input:focus + label, main .input-field textarea:focus + label 
   padding-bottom: 10px;
 }
 
-header nav .nav-wrapper {
-  background-image: url("/images/header.png");
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 190px;
-  background-color: black;
-}
-header nav .navbar {
+header {
+  margin-bottom: 10px;
   background-color: #FFD740;
+}
+header .navbar {
   height: 65px;
   position: relative;
   text-align: center;
 }
-header nav .navbar i {
+header .navbar i {
   line-height: 65px;
 }
-header nav .navbar ul li {
-  padding: 0 30px;
-  line-height: 65px;
-}
-header nav .navbar ul li img {
+header .nav-content .tabs .tab img {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 3px;
 }
-header nav .navbar ul .dropdown-content li {
-  padding: 0px;
-  background: #FFAB33;
+header .nav-content .tabs .tab a {
+  color: #212121;
+  font-weight: bold;
 }
-header nav .navbar ul a {
+header .nav-content .tabs .tab a.active, header .nav-content .tabs .tab a:active, header .nav-content .tabs .tab a:hover {
   color: #212121;
 }
 
