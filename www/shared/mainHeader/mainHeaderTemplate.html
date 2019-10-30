@@ -38,7 +38,9 @@
 <script>
     $(document).ready(function() {
         $(".dropdown-button").dropdown();
-        $(".button-collapse").sideNav();
+        $(".button-collapse").sideNav({
+            closeOnClick: true
+        });
 
         $('ul.right li').on('click', function(){
             var clicked = $(this);
