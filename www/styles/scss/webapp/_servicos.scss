@@ -1,4 +1,7 @@
 .servicos{
+  h4{
+    margin: 0;
+  }
   .collection{
     height: auto;
     white-space: normal;
@@ -37,10 +40,8 @@
     .collection-item.avatar{
       min-height: 15px;
     }
-
     .collection-item.avatar:not(.circle-clipper)>.circle{
       margin-top: 2px;
     }
-
   }
 }

@@ -15,11 +15,8 @@
 
       </div>
       <div class="col s12 m7 l7 xl7">
-
         <div id="{{'curso' + servico.svc_id}}" ng-repeat="servico in vm.servicos" ng-bind-html="servico.svc_conteudo">
         </div>
-
-
       </div>
     </div>
   </div>
@@ -28,6 +25,5 @@
 <script>
   $(document).ready(function () {
     Materialize.updateTextFields();
-    
   });
 </script>

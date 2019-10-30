@@ -19,7 +19,6 @@ angular.module('galharufa.controllers.servicos', [])
     SimpleServices
       .getServicos()
       .then(function (result) {
-        // console.log(result);
         $scope.vm.servicos = result.data;
         setTimeout(function () {
           $('ul.tabs').tabs();

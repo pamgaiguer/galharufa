@@ -2,16 +2,13 @@
   background-color: white;
   color: black;
 
-  .row{
-    margin-bottom: 0;
-  }
   .whoweare{
     border-left: 5px solid $yellow-main;
     border-right: 5px solid $yellow-main;
-    padding: 20px 25px;
+    padding: 0px 25px;
   }
   .side-text{
-    h4, h6{
+    h4, h5, h6{
       font-weight: 300;
       margin: 0;
     }
