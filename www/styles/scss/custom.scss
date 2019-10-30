@@ -3,7 +3,6 @@
 @import 'mixins';
 @import 'variables';
 @import 'typography';
-@import "../node_modules/ng2-slim-loading-bar/style.css";
 html {
   font-family: Lato, Calibri, Trebuchet, sans-serif;
 }
@@ -14,9 +13,14 @@ html {
 body {
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 main {
+  flex: 1 0 auto;
+
   .btn {
     &:hover {
       background-color: #006974;

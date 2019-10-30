@@ -7,7 +7,7 @@
       <div class="col s12 m5 l5 xl5">
 
         <ul class="collection tabs">
-          <li class="collection-item avatar tab" ng-repeat="servico in vm.servicos | orderBy: 'svc_id'">
+          <li class="collection-item avatar tab" ng-repeat="servico in vm.servicos | orderBy: 'svc_id' track by $index ">
             <img class="{{servico.svc_iconclass}} circle" ng-src="{{servico.svc_img}}">
             <a href="{{'#curso' + servico.svc_id}}" ng-bind="servico.svc_descricao"></a>
           </li>
@@ -15,7 +15,7 @@
 
       </div>
       <div class="col s12 m7 l7 xl7">
-        <div id="{{'curso' + servico.svc_id}}" ng-repeat="servico in vm.servicos" ng-bind-html="servico.svc_conteudo">
+        <div id="{{'curso' + servico.svc_id}}" ng-repeat="servico in vm.servicos track by $index" ng-bind-html="servico.svc_conteudo">
         </div>
       </div>
     </div>
