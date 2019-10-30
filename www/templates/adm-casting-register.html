@@ -13,15 +13,15 @@
     <form ng-submit="vm.state == 'insert' ? adicionar() : alterar()">
       <div class="row">
         <div class="col s12 m4 l4 xl4">
-          <label>Tipo de ator</label>
+          <label>Tipo de casting</label>
 
           <select class="browser-default" ng-model="vm.casting.tpo" id="casting">
             <option value="" disabled ng-selected="!vm.casting.tpo">Selecionar...</option>
 
-            <option value="Ator" ng-selected="vm.casting.tpo == 'Ator'">Ator</option>
-            <option value="Criança" ng-selected="vm.casting.tpo == 'Criança'">Criança</option>
-            <option value="Modelo" ng-selected="vm.casting.tpo == 'Modelo'">Modelo</option>
-            <option value="Figuração" ng-selected="vm.casting.tpo == 'Figuração'">Figuração</option>
+            <option value="Atores" ng-selected="vm.casting.tpo == 'Atores'">Atores</option>
+            <option value="Infantil" ng-selected="vm.casting.tpo == 'Infantil'">Infantil</option>
+            <option value="Exclusivos" ng-selected="vm.casting.tpo == 'Exclusivos'">Exclusivos</option>
+            <option value="Talentos" ng-selected="vm.casting.tpo == 'Talentos'">Talentos</option>
           </select>
         </div>
       </div>
@@ -29,13 +29,13 @@
         <div class="col s12 m3 l3 xl3">
           <div class="input-field">
             <input ng-model="vm.casting.nme" type="text" required>
-            <label>Nome Completo</label>
+            <label>Nome Completo <span class="red-text">*</span></label>
           </div>
         </div>
         <div class="col s12 m3 l3 xl3">
           <div class="input-field">
             <input ng-model="vm.casting.nma" type="text" required>
-            <label>Nome Artístico</label>
+            <label>Nome Artístico <span class="red-text">*</span></label>
           </div>
         </div>
         <div class="col s12 m3 l3 xl2">
@@ -67,19 +67,19 @@
         <div class="col s12 m4 l4 xl4">
           <div class="input-field">
             <input type="tel" ng-model="vm.casting.phone">
-            <label>Telefone</label>
+            <label>Telefone <span class="red-text">*</span></label>
           </div>
         </div>
         <div class="col s12 m4 l4 xl4">
           <div class="input-field">
             <input type="tel" required ng-model="vm.casting.mobile">
-            <label>Celular</label>
+            <label>Celular <span class="red-text">*</span></label>
           </div>
         </div>
         <div class="col s12 m4 l4 xl4">
           <div class="input-field">
             <input type="email" required ng-model="vm.casting.email">
-            <label>E-mail</label>
+            <label>E-mail <span class="red-text">*</span></label>
           </div>
         </div>
       </div>
@@ -193,7 +193,7 @@
         <div class="col s12 m2 l2 xl2">
           <div class="input-field">
             <input id="dtn" ng-model="vm.casting.dtn" required type="text" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}">
-            <label for="dtn">Data de nascimento</label>
+            <label for="dtn">Data de nascimento <span class="red-text">*</span></label>
           </div>
         </div>
       </div>
@@ -299,7 +299,7 @@
             <!-- <div class="chips chips-placeholder"></div> -->
 
             </textarea>
-            <label>Habilidades - pressione Enter para criar a tag</small></label>
+            <label>Habilidades - pressione Enter para criar a tag <span class="red-text">*</span></small></label>
           </div>
         <small>Para adicionar tags, apenas insira sua tag de texto e pressione enter. Você pode apaga-los clicando na ícone fechar ou usando o botão delete.</small>
 
