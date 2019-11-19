@@ -1,10 +1,8 @@
 .home{
-  .section{
-    // padding: 25px 0;
-    // height: 800px;
-    // border: 1px solid #f0f;
-    padding: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
+
+
+  .slider .indicators .indicator-item.active {
+    background-color: $yellow-main;
+}
+
 }

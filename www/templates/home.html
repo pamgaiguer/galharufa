@@ -1,48 +1,42 @@
-<img ng-if="hold" class="responsive-img" src="/images/hold.jpg"/>
+<!-- <img ng-if="hold" class="responsive-img" src="/images/hold.jpg"/>
 
-<main ng-show="!hold" ng-init="init()" class="home" id="home">
+<main ng-show="!hold" ng-init="init()" class="home" id="home"> -->
+<main ng-init="init()" class="home" > 
 
-    <div class="row">
-        <div class="col s12 m12 l12 xl12">
-          <div class="carousel carousel-slider" data-indicators="true">
-            <a class="carousel-item"><img src="/images/slider-home-001.png"></a>
-            <a class="carousel-item"><img src="/images/slider-home-001.png"></a>
-          </div>
+<div class="slider">
+    <ul class="slides">
+      <li>
+          <img src="/images/home002.jpg" alt="">
+        <div class="caption left-align">
+          <h3>Aqui a sua arte ganha vida!</h3>
+          <h5 class="light grey-text text-lighten-3">Entre para o cast!</h5>
         </div>
-    </div>
-
-
-    <!-- <div class="row bg-navy-light">
-      <div class="container">
-
-        <div class="col s12 m12 l12 xl12">
-          <div class="spacing"></div>
-          <blockquote class="embedly-card">
-            <h4>
-              <a href="https://medium.com/@agenciagalharufa">
-            Agencia Galharufa - Medium</a></h4>
-            <p>Visitem nosso blog!</p></blockquote>
-          <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+      </li>
+      <li>
+          <img src="/images/home003.jpg" alt="">
+        <div class="caption right-align">
+          <h3>Aqui os personagens contam sonhos!</h3>
+          <h5 class="light grey-text text-lighten-3">Faça parte do nosso time!</h5>
         </div>
-          <div class="spacing"></div>
-
-      </div>
-    </div> -->
+      </li>
+      <li>
+          <img src="/images/home004.jpg" alt="">
+        <div class="caption center-align">
+          <h3>Seu roteiro expressado em movimento!</h3>
+          <h5 class="light grey-text text-lighten-3">Venha fazer parte do nosso elenco!!</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
 
 </main>
 
 <script>
   $(document).ready(function(){
-    $('ul.tabs').tabs();
-
-    $('.carousel.carousel-slider').carousel({
-     fullWidth: true,
-     padding: 200
-   }, setTimeout(autoplay, 4500));
-
-    function autoplay() {
-     $('.carousel').carousel('next');
-     setTimeout(autoplay, 4500);
-   }
+    $('.slider').slider({
+      height: 800,
+      indicators: false,
+      interval: 5000
+    });
  });
 </script>

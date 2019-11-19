@@ -404,10 +404,8 @@ footer.page-footer p {
   }
 }
 
-.home .section {
-  padding: 0;
-  padding-top: 0;
-  padding-bottom: 0;
+.home .slider .indicators .indicator-item.active {
+  background-color: #FFD740;
 }
 
 .quemsomos .whoweare {
