@@ -2,7 +2,6 @@ var app = angular.module('galharufa.services.CastingServices', []);
 
 app.service('CastingServices', function ($q, $http, Configs) {
 
-  console.log("CastingServices :: Iniciado");
   const queryStringBuilderByObj = (obj) => Object.keys(obj).reduce(function(a,k){a.push(k+'='+encodeURIComponent(obj[k]));return a},[]).join('&');
   var self = {
     isLoading:false,

@@ -2,8 +2,6 @@ var app = angular.module('galharufa.services.UserServices', []);
 
 app.service('UserServices', function ($q, $http, Configs) {
 
-  console.log("UserServices :: Iniciado");
-
   var self = {
     isLoading:false,
     currentUser: {},

@@ -2,8 +2,6 @@ angular.module('galharufa.controllers.home', [])
 
 .controller('HomeCtrl', function($scope, $rootScope, $q, $timeout, $location, CastingServices) {
 
-  console.log("HomeCtrl :: Iniciado");
-
   $scope.vm = {
     'login':'',
     'pwd':'',

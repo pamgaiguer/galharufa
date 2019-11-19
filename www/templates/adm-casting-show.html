@@ -2,16 +2,11 @@
 
   <div class="row">
     <div class="col s12">
-      <h5 class="session-name">Casting
-        <i class="material-icons">keyboard_arrow_right</i> Visualizar "{{vm.casting.cas_nome}}"</h5>
-        <blockquote>
-        Dados sobre "{{vm.casting.cas_nome}}" </span>
-      </blockquote>
+      <h5 class="session-name">Casting <i class="material-icons">keyboard_arrow_right</i> Visualizar "{{vm.casting.cas_nome}}"</h5>
     </div>
   </div>
 
   <ul class="tabs">
-
     <li class="tab col s3">
       <a class="active" href="#dados">Dados Gerais</a>
     </li>
@@ -30,7 +25,6 @@
     <li class="tab col s3">
       <a class="" href="#extraData">Dados extras</a>
     </li>
-
   </ul>
 
   <div class="spacing"></div>
@@ -176,12 +170,9 @@
       <div id="photos">
         <div class="row">
           <div class="col s4">
-<pre>{{mainUrl}}{{ vm.casting.cas_foto34 }} </pre>
-
-
             <div class="profile-img">
               <figure>
-                <img class="materialboxed" data-caption="foto 3x4" ng-src="{{mainUrl}}{{ vm.casting.cas_foto34 }}">
+                <img class="materialboxed" data-caption="Foto 3x4" ng-src="https://www.agenciagalharufa.com.br{{vm.casting.cas_foto34}}">
                 <figcaption>
                   Foto 3x4
                 </figcaption>
@@ -191,7 +182,7 @@
           <div class="col s4">
             <div class="profile-img">
               <figure>
-                <img class="materialboxed" data-caption="foto corpo inteiro" ng-src="{{mainUrl}}{{vm.casting.cas_fotobody}}">
+                <img class="materialboxed" data-caption="Foto Corpo Inteiro" ng-src="https://www.agenciagalharufa.com.br{{vm.casting.cas_fotobody}}">
                 <figcaption>
                   Foto Corpo Inteiro
                 </figcaption>
@@ -201,7 +192,7 @@
           <div class="col s4">
             <div class="profile-img">
               <figure>
-                <img class="materialboxed" data-caption="foto sorriso" ng-src="{{mainUrl}}{{vm.casting.cas_fotosmile}}">
+                <img class="materialboxed" data-caption="Foto Sorriso" ng-src="https://www.agenciagalharufa.com.br{{vm.casting.cas_fotosmile}}">
                 <figcaption>
                   Foto Sorriso
                 </figcaption>
@@ -239,11 +230,11 @@
             <label for="car">Carro</label>
           </div>
           <div class="col s12 m3 l3 xl3">
-            <input type="checkbox" disabled class=" materialize-checkbox" ng-checked="vm.casting.cas_moto" />
+            <input type="checkbox" disabled class="materialize-checkbox" ng-checked="vm.casting.cas_moto" />
             <label for="mot">Moto</label>
           </div>
           <div class="col s12 m3 l3 xl3">
-            <input type="checkbox" disabled class=" materialize-checkbox" ng-checked="vm.casting.cas_trator" />
+            <input type="checkbox" disabled class="materialize-checkbox" ng-checked="vm.casting.cas_trator" />
             <label for="trt">Trator</label>
           </div>
           <div class="col s12 m3 l3 xl3">

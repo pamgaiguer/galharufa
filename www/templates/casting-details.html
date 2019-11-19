@@ -1,95 +1,59 @@
 <main ng-init="init()" class="casting-details">
-  
   <div class="container">
-    
     <div class="row">
       <div class="col s12 m12 l12 xl12">
-        <h4 class="actor-name">{{vm.casting.cas_nomeart}} 
-          <!-- <i ng-show="vm.casting.cas_nomeart.length">({{vm.casting.cas_nomeart}})</i> -->
+        <h4 class="actor-name">
+          {{vm.casting.cas_nomeart}} 
         </h4>
       </div>
     </div>
-    
     <!-- <pre>{{vm.casting | json }}</pre>     -->
-    
     <div class="row">
       <div class="col s12 m6 l6 xl6">
-        <div class="slider">
-          <ul class="slides">
-            <li>
-              <div class="caption center-align">
-                  <figure>
-                      <img class="materialboxed" data-caption="foto 3x4" ng-src="{{mainUrl}}{{ vm.casting.cas_foto34 }}">
-                      <figcaption>
-                        Foto 3x4
-                      </figcaption>
-                    </figure>
-              </div>
-            </li>
-            <li>
-              <div class="caption center-align">
-                  <figure>
-                      <img class="materialboxed" data-caption="foto corpo inteiro" ng-src="{{mainUrl}}{{vm.casting.cas_fotobody}}">
-                      <figcaption>
-                        Foto Corpo Inteiro
-                      </figcaption>
-                    </figure>
-              </div>
-            </li>
-            <li>
-              <div class="caption center-align"> 
-                  <figure>
-                      <img class="materialboxed" data-caption="foto sorriso" ng-src="{{mainUrl}}{{vm.casting.cas_fotosmile}}">
-                      <figcaption>
-                        Foto Sorriso
-                      </figcaption>
-                    </figure>
-              </div>
-            </li>
-            <li>
-              <div class="caption center-align">
-                <div class="video-container">
-                  <iframe width="100%" height="315" ng-src="{{vm.embbedVideo}}" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
-                </div>
-                <p class="white-text">Portfolio</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-        
-        
-        
-      </div>
-      <div class="col s12 m6 l6 xl6">
-        <div class="card">
-          <div class="card-content">
-            <ul>
-              <li>Ano: {{vm.casting.cas_ano}}</li>
-              <li ng-show="vm.casting.cas_tipo=='Atores'">DRT: {{vm.casting.cas_drt}}</li>
-              <li>Altura: {{vm.casting.cas_altura}}</li>
-              <li>Manequim: {{vm.casting.cas_manequim}}</li>
-              <li>Sapato: {{vm.casting.cas_sapato}}</li>
-              <li ng-show="vm.casting.cas_tipo=='Exclusivos'">Camisa: {{vm.casting.cas_camisa}}</li>
-              <li ng-show="vm.casting.cas_tipo=='Exclusivos'">Busto: {{vm.casting.cas_busto}}</li>
-              <li ng-show="vm.casting.cas_tipo=='Exclusivos'">Cintura: {{vm.casting.cas_cintura}}</li>
-              <li ng-show="vm.casting.cas_tipo=='Exclusivos'">Quadril: {{vm.casting.cas_quadril}}</li>
-              <li ng-show="vm.casting.cas_tipo=='Infantil'">Data Nascimento: {{vm.casting.cas_dtnasc | date : 'dd/M/yyyy' }}</li>
-            </ul>
-          </div>
-          
+        <figure>
+          <img class="materialboxed" data-caption="foto 3x4" ng-src="{{mainUrl}}{{ vm.casting.cas_foto34 }}">
+          <figcaption>
+            Foto 3x4
+          </figcaption>
+        </figure>
+        <figure>
+          <img class="materialboxed" data-caption="foto corpo inteiro" ng-src="{{mainUrl}}{{vm.casting.cas_fotobody}}">
+          <figcaption>
+            Foto Corpo Inteiro
+          </figcaption>
+        </figure>
+        <figure>
+          <img class="materialboxed" data-caption="foto sorriso" ng-src="{{mainUrl}}{{vm.casting.cas_fotosmile}}">
+          <figcaption>
+            Foto Sorriso
+          </figcaption>
+        </figure>
+        <div class="video-container">
+          <iframe width="100%" height="315" ng-src="{{vm.embbedVideo}}" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-    </div>
-    
-    
+  <div class="col s12 m6 l6 xl6">
+    <ul>
+      <li>Ano: {{vm.casting.cas_ano}}</li>
+      <li ng-show="vm.casting.cas_tipo=='Atores'">DRT: {{vm.casting.cas_drt}}</li>
+      <li>Altura: {{vm.casting.cas_altura}}</li>
+      <li>Manequim: {{vm.casting.cas_manequim}}</li>
+      <li>Sapato: {{vm.casting.cas_sapato}}</li>
+      <li ng-show="vm.casting.cas_tipo=='Exclusivos'">Camisa: {{vm.casting.cas_camisa}}</li>
+      <li ng-show="vm.casting.cas_tipo=='Exclusivos'">Busto: {{vm.casting.cas_busto}}</li>
+      <li ng-show="vm.casting.cas_tipo=='Exclusivos'">Cintura: {{vm.casting.cas_cintura}}</li>
+      <li ng-show="vm.casting.cas_tipo=='Exclusivos'">Quadril: {{vm.casting.cas_quadril}}</li>
+      <li ng-show="vm.casting.cas_tipo=='Infantil'">Data Nascimento: {{vm.casting.cas_dtnasc | date : 'dd/M/yyyy' }}</li>
+    </ul>
   </div>
+</div>
+
 </main>
 
 <script>
   $(document).ready(function () {
     Materialize.updateTextFields();
     
-    $('.slider').slider();
   });
 </script>
 <!-- <div ng-repeat="model in vm.casting"></div> -->
