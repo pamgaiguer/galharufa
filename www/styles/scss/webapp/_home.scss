@@ -1,8 +1,20 @@
 .home{
-
-
-  .slider .indicators .indicator-item.active {
-    background-color: $yellow-main;
+  .caption h3, .caption h5{
+    text-shadow: 5px 5px 10px rgba(0,0,0,0.9);
+  }
 }
 
+@media (min-width: 0px) and (max-width: 375px) {
+  .home{
+    .caption h3, .caption h5{
+      text-shadow: 5px 5px 10px rgba(0,0,0,0.9);
+    }
+  }
+}
+@media (min-width: 376px) and (max-width: 992px) {
+  .home{
+    .caption h3, .caption h5{
+      text-shadow: 5px 5px 10px rgba(0,0,0,0.9);
+    }
+  }
 }

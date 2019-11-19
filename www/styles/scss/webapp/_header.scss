@@ -19,7 +19,25 @@ header {
   }
 }
 
-@media (min-width: 0px) and (max-width: 375px) {}
-@media (min-width: 376px) and (max-width: 992px) {}
+@media (min-width: 0px) and (max-width: 375px) {
+  .brand-logo{
+    img{
+      width: 220px;
+    }
+  }
+  nav a{
+    color: black;
+  }
+}
+@media (min-width: 376px) and (max-width: 992px) {
+  .brand-logo{
+    img{
+      width: 220px;
+    }
+  }
+  nav a{
+    color: black;
+  }
+}
 @media (min-width: 993px) and (max-width: 1024px) {}
 @media (min-width: 1025px) {}

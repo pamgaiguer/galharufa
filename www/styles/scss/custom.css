@@ -287,6 +287,24 @@ header nav .brand-logo {
   margin-top: 5px;
 }
 
+@media (min-width: 0px) and (max-width: 375px) {
+  .brand-logo img {
+    width: 220px;
+  }
+
+  nav a {
+    color: black;
+  }
+}
+@media (min-width: 376px) and (max-width: 992px) {
+  .brand-logo img {
+    width: 220px;
+  }
+
+  nav a {
+    color: black;
+  }
+}
 footer.page-footer {
   background-color: #cccccc;
   font-weight: 300;
@@ -404,10 +422,20 @@ footer.page-footer p {
   }
 }
 
-.home .slider .indicators .indicator-item.active {
-  background-color: #FFD740;
+.home .caption h3, .home .caption h5 {
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
 }
 
+@media (min-width: 0px) and (max-width: 375px) {
+  .home .caption h3, .home .caption h5 {
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+  }
+}
+@media (min-width: 376px) and (max-width: 992px) {
+  .home .caption h3, .home .caption h5 {
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+  }
+}
 .quemsomos .whoweare {
   border-left: 5px solid #FFD740;
   border-right: 5px solid #FFD740;
@@ -517,6 +545,7 @@ footer.page-footer p {
 .contato .btn {
   background-color: #FFD740;
   color: #000;
+  margin-bottom: 10px;
 }
 .contato .btn:hover {
   background-color: #FFAB33;
