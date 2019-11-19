@@ -1,16 +1,14 @@
 footer{
   &.page-footer{
+    background-color: #cccccc;
+    font-weight: 300;
     padding-top: 0px;
-    color: #fff;
-    background-color: $navy-main;
+    padding: 5px 0;
 
-    a{
-      color: white;
-
-      &:hover, &:focus{
-        color: white;
-        text-decoration: underline;
-      }
+    p{
+      color: $black-main;
+      font-weight: 300;
+      text-transform: uppercase;
     }
   }
 }

@@ -1,17 +1,20 @@
 header {
   // margin-bottom: 10px;
   nav{
-    background: $yellow-main;
+    background: white;
     ul{
       li{
         a{
           color: $black-main;
-          font-weight: 500;
+          font-weight: 300;
           &.active, &:active, &:hover{
             color: $black-main;
           }
         }
       }
+    }
+    .brand-logo{
+      margin-top: 5px;
     }
   }
 }

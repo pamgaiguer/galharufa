@@ -1,3 +1,15 @@
+.list-inline {
+  padding-left: 0;
+  margin-left: -5px;
+  list-style: none;
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
 .white {
   background-color: #FFF;
 }
@@ -262,27 +274,29 @@ main .input-field input:focus + label, main .input-field textarea:focus + label 
 }
 
 header nav {
-  background: #FFD740;
+  background: white;
 }
 header nav ul li a {
   color: #212121;
-  font-weight: 500;
+  font-weight: 300;
 }
 header nav ul li a.active, header nav ul li a:active, header nav ul li a:hover {
   color: #212121;
 }
+header nav .brand-logo {
+  margin-top: 5px;
+}
 
 footer.page-footer {
+  background-color: #cccccc;
+  font-weight: 300;
   padding-top: 0px;
-  color: #fff;
-  background-color: #0097A7;
+  padding: 5px 0;
 }
-footer.page-footer a {
-  color: white;
-}
-footer.page-footer a:hover, footer.page-footer a:focus {
-  color: white;
-  text-decoration: underline;
+footer.page-footer p {
+  color: #212121;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 .login .card-panel {
@@ -396,10 +410,6 @@ footer.page-footer a:hover, footer.page-footer a:focus {
   padding-bottom: 0;
 }
 
-.quemsomos {
-  background-color: white;
-  color: black;
-}
 .quemsomos .whoweare {
   border-left: 5px solid #FFD740;
   border-right: 5px solid #FFD740;
@@ -496,6 +506,16 @@ footer.page-footer a:hover, footer.page-footer a:focus {
   margin: 0;
 }
 
+.contato .contact-box {
+  background-image: linear-gradient(-90deg, #FFAB33, #FFD740);
+  padding: 20px 0;
+}
+.contato .contact-box .list-icons {
+  font-size: 16px;
+}
+.contato .contact-box .list-icons .material-icons {
+  font-size: 18px;
+}
 .contato .btn {
   background-color: #FFD740;
   color: #000;

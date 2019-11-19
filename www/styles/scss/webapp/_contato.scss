@@ -1,8 +1,19 @@
 .contato{
-  .btn {
-      background-color: $yellow-main;
-      color: $black;
+  .contact-box{
+    background-image: linear-gradient(-90deg, $yellow-dark, $yellow-main);
+    padding: 20px 0;
 
+    .list-icons{
+      font-size: 16px;
+      .material-icons{
+        font-size: 18px;
+      }
+    }
+  }
+  .btn {
+    background-color: $yellow-main;
+    color: $black;
+    
     &:hover {
       background-color: $yellow-dark;
     }
