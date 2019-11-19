@@ -7,15 +7,13 @@ angular.module('galharufa.controllers.adm-casting-show', [])
         'casting': {},
     }
     $scope.init = function () {
-        // console.log("startou o adm Casting show");
         $rootScope.headerId = 2;
         $rootScope.hold = false;
 
         $scope.mainUrl = $location.host();
-        console.log($scope.mainUrl);
+        // console.log($scope.mainUrl);
         
         CastingServices.getCasting($routeParams.id).then(function(r){
-            // console.log('casting', r); 
             $scope.vm.casting = r[0] || {}; 
 
             if ($scope.vm.casting.cas_portfolio === '') {

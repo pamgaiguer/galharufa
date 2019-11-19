@@ -18,7 +18,6 @@ angular.module('galharufa.controllers.adm-servicos', [])
   }
 
   $scope.init = function () {
-    console.log("startou o adm-servicos");
     $rootScope.headerId = 2;
     $rootScope.hold = false;
     $rootScope.session_title= 'Galharufa Dashboard - Serviços';

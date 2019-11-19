@@ -1,7 +1,7 @@
 <main ng-init="init()" class="casting-details">
-
+  
   <div class="container">
-
+    
     <div class="row">
       <div class="col s12 m12 l12 xl12">
         <h4 class="actor-name">{{vm.casting.cas_nomeart}} 
@@ -9,70 +9,87 @@
         </h4>
       </div>
     </div>
-
-<!-- <pre>{{vm.casting | json }}</pre> -->    
-
+    
+    <!-- <pre>{{vm.casting | json }}</pre>     -->
+    
     <div class="row">
-        <div class="col s12 m6 l6 xl6">
-          <div class="carousel carousel-slider center" data-indicators="true">
-            <div class="carousel-item red white-text" href="#one!">
-              <h2>Foto 1</h2>
-              <img ng-src="https://www.agenciagalharufa.com.br{{vm.casting.cas_foto34}}" alt="foto 3x4">
-              <p class="white-text">Foto 3x4</p>
-            </div>
-            <div class="carousel-item amber white-text" href="#two!">
-              <h2>Foto 2</h2>
-              <img ng-src="https://www.agenciagalharufa.com.br{{vm.casting.cas_fotobody}}" alt="foto de corpo inteiro">
-              <p class="white-text">Foto corpo</p>
-            </div>
-            <div class="carousel-item green white-text" href="#three!">
-              <h2>Foto 3</h2>
-              <img ng-src="https://www.agenciagalharufa.com.br{{vm.casting.cas_fotosmile}}" alt="foto sorrindo">
-              <p class="white-text">Foto sorriso</p>
-            </div>
-            <div class="carousel-item blue white-text" href="#four!" ng-show="vm.casting.cas_portfolio.length">
-              <h2>Video</h2>
-              <video src="{{vm.casting.cas_portfolio}}"></video>
-              <p class="white-text">Portfolio</p>
-            </div>
-          </div>
-
+      <div class="col s12 m6 l6 xl6">
+        <div class="slider">
+          <ul class="slides">
+            <li>
+              <div class="caption center-align">
+                  <figure>
+                      <img class="materialboxed" data-caption="foto 3x4" ng-src="{{mainUrl}}{{ vm.casting.cas_foto34 }}">
+                      <figcaption>
+                        Foto 3x4
+                      </figcaption>
+                    </figure>
+              </div>
+            </li>
+            <li>
+              <div class="caption center-align">
+                  <figure>
+                      <img class="materialboxed" data-caption="foto corpo inteiro" ng-src="{{mainUrl}}{{vm.casting.cas_fotobody}}">
+                      <figcaption>
+                        Foto Corpo Inteiro
+                      </figcaption>
+                    </figure>
+              </div>
+            </li>
+            <li>
+              <div class="caption center-align"> 
+                  <figure>
+                      <img class="materialboxed" data-caption="foto sorriso" ng-src="{{mainUrl}}{{vm.casting.cas_fotosmile}}">
+                      <figcaption>
+                        Foto Sorriso
+                      </figcaption>
+                    </figure>
+              </div>
+            </li>
+            <li>
+              <div class="caption center-align">
+                <div class="video-container">
+                  <iframe width="100%" height="315" ng-src="{{vm.embbedVideo}}" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                </div>
+                <p class="white-text">Portfolio</p>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="col s12 m6 l6 xl6">
-          <div class="card teal">
-            <div class="card-content">
-              <ul>
-                <li>Ano: {{vm.casting.cas_ano}}</li>
-                <li ng-show="vm.casting.cas_tipo=='Atores'">DRT: {{vm.casting.cas_drt}}</li>
-                <li>Altura: {{vm.casting.cas_altura}}</li>
-                <li>Manequim: {{vm.casting.cas_manequim}}</li>
-                <li>Sapato: {{vm.casting.cas_sapato}}</li>
-                <li ng-show="vm.casting.cas_tipo=='Modelo'">Camisa: {{vm.casting.cas_camisa}}</li>
-                <li ng-show="vm.casting.cas_tipo=='Modelo'">Busto: {{vm.casting.cas_busto}}</li>
-                <li ng-show="vm.casting.cas_tipo=='Modelo'">Cintura: {{vm.casting.cas_cintura}}</li>
-                <li ng-show="vm.casting.cas_tipo=='Modelo'">Quadril: {{vm.casting.cas_quadril}}</li>
-                <li ng-show="vm.casting.cas_tipo=='Crianças'">Data Nascimento: {{vm.casting.cas_dtnasc | date : 'dd/M/yyyy' }}</li>
-              </ul>
-            </div>
-
+        
+        
+        
+      </div>
+      <div class="col s12 m6 l6 xl6">
+        <div class="card">
+          <div class="card-content">
+            <ul>
+              <li>Ano: {{vm.casting.cas_ano}}</li>
+              <li ng-show="vm.casting.cas_tipo=='Atores'">DRT: {{vm.casting.cas_drt}}</li>
+              <li>Altura: {{vm.casting.cas_altura}}</li>
+              <li>Manequim: {{vm.casting.cas_manequim}}</li>
+              <li>Sapato: {{vm.casting.cas_sapato}}</li>
+              <li ng-show="vm.casting.cas_tipo=='Exclusivos'">Camisa: {{vm.casting.cas_camisa}}</li>
+              <li ng-show="vm.casting.cas_tipo=='Exclusivos'">Busto: {{vm.casting.cas_busto}}</li>
+              <li ng-show="vm.casting.cas_tipo=='Exclusivos'">Cintura: {{vm.casting.cas_cintura}}</li>
+              <li ng-show="vm.casting.cas_tipo=='Exclusivos'">Quadril: {{vm.casting.cas_quadril}}</li>
+              <li ng-show="vm.casting.cas_tipo=='Infantil'">Data Nascimento: {{vm.casting.cas_dtnasc | date : 'dd/M/yyyy' }}</li>
+            </ul>
           </div>
+          
         </div>
+      </div>
     </div>
-
-
+    
+    
   </div>
 </main>
 
 <script>
   $(document).ready(function () {
     Materialize.updateTextFields();
-
-    $('.carousel.carousel-slider').carousel({
-      fullWidth: true,
-      noWrap: true
-    });
+    
+    $('.slider').slider();
   });
 </script>
-
-
 <!-- <div ng-repeat="model in vm.casting"></div> -->

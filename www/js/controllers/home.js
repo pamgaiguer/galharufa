@@ -12,7 +12,6 @@ angular.module('galharufa.controllers.home', [])
   }
 
   $scope.init = function () {
-    console.log("startou o login");
     // $rootScope.hold = $location.path() != "/teste";
     CastingServices.getCastings().then(function(r){
       $scope.vm.casting = r;

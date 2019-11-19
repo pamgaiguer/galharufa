@@ -11,8 +11,8 @@ var connection  = require('express-myconnection');
 var users = require('./routes/usuarios');
 var casting = require('./routes/casting');
 var servicos = require('./routes/servicos');
-const quemsomos = require('./routes/quemsomos');
-const contato = require('./routes/contato');
+var quemsomos = require('./routes/quemsomos');
+var contato = require('./routes/contato');
 
 var app = express();
 

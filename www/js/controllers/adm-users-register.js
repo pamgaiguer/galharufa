@@ -15,7 +15,6 @@ angular.module('galharufa.controllers.adm-users-register', [])
   }
 
   $scope.init = function () {
-    console.log("startou o adm-users");
     $rootScope.headerId = 2;
     $rootScope.hold = false;
 

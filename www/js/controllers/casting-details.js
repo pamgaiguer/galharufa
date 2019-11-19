@@ -1,6 +1,6 @@
 angular.module('galharufa.controllers.casting-details', [])
 
-.controller('CastingDetailsCtrl', function($scope, $rootScope, $location, CastingServices, $routeParams) {
+.controller('CastingDetailsCtrl', function($scope, $sce, $rootScope, $location, CastingServices, $routeParams) {
 
   console.log("CastingDetailsCtrl :: Iniciado");
 
@@ -12,16 +12,25 @@ angular.module('galharufa.controllers.casting-details', [])
   }
 
   $scope.init = function () {
-    console.log("startou o casting details");
     $rootScope.headerId = 1;
     $rootScope.hold = false;
 
     $scope.mainUrl = $location.host();
-    console.log($scope.mainUrl);
+    // console.log($scope.mainUrl);
 
-    // $('body, html').animate({ scrollTop: 250 });
     CastingServices.getCasting($routeParams.id).then(function(r){
-      $scope.vm.casting = r[0];
+      // $scope.vm.casting = r[0];
+      $scope.vm.casting = r[0] || {}; 
+
+      if ($scope.vm.casting.cas_portfolio === '') {
+          $scope.vm.embbedVideo = ''
+          return
+      }
+      let embedUrl = $scope.vm.casting.cas_portfolio.replace('watch?v=', 'embed/')
+      $scope.vm.embbedVideo = $sce.trustAsResourceUrl(embedUrl)
+
+
+
     });
   }
 

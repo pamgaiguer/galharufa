@@ -1,5 +1,4 @@
 header {
-  // margin-bottom: 10px;
   nav{
     background: white;
     ul{
@@ -17,6 +16,9 @@ header {
       margin-top: 5px;
     }
   }
+  .dropdown-content li>a, .dropdown-content li>span {
+    color: black;
+}
 }
 
 @media (min-width: 0px) and (max-width: 375px) {

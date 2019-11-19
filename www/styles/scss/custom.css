@@ -286,6 +286,9 @@ header nav ul li a.active, header nav ul li a:active, header nav ul li a:hover {
 header nav .brand-logo {
   margin-top: 5px;
 }
+header .dropdown-content li > a, header .dropdown-content li > span {
+  color: black;
+}
 
 @media (min-width: 0px) and (max-width: 375px) {
   .brand-logo img {
@@ -521,15 +524,11 @@ footer.page-footer p {
   text-transform: uppercase;
   font-size: 42px;
   font-weight: 400;
-  color: #006974;
 }
 .casting-details .actor-name {
-  border: 3px solid #FFAB33;
-  font-size: 28px;
-  font-weight: 400;
-}
-.casting-details .card {
-  margin: 0;
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
 }
 
 .contato .contact-box {

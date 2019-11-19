@@ -19,7 +19,6 @@ angular.module('galharufa.controllers.adm-home', [])
   }
 
   $scope.login = function(form) {
-    console.log('Form Valid!');
     $scope.formData.isLoading = true;
     UserServices.login($scope.vm.login,$scope.vm.pwd)
     .then(function(success){

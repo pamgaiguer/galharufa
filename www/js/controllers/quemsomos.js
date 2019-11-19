@@ -12,7 +12,6 @@ angular.module('galharufa.controllers.quemsomos', [])
   }
 
   $scope.init = function () {
-    console.log("startou o quem somos");
     $rootScope.headerId = 1;
     $rootScope.hold = false;
 

@@ -12,7 +12,6 @@ angular.module('galharufa.controllers.servicos', [])
   }
 
   $scope.init = function () {
-    console.log("startou o servicos");
     $rootScope.headerId = 1;
     $rootScope.hold = false;
 

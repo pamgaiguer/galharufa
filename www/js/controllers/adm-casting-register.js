@@ -18,8 +18,6 @@ angular.module('galharufa.controllers.adm-casting-register', [])
 
   .controller('AdminCastingRegCtrl', function ($scope, $rootScope, $q, $timeout, $location, FileUploader, UserServices, CastingServices, $sce) {
 
-    console.log("AdminCastingRegCtrl :: Iniciado");
-
     var uploader = $scope.uploader = new FileUploader({
       url: '/casting/upload'
     });
