@@ -1,6 +1,6 @@
 .contato{
   .contact-box{
-    background-image: linear-gradient(-90deg, $yellow-dark, $yellow-main);
+    background-image: linear-gradient(-90deg, $gray-light, $gray-line);
     padding: 20px 0;
 
     .list-icons{
@@ -11,28 +11,28 @@
     }
   }
   .btn {
-    background-color: $yellow-main;
-    color: $black;
+    background-color: $black-main;
+    color: white;
     margin-bottom: 10px;
     
     &:hover {
-      background-color: $yellow-dark;
+      background-color: $black-main;
     }
     &:focus {
-      background-color: $yellow-dark;
+      background-color: $black-main;
     }
   }
   .btn-large {
     &:hover {
-      background-color: $yellow-dark;
+      background-color: $black-main;
     }
     &:focus {
-      background-color: $yellow-dark;
+      background-color: $black-main;
     }
   }
   .btn-floating {
     &:focus {
-      background-color: $yellow-dark;
+      background-color: $black-main;
     }
   }
 }
