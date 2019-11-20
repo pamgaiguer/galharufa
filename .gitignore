@@ -63,7 +63,6 @@ jspm_packages
 
 ### Sass ###
 .sass-cache/
-*.css.map
 
 ### temporary ###
 .tmp
