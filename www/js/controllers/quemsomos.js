@@ -2,7 +2,7 @@ angular.module('galharufa.controllers.quemsomos', [])
 
 .controller('QuemsomosCtrl', function($scope, $rootScope, $q, $timeout, $location, SimpleServices) {
 
-  console.log("QuemsomosCtrl :: Iniciado");
+  // console.log("QuemsomosCtrl :: Iniciado");
 
   $scope.vm = {
     'login':'',

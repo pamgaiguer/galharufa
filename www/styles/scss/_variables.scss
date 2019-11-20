@@ -18,6 +18,7 @@ $purple-main: #78769D;
 $purple-dark: #51506A;
 
 $gray-light: #FAFAFA;
+$gray-line: rgb(131, 131, 131);
 
 $white: #FFF;
 $black: #000;
@@ -26,10 +27,13 @@ $black: #000;
 .bg-black {@include bg-color($black);}
 .bg-yellow-main {
     @include bg-color($yellow-main);
-
     &:hover{
         @include bg-color($yellow-main);
     }
+}
+.bg-icon-servicos{
+    @include bg-color($white);
+    border:1px solid $gray-line;
 }
 .bg-yellow-dark {@include bg-color($yellow-dark);}
 

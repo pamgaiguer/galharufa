@@ -2,8 +2,6 @@ angular.module('galharufa.controllers.casting', [])
 
 .controller('CastingCtrl', function($scope, $rootScope, $q, $timeout, $location, CastingServices) {
 
-  console.log("CastingCtrl :: Iniciado");
-
   $scope.vm = {
     'login':'',
     'pwd':'',
@@ -17,7 +15,6 @@ angular.module('galharufa.controllers.casting', [])
   $scope.init = function () {
 
     $scope.mainUrl = $location.host();
-    console.log($scope.mainUrl);
 
     $rootScope.headerId = 1;
     $rootScope.hold = false;

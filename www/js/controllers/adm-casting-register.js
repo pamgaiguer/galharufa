@@ -73,7 +73,7 @@ angular.module('galharufa.controllers.adm-casting-register', [])
     }
 
     $scope.init = function () {
-      console.log("startou o adm Casting");
+      // console.log("startou o adm Casting");
       $rootScope.headerId = 2;
       $rootScope.hold = false;
       $rootScope.session_title = 'Dash - Casting - Cadastro';
@@ -84,7 +84,7 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         $scope.vm.state = "alter";
 
         var dataNascimento = new Date(CastingServices.casting.cas_dtnasc);
-        console.log(dataNascimento);
+        // console.log(dataNascimento);
 
         $scope.vm.casting.id = CastingServices.casting.cas_id;
         $scope.vm.casting.tpo = CastingServices.casting.cas_tipo;

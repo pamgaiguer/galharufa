@@ -1,9 +1,7 @@
 angular.module('galharufa.controllers.contato', [])
 
-.controller('ContatoCtrl', function($scope, $rootScope, $q, 
-  $timeout, $location, SimpleServices) {
+.controller('ContatoCtrl', function($scope, $rootScope, $q, $timeout, $location, SimpleServices) {
 
-  console.log("ContatoCtrl :: Iniciado");
 
   $scope.vm = {
     'login':'',

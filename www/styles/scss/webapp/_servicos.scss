@@ -19,12 +19,14 @@
       text-align: left !important;
 
       &:hover, &:focus, &:active{
-        color: $salmon-dark;
         text-decoration: underline;
+        color: $black-main;
+
       }
       &.active{
-        font-weight: 700;
-        color: $salmon-main;
+        color: $black-main;
+
+        text-decoration: underline;
       }
     }
   }

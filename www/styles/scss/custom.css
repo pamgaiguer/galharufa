@@ -25,6 +25,11 @@
   background-color: #FFD740;
 }
 
+.bg-icon-servicos {
+  background-color: #FFF;
+  border: 1px solid #838383;
+}
+
 .bg-yellow-dark {
   background-color: #FFAB33;
 }
@@ -483,12 +488,12 @@ footer.page-footer p {
   text-align: left !important;
 }
 .servicos .tab a:hover, .servicos .tab a:focus, .servicos .tab a:active {
-  color: #CC7E66;
   text-decoration: underline;
+  color: #212121;
 }
 .servicos .tab a.active {
-  font-weight: 700;
-  color: #FF9E80;
+  color: #212121;
+  text-decoration: underline;
 }
 .servicos .indicator {
   display: none;

@@ -2,7 +2,6 @@ angular.module('galharufa.controllers.adm-servicos', [])
 
 .controller('AdminServicosCtrl', function($scope, $rootScope, $q, $timeout, UserServices, SimpleServices) {
 
-  console.log("AdminServicosCtrl :: Iniciado");
 
   $scope.vm = {
     'user': {

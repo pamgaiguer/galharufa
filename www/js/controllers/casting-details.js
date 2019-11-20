@@ -2,7 +2,6 @@ angular.module('galharufa.controllers.casting-details', [])
 
 .controller('CastingDetailsCtrl', function($scope, $sce, $rootScope, $location, CastingServices, $routeParams) {
 
-  console.log("CastingDetailsCtrl :: Iniciado");
 
   $scope.vm = {
     'login':'',
@@ -28,8 +27,6 @@ angular.module('galharufa.controllers.casting-details', [])
       }
       let embedUrl = $scope.vm.casting.cas_portfolio.replace('watch?v=', 'embed/')
       $scope.vm.embbedVideo = $sce.trustAsResourceUrl(embedUrl)
-
-
 
     });
   }

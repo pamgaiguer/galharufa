@@ -5,10 +5,10 @@
   <div class="container">
     <div class="row">
       <div class="col s12 m5 l5 xl5">
-
+<!-- <pre>{{vm.servicos | json }}</pre> -->
         <ul class="collection tabs">
           <li class="collection-item avatar tab" ng-repeat="servico in vm.servicos | orderBy: 'svc_id' track by $index ">
-            <img class="{{servico.svc_iconclass}} circle" ng-src="{{servico.svc_img}}">
+            <img class="bg-icon-servicos circle" ng-src="{{servico.svc_img}}">
             <a href="{{'#curso' + servico.svc_id}}" ng-bind="servico.svc_descricao"></a>
           </li>
         </ul>
