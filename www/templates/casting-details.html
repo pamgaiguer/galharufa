@@ -11,19 +11,19 @@
     <div class="row">
       <div class="col s12 m6 l6 xl6">
         <figure>
-          <img class="materialboxed" data-caption="foto 3x4" src="{{vm.casting.cas_foto34 }}">
+          <img class="materialboxed responsive-img" data-caption="foto 3x4" src="{{vm.casting.cas_foto34 }}">
           <figcaption>
             Foto 3x4
           </figcaption>
         </figure>
         <figure>
-          <img class="materialboxed activator" data-caption="foto corpo inteiro" ng-src="https://www.agenciagalharufa.com.br{{vm.casting.cas_fotobody}}">
+          <img class="materialboxed responsive-img " data-caption="foto corpo inteiro" ng-src="{{vm.casting.cas_fotobody}}">
           <figcaption>
             Foto Corpo Inteiro
           </figcaption>
         </figure>
         <figure>
-          <img class="materialboxed" data-caption="foto sorriso" src="{{vm.casting.cas_fotosmile}}">
+          <img class="materialboxed responsive-img" data-caption="foto sorriso" src="{{vm.casting.cas_fotosmile}}">
           <figcaption>
             Foto Sorriso
           </figcaption>
@@ -52,8 +52,8 @@
 
 <script>
   $(document).ready(function () {
+    $('.materialboxed').materialbox();
     Materialize.updateTextFields();
-    
   });
 </script>
 <!-- <div ng-repeat="model in vm.casting"></div> -->

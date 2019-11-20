@@ -199,7 +199,6 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         $scope.vm.casting.dbc, UserServices.currentUser.usu_id, $scope.vm.casting.email,
         $scope.vm.casting.phone, $scope.vm.casting.mobile, getHabilidades()
       )
-
         .then(function (r) {
           $scope.upload();
 
@@ -260,6 +259,7 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         .then(function (r) {
           $scope.upload()
 
+          Materialize.toast($scope.vm.casting.tpo + ' alterado com sucesso!', 4000);
           $rootScope.path("/adm-casting-search");
         });
 

@@ -11,7 +11,6 @@ angular.module('galharufa.controllers.adm-casting-show', [])
         $rootScope.hold = false;
 
         $scope.mainUrl = $location.host();
-        // console.log($scope.mainUrl);
         
         CastingServices.getCasting($routeParams.id).then(function(r){
             $scope.vm.casting = r[0] || {}; 

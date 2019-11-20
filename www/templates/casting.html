@@ -10,16 +10,12 @@
     <div class="row">
       <div ng-repeat="model in vm.casting">
         <div class="col s12 m3 l3 xl3">
-          <div class="card" ng-click="path('/casting-details/'+model.cas_id)">
-            <div class="card-image">
-              <img [src]="{{model.cas_foto34}}" class="responsive-img activator" alt="{{model.cas_nome}}">
-              <img src="{{model.cas_foto34}}" class="responsive-img activator" alt="{{model.cas_nome}}">
-              <img ng-src="{{model.cas_foto34}}" class="responsive-img activator" alt="{{model.cas_nome}}">
-            </div>
-            <div class="card-nomeart">
-              <p>{{model.cas_nomeart}}</p>
-            </div>
-          </div>
+          <figure ng-click="path('/casting-details/'+model.cas_id)">
+              <img *ngIf="model.cas_foto34" src="{{model.cas_foto34}}" data-caption="Foto 3x4" class="responsive-img">
+            <figcaption class="card-nomeart">
+              {{model.cas_nomeart}}
+            </figcaption>
+          </figure>
         </div>
       </div>
     </div>

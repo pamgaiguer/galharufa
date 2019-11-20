@@ -10,7 +10,7 @@ angular.module('galharufa.controllers.adm-casting-search', [])
   $scope.init = function () {
     $rootScope.headerId = 2;
     $rootScope.hold = false;
-    $rootScope.session_title= 'Galharufa Dashboard - Pesquisa Casting';
+    // $rootScope.session_title= 'Galharufa Dashboard - Pesquisa Casting';
     //if (UserServices.currentUser.usu_id == undefined) $location.path('/login');
     CastingServices.getCastings().then(function(r){ $scope.vm.casting = r; });
   }

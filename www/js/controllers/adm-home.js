@@ -2,7 +2,7 @@ angular.module('galharufa.controllers.adm-home', [])
 
 .controller('AdminHomeCtrl', function($scope, $rootScope, $q, $timeout, $location, UserServices) {
 
-  console.log("AdminHomeCtrl :: Iniciado");
+  // console.log("AdminHomeCtrl :: Iniciado");
 
   $scope.vm = {
     'login':'',
@@ -11,10 +11,9 @@ angular.module('galharufa.controllers.adm-home', [])
   }
 
   $scope.init = function () {
-    console.log("startou o admin");
+    // console.log("startou o admin");
     $rootScope.headerId = 2;
     $rootScope.hold = false;
-
     //if (UserServices.currentUser.usu_id == undefined) $location.path('/login');
   }
 
