@@ -50,9 +50,8 @@ var app = angular.module('galharufa', [
   
   app.constant('Configs', {
     appToken:'',
-    // apiUrl:'http://localhost:3000/'
-    // apiUrl:'http://agenciagalharufa.com.br/'
-    apiUrl:'https://agenciagalharufa.com.br/'
+    apiUrl:'http://www.agenciagalharufa.com.br/'
+    // apiUrl:'https://www.agenciagalharufa.com.br/'
   });
   
   app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
