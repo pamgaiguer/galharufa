@@ -17,16 +17,22 @@ var contato = require('./routes/contato');
 var app = express();
 
 app.all('*', function(req, res, next) {
-  console.log('configurando protocolos');
-  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Origin', 'URLs to trust of allow');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   res.header('Access-Control-Allow-Headers', 'Content-Type');
-  if (req.headers['x-forwarded-proto'] != 'https') {
-    // checa se o header é HTTP ou HTTPS
-    res.redirect("https://" + req.headers.host + req.url);
-    // faz o redirect para HTTPS
+  if ('OPTIONS' == req.method) {
+  res.sendStatus(200);
+  console.log("entrei no if");
   } else {
     next();
   }
+  // if (req.headers['x-forwarded-proto'] != 'https') {
+  //   // checa se o header é HTTP ou HTTPS
+  //   res.redirect("https://" + req.headers.host + req.url);
+  //   // faz o redirect para HTTPS
+  // } else {
+    next();
+  // }
 });
 
 app.use(
