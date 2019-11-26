@@ -19,9 +19,6 @@ var app = express();
 app.all('*', function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', 'Content-Type'); 
-
-
-
   // if (req.headers['x-forwarded-proto'] != 'https') {
   //   // checa se o header é HTTP ou HTTPS
   //   res.redirect("https://" + req.headers.host + req.url);
@@ -72,6 +69,7 @@ app.use(
   app.use('/js',express.static(path.join(__dirname, 'www/js')));
   app.use('/shared',express.static(path.join(__dirname, 'www/shared')));
   app.use('/styles',express.static(path.join(__dirname, 'www/styles')));
+  app.use('/images',express.static(path.join(__dirname, 'www/images/casting')));
   
   app.use('/',function(req, res) {
     res.sendFile(__dirname + '/www/index.html');

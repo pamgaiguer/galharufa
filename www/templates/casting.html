@@ -11,8 +11,8 @@
       <div ng-repeat="model in vm.casting">
         <div class="col s12 m3 l3 xl3">
           <figure ng-click="path('/casting-details/'+model.cas_id)">
-              <img *ngIf="model.cas_foto34" src="{{model.cas_foto34}}" data-caption="Foto 3x4" class="responsive-img">
-            <figcaption class="card-nomeart">
+              <img *ngIf="model.cas_foto34" ng-src="{{model.cas_foto34}}" data-caption="Foto 3x4" class="responsive-img">
+            <figcaption>
               {{model.cas_nomeart}}
             </figcaption>
           </figure>

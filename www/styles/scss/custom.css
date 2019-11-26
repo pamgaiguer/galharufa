@@ -513,14 +513,14 @@ footer.page-footer p {
   font-size: 42px;
   font-weight: 300;
 }
-.casting .card {
+.casting figure {
   margin: 0;
   box-shadow: none;
 }
-.casting .card:hover {
+.casting figure:hover {
   cursor: pointer;
 }
-.casting .card .card-nomeart p {
+.casting figure figcaption {
   color: #212121;
   font-weight: 700;
 }

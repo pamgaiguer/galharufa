@@ -4,19 +4,16 @@
         font-size: 42px;
         font-weight: 300;
     }
-    .card{
+    figure{
         margin: 0;
         box-shadow: none;
-
+        
         &:hover{
             cursor: pointer;
         }
-        .card-nomeart{
-            p{
-                color: $black-main;
-                font-weight: 700;
-            }
-            
+        figcaption{
+            color: $black-main;
+            font-weight: 700;
         }
     }
 }
