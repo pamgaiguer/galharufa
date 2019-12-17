@@ -22,9 +22,12 @@
     }
   }
 
-  .main-text{
+  .main-text, figcaption{
     font-weight: 300;
     font-size: 16px;
     text-align: justify;
+  }
+  figcaption{
+    text-align: center;
   }
 }

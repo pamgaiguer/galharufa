@@ -462,10 +462,13 @@ footer.page-footer p {
 .quemsomos .side-text .topics li {
   list-style-type: circle !important;
 }
-.quemsomos .main-text {
+.quemsomos .main-text, .quemsomos figcaption {
   font-weight: 300;
   font-size: 16px;
   text-align: justify;
+}
+.quemsomos figcaption {
+  text-align: center;
 }
 
 .servicos h4 {
