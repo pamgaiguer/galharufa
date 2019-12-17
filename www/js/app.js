@@ -121,7 +121,7 @@ var app = angular.module('galharufa', [
       controller: 'AdminServicosCtrl'
     });
     $locationProvider.html5Mode({
-      enabled:true,
+      enabled:false,
       requireBase:false
     })
     .hashPrefix(''); ;
