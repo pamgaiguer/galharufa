@@ -202,7 +202,7 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         .then(function (r) {
           $scope.upload();
 
-          Materialize.toast($scope.vm.casting.tpo + ' inserido com sucesso!', 4000);
+          Materialize.toast($scope.vm.casting.nma + ' inserido com sucesso!', 4000);
           $rootScope.path("/adm-casting-search");
         });
     }
