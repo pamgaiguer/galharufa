@@ -2,8 +2,11 @@
 # Created by https://www.gitignore.io/api/node,bower,sass
 www/bower_components/*
 www/node_modules/*
-www/images/casting/*
+www/images/casting
 mail_bkp/
+www/package-json.lock
+package-json.lock
+sql/galharufa2.sql
 ### Node ###
 # Logs
 logs
@@ -53,14 +56,11 @@ jspm_packages
 # Yarn Integrity file
 .yarn-integrity
 
-
-
 ### Bower ###
 #bower_components
 .bower-cache
 .bower-registry
 .bower-tmp
-
 
 ### Sass ###
 .sass-cache/
@@ -111,6 +111,3 @@ Desktop.ini
 .DS_Store
 # node_modules/*
 # node_modules/*
-www/package-json.lock
-package-json.lock
-sql/galharufa2.sql
