@@ -6,8 +6,8 @@ router.post('/', function (req, res, next) {
     const {nome, email, telefone, mensagem} = req.body;
 
     const mailOptions = {
-        from: 'Galharufa Contato <contato@agenciagalharufa.com.br>',
-        to: 'contato@agenciagalharufa.com.br',
+        from: 'Galharufa Site <atendimento@agenciagalharufa.com.br>',
+        to: 'atendimento@agenciagalharufa.com.br',
         subject: 'Contato pelo site',
         text: 
             `
@@ -22,8 +22,8 @@ router.post('/', function (req, res, next) {
         host: 'smtp.umbler.com',
         port: 587,
         auth: {
-            user: 'contato@agenciagalharufa.com.br',
-            pass: 'agencia1234'
+            user: 'atendimento@agenciagalharufa.com.br',
+            pass: 'galharufa123'
         }
     });
 

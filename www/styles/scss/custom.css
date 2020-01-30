@@ -540,34 +540,41 @@ footer.page-footer p {
 }
 
 .contato .contact-box {
-  background-image: linear-gradient(-90deg, #FAFAFA, #838383);
+  border: 1px solid black;
   padding: 20px 0;
+  font-weight: 300;
 }
 .contato .contact-box .list-icons {
   font-size: 16px;
+}
+.contato .contact-box .list-icons a {
+  color: black;
+}
+.contato .contact-box .list-icons a:hover {
+  text-decoration: underline;
 }
 .contato .contact-box .list-icons .material-icons {
   font-size: 18px;
 }
 .contato .btn {
-  background-color: #212121;
-  color: white;
+  background-color: white;
+  color: #212121;
   margin-bottom: 10px;
 }
 .contato .btn:hover {
-  background-color: #212121;
+  background-color: white;
 }
 .contato .btn:focus {
-  background-color: #212121;
+  background-color: white;
 }
 .contato .btn-large:hover {
-  background-color: #212121;
+  background-color: white;
 }
 .contato .btn-large:focus {
-  background-color: #212121;
+  background-color: white;
 }
 .contato .btn-floating:focus {
-  background-color: #212121;
+  background-color: white;
 }
 
 /*# sourceMappingURL=custom.css.map */
