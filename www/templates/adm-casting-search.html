@@ -43,7 +43,7 @@
   <table class="striped responsive-table">
     <thead>
       <tr>
-        <th>Nome</th>
+        <th>Nome Artistico</th>
         <th>Ano</th>
         <th>Altura</th>
         <th>Tipo Casting</th>
@@ -55,8 +55,8 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="c in vm.casting">
-        <td >{{c.cas_nome}}</td>
+      <tr ng-repeat="c in vm.casting | orderBy:'cas_nomeart'">
+        <td >{{c.cas_nomeart}}</td>
         <td >{{c.cas_ano}}</td>
         <td >{{c.cas_altura}}</td>
         <td >{{c.cas_tipo}}</td>
@@ -73,4 +73,5 @@
 <script>
   $('select').material_select();
   Materialize.updateTextFields();
+
 </script>
