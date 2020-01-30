@@ -11,20 +11,20 @@
     <div class="row">
       <div class="col s12 m6 l6 xl6">
         <figure>
-          <img class="materialboxed responsive-img" data-caption="foto 3x4" src="{{vm.casting.cas_foto34 }}">
+          <img class="materialboxed responsive-img" data-caption="foto 01" src="{{vm.casting.cas_foto34 }}">
           <figcaption>
             <!-- Foto 3x4 -->
             Foto 01
           </figcaption>
         </figure>
         <figure>
-          <img class="materialboxed responsive-img " data-caption="foto corpo inteiro" ng-src="{{vm.casting.cas_fotobody}}">
+          <img class="materialboxed responsive-img " data-caption="foto 02" ng-src="{{vm.casting.cas_fotobody}}">
           <figcaption>
             Foto 02
           </figcaption>
         </figure>
         <figure>
-          <img class="materialboxed responsive-img" data-caption="foto sorriso" src="{{vm.casting.cas_fotosmile}}">
+          <img class="materialboxed responsive-img" data-caption="foto 03" src="{{vm.casting.cas_fotosmile}}">
           <figcaption>
             Foto 03
           </figcaption>
@@ -36,7 +36,7 @@
   <div class="col s12 m6 l6 xl6">
     <ul>
       <li>Ano: {{vm.casting.cas_ano}}</li>
-      <li ng-show="vm.casting.cas_tipo=='Atores'">DRT: {{vm.casting.cas_drt}}</li>
+      <li ng-show="vm.casting.cas_tipo=='Atores' || vm.casting.cas_tipo=='Infantil'">DRT: {{vm.casting.cas_drt}}</li>
       <li>Altura: {{vm.casting.cas_altura}}</li>
       <li>Manequim: {{vm.casting.cas_manequim}}</li>
       <li>Sapato: {{vm.casting.cas_sapato}}</li>

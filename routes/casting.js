@@ -16,6 +16,7 @@ router.get('/', function (req, res, next) {
 
     } else {
       if(cas_tipo){
+        console.log("entrei no tipo");
         connection.query('SELECT * FROM casting where cas_tipo = ?', [cas_tipo], function (err, result) {
           if (err) return res.status(400).json(err);
           return res.status(200).json(result);
