@@ -12,9 +12,7 @@ angular.module('galharufa.controllers.casting-details', [])
   }
 
   $scope.init = function () {
-    $rootScope.headerId = 1;
     $rootScope.hold = false;
-
     $scope.mainUrl = $location.host();
     // console.log($scope.mainUrl);
 

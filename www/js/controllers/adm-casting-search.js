@@ -8,7 +8,6 @@ angular.module('galharufa.controllers.adm-casting-search', [])
   }
 
   $scope.init = function () {
-    $rootScope.headerId = 2;
     $rootScope.hold = false;
     CastingServices.getCastings().then(function(r){ $scope.vm.casting = r; });
   }

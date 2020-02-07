@@ -14,7 +14,6 @@ angular.module('galharufa.controllers.adm-users', [])
   }
 
   $scope.init = function () {
-    $rootScope.headerId = 2;
     $rootScope.hold = false;
 
     UserServices.getUsers().then(function(r){ $scope.vm.users = r; });

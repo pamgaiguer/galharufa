@@ -12,7 +12,6 @@ angular.module('galharufa.controllers.servicos', [])
   }
 
   $scope.init = function () {
-    $rootScope.headerId = 1;
     $rootScope.hold = false;
 
     SimpleServices

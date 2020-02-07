@@ -10,7 +10,6 @@ angular.module('galharufa.controllers.blog', [])
   }
 
   $scope.init = function () {
-    $rootScope.headerId = 1;
     $rootScope.hold = false;
   }
 

@@ -15,8 +15,6 @@ angular.module('galharufa.controllers.casting', [])
   $scope.init = function () {
 
     $scope.mainUrl = $location.host();
-
-    $rootScope.headerId = 1;
     $rootScope.hold = false;
     CastingServices.getCastings({cas_tipo}).then(function(r){ $scope.vm.casting = r; });
   }

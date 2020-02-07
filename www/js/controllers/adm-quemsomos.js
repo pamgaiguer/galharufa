@@ -15,7 +15,6 @@ angular.module('galharufa.controllers.adm-quemsomos', [])
 
   $scope.init = function () {
     console.log("startou o adm-quemsomos");
-    $rootScope.headerId = 2;
     $rootScope.hold = false;
     $rootScope.session_title= 'Dash - Quem Somos';
 
