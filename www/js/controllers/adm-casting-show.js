@@ -7,6 +7,7 @@ angular.module('galharufa.controllers.adm-casting-show', [])
         'casting': {},
     }
     $scope.init = function () {
+        $rootScope.headerId = 2;
         $rootScope.hold = false;
 
         $scope.mainUrl = $location.host();

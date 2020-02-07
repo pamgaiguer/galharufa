@@ -17,8 +17,8 @@ angular.module('galharufa.controllers.adm-servicos', [])
   }
 
   $scope.init = function () {
+    $rootScope.headerId = 2;
     $rootScope.hold = false;
-    $rootScope.session_title= 'Galharufa Dashboard - Serviços';
 
     SimpleServices
       .getServicos()

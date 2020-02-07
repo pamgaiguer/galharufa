@@ -11,6 +11,7 @@ angular.module('galharufa.controllers.adm-home', [])
   }
 
   $scope.init = function () {
+    $rootScope.headerId = 2;
     $rootScope.hold = false;
     //if (UserServices.currentUser.usu_id == undefined) $location.path('/login');
   }
