@@ -20,25 +20,23 @@
     }
   }
   .btn {
-    background-color: $yellow-main;
+    background-color: white;
+    color: $black-main;
+    margin-bottom: 10px;
+    
     &:hover {
-      background-color: $yellow-dark;
+      background-color: whitesmoke;
     }
     &:focus {
-      background-color: $yellow-dark;
+      background-color: whitesmoke;
     }
   }
   .btn-large {
     &:hover {
-      background-color: $yellow-dark;
+      background-color: white;
     }
     &:focus {
-      background-color: $yellow-dark;
-    }
-  }
-  .btn-floating {
-    &:focus {
-      background-color: $yellow-dark;
+      background-color: white;
     }
   }
 }

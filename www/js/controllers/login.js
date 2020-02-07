@@ -10,6 +10,8 @@ angular.module('galharufa.controllers.login', [])
   }
 
   $scope.init = function () {
+    $rootScope.headerId = 0;
+
     $('body').css('background-color', '#f5f5f5');
 
     if (UserServices.currentUser.usu_id != undefined) {

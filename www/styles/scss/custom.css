@@ -343,22 +343,21 @@ footer.page-footer p {
   color: #bbb !important;
 }
 .login .btn {
-  background-color: #FFD740;
+  background-color: white;
+  color: #212121;
+  margin-bottom: 10px;
 }
 .login .btn:hover {
-  background-color: #FFAB33;
+  background-color: whitesmoke;
 }
 .login .btn:focus {
-  background-color: #FFAB33;
+  background-color: whitesmoke;
 }
 .login .btn-large:hover {
-  background-color: #FFAB33;
+  background-color: white;
 }
 .login .btn-large:focus {
-  background-color: #FFAB33;
-}
-.login .btn-floating:focus {
-  background-color: #FFAB33;
+  background-color: white;
 }
 
 .dash-home, .dash-casting, .dash-casting-search, .dash-casting-show, .dash-users, .dash-quemsomos, .dash-servicos {
