@@ -14,26 +14,26 @@
         }
     }
     .btn {
-        background-color: $yellow-main;
-        color: $black;
+        background-color: white;
+        color: $black-main;
         &:hover {
-            background-color: $yellow-dark;
+            background-color: whitesmoke;
         }
         &:focus {
-            background-color: $yellow-dark;
+            background-color: whitesmoke;
         }
     }
     .btn-large {
         &:hover {
-            background-color: $yellow-dark;
+            background-color: whitesmoke;
         }
         &:focus {
-            background-color: $yellow-dark;
+            background-color: whitesmoke;
         }
     }
     .btn-floating {
         &:focus {
-            background-color: $yellow-dark;
+            background-color: whitesmoke;
         }
     }
 
@@ -69,24 +69,20 @@
         img{
             text-align: center;
         }
-        figure{
-        }
-        figcaption{
-        }
     }
     .dropdown-content li>a, .dropdown-content li>span {
         color: #455a64;
     }
     .btn-table{
         a{
-            color: $yellow-dark;
+            color: $black-main;
             &:hover, &:focus, &:active{
-                color: $yellow-main;
+                color: black;
             }
         }
     }
 
     @media only screen and (max-width:992px) {
     padding-left: 0;
-}
+    }
 }

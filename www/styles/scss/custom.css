@@ -374,23 +374,23 @@ footer.page-footer p {
   margin: 0 5px;
 }
 .dash-home .btn, .dash-casting .btn, .dash-casting-search .btn, .dash-casting-show .btn, .dash-users .btn, .dash-quemsomos .btn, .dash-servicos .btn {
-  background-color: #FFD740;
-  color: #000;
+  background-color: white;
+  color: #212121;
 }
 .dash-home .btn:hover, .dash-casting .btn:hover, .dash-casting-search .btn:hover, .dash-casting-show .btn:hover, .dash-users .btn:hover, .dash-quemsomos .btn:hover, .dash-servicos .btn:hover {
-  background-color: #FFAB33;
+  background-color: whitesmoke;
 }
 .dash-home .btn:focus, .dash-casting .btn:focus, .dash-casting-search .btn:focus, .dash-casting-show .btn:focus, .dash-users .btn:focus, .dash-quemsomos .btn:focus, .dash-servicos .btn:focus {
-  background-color: #FFAB33;
+  background-color: whitesmoke;
 }
 .dash-home .btn-large:hover, .dash-casting .btn-large:hover, .dash-casting-search .btn-large:hover, .dash-casting-show .btn-large:hover, .dash-users .btn-large:hover, .dash-quemsomos .btn-large:hover, .dash-servicos .btn-large:hover {
-  background-color: #FFAB33;
+  background-color: whitesmoke;
 }
 .dash-home .btn-large:focus, .dash-casting .btn-large:focus, .dash-casting-search .btn-large:focus, .dash-casting-show .btn-large:focus, .dash-users .btn-large:focus, .dash-quemsomos .btn-large:focus, .dash-servicos .btn-large:focus {
-  background-color: #FFAB33;
+  background-color: whitesmoke;
 }
 .dash-home .btn-floating:focus, .dash-casting .btn-floating:focus, .dash-casting-search .btn-floating:focus, .dash-casting-show .btn-floating:focus, .dash-users .btn-floating:focus, .dash-quemsomos .btn-floating:focus, .dash-servicos .btn-floating:focus {
-  background-color: #FFAB33;
+  background-color: whitesmoke;
 }
 .dash-home .input-field, .dash-casting .input-field, .dash-casting-search .input-field, .dash-casting-show .input-field, .dash-users .input-field, .dash-quemsomos .input-field, .dash-servicos .input-field {
   color: #000;
@@ -419,10 +419,10 @@ footer.page-footer p {
   color: #455a64;
 }
 .dash-home .btn-table a, .dash-casting .btn-table a, .dash-casting-search .btn-table a, .dash-casting-show .btn-table a, .dash-users .btn-table a, .dash-quemsomos .btn-table a, .dash-servicos .btn-table a {
-  color: #FFAB33;
+  color: #212121;
 }
 .dash-home .btn-table a:hover, .dash-home .btn-table a:focus, .dash-home .btn-table a:active, .dash-casting .btn-table a:hover, .dash-casting .btn-table a:focus, .dash-casting .btn-table a:active, .dash-casting-search .btn-table a:hover, .dash-casting-search .btn-table a:focus, .dash-casting-search .btn-table a:active, .dash-casting-show .btn-table a:hover, .dash-casting-show .btn-table a:focus, .dash-casting-show .btn-table a:active, .dash-users .btn-table a:hover, .dash-users .btn-table a:focus, .dash-users .btn-table a:active, .dash-quemsomos .btn-table a:hover, .dash-quemsomos .btn-table a:focus, .dash-quemsomos .btn-table a:active, .dash-servicos .btn-table a:hover, .dash-servicos .btn-table a:focus, .dash-servicos .btn-table a:active {
-  color: #FFD740;
+  color: black;
 }
 @media only screen and (max-width: 992px) {
   .dash-home, .dash-casting, .dash-casting-search, .dash-casting-show, .dash-users, .dash-quemsomos, .dash-servicos {
@@ -562,10 +562,10 @@ footer.page-footer p {
   margin-bottom: 10px;
 }
 .contato .btn:hover {
-  background-color: white;
+  background-color: whitesmoke;
 }
 .contato .btn:focus {
-  background-color: white;
+  background-color: whitesmoke;
 }
 .contato .btn-large:hover {
   background-color: white;

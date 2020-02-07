@@ -36,14 +36,10 @@
   <div class="col s12 m6 l6 xl6">
     <ul>
       <li>Ano: {{vm.casting.cas_ano}}</li>
-      <li ng-show="vm.casting.cas_tipo=='Atores' || vm.casting.cas_tipo=='Infantil'">DRT: {{vm.casting.cas_drt}}</li>
-      <li>Altura: {{vm.casting.cas_altura}}</li>
+      <li ng-show="vm.casting.cas_tipo=='Atores' || vm.casting.cas_tipo=='Infantil' || vm.casting.cas_tipo=='Exclusivos' ">DRT: {{vm.casting.cas_drt}}</li>
+      <li>Altura: {{vm.casting.cas_altura | number: 2}}</li>
       <li>Manequim: {{vm.casting.cas_manequim}}</li>
       <li>Sapato: {{vm.casting.cas_sapato}}</li>
-      <li ng-show="vm.casting.cas_tipo=='Exclusivos'">Camisa: {{vm.casting.cas_camisa}}</li>
-      <li ng-show="vm.casting.cas_tipo=='Exclusivos'">Busto: {{vm.casting.cas_busto}}</li>
-      <li ng-show="vm.casting.cas_tipo=='Exclusivos'">Cintura: {{vm.casting.cas_cintura}}</li>
-      <li ng-show="vm.casting.cas_tipo=='Exclusivos'">Quadril: {{vm.casting.cas_quadril}}</li>
       <li ng-show="vm.casting.cas_tipo=='Infantil'">Data Nascimento: {{vm.casting.cas_dtnasc | date : 'dd/M/yyyy' }}</li>
     </ul>
   </div>

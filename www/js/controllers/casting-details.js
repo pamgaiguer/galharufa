@@ -8,6 +8,7 @@ angular.module('galharufa.controllers.casting-details', [])
     'pwd':'',
     'isLoading':false,
     'cast': null,
+    casting_details: 'Carregando...'
   }
 
   $scope.init = function () {

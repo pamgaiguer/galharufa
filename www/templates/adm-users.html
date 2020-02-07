@@ -5,7 +5,7 @@
       <blockquote>
         Usuários com acesso ao sistema da agência.
       </blockquote>
-      <table>
+      <table class="striped responsive-table">
         <thead>
           <tr>
             <th>Nome</th>
@@ -17,7 +17,7 @@
           <tr ng-repeat="user in vm.users">
             <td>{{user.usu_nome}}</td>
             <td>{{user.usu_login}}</td>
-            <td><a href="" ng-click="deleteUser(user.usu_id)"><i class="material-icons">delete</i></a></td>
+            <td class="btn-table"><a href="" ng-click="deleteUser(user.usu_id)"><i class="material-icons">delete</i></a></td>
           </tr>
         </tbody>
       </table>
