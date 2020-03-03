@@ -44,23 +44,23 @@
 </header>
 <script>
     $(document).ready(function() {
-        // $('ul.right li').on('click', function(){
-            //     var clicked = $(this);
-            //     $('ul.right li').each(function(){
-                //         if($(this).hasClass('active')){
-                    //             $(this).removeClass('active');
-                    //         }
-                    //     });
-                    //     $(this).addClass('active');
-                    // });
-                    
-                    
-                    $(".button-collapse").sideNav({
-                        // closeOnClick: true,
-                        // edge: 'left', 
-                        // menuWidth: 300
-                    });
-                    $(".dropdown-button").dropdown({
-                    });
-                });
-            </script>
+        $('ul.right li').on('click', function(){
+            var clicked = $(this);
+            $('ul.right li').each(function(){
+                if($(this).hasClass('active')){
+                    $(this).removeClass('active');
+                }
+            });
+            $(this).addClass('active');
+        });
+        
+        
+        $(".button-collapse").sideNav({
+            // closeOnClick: true,
+            // edge: 'left', 
+            // menuWidth: 300
+        });
+        $(".dropdown-button").dropdown({
+        });
+    });
+</script>

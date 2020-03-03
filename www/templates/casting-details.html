@@ -10,41 +10,72 @@
     <!-- <pre>{{vm.casting | json }}</pre>     -->
     <div class="row">
       <div class="col s12 m6 l6 xl6">
+        <div class="casting-info">
+
+          <table class="responsive-table centered">
+            <tr>
+              <th>Ano</th>
+              <td>{{vm.casting.cas_ano}}</td>
+            </tr>
+            <tr ng-show="vm.casting.cas_tipo=='Atores' || vm.casting.cas_tipo=='Infantil' || vm.casting.cas_tipo=='Exclusivos' ">
+              <th ng-show="vm.casting.cas_tipo=='Atores' || vm.casting.cas_tipo=='Infantil' || vm.casting.cas_tipo=='Exclusivos' ">DRT</th>
+              <td ng-show="vm.casting.cas_tipo=='Atores' || vm.casting.cas_tipo=='Infantil' || vm.casting.cas_tipo=='Exclusivos' ">{{vm.casting.cas_drt}}</td>
+            </tr>
+            <tr>
+              <th>Altura</th>
+              <td>{{vm.casting.cas_altura | number: 2}}</td>
+            </tr>
+            <tr>
+              <th>Manequim</th>
+              <td>{{vm.casting.cas_manequim}}</td>
+            </tr>
+            <tr>
+              <th>Sapato</th>
+              <td>{{vm.casting.cas_sapato}}</td>
+            </tr>
+            <tr ng-show="vm.casting.cas_tipo=='Infantil'">
+              <th>Data Nascimento</th>
+              <td>{{vm.casting.cas_dtnasc | date : 'dd/M/yyyy' }}</td>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+    </div>    
+    <div class="row">
+      <div class="col s12 m4 l4 xl4">
         <figure>
           <img class="materialboxed responsive-img" data-caption="foto 01" src="{{vm.casting.cas_foto34 }}">
           <figcaption>
             Foto 01
           </figcaption>
         </figure>
+      </div>
+      <div class="col s12 m4 l4 xl4">
         <figure>
           <img class="materialboxed responsive-img " data-caption="foto 02" ng-src="{{vm.casting.cas_fotobody}}">
           <figcaption>
             Foto 02
           </figcaption>
         </figure>
+      </div>
+      <div class="col s12 m4 l4 xl4">
         <figure>
           <img class="materialboxed responsive-img" data-caption="foto 03" src="{{vm.casting.cas_fotosmile}}">
-          <figcaption>
+          <figcaption class="center-text">
             Foto 03
           </figcaption>
         </figure>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 m12 l12 xl12">
         <div class="video-container">
-          <iframe width="100%" height="315" ng-src="{{vm.embbedVideo}}" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+          <iframe width="60%" height="315" ng-src="{{vm.embbedVideo}}" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
     </div>
-  <div class="col s12 m6 l6 xl6">
-    <ul>
-      <li>Ano: {{vm.casting.cas_ano}}</li>
-      <li ng-show="vm.casting.cas_tipo=='Atores' || vm.casting.cas_tipo=='Infantil' || vm.casting.cas_tipo=='Exclusivos' ">DRT: {{vm.casting.cas_drt}}</li>
-      <li>Altura: {{vm.casting.cas_altura | number: 2}}</li>
-      <li>Manequim: {{vm.casting.cas_manequim}}</li>
-      <li>Sapato: {{vm.casting.cas_sapato}}</li>
-      <li ng-show="vm.casting.cas_tipo=='Infantil'">Data Nascimento: {{vm.casting.cas_dtnasc | date : 'dd/M/yyyy' }}</li>
-    </ul>
   </div>
-</div>
-
 </main>
 
 <script>

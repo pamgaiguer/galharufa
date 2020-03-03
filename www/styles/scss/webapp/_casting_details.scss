@@ -9,4 +9,29 @@
         font-weight: 300;
         text-align: center;
     }
+    figure{
+        margin: 0;
+        
+        figcaption{
+            text-align: center;
+        }
+    }
+    .video-container{
+        border: 1px solid #f0f;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 375px) {
+    .casting-details{
+        figure {
+            margin: 1em 40px;
+        }
+    }
+}
+@media (min-width: 376px) and (max-width: 992px) {
+    .casting-details{
+        figure {
+            margin: 1em 40px;
+        }
+    }
 }

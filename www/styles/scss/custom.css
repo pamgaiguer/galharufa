@@ -518,6 +518,9 @@ footer.page-footer p {
 .casting figure {
   margin: 0;
 }
+.casting figure:hover {
+  cursor: pointer;
+}
 .casting figure figcaption {
   color: #212121;
   font-weight: 700;
@@ -543,7 +546,26 @@ footer.page-footer p {
   font-weight: 300;
   text-align: center;
 }
+.casting-details figure {
+  margin: 0;
+}
+.casting-details figure figcaption {
+  text-align: center;
+}
+.casting-details .video-container {
+  border: 1px solid #f0f;
+}
 
+@media (min-width: 0px) and (max-width: 375px) {
+  .casting-details figure {
+    margin: 1em 40px;
+  }
+}
+@media (min-width: 376px) and (max-width: 992px) {
+  .casting-details figure {
+    margin: 1em 40px;
+  }
+}
 .contato .contact-box {
   border: 1px solid black;
   padding: 20px 0;

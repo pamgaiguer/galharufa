@@ -6,8 +6,10 @@
     }
     figure{
         margin: 0;
-
         
+        &:hover{
+            cursor: pointer;
+        }
         figcaption{
             color: $black-main;
             font-weight: 700;
@@ -22,11 +24,11 @@
             margin: 1em 40px;
         }
     }
-  }
-  @media (min-width: 376px) and (max-width: 992px) {
+}
+@media (min-width: 376px) and (max-width: 992px) {
     .casting{
         figure {
             margin: 1em 40px;
         }
     }
-  }
+}
