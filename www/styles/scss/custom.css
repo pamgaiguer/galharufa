@@ -517,16 +517,22 @@ footer.page-footer p {
 }
 .casting figure {
   margin: 0;
-  box-shadow: none;
-}
-.casting figure:hover {
-  cursor: pointer;
 }
 .casting figure figcaption {
   color: #212121;
   font-weight: 700;
 }
 
+@media (min-width: 0px) and (max-width: 375px) {
+  .casting figure {
+    margin: 1em 40px;
+  }
+}
+@media (min-width: 376px) and (max-width: 992px) {
+  .casting figure {
+    margin: 1em 40px;
+  }
+}
 .casting-details .title-name {
   text-transform: uppercase;
   font-size: 42px;
