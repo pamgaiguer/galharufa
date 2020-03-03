@@ -2,7 +2,6 @@ angular.module('galharufa.controllers.servicos', [])
 
 .controller('ServicosCtrl', function($scope, $rootScope, $q, $timeout, $location, SimpleServices) {
 
-  console.log("ServicosCtrl :: Iniciado");
 
   $scope.vm = {
     'login':'',
@@ -12,6 +11,8 @@ angular.module('galharufa.controllers.servicos', [])
   }
 
   $scope.init = function () {
+  console.log("ServicosCtrl :: Iniciado");
+
     $rootScope.hold = false;
 
     SimpleServices

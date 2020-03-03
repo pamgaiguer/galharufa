@@ -3,7 +3,7 @@
     <div class="spacing"></div>
     <div class="spacing"></div>
     <div class="row">
-      <div class="col s12 l5  m5 xl5 ">
+      <div class="col s12 l6 m6 xl6">
         {{vm.success}}
         <form ng-submit="enviar()">
           <div class="input-field">
@@ -31,31 +31,78 @@
           </button>
         </form>
       </div>
-      <div class="col s12 push-l1 l6 push-m1  m6 push-xl1 xl6">
-          <div class="contact-box center-align">
-            <h4>Contato</h4>
-            <p>Entre em contato com a Galharufa</p>
-
-            <div class="spacing"></div>
-            
-            <ul class="list-icons">
-              <li><i class="small material-icons">location_on</i> São Paulo / SP</li>
-              <li><i class="small material-icons">local_phone</i><a href="tel:+5511966185562"> +55 11 9-6618-5562</a></li>
-              <li><i class="small material-icons">mail</i> <a href="mailto:atendimento@agenciagalharufa.com.br"> atendimento@agenciagalharufa.com.br</a></li>
-            </ul>
-
-          </div>
-          <div class="image-cinema">
-
-          </div>
+      <div class="col s12 l6 m6 xl6">
+        <div class="contact-box center-align">
+          <h4>Contato</h4>
+          <p>Entre em contato com a Galharufa</p>
+          
+          <div class="spacing"></div>
+          
+          <ul class="list-icons">
+            <li><i class="small material-icons">location_on</i> São Paulo / SP</li>
+            <li><i class="small material-icons">local_phone</i><a href="tel:+5511966185562"> +55 11 9-6618-5562</a></li>
+            <li><i class="small material-icons">mail</i> <a href="mailto:atendimento@agenciagalharufa.com.br"> atendimento@agenciagalharufa.com.br</a></li>
+          </ul>
+          
+        </div>
+        <div class="image-cinema">
+          
+        </div>
         
       </div>
     </div>
   </div>
-</main>
+</div>
+
+
+
+
+<div class="row">
+  <div class="col s12 l12 m12 xl12">
+    <h4>Convênios</h4>
+    <div class="spacing"></div>
+  <div class="spacing"></div>
+  <div class="spacing"></div>
+  </div>
+  
+  
+  
+  <div class="col s12 l6 m6 xl6">
+    <img  class="responsive-img" 
+    src="../images/convenios/conv_dracecilia.jpg">
+  </div>
+  <div class="col s12 l6 m6 xl6">
+    <img  class="responsive-img" 
+    src="../images/convenios/conv_fabi.jpg">
+  </div>
+  <div class="col s12 l6 m6 xl6">
+    <img  class="responsive-img" 
+    src="../images/convenios/conv_ator.png">
+  </div>
+  <div class="col s12 l6 m6 xl6">
+    <img  class="responsive-img" 
+    src="../images/convenios/conv_tatoo.jpg">
+  </div>
+</div>
 
 <script>
   $(document).ready(function(){
     Materialize.updateTextFields();
+    
+    $('.materialboxed').materialbox();
+  });
+</script>
+
+</main>
+
+
+
+
+
+
+<script>
+  $(document).ready(function(){
+    Materialize.updateTextFields();
+    $('.materialboxed').materialbox();
   });
 </script>
