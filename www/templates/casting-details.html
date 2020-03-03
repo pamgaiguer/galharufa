@@ -18,8 +18,8 @@
               <td>{{vm.casting.cas_ano}}</td>
             </tr>
             <tr ng-show="vm.casting.cas_tipo=='Atores' || vm.casting.cas_tipo=='Infantil' || vm.casting.cas_tipo=='Exclusivos' ">
-              <th ng-show="vm.casting.cas_tipo=='Atores' || vm.casting.cas_tipo=='Infantil' || vm.casting.cas_tipo=='Exclusivos' ">DRT</th>
-              <td ng-show="vm.casting.cas_tipo=='Atores' || vm.casting.cas_tipo=='Infantil' || vm.casting.cas_tipo=='Exclusivos' ">{{vm.casting.cas_drt}}</td>
+              <th>DRT</th>
+              <td>{{vm.casting.cas_drt}}</td>
             </tr>
             <tr>
               <th>Altura</th>
@@ -68,9 +68,10 @@
         </figure>
       </div>
     </div>
-    <div class="row">
+    <div class="row" ng-show="vm.embbedVideo">
       <div class="col s12 m12 l12 xl12">
         <div class="video-container">
+          <p>Videobook: </p>
           <iframe width="60%" height="315" ng-src="{{vm.embbedVideo}}" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
         </div>
       </div>

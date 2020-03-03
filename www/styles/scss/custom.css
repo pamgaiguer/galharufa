@@ -552,8 +552,9 @@ footer.page-footer p {
 .casting-details figure figcaption {
   text-align: center;
 }
-.casting-details .video-container {
-  border: 1px solid #f0f;
+.casting-details .video-container p {
+  font-size: 14px;
+  font-weight: 300;
 }
 
 @media (min-width: 0px) and (max-width: 375px) {

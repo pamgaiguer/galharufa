@@ -11,13 +11,16 @@
     }
     figure{
         margin: 0;
-        
+
         figcaption{
             text-align: center;
         }
     }
     .video-container{
-        border: 1px solid #f0f;
+        p{
+            font-size: 14px;
+            font-weight: 300;
+        }
     }
 }
 
