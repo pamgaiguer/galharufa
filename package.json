@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
-    "dev": "nodemon ./bin/www",
+    "start": "node ./bin/www",
+    "dev": "node ./bin/www",
     "scss": "node-sass --watch custom.scss -o ."
   },
   "dependencies": {
