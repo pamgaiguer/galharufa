@@ -92,6 +92,10 @@ var app = angular.module('galharufa', [
       templateUrl: '/templates/quemsomos.html',
       controller: 'QuemsomosCtrl'
     })
+    .when('/blog/', {
+      templateUrl: '/templates/blog.html',
+      controller: 'BlogCtrl'
+    })
     .when('/adm-home/', {
       templateUrl: '/templates/adm-home.html',
       controller: 'AdminHomeCtrl'

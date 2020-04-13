@@ -11,7 +11,8 @@
 
   <!-- inject:css -->
   <link rel="stylesheet" href="styles/css/materialize.min.css">
-  <link rel="stylesheet" href="styles/scss/custom.css">
+  <link rel="stylesheet" href="styles/css/retainable.css">
+  <link rel="stylesheet" href="styles/css/custom.css">
   <!-- endinject -->
 
   <link rel="manifest" href="/manifest.json">
@@ -22,7 +23,6 @@
   <app-header ng-show="headerId == 2 && !hold"></app-header>
   <div ng-view></div>
   <main-footer ng-show="headerId == 1 && !hold"></main-footer>
-  <app-footer ng-show="headerId == 2 && !hold"></app-footer>
 
   <!-- inject:js -->
   <script src="js/libs/jquery.min.js"></script>
@@ -33,6 +33,7 @@
   <script src="js/libs/ng-file-upload.min.js"></script>
   <script src="js/libs/angular-file-upload.min.js"></script>
   <script src="js/libs/wow.min.js"></script>
+  <script src="js/libs/retainable.js"></script>
   <script src="js/app.js"></script>
   <script src="js/services/CastingServices.js"></script>
   <script src="js/services/SimpleServices.js"></script>

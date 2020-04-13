@@ -1,0 +1,36 @@
+.blog{
+    #rtb{
+        .post-date[data-v-6ad3d82e]{
+            font-weight: 300;
+            font-size: 12px;
+        }
+        // .post-image[data-v-6ad3d82e]{}
+        .post-title[data-v-6ad3d82e] > h2{
+            font-size: 20px !important;
+            font-weight: 700;
+            color: #444;
+        }
+        .author[data-v-6ad3d82e]{
+            font-weight: 300;
+            font-size: 12px;
+        }
+        .excerpt[data-v-6ad3d82e]{
+            font-weight: 300;
+            font-size: 12px;
+        }
+        .read-more[data-v-6ad3d82e]{}
+    }
+
+    .btn {
+        background-color:$black-main;
+        color: white;
+        margin-bottom: 10px;
+        
+        &:hover {
+          background-color: $black-smoke;
+        }
+        &:focus {
+          background-color: $black-smoke;
+        }
+      }
+}

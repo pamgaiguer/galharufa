@@ -1,6 +1,6 @@
 .contato{
   .contact-box{
-    border: 1px solid black;
+    border: 1px solid #ccc;
     padding: 20px 0;
     font-weight: 300;
 
@@ -20,15 +20,15 @@
     }
   }
   .btn {
-    background-color: white;
-    color: $black-main;
+    background-color:$black-main;
+    color: white;
     margin-bottom: 10px;
     
     &:hover {
-      background-color: whitesmoke;
+      background-color: $black-smoke;
     }
     &:focus {
-      background-color: whitesmoke;
+      background-color: $black-smoke;
     }
   }
   .btn-large {

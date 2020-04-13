@@ -10,7 +10,6 @@ angular.module('galharufa.controllers.contato', [])
   }
 
   $scope.init = function () {
-    $rootScope.hold = false;
   }
 
   $scope.enviar = function () {

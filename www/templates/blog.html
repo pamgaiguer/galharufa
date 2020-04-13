@@ -1,11 +1,32 @@
 <main ng-init="init()" class="blog">
-
+    
     <section class="section">
         <div class="container">
             <div class="row">
-                    <div class="col s12 m12 l12 xl12">
-
+                <div class="col s12 m12 l12 xl12">
+                    <div id="retainable-rss-embed" 
+                    data-rss="https://medium.com/feed/@galharufa"
+                    data-maxcols="3" 
+                    data-layout="grid" 
+                    data-poststyle="modal" 
+                    data-readmore="Leia mais..." 
+                    data-buttonclass="btn" 
+                    data-offset="-100"></div>
+                </div>
             </div>
         </div>
     </section>
 </main>
+
+<script>
+    var container = document.getElementById("retainable-rss-embed");
+if (container) {
+    // var css = document.createElement('link');
+    // css.href = '../styles/css/retainable.css';
+    // css.rel = "stylesheet"
+    // document.getElementsByTagName('head')[0].appendChild(css);
+    var script = document.createElement('script');
+    script.src = "../js/libs/retainable.js";
+    document.getElementsByTagName('body')[0].appendChild(script);
+}
+</script>
