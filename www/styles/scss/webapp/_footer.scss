@@ -10,5 +10,13 @@ footer{
       font-weight: 300;
       text-transform: uppercase;
     }
+    .blog-link{
+      color: $black-main;
+
+      &:hover, &:focus{
+        outline: none;
+        color: $black-smoke;
+      }
+    }
   }
 }

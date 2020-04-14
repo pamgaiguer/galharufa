@@ -20,17 +20,35 @@
         }
         .read-more[data-v-6ad3d82e]{}
     }
-
+    
     .btn {
         background-color:$black-main;
         color: white;
         margin-bottom: 10px;
         
         &:hover {
-          background-color: $black-smoke;
+            background-color: $black-smoke;
         }
         &:focus {
-          background-color: $black-smoke;
+            background-color: $black-smoke;
         }
-      }
+    }
+    
+}
+#rtb-modal{
+    .btn{
+        background-color: $black-main;
+        color: white;
+        border: none;
+        border-radius: 0;
+        padding: 0px 5px;
+        
+        &:hover {
+            background-color: $black-smoke;
+        }
+        &:focus {
+            background-color: $black-smoke;
+        }
+    }
+    
 }

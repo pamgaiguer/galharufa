@@ -324,6 +324,13 @@ footer.page-footer p {
   font-weight: 300;
   text-transform: uppercase;
 }
+footer.page-footer .blog-link {
+  color: #212121;
+}
+footer.page-footer .blog-link:hover, footer.page-footer .blog-link:focus {
+  outline: none;
+  color: #464646;
+}
 
 .login .card-panel {
   background-color: #eee;
@@ -633,6 +640,20 @@ footer.page-footer p {
   background-color: #464646;
 }
 .blog .btn:focus {
+  background-color: #464646;
+}
+
+#rtb-modal .btn {
+  background-color: #212121;
+  color: white;
+  border: none;
+  border-radius: 0;
+  padding: 0px 5px;
+}
+#rtb-modal .btn:hover {
+  background-color: #464646;
+}
+#rtb-modal .btn:focus {
   background-color: #464646;
 }
 
