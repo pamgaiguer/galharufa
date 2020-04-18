@@ -33,12 +33,14 @@ var app = angular.module('galharufa', [
     $rootScope.hold = false;
     UserServices.loadUserLocalStorage();
     
-    $rootScope.path = function(p,params={}){
-      if(params && Object.keys(params).length){
+    $rootScope.path = function(p, params={}){
+      let hasQueryString = window.location.href.split("?");
+      if (hasQueryString.length > 1 && hasQueryString[1] && Object.keys(params).length === 0) {
+        $location.path(p).search({});
+      } else if(params && Object.keys(params).length){
         $location.path(p).search(params);
-      }else{
-        $location.path(p);
       }
+      $location.path(p)
       $route.reload();
     }
     
@@ -53,10 +55,10 @@ var app = angular.module('galharufa', [
     // apiUrl:'http://localhost:3000/'
     apiUrl:'http://www.agenciagalharufa.com.br/'
   });
-  
+
   app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider
-    .when('/', {
+    .when('/', { 
       templateUrl: '/templates/home.html',
       controller: 'HomeCtrl'
     })
@@ -125,10 +127,10 @@ var app = angular.module('galharufa', [
       controller: 'AdminServicosCtrl'
     });
     $locationProvider.html5Mode({
-      enabled:false,
-      requireBase:false
+      enabled: false,
+      requireBase: false,
     })
-    .hashPrefix(''); ;
+    .hashPrefix('');
     
   }]);
   
