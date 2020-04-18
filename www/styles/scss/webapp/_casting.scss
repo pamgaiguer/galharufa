@@ -17,6 +17,15 @@
             margin-bottom: 10px;
         }
     }
+    .gender-filter{
+        margin-top: 35px;
+        
+        [type="radio"]:checked+label:after{
+            background-color: $black-smoke;
+            border: 2px solid $black-smoke;
+        }
+    }
+    
 }
 
 

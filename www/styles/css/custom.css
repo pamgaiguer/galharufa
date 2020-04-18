@@ -542,6 +542,13 @@ footer.page-footer .blog-link:hover, footer.page-footer .blog-link:focus {
   text-align: center;
   margin-bottom: 10px;
 }
+.casting .gender-filter {
+  margin-top: 35px;
+}
+.casting .gender-filter [type=radio]:checked + label:after {
+  background-color: #464646;
+  border: 2px solid #464646;
+}
 
 @media (min-width: 0px) and (max-width: 375px) {
   .casting figure {
