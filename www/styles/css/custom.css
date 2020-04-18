@@ -580,6 +580,14 @@ footer.page-footer .blog-link:hover, footer.page-footer .blog-link:focus {
   font-size: 14px;
   font-weight: 300;
 }
+.casting-details .casting-info .label-info {
+  font-weight: 700;
+  color: black;
+}
+.casting-details .casting-info .text-minicv {
+  word-wrap: break-word;
+  text-align: justify;
+}
 
 @media (min-width: 0px) and (max-width: 375px) {
   .casting-details figure {
