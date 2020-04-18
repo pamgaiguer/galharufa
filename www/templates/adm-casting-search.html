@@ -34,9 +34,9 @@
       
       <div class="col s12 m3 l3 xl3">
           <p class="gender-filter">
-            <input name="gender" type="radio" id="masculino" />
+            <input name="gender" ng-model="searchText.cas_genero" value="M" type="radio" id="masculino" />
             <label for="masculino">Masculino</label>
-            <input name="gender" type="radio" id="feminino" />
+            <input name="gender" ng-model="searchText.cas_genero" value="F" type="radio" id="feminino" />
             <label for="feminino">Feminino</label>
           </p>
       </div>
@@ -68,7 +68,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="c in vm.casting | orderBy:'cas_nomeart'"> <!-- limitTo:15 -->  
+          <tr ng-repeat="c in vm.casting | orderBy:'cas_nomeart' | filter:searchText:strict"> <!-- limitTo:15 -->  
             <td >{{c.cas_nomeart}}</td>
             <td >{{c.cas_ano}}</td>
             <td >{{c.cas_altura | number: 2 }}</td>
