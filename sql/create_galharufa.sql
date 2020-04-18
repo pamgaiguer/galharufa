@@ -2,13 +2,13 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "-03:00";
 
 
-CREATE TABLE `casting` (
+CREATE TABLE IF NOT EXISTS `casting` (
   `cas_id` int(11) NOT NULL,
   `cas_tipo` varchar(25) NOT NULL,
   `cas_nome` varchar(100) DEFAULT NULL,
   `cas_nomeart` varchar(100) DEFAULT NULL,
   `cas_genero` varchar(10) DEFAULT NULL,
-  `cas_ano` int DEFAULT NULL,
+  `cas_ano` int(11) DEFAULT NULL,
   `cas_nacionalidade` varchar(50) DEFAULT NULL,
   `cas_torax` decimal(10,2) DEFAULT NULL,
   `cas_terno` decimal(10,2) DEFAULT NULL,
@@ -32,16 +32,24 @@ CREATE TABLE `casting` (
   `cas_foto34` varchar(100) DEFAULT NULL,
   `cas_fotobody` varchar(100) DEFAULT NULL,
   `cas_fotosmile` varchar(100) DEFAULT NULL,
-  `cas_carro` bit DEFAULT NULL,
-  `cas_moto` bit DEFAULT NULL,
-  `cas_trator` bit DEFAULT NULL,
-  `cas_jetski` bit DEFAULT NULL,
+  `cas_carro` bit(1) DEFAULT NULL,
+  `cas_moto` bit(1) DEFAULT NULL,
+  `cas_trator` bit(1) DEFAULT NULL,
+  `cas_jetski` bit(1) DEFAULT NULL,
   `cas_portfolio` varchar(100) DEFAULT NULL,
+  `cas_youtube2` varchar(255) DEFAULT NULL,
+  `cas_vimeo` varchar(255) DEFAULT NULL,
+  `cas_vimeo2` varchar(255) DEFAULT NULL,
   `cas_skills` varchar(255) DEFAULT NULL,
   `cas_dadosbancarios` varchar(255) DEFAULT NULL,
   `cas_usu_id` int(11) DEFAULT NULL,
-  `cas_datamodificacao` datetime DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `cas_datamodificacao` datetime DEFAULT NULL,
+  `cas_phone` varchar(100) DEFAULT NULL,
+  `cas_mobile` varchar(100) DEFAULT NULL,
+  `cas_email` varchar(100) DEFAULT NULL,
+  `cas_habilidade` varchar(255) NOT NULL,
+  `cas_minicurriculum` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=240 DEFAULT CHARSET=utf8;
 
 
 CREATE TABLE `usuarios` (
