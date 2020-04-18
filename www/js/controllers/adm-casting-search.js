@@ -26,15 +26,17 @@ angular.module('galharufa.controllers.adm-casting-search', [])
     });
   }
 
+
   $scope.visualizar = function(c){
     // CastingServices.casting = c;
     $location.path('/adm-casting-show/' + c);
   }
 
   $scope.buscar = function(){
-    if ($scope.vm.busca.length === 0)
-      CastingServices.getCastings().then(function(r){ $scope.vm.casting = r; });
-    else
-      CastingServices.getCastingsPorBusca($scope.vm.tipo, $scope.vm.busca).then(function(r){ $scope.vm.casting = r; });
+    console.log($scope.gender, $scope.vm.busca)
+    // if ($scope.vm.busca.length === 0)
+    //   CastingServices.getCastings().then(function(r){ $scope.vm.casting = r; });
+    // else
+    //   CastingServices.getCastingsPorBusca($scope.vm.tipo, $scope.vm.busca).then(function(r){ $scope.vm.casting = r; });
   }
 });
