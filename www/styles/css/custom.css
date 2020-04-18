@@ -374,6 +374,13 @@ footer.page-footer .blog-link:hover, footer.page-footer .blog-link:focus {
 .dash-home blockquote, .dash-casting blockquote, .dash-casting-search blockquote, .dash-casting-show blockquote, .dash-users blockquote, .dash-quemsomos blockquote, .dash-servicos blockquote {
   border-left: 5px solid #212121;
 }
+.dash-home .gender-filter, .dash-casting .gender-filter, .dash-casting-search .gender-filter, .dash-casting-show .gender-filter, .dash-users .gender-filter, .dash-quemsomos .gender-filter, .dash-servicos .gender-filter {
+  margin-top: 35px;
+}
+.dash-home .gender-filter [type=radio]:checked + label:after, .dash-casting .gender-filter [type=radio]:checked + label:after, .dash-casting-search .gender-filter [type=radio]:checked + label:after, .dash-casting-show .gender-filter [type=radio]:checked + label:after, .dash-users .gender-filter [type=radio]:checked + label:after, .dash-quemsomos .gender-filter [type=radio]:checked + label:after, .dash-servicos .gender-filter [type=radio]:checked + label:after {
+  background-color: #464646;
+  border: 2px solid #464646;
+}
 .dash-home .session-name .material-icons, .dash-casting .session-name .material-icons, .dash-casting-search .session-name .material-icons, .dash-casting-show .session-name .material-icons, .dash-users .session-name .material-icons, .dash-quemsomos .session-name .material-icons, .dash-servicos .session-name .material-icons {
   position: relative;
   top: 5px;
@@ -402,7 +409,8 @@ footer.page-footer .blog-link:hover, footer.page-footer .blog-link:focus {
   color: #000;
 }
 .dash-home .input-field label, .dash-casting .input-field label, .dash-casting-search .input-field label, .dash-casting-show .input-field label, .dash-users .input-field label, .dash-quemsomos .input-field label, .dash-servicos .input-field label {
-  color: #888;
+  font-weight: 700;
+  color: #000;
 }
 .dash-home .input-field input:focus, .dash-home .input-field textarea:focus, .dash-casting .input-field input:focus, .dash-casting .input-field textarea:focus, .dash-casting-search .input-field input:focus, .dash-casting-search .input-field textarea:focus, .dash-casting-show .input-field input:focus, .dash-casting-show .input-field textarea:focus, .dash-users .input-field input:focus, .dash-users .input-field textarea:focus, .dash-quemsomos .input-field input:focus, .dash-quemsomos .input-field textarea:focus, .dash-servicos .input-field input:focus, .dash-servicos .input-field textarea:focus {
   border-bottom: 1px solid #bbb !important;
