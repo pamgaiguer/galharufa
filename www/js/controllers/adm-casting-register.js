@@ -68,7 +68,8 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         email: '',
         phone: '',
         mobile: '',
-        habilidades: []
+        habilidades: [],
+        'bio': ''
       }
     }
 
@@ -127,6 +128,7 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         $scope.vm.casting.email = CastingServices.casting.cas_email;
         $scope.vm.casting.phone = CastingServices.casting.cas_phone;
         $scope.vm.casting.mobile = CastingServices.casting.cas_mobile;
+        $scope.vm.casting.bio = CastingServices.casting.cas_minicurriculum;
 
         // Load habilities
         $scope.vm.casting.habilidades = CastingServices.casting.cas_habilidade.split(';');
@@ -198,7 +200,7 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         $scope.vm.casting.jsk, $scope.vm.casting.youtube, $scope.vm.casting.youtube2,
         $scope.vm.casting.vimeo, $scope.vm.casting.vimeo2, $scope.vm.casting.sks,
         $scope.vm.casting.dbc, UserServices.currentUser.usu_id, $scope.vm.casting.email,
-        $scope.vm.casting.phone, $scope.vm.casting.mobile, getHabilidades()
+        $scope.vm.casting.phone, $scope.vm.casting.mobile, getHabilidades(), $scope.vm.casting.bio
       )
         .then(function (r) {
           $scope.upload();
@@ -254,7 +256,7 @@ angular.module('galharufa.controllers.adm-casting-register', [])
         $scope.vm.casting.jsk, $scope.vm.casting.youtube, $scope.vm.casting.youtube2,
         $scope.vm.casting.vimeo, $scope.vm.casting.vimeo2, $scope.vm.casting.sks,
         $scope.vm.casting.dbc, UserServices.currentUser.usu_id, $scope.vm.casting.email,
-        $scope.vm.casting.phone, $scope.vm.casting.mobile, getHabilidades()
+        $scope.vm.casting.phone, $scope.vm.casting.mobile, getHabilidades(), $scope.vm.casting.bio
       )
 
         .then(function (r) {
