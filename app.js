@@ -57,11 +57,12 @@ app.use(
   app.use(cookieParser());
   app.use(express.static(path.join(__dirname, 'www')));
   
-  app.use('/usuarios', users);
-  app.use('/casting', casting);
-  app.use('/servicos', servicos);
-  app.use('/quemsomos', quemsomos);
-  app.use('/contato', contato);
+  // API
+  app.use('/api/usuarios', users);
+  app.use('/api/casting', casting);
+  app.use('/api/servicos', servicos);
+  app.use('/api/quemsomos', quemsomos);
+  app.use('/api/contato', contato);
   
   app.use(express.static(__dirname + '/www'));
   
