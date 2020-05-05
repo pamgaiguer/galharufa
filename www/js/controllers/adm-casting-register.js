@@ -16,10 +16,10 @@ angular.module('galharufa.controllers.adm-casting-register', [])
     }
   }])
 
-  .controller('AdminCastingRegCtrl', function ($scope, $rootScope, $q, $timeout, $location, FileUploader, UserServices, CastingServices, $sce) {
+  .controller('AdminCastingRegCtrl', function ($scope, $rootScope, $q, $timeout, $location, FileUploader, UserServices, CastingServices, $sce, Configs) {
 
     var uploader = $scope.uploader = new FileUploader({
-      url: '/casting/upload'
+      url: Configs.apiUrl + 'casting/upload'
     });
 
     $scope.vm = {
@@ -164,7 +164,7 @@ angular.module('galharufa.controllers.adm-casting-register', [])
       for (let index = 0; index < uploader.queue.length; index++) {
         const element = uploader.queue[index];
 
-        element.url = '/casting/upload?name=' + $scope.vm.casting.nme
+        element.url = Configs.apiUrl + '/casting/upload?name=' + $scope.vm.casting.nme
 
         if (element.alias === 'ft34') {
           img34Ext = element.file.name.slice((element.file.name.lastIndexOf(".") - 1 >>> 0) + 2)
@@ -220,7 +220,7 @@ angular.module('galharufa.controllers.adm-casting-register', [])
 
       for (let index = 0; index < uploader.queue.length; index++) {
         const element = uploader.queue[index];
-        element.url = '/casting/upload?name=' + $scope.vm.casting.nme
+        element.url = Configs.apiUrl + 'casting/upload?name=' + $scope.vm.casting.nme
 
         if (element.alias === 'ft34') {
           img34Ext = element.file.name.slice((element.file.name.lastIndexOf(".") - 1 >>> 0) + 2)

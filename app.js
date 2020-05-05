@@ -43,7 +43,7 @@ app.use(
       return( useDefaultTypeCasting() );
     }
   },'request')
-  );
+);
   
   // view engine setup
   app.set('views', path.join(__dirname, 'views'));
