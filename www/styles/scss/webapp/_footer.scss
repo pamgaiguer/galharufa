@@ -1,21 +1,22 @@
 footer{
   &.page-footer{
-    background-color: #cccccc;
+    background-color: #020202;
     font-weight: 300;
     padding-top: 0px;
     padding: 5px 0;
 
     p{
-      color: $black-main;
+      color: $white;
       font-weight: 300;
       text-transform: uppercase;
     }
     .blog-link{
-      color: $black-main;
+      color: $white;
 
       &:hover, &:focus{
         outline: none;
-        color: $black-smoke;
+        color: $white;
+        text-decoration: underline;
       }
     }
   }
